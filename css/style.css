@@ -2,7 +2,7 @@ body{
    font-family: 'SourceSansPro-Regular' !important;
 }
 .body_bg {
-		background:#ffffff url(../imgs/fundo_menu.jpg) top center no-repeat;
+		background:#ffffff url(../imgs/fundo_menu2.jpg) top center no-repeat;
 		margin: 0;
 		position: fixed;
 		width: 100%;
@@ -101,7 +101,7 @@ body{
 
 
 .header {
-	height: 70px;
+	height: 60px;
 	width: 100%;
 	background: #054667;
 	border-bottom-width:0!important;
@@ -167,8 +167,8 @@ body{
 }
 
 .menuI{
-   padding-top: 70px !important;
-   padding-bottom: 70px !important;
+   padding-top: 60px !important;
+   padding-bottom: 60px !important;
 }
 
 .open-menu5{
@@ -237,7 +237,7 @@ body{
 }
 
 .foot {
-	height: 75px;
+	height: 65px;
 	/*width:210px;*/
 	background: #033148;
         border-top-width:0!important;
@@ -326,12 +326,18 @@ body{
    height:  80%;
 }*/
 
+.favorites
+{
+   padding-top: 60px;
+}
+
 .barraTab
 {
-        margin-top: 50px !important;
-        border-bottom: 3px solid #000000 !important;
-        background: transparent !important;
-        height: 35px !important;
+       /* margin-top: 50px !important;*/
+       /* border-bottom: 3px solid #000000 !important;*/
+        background: #02354f !important;
+       /* height: 35px !important;*/
+       height: 50px !important;
 }
 
 .barraTab2
@@ -363,7 +369,25 @@ body{
 }  
 
 .tabPaginas{
-        background: transparent !important;
+        background:#ffffff url(../imgs/fundo_menu2.jpg) top center no-repeat;
+}
+
+.tabCaixilharia{
+        /*background: transparent !important;*/
+        background:#ffffff url(../imgs/fundo_caixilharia.jpg) top center no-repeat;
+        background-size: cover;
+}
+.tabVidro{
+        background:#ffffff url(../imgs/fundo_vidro.jpg) top center no-repeat;
+        background-size: cover;
+}
+.tabExtrusao{
+        background:#ffffff url(../imgs/fundo_extrusao.jpg) top center no-repeat;
+        background-size: cover;
+}
+.tabTratamento{
+        background:#ffffff url(../imgs/fundo_tratamento.jpg) top center no-repeat;
+        background-size: cover;
 }
 
 
@@ -486,10 +510,10 @@ body{
 	margin: auto;
         margin-bottom: 2px;
 	padding: 13px;
-	width: 180px;
-	height: 40px;
+	width: 150px;
+	height: 34px;
 	background: url(../imgs/logotipo-retina.png) no-repeat center;
-        background-size: 180px 40px;
+        background-size: 150px 34px;
 }
 
 .close{
@@ -537,7 +561,7 @@ body{
         /*right: 0 !important;
         left: 0 !important;*/
 	width: 50% !important;
-	height: 75px !important;
+	height: 65px !important;
         margin-right:  0 !important;
         color: #FFFFFF !important;
         background: #033148 !important;
@@ -548,7 +572,7 @@ body{
         /*right: 0 !important;
         left: 0 !important;*/
 	width: 50% !important;
-	height: 75px !important;
+	height: 65px !important;
         margin-left:  0 !important;
         color: #FFFFFF !important;
         background: #054667 !important;
@@ -580,10 +604,10 @@ body{
 
 .back{
 	top: 0;
-	left: 5px;
+	left: 0px;
 	position: absolute;
-	width: 70px;
-	height: 70px !important;
+	width: 60px;
+	height: 60px !important;
         font-size: 30px !important;
         text-align: -webkit-center !important;
 }
@@ -863,16 +887,33 @@ only screen and ( min-resolution: 192dpi),
 only screen and ( min-resolution: 2dppx) {
     /* Retina-specific stuff here */
     .body_bg {
-        background:#ffffff url(../imgs/fundo_retina.jpg) top center no-repeat;
+        background:#ffffff url(../imgs/fundo_menu2.jpg) top center no-repeat;
         background-size: cover;
     }
 }
 
 @media screen and (min-width:768px) {
-	.body_bg {
-		background:#ffffff url(../imgs/fundo_web3.jpg) top center no-repeat;
-                background-size: cover;
-	}
+      .body_bg {
+	 background:#ffffff url(../imgs/fundo_web3.jpg) top center no-repeat;
+         background-size: cover;
+      }
+      .tabCaixilharia{
+        /*background: transparent !important;*/
+        background:#ffffff url(../imgs/fundo_caixilharia_web.jpg) top center no-repeat !important;
+        background-size: cover !important;
+      }
+      .tabVidro{
+       background:#ffffff url(../imgs/fundo_vidro_web.jpg) top center no-repeat !important;
+       background-size: cover !important;
+      }
+      .tabExtrusao{
+        background:#ffffff url(../imgs/fundo_extrusao_web.jpg) top center no-repeat !important;
+        background-size: cover !important;
+      }
+      .tabTratamento{
+       background:#ffffff url(../imgs/fundo_tratamento_web.jpg) top center no-repeat !important;
+       background-size: cover !important;
+      }
 }
 
 .x-msgbox .x-button {
@@ -922,8 +963,55 @@ only screen and ( min-resolution: 2dppx) {
    border-radius: 0px !important;
 }
 
+.x-tabbar-dark.x-docked-bottom .x-tab-active {
+/*background-image: none;
+background-color: #0b3c5e;
+background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #061f31), color-stop(10%, #092e47), color-stop(65%, #0b3c5e), color-stop(100%, #0c3e60));
+background-image: -webkit-linear-gradient(top, #061f31,#092e47 10%,#0b3c5e 65%,#0c3e60);
+background-image: linear-gradient(top, #061f31,#092e47 10%,#0b3c5e 65%,#0c3e60);
+text-shadow: rgba(0, 0, 0, 0.5) 0 -0.08em 0;
+-webkit-box-shadow: #092e47 0 0 0.25em inset;
+box-shadow: #092e47 0 0 0.25em inset;*/
+   color: #00aeef !important;
+   background: transparent;
+   border: none !important;
+  /* border-bottom: 4px solid #000000 !important;*/
+   border-radius: 0px !important;
+   /*width: 50% !important;*/
+}
+
+.x-tabbar-dark.x-docked-bottom .x-tab {
+text-shadow: rgba(0, 0, 0, 0.5) 0 -0.08em 0;
+width: 25% !important;
+}
+
+#ext-tab-1{
+background: #02354f;
+color: #fff;
+padding-top: 8px;
+border-radius: 0px;
+}
+#ext-tab-2{
+background: #022e45;
+color: #fff;
+padding-top: 8px;
+border-radius: 0px;
+}
+#ext-tab-3{
+background: #02354f;
+color: #fff;
+padding-top: 8px;
+border-radius: 0px;
+}
+#ext-tab-4{
+background: #022e45;
+color: #fff;
+padding-top: 8px;
+border-radius: 0px;
+}
+
 .x-tabbar-dark .x-tab {
-   color: #000000 !important;
+   /*color: #000000 !important;*/
 }
 
 .x-toolbar .x-field-search .x-component-outer {
@@ -1015,3 +1103,4 @@ only screen and ( min-resolution: 2dppx) {
 .x-android .x-empty .x-input-el {
    -webkit-text-fill-color: #FFF !important;
 }
+

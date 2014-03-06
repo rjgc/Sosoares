@@ -117,7 +117,9 @@ Ext.define('Italbox.Viewport7', {
         fn: function() {
             Ext.getCmp('menuI').hide();
             Ext.getCmp('back').show();
-            Ext.getCmp('italbox').show();
+            Ext.getCmp('footer').hide();
+            //Ext.getCmp('italbox').show();
+            Ext.getCmp('favorites').show();
         }
     },
      {
@@ -633,7 +635,7 @@ Ext.define('Italbox.Viewport7', {
         }
     }
 });
-
+*/
 Ext.define('Italbox.Viewport5', {
     extend: 'Ext.tab.Panel',
     xtype : 'my-viewport5',
@@ -655,294 +657,295 @@ Ext.define('Italbox.Viewport5', {
                 direction: 'down',
                 easing: 'easeIn'
             },
+            tabBarPosition: 'bottom',
             tabBar:    {
                 cls: 'barraTab',
                 id: 'barraTab',
             },
            items: [
                 {
-                    title: 'PÁGINAS',
+                    //title: 'PÁGINAS',
+                    iconCls: 'icon-mundo-catalogos2',
                     layout : 'fit',
-                    cls: 'tabPaginas',
+                    cls: 'tabCaixilharia',
+                    layout: {
+                        type: 'vbox',
+                        align: 'stretch'
+                    },
                     items: [
                     {
-                    xtype: 'dataview',
-                    cls: 'favoritos',
-                    id: 'data_paginas',
-                    flex: 1,
-                    scrollable: {
-                        direction: 'vertical',
+                        flex:1, 
+                        layout: {
+                            type: 'hbox',
+                            align: 'stretch'
+                        },
+                        items: [
+                        {
+                            id: 'start-italbox',
+                            flex: 1,
+                            style: 'margin:20px 10px 10px 20px;'+
+                            'border-radius:5px; border-bottom: 7px solid #05698e;'+
+                            'background: url(imgs/icons/caixilharia_menu.png) no-repeat, rgba(16, 124, 164, .8);'+
+                            'background-size: contain; background-position: center;',
+                        },
+                        {
+                            id: 'start-catalogos',
+                            flex: 1,
+                            style: 'margin:20px 20px 10px 10px;border-bottom: 7px solid #05698e;border-radius:5px;'+
+                            'background: url(imgs/icons/vidro_menu.png) no-repeat, rgba(16, 124, 164, .8);'+
+                            'background-size: contain; background-position: center;',
+                        },   
+                        ]
                     },
-                    inline: {
-                        wrap: true
-                    },
-                    
-                    store: 'Favorites',
-                    
-                    itemTpl: '<img src="{imag}" style="width:130px; margin:10px 10px 0 10px;"></img><i class="remove icon-close2"  style=""></i><div style="text-align: center; font-size:12px;">{nome}</div>',
-                    
-                    emptyText: '<div style="margin-left: 10px; margin-top: 10px; font-size: 19px;">Sem Favoritos</div>',
-                    
-                    listeners: {
-                        itemtap: function(list, index, target, record,e) {
-                            if (e.getTarget('i.remove')) {
-                                Ext.Msg.confirm(
-                            "",
-                            Ext.getStore('Languages').getById(idioma).get('remove_favorite')+' '+record.get('nome')+"?",
-                            function(buttonId) {
-                            if (buttonId === 'yes') {
-                                Ext.getStore('Favorites').remove(record);
-                                Ext.getStore('Favorites').sync();
-                                }});
-                            }
-                            else{
-                                Ext.Msg.confirm(
-                                "",
-                                Ext.getStore('Languages').getById(idioma).get('open_favorite')+' '+record.get('nome')+"?",
-                                function(buttonId) {
-                                if (buttonId === 'yes') {
-                                     Ext.getCmp('favorites').hide();
-                                     Ext.getCmp('myCarroucel').removeAll(true,true);
-                                     idcatalogo = record.get('id_catalogo');
-                                if (Ext.Viewport.getOrientation() === 'portrait') {
-                                     Ext.getCmp('myCarroucel').setItems($.grep(tpaginas2, function(e) { return e.id_catalogo == idcatalogo }));
-                                     Ext.getCmp('myCarroucel').setActiveItem((record.get('numero')*2)-3);
-                                     Ext.getCmp('footer').show();
-                                }
-                                else{
-                                     Ext.getCmp('myCarroucel').setItems($.grep(tpaginas, function(e) { return e.id_catalogo == idcatalogo }));
-                                     Ext.getCmp('myCarroucel').setActiveItem(record.get('numero')-1);
-                                     Ext.getCmp('footer').show();
-                                }
-                                Ext.getCmp('barra5').show();
-                                Ext.getCmp('footer').show();
-                                Ext.getCmp('myCarroucel').show();
-                                }});
-                            }
-                        }  
-                    }
-                }
-                ],
-                },
-                {
-                    title: 'PRODUTOS',
-                    layout : 'fit',
-                    cls: 'tabPaginas',
-                    items: [
                     {
-                    xtype: 'dataview',
-                    cls: 'favoritos',
-                    id: 'data_produtos',
-                    flex: 1,
-                    scrollable: {
-                        direction: 'vertical',
+                        flex:1,
+                        layout: {
+                            type: 'hbox',
+                            align: 'stretch'
+                        },
+                        items: [{
+                            id: 'start-favoritos',
+                            flex: 1,
+                            style: 'margin:10px 10px 20px 20px;border-bottom: 7px solid #05698e;border-radius:5px;'+
+                            'background: url(imgs/icons/extrusao_menu.png) no-repeat, rgba(16, 124, 164, .8);'+
+                            'background-size: contain; background-position: center;',
+                        
+                        }, {
+                            id: 'start-language',
+                            flex: 1,
+                            style: 'margin:10px 20px 20px 10px;border-bottom: 7px solid #05698e; border-radius:5px;'+
+                            'background: url(imgs/icons/tratamento_menu.png) no-repeat, rgba(16, 124, 164, .8);'+
+                            'background-size: contain; background-position: center;',
+                        },
+                        ]
                     },
-                    inline: {
-                        wrap: true
-                    },
-                    
-                    store: 'Favorites2',
-                    
-                    itemTpl: '<img src="{thumb}" style="width:130px; margin:10px 10px 0 10px;"></img><i class="remove icon-close2"  style=""></i><div style="text-align: center; font-size:12px;">{nome}</div>',
-                    
-                    emptyText: '<div style="margin-left: 10px; margin-top: 10px; font-size: 19px;">Sem Favoritos</div>',
-                    
-                    listeners: {
-                        itemtap: function(list, index, target, record,e) {
-                            if (e.getTarget('i.remove')) {
-                                Ext.Msg.confirm(
-                            "",
-                            Ext.getStore('Languages').getById(idioma).get('remove_favorite')+' '+record.get('nome')+"?",
-                            function(buttonId) {
-                            if (buttonId === 'yes') {
-                                Ext.getStore('Favorites2').remove(record);
-                                Ext.getStore('Favorites2').sync();
-                                }}); 
-                            }
-                            else{
-                            Ext.Msg.confirm(
-                            "",
-                            Ext.getStore('Languages').getById(idioma).get('open_favorite')+' '+record.get('nome')+"?",
-                            function(buttonId) {
-                            if (buttonId === 'yes') {
-                                
-                            if( typeof panel_produto !== 'undefined' ) {
-                                 panel_produto.destroy();
-                            }
-                            panel_produto = Ext.Viewport.add({ 
-                                xtype: 'container',
-                                id: 'pop-produto',
-                                cls: 'pop-produto',
-                                float: true,
-                                showAnimation: 
-                                {
-                                    type: 'pop',
-                                    duration: 300,
-                                },  
-                                layout : {
-                                    type : 'vbox',
-                                },
-                                items: [
-                                    {
-                                        xtype: 'toolbar',
-                                        cls: 'header3',
-                                        layout: {
-                                                type: 'hbox',
-                                                pack: 'right'
-                                        },
-                                        items: [
-                                            {
-                                            align: 'right', 
-                                            ui:    'plain',
-                                            xtype: 'button',
-                                            cls: 'close icon-close',
-                                            handler: function () {
-                                                 panel_produto.hide();
-                                                }
-                                            },
-                                        ]    
-                                    },
-                                    {
-                                        html  : '<div class="pop-up">'+
-                                        '<img src="'+record.get('foto')+'">'+
-                                        '<br/><div class="btn-extras" id="btn-extras">EXTRAS</div>'+record.get('nome')+
-                                        '<br/>Ref '+record.get('ref')+'<br/>'+record.get('descricao_'+idioma)+'</div>'
-                                    },
-                                ],
-                                listeners: [
-                                {
-                                    element: 'element',
-                                    delegate: '#btn-extras',
-                                    event: 'tap',
-                                    fn: function() {
-                                     panel_extras = Ext.Viewport.add({
-                                        xtype : 'tabpanel',
-                                        id:'extras',
-                                        cls: 'lista-extras',
-                                        float: true,
-                                        tabBar:    {
-                                            cls: 'barraTab2',
-                                            hidden: true,
-                                        },
-                                        items: [
-                                        {
-                                            xtype: 'toolbar',
-                                            docked: 'top',
-                                            cls: 'barraPaginas',
-                                            items: [
-                                                {
-                                                    xtype: 'button',
-                                                    ui: 'plain',
-                                                    cls: 'back icon-back',
-                                                    handler: function () {
-                                                        panel_extras.hide();
-                                                    }
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            title: '',
-                                            layout : 'fit',
-                                            cls: 'tabPaginas',
-                                            items: [
-                                            {
-                                                xtype: 'dataview',
-                                                cls: 'favoritos',
-                                                flex: 1,
-                                                scrollable: {
-                                                    direction: 'vertical',
-                                                },
-                                                inline: {
-                                                    wrap: true
-                                                },
-                                                store: 
-                                                {
-                                                    fields: ['descricao_1','descricao_2','descricao_3','descricao_4','estado','extra_id','foto','id','id_extra','lastModified','nome','priority','produto_id','ref'],
-                                                    data: $.grep(textras_produtos, function(e) { return e.produto_id ==  record.get('id_produto')})
-                                                },
-                                                
-                                                itemTpl: '<img src="'+caminho2+'{foto}" style="width:130px; margin:10px 10px 0 10px;"></img><div style="text-align: center; font-size:10px;">{nome}</div>',
-                                                
-                                                listeners: {
-                                                    itemtap: function(list, index, target, record,e) {
-                                                        panel_extra = Ext.Viewport.add({ 
-                                                            xtype: 'container',
-                                                            id: 'extra',
-                                                            cls: 'pop-produto',
-                                                            float: true,
-                                                            showAnimation: 
-                                                            {
-                                                                type: 'pop',
-                                                                duration: 300,
-                                                            },  
-                                                            layout : {
-                                                                type : 'vbox',
-                                                            },
-                                                            items: [
-                                                                {
-                                                                    xtype: 'toolbar',
-                                                                    cls: 'header3',
-                                                                    layout: {
-                                                                            type: 'hbox',
-                                                                            pack: 'right'
-                                                                    },
-                                                                   
-                                                                    items: [
-                                                                        {
-                                                                        align: 'right', 
-                                                                        ui:    'plain',
-                                                                        xtype: 'button',
-                                                                        cls: 'close icon-close',
-                                                                        handler: function () {
-                                                                             panel_extra.hide();
-                                                                            }
-                                                                        },
-                                                                    ]    
-                                                                },
-                                                                {
-                                                                    html  : '<div class="pop-up">'+
-                                                                    '<img src="'+caminho+record.get('foto')+'">'+
-                                                                    '<br\>'+record.get('nome')+'<br/>'+
-                                                                    'Ref '+record.get('ref')+'<br/>'+record.get('descricao_'+idioma)+'</div>'
-                                                                },
-                                                            ],
-                                                           
-                                                        });
-                                                    panel_extra.show();
-                                                    panel_extra.on('hide', function() {
-                                                       panel_extra.destroy();
-                                                    });
-                                                        
-                                                    }
-                                                }
-                                            }
-                                            ], 
-                                        }, 
-                                        ],       
-                                        });
-                                        panel_extras.show();
-                                        panel_extras.on('hide', function() {
-                                           panel_extras.destroy();
-                                        });
-                                    }
-                                },
-                                ],
-                            });
-                            panel_produto.show();
-                            panel_produto.on('hide', function() {
-                               panel_produto.destroy();
-                            });
-                        }});
-                        }
-                        }  
-                    }
-                    }
+                   /* {
+                        flex:1,
+                        layout: {
+                            type: 'hbox',
+                            align: 'stretch'
+                        },
+                      items: [
+                        {
+                            id: 'start-help',
+                            flex: 1,
+                            style: 'margin:5px 10px 10px 10px; background: url(imgs/icons/ajuda_menu.png) no-repeat, rgba(255, 255, 255, .4);'+
+                            'background-size: contain; background-position: center;',
+                        },
+                        ],    
+                    },*/
                     ],
                 },
+                {
+                    //title: 'PRODUTOS',
+                    layout : 'fit',
+                    cls: 'tabVidro',
+                    iconCls: 'icon-mundo-catalogos3',
+                    //iconMask : false,   
+                    layout: {
+                        type: 'vbox',
+                        align: 'stretch'
+                    },
+                    items: [
+                    {
+                        flex:1, 
+                        layout: {
+                            type: 'hbox',
+                            align: 'stretch'
+                        },
+                        items: [
+                        {
+                            id: 'start-italbox',
+                            flex: 1,
+                            style: 'margin:20px 10px 10px 20px;'+
+                            'border-radius:5px; border-bottom: 7px solid #05698e;'+
+                            'background: url(imgs/icons/caixilharia_menu.png) no-repeat, rgba(16, 124, 164, .8);'+
+                            'background-size: contain; background-position: center;',
+                        },
+                        {
+                            id: 'start-catalogos',
+                            flex: 1,
+                            style: 'margin:20px 20px 10px 10px;border-bottom: 7px solid #05698e;border-radius:5px;'+
+                            'background: url(imgs/icons/vidro_menu.png) no-repeat, rgba(16, 124, 164, .8);'+
+                            'background-size: contain; background-position: center;',
+                        },   
+                        ]
+                    },
+                    {
+                        flex:1,
+                        layout: {
+                            type: 'hbox',
+                            align: 'stretch'
+                        },
+                        items: [{
+                            id: 'start-favoritos',
+                            flex: 1,
+                            style: 'margin:10px 10px 20px 20px;border-bottom: 7px solid #05698e;border-radius:5px;'+
+                            'background: url(imgs/icons/extrusao_menu.png) no-repeat, rgba(16, 124, 164, .8);'+
+                            'background-size: contain; background-position: center;',
+                        
+                        }, {
+                            id: 'start-language',
+                            flex: 1,
+                            style: 'margin:10px 20px 20px 10px;border-bottom: 7px solid #05698e; border-radius:5px;'+
+                            'background: url(imgs/icons/tratamento_menu.png) no-repeat, rgba(16, 124, 164, .8);'+
+                            'background-size: contain; background-position: center;',
+                        },
+                        ]
+                    },
+                   /* {
+                        flex:1,
+                        layout: {
+                            type: 'hbox',
+                            align: 'stretch'
+                        },
+                      items: [
+                        {
+                            id: 'start-help',
+                            flex: 1,
+                            style: 'margin:5px 10px 10px 10px; background: url(imgs/icons/ajuda_menu.png) no-repeat, rgba(255, 255, 255, .4);'+
+                            'background-size: contain; background-position: center;',
+                        },
+                        ],    
+                    },*/
+                    ],
+                },
+                {
+                    //title: 'Teste',
+                    layout : 'fit',
+                    cls: 'tabExtrusao',
+                    iconCls: 'icon-mundo-catalogos2',
+                    layout: {
+                        type: 'vbox',
+                        align: 'stretch'
+                    },
+                    items: [
+                    {
+                        flex:1, 
+                        layout: {
+                            type: 'hbox',
+                            align: 'stretch'
+                        },
+                        items: [
+                        {
+                            id: 'start-italbox',
+                            flex: 1,
+                            style: 'margin:20px 10px 10px 20px;'+
+                            'border-radius:5px; border-bottom: 7px solid #05698e;'+
+                            'background: url(imgs/icons/caixilharia_menu.png) no-repeat, rgba(16, 124, 164, .8);'+
+                            'background-size: contain; background-position: center;',
+                        },
+                        {
+                            id: 'start-catalogos',
+                            flex: 1,
+                            style: 'margin:20px 20px 10px 10px;border-bottom: 7px solid #05698e;border-radius:5px;'+
+                            'background: url(imgs/icons/vidro_menu.png) no-repeat, rgba(16, 124, 164, .8);'+
+                            'background-size: contain; background-position: center;',
+                        },   
+                        ]
+                    },
+                    {
+                        flex:1,
+                        layout: {
+                            type: 'hbox',
+                            align: 'stretch'
+                        },
+                        items: [{
+                            id: 'start-favoritos',
+                            flex: 1,
+                            style: 'margin:10px 10px 20px 20px;border-bottom: 7px solid #05698e;border-radius:5px;'+
+                            'background: url(imgs/icons/extrusao_menu.png) no-repeat, rgba(16, 124, 164, .8);'+
+                            'background-size: contain; background-position: center;',
+                        
+                        }, {
+                            id: 'start-language',
+                            flex: 1,
+                            style: 'margin:10px 20px 20px 10px;border-bottom: 7px solid #05698e; border-radius:5px;'+
+                            'background: url(imgs/icons/tratamento_menu.png) no-repeat, rgba(16, 124, 164, .8);'+
+                            'background-size: contain; background-position: center;',
+                        },
+                        ]
+                    },
+                    ],    
+                },
+                {
+                    //title: 'Teste',
+                    layout : 'fit',
+                    cls: 'tabTratamento',
+                    iconCls: 'icon-mundo-catalogos3',
+                    layout: {
+                        type: 'vbox',
+                        align: 'stretch'
+                    },
+                    items: [
+                    {
+                        flex:1, 
+                        layout: {
+                            type: 'hbox',
+                            align: 'stretch'
+                        },
+                        items: [
+                        {
+                            id: 'start-italbox',
+                            flex: 1,
+                            style: 'margin:20px 10px 10px 20px;'+
+                            'border-radius:5px; border-bottom: 7px solid #05698e;'+
+                            'background: url(imgs/icons/caixilharia_menu.png) no-repeat, rgba(16, 124, 164, .8);'+
+                            'background-size: contain; background-position: center;',
+                        },
+                        {
+                            id: 'start-catalogos',
+                            flex: 1,
+                            style: 'margin:20px 20px 10px 10px;border-bottom: 7px solid #05698e;border-radius:5px;'+
+                            'background: url(imgs/icons/vidro_menu.png) no-repeat, rgba(16, 124, 164, .8);'+
+                            'background-size: contain; background-position: center;',
+                        },   
+                        ]
+                    },
+                    {
+                        flex:1,
+                        layout: {
+                            type: 'hbox',
+                            align: 'stretch'
+                        },
+                        items: [{
+                            id: 'start-favoritos',
+                            flex: 1,
+                            style: 'margin:10px 10px 20px 20px;border-bottom: 7px solid #05698e;border-radius:5px;'+
+                            'background: url(imgs/icons/extrusao_menu.png) no-repeat, rgba(16, 124, 164, .8);'+
+                            'background-size: contain; background-position: center;',
+                        
+                        }, {
+                            id: 'start-language',
+                            flex: 1,
+                            style: 'margin:10px 20px 20px 10px;border-bottom: 7px solid #05698e; border-radius:5px;'+
+                            'background: url(imgs/icons/tratamento_menu.png) no-repeat, rgba(16, 124, 164, .8);'+
+                            'background-size: contain; background-position: center;',
+                        },
+                        ]
+                    },
+                   /* {
+                        flex:1,
+                        layout: {
+                            type: 'hbox',
+                            align: 'stretch'
+                        },
+                      items: [
+                        {
+                            id: 'start-help',
+                            flex: 1,
+                            style: 'margin:5px 10px 10px 10px; background: url(imgs/icons/ajuda_menu.png) no-repeat, rgba(255, 255, 255, .4);'+
+                            'background-size: contain; background-position: center;',
+                        },
+                        ],    
+                    },*/
+                    ],
+                },
+                
             ],   
     }
 });
-
+/*
 Ext.define('Italbox.Viewport4', {
     extend: 'Ext.Panel',
     xtype : 'my-viewport4',
@@ -1259,7 +1262,9 @@ Ext.define('Italbox.ViewportPanel', {
                     cls: 'back icon-back',
                     hidden: true,
                     handler: function () {
+                         Ext.getCmp('favorites').hide();
                          Ext.getCmp('menuI').show();
+                         Ext.getCmp('footer').show();
                          Ext.getCmp('back').hide();
                     /*if(Ext.getCmp('myList')._hidden === false || Ext.getCmp('italbox')._hidden === false || Ext.getCmp('favorites')._hidden === false || Ext.getCmp('help')._hidden === false || Ext.getCmp('search')._hidden === false )
 	            {
@@ -2254,13 +2259,14 @@ Ext.define('Italbox.ViewportPanel', {
             hidden: true,
             id: 'help',
             cls: 'help'
-        },
+        },*/
         {
             xtype: 'my-viewport5',
             hidden: true,
-            id: 'favorites'
+            id: 'favorites',
+            cls: 'favorites'
         },
-        {
+      /*  {
             xtype: 'my-viewport6',
             hidden: true,
             id: 'search',

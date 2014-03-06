@@ -51,6 +51,23 @@
 	/*color: #000000;*/
 	font-size: 30px !important
 }
+
+.icon-mundo-catalogos2:before {
+content: "\e604";
+/* color: #000000; */
+font-size: 34px !important;
+background-color: #02354f !important;
+/*color: #FFFFFF;*/
+}
+
+.icon-mundo-catalogos3:before {
+content: "\e604";
+/* color: #000000; */
+font-size: 34px !important;
+background-color: #022e45 !important;
+/*color: #FFFFFF;*/
+}
+
 .icon-menu:before {
 	content: "\e605";
 	color: #000000 !important;
