@@ -1,10 +1,10 @@
 @font-face {
 	font-family: 'sosoares';
-	src:url('font/sosoares.eot?-dkg7gs');
-	src:url('font/sosoares.eot?#iefix-dkg7gs') format('embedded-opentype'),
-		url('font/sosoares.woff?-dkg7gs') format('woff'),
-		url('font/sosoares.ttf?-dkg7gs') format('truetype'),
-		url('font/sosoares.svg?-dkg7gs#sosoares') format('svg');
+	src:url('fonts/sosoares.eot?-dkg7gs');
+	src:url('fonts/sosoares.eot?#iefix-dkg7gs') format('embedded-opentype'),
+		url('fonts/sosoares.woff?-dkg7gs') format('woff'),
+		url('fonts/sosoares.ttf?-dkg7gs') format('truetype'),
+		url('fonts/sosoares.svg?-dkg7gs#sosoares') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -25,13 +25,9 @@
 
 .icon-vidro:before {
 	content: "\e600";
-	font-size: 31px !important;
-	background-color: #022e45 !important;
 }
 .icon-tratamento:before {
 	content: "\e601";
-	font-size: 31px !important;
-	background-color: #022e45 !important;
 }
 .icon-telefone:before {
 	content: "\e602";
@@ -80,12 +76,9 @@
 }
 .icon-idioma:before {
 	content: "\e611";
-	font-size: 37px;
 }
 .icon-extrusao:before {
 	content: "\e612";
-	font-size: 31px !important;
-	background-color: #022e45 !important;
 }
 .icon-call_black:before {
 	content: "\e613";
@@ -95,21 +88,16 @@
 }
 .icon-caixilharia:before {
 	content: "\e615";
-	font-size: 31px !important;
-	background-color: #022e45 !important;
 }
 .icon-back:before {
 	content: "\e616";
-	color: #00aeef !important;
 }
 .icon-apoio:before {
 	content: "\e617";
 }
 .icon-anodizacao:before {
 	content: "\e618";
-	
 }
 .icon-ajuda:before {
 	content: "\e619";
-	font-size: 37px;
 }

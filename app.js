@@ -119,6 +119,7 @@ Ext.define('Italbox.Viewport7', {
             Ext.getCmp('back').show();
             Ext.getCmp('footer').hide();
             //Ext.getCmp('italbox').show();
+            Ext.getCmp('favorites').setActiveItem(0);
             Ext.getCmp('favorites').show();
         }
     },
@@ -665,7 +666,7 @@ Ext.define('Italbox.Viewport5', {
            items: [
                 {
                     //title: 'PÁGINAS',
-                    iconCls: 'icon-mundo-catalogos2',
+                    iconCls: 'icon-caixilharia',
                     layout : 'fit',
                     cls: 'tabCaixilharia',
                     layout: {
@@ -685,14 +686,14 @@ Ext.define('Italbox.Viewport5', {
                             flex: 1,
                             style: 'margin:20px 10px 10px 20px;'+
                             'border-radius:5px; border-bottom: 7px solid #05698e;'+
-                            'background: url(imgs/icons/caixilharia_menu.png) no-repeat, rgba(16, 124, 164, .8);'+
+                            'background: url(imgs/icons/sosoares.png) no-repeat, rgba(16, 124, 164, .8);'+
                             'background-size: contain; background-position: center;',
                         },
                         {
                             id: 'start-catalogos',
                             flex: 1,
                             style: 'margin:20px 20px 10px 10px;border-bottom: 7px solid #05698e;border-radius:5px;'+
-                            'background: url(imgs/icons/vidro_menu.png) no-repeat, rgba(16, 124, 164, .8);'+
+                            'background: url(imgs/icons/caixilharia.png) no-repeat, rgba(16, 124, 164, .8);'+
                             'background-size: contain; background-position: center;',
                         },   
                         ]
@@ -707,14 +708,14 @@ Ext.define('Italbox.Viewport5', {
                             id: 'start-favoritos',
                             flex: 1,
                             style: 'margin:10px 10px 20px 20px;border-bottom: 7px solid #05698e;border-radius:5px;'+
-                            'background: url(imgs/icons/extrusao_menu.png) no-repeat, rgba(16, 124, 164, .8);'+
+                            'background: url(imgs/icons/obras.png) no-repeat, rgba(16, 124, 164, .8);'+
                             'background-size: contain; background-position: center;',
                         
                         }, {
                             id: 'start-language',
                             flex: 1,
                             style: 'margin:10px 20px 20px 10px;border-bottom: 7px solid #05698e; border-radius:5px;'+
-                            'background: url(imgs/icons/tratamento_menu.png) no-repeat, rgba(16, 124, 164, .8);'+
+                            'background: url(imgs/icons/marcacao.png) no-repeat, rgba(16, 124, 164, .8);'+
                             'background-size: contain; background-position: center;',
                         },
                         ]
@@ -740,7 +741,7 @@ Ext.define('Italbox.Viewport5', {
                     //title: 'PRODUTOS',
                     layout : 'fit',
                     cls: 'tabVidro',
-                    iconCls: 'icon-mundo-catalogos3',
+                    iconCls: 'icon-vidro',
                     //iconMask : false,   
                     layout: {
                         type: 'vbox',
@@ -759,14 +760,14 @@ Ext.define('Italbox.Viewport5', {
                             flex: 1,
                             style: 'margin:20px 10px 10px 20px;'+
                             'border-radius:5px; border-bottom: 7px solid #05698e;'+
-                            'background: url(imgs/icons/caixilharia_menu.png) no-repeat, rgba(16, 124, 164, .8);'+
+                            'background: url(imgs/icons/sosoares.png) no-repeat, rgba(16, 124, 164, .8);'+
                             'background-size: contain; background-position: center;',
                         },
                         {
                             id: 'start-catalogos',
                             flex: 1,
                             style: 'margin:20px 20px 10px 10px;border-bottom: 7px solid #05698e;border-radius:5px;'+
-                            'background: url(imgs/icons/vidro_menu.png) no-repeat, rgba(16, 124, 164, .8);'+
+                            'background: url(imgs/icons/vidro.png) no-repeat, rgba(16, 124, 164, .8);'+
                             'background-size: contain; background-position: center;',
                         },   
                         ]
@@ -781,14 +782,14 @@ Ext.define('Italbox.Viewport5', {
                             id: 'start-favoritos',
                             flex: 1,
                             style: 'margin:10px 10px 20px 20px;border-bottom: 7px solid #05698e;border-radius:5px;'+
-                            'background: url(imgs/icons/extrusao_menu.png) no-repeat, rgba(16, 124, 164, .8);'+
+                            'background: url(imgs/icons/servicos_vidro.png) no-repeat, rgba(16, 124, 164, .8);'+
                             'background-size: contain; background-position: center;',
                         
                         }, {
                             id: 'start-language',
                             flex: 1,
                             style: 'margin:10px 20px 20px 10px;border-bottom: 7px solid #05698e; border-radius:5px;'+
-                            'background: url(imgs/icons/tratamento_menu.png) no-repeat, rgba(16, 124, 164, .8);'+
+                            'background: url(imgs/icons/tecnica.png) no-repeat, rgba(16, 124, 164, .8);'+
                             'background-size: contain; background-position: center;',
                         },
                         ]
@@ -814,7 +815,7 @@ Ext.define('Italbox.Viewport5', {
                     //title: 'Teste',
                     layout : 'fit',
                     cls: 'tabExtrusao',
-                    iconCls: 'icon-mundo-catalogos2',
+                    iconCls: 'icon-extrusao',
                     layout: {
                         type: 'vbox',
                         align: 'stretch'
@@ -832,14 +833,14 @@ Ext.define('Italbox.Viewport5', {
                             flex: 1,
                             style: 'margin:20px 10px 10px 20px;'+
                             'border-radius:5px; border-bottom: 7px solid #05698e;'+
-                            'background: url(imgs/icons/caixilharia_menu.png) no-repeat, rgba(16, 124, 164, .8);'+
+                            'background: url(imgs/icons/sosoares.png) no-repeat, rgba(16, 124, 164, .8);'+
                             'background-size: contain; background-position: center;',
                         },
                         {
                             id: 'start-catalogos',
                             flex: 1,
                             style: 'margin:20px 20px 10px 10px;border-bottom: 7px solid #05698e;border-radius:5px;'+
-                            'background: url(imgs/icons/vidro_menu.png) no-repeat, rgba(16, 124, 164, .8);'+
+                            'background: url(imgs/icons/extrusao.png) no-repeat, rgba(16, 124, 164, .8);'+
                             'background-size: contain; background-position: center;',
                         },   
                         ]
@@ -854,14 +855,14 @@ Ext.define('Italbox.Viewport5', {
                             id: 'start-favoritos',
                             flex: 1,
                             style: 'margin:10px 10px 20px 20px;border-bottom: 7px solid #05698e;border-radius:5px;'+
-                            'background: url(imgs/icons/extrusao_menu.png) no-repeat, rgba(16, 124, 164, .8);'+
+                            'background: url(imgs/icons/servicos_extrusao.png) no-repeat, rgba(16, 124, 164, .8);'+
                             'background-size: contain; background-position: center;',
                         
                         }, {
                             id: 'start-language',
                             flex: 1,
                             style: 'margin:10px 20px 20px 10px;border-bottom: 7px solid #05698e; border-radius:5px;'+
-                            'background: url(imgs/icons/tratamento_menu.png) no-repeat, rgba(16, 124, 164, .8);'+
+                            'background: url(imgs/icons/apoio.png) no-repeat, rgba(16, 124, 164, .8);'+
                             'background-size: contain; background-position: center;',
                         },
                         ]
@@ -872,7 +873,7 @@ Ext.define('Italbox.Viewport5', {
                     //title: 'Teste',
                     layout : 'fit',
                     cls: 'tabTratamento',
-                    iconCls: 'icon-mundo-catalogos3',
+                    iconCls: 'icon-tratamento',
                     layout: {
                         type: 'vbox',
                         align: 'stretch'
@@ -890,14 +891,14 @@ Ext.define('Italbox.Viewport5', {
                             flex: 1,
                             style: 'margin:20px 10px 10px 20px;'+
                             'border-radius:5px; border-bottom: 7px solid #05698e;'+
-                            'background: url(imgs/icons/caixilharia_menu.png) no-repeat, rgba(16, 124, 164, .8);'+
+                            'background: url(imgs/icons/sosoares.png) no-repeat, rgba(16, 124, 164, .8);'+
                             'background-size: contain; background-position: center;',
                         },
                         {
                             id: 'start-catalogos',
                             flex: 1,
                             style: 'margin:20px 20px 10px 10px;border-bottom: 7px solid #05698e;border-radius:5px;'+
-                            'background: url(imgs/icons/vidro_menu.png) no-repeat, rgba(16, 124, 164, .8);'+
+                            'background: url(imgs/icons/lacagem.png) no-repeat, rgba(16, 124, 164, .8);'+
                             'background-size: contain; background-position: center;',
                         },   
                         ]
@@ -912,14 +913,14 @@ Ext.define('Italbox.Viewport5', {
                             id: 'start-favoritos',
                             flex: 1,
                             style: 'margin:10px 10px 20px 20px;border-bottom: 7px solid #05698e;border-radius:5px;'+
-                            'background: url(imgs/icons/extrusao_menu.png) no-repeat, rgba(16, 124, 164, .8);'+
+                            'background: url(imgs/icons/anodizacao.png) no-repeat, rgba(16, 124, 164, .8);'+
                             'background-size: contain; background-position: center;',
                         
                         }, {
                             id: 'start-language',
                             flex: 1,
                             style: 'margin:10px 20px 20px 10px;border-bottom: 7px solid #05698e; border-radius:5px;'+
-                            'background: url(imgs/icons/tratamento_menu.png) no-repeat, rgba(16, 124, 164, .8);'+
+                            'background: url(imgs/icons/imitacao.png) no-repeat, rgba(16, 124, 164, .8);'+
                             'background-size: contain; background-position: center;',
                         },
                         ]
@@ -1773,7 +1774,7 @@ Ext.define('Italbox.ViewportPanel', {
                     align: 'left', 
                     ui:    'plain',
                     xtype: 'button',
-                    text: '<i class="icon-mundo-catalogos"></i><br><font style="font-size:15px">Idiomas</font>',
+                    text: '<i class="icon-idioma"></i><br><font style="font-size:15px">Idiomas</font>',
                     cls: 'open-menu4',
                     id: 'open-menu4',
                     //hidden: true,

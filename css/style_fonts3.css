@@ -1,0 +1,112 @@
+@font-face {
+	font-family: 'sosoares';
+	src:url('fonts/sosoares.eot?-dkg7gs');
+	src:url('fonts/sosoares.eot?#iefix-dkg7gs') format('embedded-opentype'),
+		url('font/sosoares.svg?-dkg7gs#sosoares') format('svg'),
+		url('font/sosoares.woff?-dkg7gs') format('woff'),
+		url('font/sosoares.ttf?-dkg7gs') format('truetype');
+		
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'sosoares';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-obras:before {
+	content: "\e600";
+}
+.icon-vidro:before {
+	content: "\e601";
+}
+.icon-tratamento:before {
+	content: "\e602";
+}
+.icon-telefone:before {
+	content: "\e603";
+}
+.icon-tecnica:before {
+	content: "\e604";
+}
+.icon-sosoares:before {
+	content: "\e605";
+}
+.icon-servicos_vidro:before {
+	content: "\e606";
+}
+.icon-servicos_extrusao:before {
+	content: "\e607";
+}
+.icon-search:before {
+	content: "\e608";
+}
+.icon-produtos_vidro:before {
+	content: "\e609";
+}
+.icon-produtos_extrusao:before {
+	content: "\e60a";
+}
+.icon-produtos_caixilharia:before {
+	content: "\e60b";
+}
+.icon-obras2:before {
+	content: "\e60c";
+}
+.icon-back:before {
+	content: "\e60d";
+}
+.icon-caixilharia:before {
+	content: "\e60e";
+}
+.icon-call:before {
+	content: "\e60f";
+}
+.icon-call_black:before {
+	content: "\e610";
+}
+.icon-extrusao:before {
+	content: "\e611";
+}
+.icon-idioma:before {
+	content: "\e612";
+	font-size: 32px;
+}
+.icon-imitacao:before {
+	content: "\e613";
+}
+.icon-lacagem:before {
+	content: "\e614";
+}
+.icon-local:before {
+	content: "\e615";
+}
+.icon-marcacao:before {
+	content: "\e616";
+}
+.icon-menu:before {
+	content: "\e617";
+}
+.icon-anodizacao:before {
+	content: "\e618";
+}
+.icon-ajuda:before {
+	content: "\e619";
+	font-size: 32px;
+}
+.icon-servicos_vidro2:before {
+	content: "\e61a";
+}
+.icon-apoio:before {
+	content: "\e61b";
+}
