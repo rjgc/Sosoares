@@ -427,7 +427,7 @@ Ext.define('Italbox.Viewport6', {
                xtype: 'toolbar',
                docked: 'top',
                cls: 'barraPesquisa',
-               html: '<div><span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 7px;"><i class="icon-produtos_caixilharia" style="font-size: 30px !important; margin: 12px;"></i>Produtos</span></div>',
+               html: '<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-produtos_caixilharia" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Produtos</span>',
               /* items: [
                {
                 //html: '<span style="background: transparent"><i class="icon-caixilharia2"></i>Produtos</span>'
@@ -750,6 +750,7 @@ Ext.define('Italbox.Viewport5', {
                                 //if (connect === 1) {
                                     Ext.getCmp('favorites').hide();
                                     Ext.getCmp('back').show();
+                                    Ext.getStore('Products').sync();
                                     Ext.getCmp('search').show();
                                /* }
                                 else{
