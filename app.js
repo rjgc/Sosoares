@@ -100,14 +100,14 @@ Ext.define('Italbox.Viewport7', {
         delegate: '#start-catalogos',
         event: 'tap',
         fn: function() {
-            if (connect === 1) {
+            //if (connect === 1) {
                 Ext.getCmp('menuI').hide();
                 Ext.getCmp('back').show();
                 Ext.getCmp('myList').show();
-            }
+           /* }
             else{
                 Ext.Msg.alert('Offline', Ext.getStore('Languages').getById(idioma).get('offline_catalogs'), Ext.emptyFn);
-            }
+            }*/
         }
     },
     {
@@ -117,6 +117,7 @@ Ext.define('Italbox.Viewport7', {
         fn: function() {
             Ext.getCmp('menuI').hide();
             Ext.getCmp('back').show();
+            Ext.getCmp('open-menu').show();
             Ext.getCmp('footer').hide();
             //Ext.getCmp('italbox').show();
             Ext.getCmp('favorites').setActiveItem(0);
@@ -128,14 +129,14 @@ Ext.define('Italbox.Viewport7', {
         delegate: '#start-favoritos',
         event: 'tap',
         fn: function() {
-            if (connect === 1) {
+          //  if (connect === 1) {
                 Ext.getCmp('menuI').hide();
                 Ext.getCmp('back').show();
                 Ext.getCmp('favorites').show();
-            }
+           /* }
             else{
                 Ext.Msg.alert('Offline', Ext.getStore('Languages').getById(idioma).get('offline_favorites'), Ext.emptyFn);
-            }
+            }*/
         }
     },
     {
@@ -387,7 +388,7 @@ Ext.define('Italbox.Viewport7', {
     }
 });
 
-/*Ext.define('Italbox.Viewport6', {
+Ext.define('Italbox.Viewport6', {
     extend: 'Ext.dataview.List',
     xtype : 'my-viewport6',
     cls: 'pesquisa',
@@ -409,11 +410,11 @@ Ext.define('Italbox.Viewport7', {
             easing: 'easeIn'
         }, 
         store: {id: 'produtos',
-                fields: ['id_produto', 'nome', 'descricao_1','descricao_2','descricao_3','descricao_4', 'foto', 'ref', 'estado', 'lastModified'],
-                data:tprodutos
+               /* fields: ['id_produto', 'nome', 'descricao_1','descricao_2','descricao_3','descricao_4', 'foto', 'ref', 'estado', 'lastModified'],
+                data:tprodutos*/
         },
         itemTpl:  '<div class="lista-pesquisa">'+
-            '<img src="'+caminho2+'{foto}" style="float:left; height:40px; margin-right:10px;"></img>' +
+            '<img src="{foto}" style="float:left; height:40px; margin-right:10px;"></img>' +
             '<div><b>Nome:</b> <span>{nome}</span></div>' +
             '<div><b>Ref:</b> <span>{ref}</span></div>' +
             '</div>',
@@ -636,7 +637,7 @@ Ext.define('Italbox.Viewport7', {
         }
     }
 });
-*/
+
 Ext.define('Italbox.Viewport5', {
     extend: 'Ext.tab.Panel',
     xtype : 'my-viewport5',
@@ -690,7 +691,7 @@ Ext.define('Italbox.Viewport5', {
                             'background-size: contain; background-position: center;',
                         },
                         {
-                            id: 'start-catalogos',
+                            id: 'produtos_caixilharia',
                             flex: 1,
                             style: 'margin:20px 20px 10px 10px;border-bottom: 7px solid #05698e;border-radius:5px;'+
                             'background: url(imgs/icons/caixilharia.png) no-repeat, rgba(16, 124, 164, .8);'+
@@ -735,6 +736,24 @@ Ext.define('Italbox.Viewport5', {
                         },
                         ],    
                     },*/
+                    ],
+                    
+                     listeners: [
+                        {
+                            element: 'element',
+                            delegate: '#produtos_caixilharia',
+                            event: 'tap',
+                            fn: function() {
+                                //if (connect === 1) {
+                                    Ext.getCmp('favorites').hide();
+                                    Ext.getCmp('back').show();
+                                    Ext.getCmp('search').show();
+                               /* }
+                                else{
+                                    Ext.Msg.alert('Offline', Ext.getStore('Languages').getById(idioma).get('offline_catalogs'), Ext.emptyFn);
+                                }*/
+                            }
+                        },
                     ],
                 },
                 {
@@ -1263,10 +1282,18 @@ Ext.define('Italbox.ViewportPanel', {
                     cls: 'back icon-back',
                     hidden: true,
                     handler: function () {
-                         Ext.getCmp('favorites').hide();
-                         Ext.getCmp('menuI').show();
-                         Ext.getCmp('footer').show();
-                         Ext.getCmp('back').hide();
+                        if(Ext.getCmp('search')._hidden === false)
+                        {
+                            Ext.getCmp('search').hide();
+                            Ext.getCmp('favorites').show();
+                        }
+                        else{
+                            Ext.getCmp('favorites').hide();
+                            Ext.getCmp('menuI').show();
+                            Ext.getCmp('footer').show();
+                            Ext.getCmp('open-menu').hide();
+                            Ext.getCmp('back').hide();
+                        }
                     /*if(Ext.getCmp('myList')._hidden === false || Ext.getCmp('italbox')._hidden === false || Ext.getCmp('favorites')._hidden === false || Ext.getCmp('help')._hidden === false || Ext.getCmp('search')._hidden === false )
 	            {
                         Ext.getCmp('menuI').show();
@@ -1315,6 +1342,7 @@ Ext.define('Italbox.ViewportPanel', {
                     align: 'right',
                     ui:      'plain',
                     xtype: 'button',
+                    id: 'open-menu',
                     hidden: true,
                     cls: 'open-menu icon-menu',
                     handler: function() {
@@ -2267,12 +2295,12 @@ Ext.define('Italbox.ViewportPanel', {
             id: 'favorites',
             cls: 'favorites'
         },
-      /*  {
+        {
             xtype: 'my-viewport6',
             hidden: true,
             id: 'search',
             cls: 'pesquisa',
-        },*/
+        },
         {
             xtype: 'my-viewport7',
             id: 'menuI',
@@ -2294,14 +2322,15 @@ Ext.application({
     models : [
         'Setting',
         'Favorite',
-        'Favorite2'
+        'Favorite2',
+        'Product'
               
     ],
     stores : [
         'Settings',
         'Languages',
         'Favorites',
-        'Favorites2',
+        'Products',
     ],
     
     icon: {
@@ -2335,6 +2364,9 @@ Ext.application({
             id: 'painel'
         });
         
+        Ext.getStore('produtos');
+        //Ext.getStore('produtos') = Ext.getStore('Products');
+        console.dir( Ext.getStore('produtos'));
         Ext.Msg.setZIndex(20);
         
         try{

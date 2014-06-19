@@ -162,8 +162,8 @@ body{
 }
 
 .pesquisa{
-   padding-top: 50px !important;
-   background: transparent;
+   padding-top: 60px !important;
+   background: #012f46;
 }
 
 .menuI{
@@ -528,10 +528,11 @@ body{
 	top: 0;
 	right: 0px;
 	position: absolute;
-	width: 45px;
-	height: 45px !important;
-        font-size: 19px !important;
+	width: 60px;
+	height: 60px !important;
+        font-size: 30px !important;
         text-align: -webkit-center !important;
+
 }
 
 .open-menu2{

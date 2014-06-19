@@ -27,11 +27,13 @@
 	content: "\e600";
 	font-size: 31px !important;
 	background-color: #022e45 !important;
+	visibility: visible !important;
 }
 .icon-tratamento:before {
 	content: "\e601";
 	font-size: 31px !important;
 	background-color: #022e45 !important;
+	visibility: visible !important;
 }
 .icon-telefone:before {
 	content: "\e602";
@@ -65,6 +67,7 @@
 }
 .icon-menu:before {
 	content: "\e60c";
+	color: #00aeef !important;
 }
 .icon-marcacao:before {
 	content: "\e60d";
@@ -86,6 +89,7 @@
 	content: "\e612";
 	font-size: 31px !important;
 	background-color: #022e45 !important;
+	visibility: visible !important;
 }
 .icon-call_black:before {
 	content: "\e613";
@@ -97,6 +101,7 @@
 	content: "\e615";
 	font-size: 31px !important;
 	background-color: #022e45 !important;
+	visibility: visible !important;
 }
 .icon-back:before {
 	content: "\e616";
