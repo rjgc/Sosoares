@@ -103,9 +103,14 @@
 	background-color: #022e45 !important;
 	visibility: visible !important;
 }
+
 .icon-back:before {
 	content: "\e616";
 	color: #00aeef !important;
+}
+.icon-front:before {
+	content: "\e616";
+	color: #FFF !important;
 }
 .icon-apoio:before {
 	content: "\e617";

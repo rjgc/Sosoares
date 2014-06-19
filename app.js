@@ -1,3 +1,4 @@
+var thumb_products = 'http://www.critecns.com/sosoares/assets/uploads/produtos/thumb/'
 
 Ext.Loader.setConfig({
     enabled: true,
@@ -409,14 +410,14 @@ Ext.define('Italbox.Viewport6', {
             direction: 'down',
             easing: 'easeIn'
         }, 
-        store: {id: 'produtos',
+        store: 'Products',//Ext.getStore('Products').data.all,
+            /*{id: 'produtos',
                /* fields: ['id_produto', 'nome', 'descricao_1','descricao_2','descricao_3','descricao_4', 'foto', 'ref', 'estado', 'lastModified'],
                 data:tprodutos*/
-        },
+        /*},*/
         itemTpl:  '<div class="lista-pesquisa">'+
-            '<img src="{foto}" style="float:left; height:40px; margin-right:10px;"></img>' +
-            '<div><b>Nome:</b> <span>{nome}</span></div>' +
-            '<div><b>Ref:</b> <span>{ref}</span></div>' +
+            '<img src="'+thumb_products+'{foto_1}" style="float:left; height:30px; margin-right:10px;"><i class="icon-front front"></i></img>' +
+            '<div> <span>{nome_pt}</span></div>' +
             '</div>',
          
         emptyText: '<div class="lista-pesquisa">Sem resultados</div>',
@@ -426,10 +427,12 @@ Ext.define('Italbox.Viewport6', {
                xtype: 'toolbar',
                docked: 'top',
                cls: 'barraPesquisa',
-               items: [
+               html: '<div><span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 7px;"><i class="icon-produtos_caixilharia" style="font-size: 30px !important; margin: 12px;"></i>Produtos</span></div>',
+              /* items: [
                {
-                    xtype: 'searchfield',
-                    placeHolder: 'Pesquisa...',
+                //html: '<span style="background: transparent"><i class="icon-caixilharia2"></i>Produtos</span>'
+                   /* xtype: 'searchfield',
+                    placeHolder: 'Produtos',
                     itemId: 'searchBox',
                     id: 'searchBox',
                     cls: 'search',
@@ -451,9 +454,9 @@ Ext.define('Italbox.Viewport6', {
                         clearicontap: function() {
                              Ext.getStore('produtos').clearFilter();
                         },
-                    }
-                },
-                ],
+                    }*/
+              /* },*/
+              //  ],
             }
         ],
         listeners: {
@@ -2364,9 +2367,9 @@ Ext.application({
             id: 'painel'
         });
         
-        Ext.getStore('produtos');
+        Ext.getStore('Products');
         //Ext.getStore('produtos') = Ext.getStore('Products');
-        console.dir( Ext.getStore('produtos'));
+        console.dir( Ext.getStore('Products').data.all);
         Ext.Msg.setZIndex(20);
         
         try{

@@ -349,8 +349,8 @@ body{
 
 .barraPesquisa
 {
-        background: #000000 !important;
-        border-bottom: 3px solid #000000 !important;
+        background: #012f46 !important;
+        border-bottom: 3px solid #012f46 !important;
 }
 
 .barraPaginas
@@ -365,7 +365,7 @@ body{
 }
 
 .search input::-webkit-input-placeholder {
-        color: #FFFFFF !important;
+        color: #FFF !important;
 }  
 
 .tabPaginas{
@@ -613,6 +613,15 @@ body{
         text-align: -webkit-center !important;
 }
 
+.front{
+   transform: scaleX(-1);
+   -moz-transform: scaleX(-1);
+   -webkit-transform: scaleX(-1);
+   -ms-transform: scaleX(-1);
+   float: right;
+   margin-right: 5px;
+}
+
 .remove{
   position: absolute;
   margin-top: 1px;
@@ -623,12 +632,13 @@ body{
 .lista-pesquisa div {
 	font-size:14px;
         text-transform:uppercase;
-        font-family: 'robotomedium';
+        /*font-family: 'robotomedium';*/
 }
 
 .lista-pesquisa span {
-	font-size:13px;
-        font-family: 'robotomedium';
+	font-size:19px;
+       /* font-family: 'robotomedium';*/
+        color: #FFF;
 }
 
 .header > .search{
@@ -1019,7 +1029,7 @@ border-radius: 0px;
    -webkit-border-radius: 0px !important;
    border-radius: 0px !important;
    -webkit-box-shadow: none !important;
-   border: 2px solid #000 !important;
+   border: 2px solid #012f46 !important;
 }
 
 .x-toolbar .x-field-search .x-component-outer {
@@ -1028,7 +1038,7 @@ border-radius: 0px;
 }
 
 .x-list .x-list-item {
-   background: #FFFFFF;
+   background: #033c59;
 }
 
 .x-list .x-list-item.x-item-selected .x-list-item-label {
@@ -1040,12 +1050,12 @@ border-radius: 0px;
 }
 
 .x-list-normal .x-list-item.x-item-pressed .x-list-item-label {
-   border-top-color: #CCCCCC !important;
-   background-color: #CCCCCC !important;
+   border-top-color: #012f46 !important;
+   background-color: #012f46 !important;
 }
 
 .x-list-normal .x-list-item .x-list-item-label {
-   border-top: 1px solid #000000;
+   border-top: 1px solid #054667;
 }
 
 .x-toolbar .x-field {
@@ -1067,7 +1077,7 @@ border-radius: 0px;
 }
 
 .x-toolbar .x-field-search .x-component-outer {
-   background-color: #000000 !important;
+   background-color: #012f46 !important;
 }
 
 .x-toolbar .x-field .x-clear-icon {
@@ -1087,7 +1097,7 @@ border-radius: 0px;
 }
 
 .x-list-normal .x-list-item:last-child .x-list-item-label {
-   border-bottom: 1px solid #000000 !important;
+   border-bottom: 1px solid #054667 !important;
 }
 
 .x-button.x-button-plain.x-button-pressing, .x-button.x-button-plain.x-button-pressed, .x-toolbar .x-button.x-button-plain.x-button-pressing, .x-toolbar .x-button.x-button-plain.x-button-pressed {
