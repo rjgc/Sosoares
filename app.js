@@ -750,7 +750,7 @@ Ext.define('Italbox.Viewport5', {
                                 //if (connect === 1) {
                                     Ext.getCmp('favorites').hide();
                                     Ext.getCmp('back').show();
-                                    Ext.getStore('Products').sync();
+                                    Ext.getStore('Products').load();
                                     Ext.getCmp('search').show();
                                /* }
                                 else{
