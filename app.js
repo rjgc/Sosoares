@@ -15,8 +15,13 @@ Ext.define('Italbox.Viewport8', {
     //alias: "widget.grocerieslist",
     config: {
         fullscreen: true,
-        //useToolbar: false,
-        //title: 'Groceries',
+        useToolbar: false,
+       backButton: {ui: 'back', hidden: true},
+        /*toolbar: {
+items: [{xtype: 'spacer'},{iconCls: 'home', iconMask: true, id: 'homeBtn'}]
+},*/
+
+        title: 'Produtos',
         displayField: 'text',
         store: 'Teste',
         listConfig:{
@@ -34,6 +39,13 @@ Ext.define('Italbox.Viewport8', {
             scrollable: true,
             html: 'Hey buddy'
         },
+        items: [
+               {
+               xtype: 'toolbar',
+               docked: 'top',
+               cls: 'barraPesquisa',
+               html: '<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-produtos_caixilharia" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Produtos</span>',
+               }],
         listeners: {
          //This handler is require only if you want to update the detail card, etc. 
             itemtap: function(nestedList, list, index, element, wall) {
@@ -1329,8 +1341,10 @@ Ext.define('Italbox.ViewportPanel', {
                             Ext.getCmp('search').hide();
                              Ext.getCmp('teste').hide();
                             Ext.getCmp('favorites').show();
-                        }else if (Ext.getCmp('teste')._hidden === false && Ext.getCmp('teste').getBackButton( )._hidden === false){
-                            Ext.getCmp('teste').fireAction('back', [Ext.getCmp('teste'), Ext.getCmp('teste').getLastNode(), Ext.getCmp('teste').getLastActiveList(), Ext.getCmp('teste').getDetailCard()], 'doBack');
+                        }else if (Ext.getCmp('teste')._hidden === false && Ext.getCmp('teste').getBackButton()._hidden === false){
+                            
+                            Ext.getCmp('teste').onBackTap()
+                           
                                console.dir(Ext.getCmp('teste').getBackButton());
                         
                          }else if (Ext.getCmp('teste')._hidden === false && Ext.getCmp('teste').getBackButton( )._hidden === true){
