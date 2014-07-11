@@ -894,6 +894,10 @@ body{
         border-bottom: solid; 1px;
 }
 
+.carousel_obras{
+   height: 70% !important;
+}
+
 @media  
 only screen and (-webkit-min-device-pixel-ratio: 2),  
 only screen and ( min--moz-device-pixel-ratio: 2),  
@@ -1047,11 +1051,11 @@ border-radius: 0px;
 }
 
 .x-list .x-list-item.x-item-selected .x-list-item-label {
-   background-image: #CCCCCC !important;
-   background: #CCCCCC !important;
+   /*background-image: #CCCCCC !important;*/
+   background: #012f46 !important;
    color : #000000 !important;
-   border-top-color: #000000 !important;
-   border-bottom-color: #000000 !important;
+   border-top-color: #054667 !important;
+   border-bottom-color: #054667 !important;
 }
 
 .x-list-normal .x-list-item.x-item-pressed .x-list-item-label {
@@ -1120,3 +1124,24 @@ border-radius: 0px;
    -webkit-text-fill-color: #FFF !important;
 }
 
+.x-carousel-indicator-dark span.x-carousel-indicator-active {
+background-color: rgba(255, 255, 255, 1) !important;
+}
+
+.x-carousel-indicator-dark span {
+background-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.leaf_panel p{
+   color: #FFF !important;
+   text-align: justify !important;
+}
+
+.leaf_panel ul{
+   color: #FFF !important;
+   text-align: justify !important;
+}
+
+.leaf_panel h4{
+   color: #107ca4 !important
+}

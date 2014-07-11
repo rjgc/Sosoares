@@ -1,29 +1,22 @@
-/*Ext.define('ItalboxCatalog.store.Languages', {
-    extend: 'Ext.data.Store',
-    config:{
-        autoLoad: true,
-        fields: [
-            { name: 'id', type: 'int' },
-           
-        ],
-        data : [
-        {
-        id : 1,
-        },
-        ]
-    }
-});*/
-
-Ext.define('ItalboxCatalog.store.Teste', {
+Ext.define('ItalboxCatalog.store.Products_Caixilharia', {
         extend: 'Ext.data.TreeStore',
         //defaultRootProperty: 'items',
-
         config: {
              fields: [
-               // {name: 'id',type: 'string'},
+                {name: 'id_caixilharia',type: 'int'},
                 {name: 'text',type: 'string'},
+                {name: 'descricao',type: 'string'},
                 {name: 'foto', type: 'string' },
              ],
+        defaultRootProperty: 'items',
+        proxy: {
+            type: 'ajax',
+            url: 'http://critecns.com/sosoares_app/connect2.php?table=produtos_aluminio'
+        },
+        /*autoLoad: true,*/
+        root: {
+            text:'Produtos'
+        }
         //model: 'App.model.Grocery',
           /*    defaultRootProperty: 'items',
             root: {
@@ -65,15 +58,7 @@ Ext.define('ItalboxCatalog.store.Teste', {
                     }]
                 }]
             }*/
-        defaultRootProperty: 'items',
-        proxy: {
-            type: 'ajax',
-            url: 'http://critecns.com/sosoares_app/connect2.php?table=produtos_aluminio'
-        },
-        autoLoad: true,
-        root: {
-            text:'Produtos'
-        }
+        
     }
 
 

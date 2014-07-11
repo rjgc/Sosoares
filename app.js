@@ -1,5 +1,7 @@
 var thumb_products = 'http://www.critecns.com/sosoares/assets/uploads/produtos/thumb/'
-
+var products = 'http://www.critecns.com/sosoares/assets/uploads/produtos/'
+var thumb_works = 'http://www.critecns.com/sosoares/assets/uploads/obras/thumb/'
+var works = 'http://www.critecns.com/sosoares/assets/uploads/obras/'
 Ext.Loader.setConfig({
     enabled: true,
     paths: {
@@ -7,23 +9,143 @@ Ext.Loader.setConfig({
     }
 });
 
-Ext.define('Italbox.Viewport8', {
+Ext.define('Italbox.Viewport9', {
     extend: 'Ext.NestedList',
-     xtype : 'my-viewport8',
+     xtype : 'my-viewport9',
       cls: 'pesquisa',
-      id: 'teste',
+      id: 'works',
     //alias: "widget.grocerieslist",
     config: {
         fullscreen: true,
         useToolbar: false,
-       backButton: {ui: 'back', hidden: true},
-        /*toolbar: {
-items: [{xtype: 'spacer'},{iconCls: 'home', iconMask: true, id: 'homeBtn'}]
-},*/
+        showAnimation: 
+            {
+                type: 'slideIn',
+                duration: 1000,
+                delay: 700,
+                direction: 'down',
+                easing: 'easeIn'
+            },  
+            hideAnimation: 
+            {
+                type: 'slideOut',
+                duration: 700,
+                direction: 'up',
+                easing: 'easeOut'
+            }, 
+
+        title: 'Obras',
+        displayField: 'text',
+        store: 'Obras',
+        listConfig:{
+        cls: 'pesquisa2',
+        itemTpl:  '<div class="lista-pesquisa">'+
+            '<img src="'+thumb_works+'{foto}" style="float:left; height:30px; margin-right:10px;"><i class="icon-front front"></i></img>' +
+            '<div> <span>{text}</span></div>' +
+            '</div>',
+         
+        emptyText: '<div class="lista-pesquisa">Sem resultados</div>',
+        },
+        detailCard:{
+            xtype:'panel',
+            //styleHtmlContent: true,
+            scrollable: true,
+            //padding: '0px !important',
+            //html: '',
+            style: 'background-color: #054667;',
+           // fullscreen: true,
+            //height: '50%',
+            items: [{
+                        xtype: 'carousel',
+                        id: 'carousel_obras',
+                        /*autoSlide: true,
+                        carouselSlideDelay: 3500,
+                        /*cls: 'carousel_obras',*/
+                        height: 320,
+                    },
+                    {
+                     id: 'html_obras',
+                    html  : '',
+                    },
+            ]
+        },
+        items: [
+               {
+               xtype: 'toolbar',
+               docked: 'top',
+               cls: 'barraPesquisa',
+               id: 'works_toolbar',
+               html: '<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-obras" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Obras</span>',
+               }],
+        listeners: {
+            leafitemtap: function(me, list, index, target, record) {
+                  Ext.getCmp('carousel_obras').removeAll();
+                  Ext.getCmp('html_obras').setHtml('');
+                  Ext.getStore('Works_Gallery').load( function(pictures , operation ) {
+                    var items = [];
+                    Ext.each( pictures, function(picture) {
+                      if (picture.get('id_obra') == record.get('id_obra')) {
+                        //return;
+                      items.push({
+                        xtype: 'image',
+                        src: works+picture.get('foto'),
+                        style: 'background-size: 100% 100%;'
+                      });
+                       /*items.push({
+                        xtype: 'image',
+                        src: works+record.get('foto'),
+                        style: 'background-size: 100% 100%;'
+                      });  */           
+                   // });
+                   
+                    }})
+                     Ext.getCmp('carousel_obras').setItems(items);
+                    Ext.getCmp('carousel_obras').setActiveItem(0);
+                    
+                    Ext.getCmp('html_obras').setHtml('<div style="max-width:100%" class="leaf_panel"><br/><div style="margin:10px"><h3 style="font-size: 24px; color:#00aeef !important">'+record.get('text')+'</h3><br><p style="color:#FFF !important;">'+record.get('descricao')+'</p></div></div>');
+                    
+                    })
+                    // fill items into carousel
+                   
+               // });
+             /* me.getDetailCard().setHtml('<div style="max-width:100%" class="leaf_panel">'+
+                                        '<img style="max-width:100%; max-height:70%" src="'+works+record.get('foto')+'">'+
+                                        '<br/><div style="margin:10px"><h3 style="font-size: 24px; color:#00aeef !important">'+record.get('text')+'</h3><br><p style="color:#FFF !important;">'+record.get('descricao')+'</p></div></div>');*/
+              // me.getDetailCard().setStyle('background-color: #054667;margin: 0px !important;padding: 0px !important');
+               // me.getDetailCard().setFullscreen(true);
+            }
+        }
+    }
+});
+
+Ext.define('Italbox.Viewport8', {
+    extend: 'Ext.NestedList',
+     xtype : 'my-viewport8',
+      cls: 'pesquisa',
+      id: 'products',
+    //alias: "widget.grocerieslist",
+    config: {
+        fullscreen: true,
+        useToolbar: false,
+        showAnimation: 
+            {
+                type: 'slideIn',
+                duration: 1000,
+                delay: 700,
+                direction: 'down',
+                easing: 'easeIn'
+            },  
+            hideAnimation: 
+            {
+                type: 'slideOut',
+                duration: 700,
+                direction: 'up',
+                easing: 'easeOut'
+            }, 
 
         title: 'Produtos',
         displayField: 'text',
-        store: 'Teste',
+        store: '',
         listConfig:{
         cls: 'pesquisa2',
         itemTpl:  '<div class="lista-pesquisa">'+
@@ -35,21 +157,27 @@ items: [{xtype: 'spacer'},{iconCls: 'home', iconMask: true, id: 'homeBtn'}]
         },
         detailCard:{
             xtype:'panel',
-            styleHtmlContent: true,
+            //styleHtmlContent: true,
             scrollable: true,
-            html: 'Hey buddy'
+            //padding: '0px !important',
+            html: '',
+            style: 'background-color: #054667;'
         },
         items: [
                {
                xtype: 'toolbar',
                docked: 'top',
                cls: 'barraPesquisa',
+               id: 'products_toolbar',
                html: '<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-produtos_caixilharia" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Produtos</span>',
                }],
         listeners: {
-         //This handler is require only if you want to update the detail card, etc. 
-            itemtap: function(nestedList, list, index, element, wall) {
-               return this.getDetailCard().setHtml('Got it');
+            leafitemtap: function(me, list, index, target, record) {
+              me.getDetailCard().setHtml('<div style="max-width:100%" class="leaf_panel">'+
+                                        '<img style="max-width:100%; max-height:70%" src="'+products+record.get('foto')+'">'+
+                                        '<br/><div style="margin:10px"><h3 style="font-size: 24px; color:#00aeef !important">'+record.get('text')+'</h3><br><p style="color:#FFF !important;">'+record.get('descricao')+'</p></div></div>');
+              // me.getDetailCard().setStyle('background-color: #054667;margin: 0px !important;padding: 0px !important');
+               // me.getDetailCard().setFullscreen(true);
             }
         }
     }
@@ -90,7 +218,7 @@ Ext.define('Italbox.Viewport7', {
         },
         items: [
         {
-            id: 'start-italbox',
+            id: 'start-caixilharia',
             flex: 1,
             style: 'margin:20px 10px 10px 20px;'+
             'border-radius:5px; border-bottom: 7px solid #05698e;'+
@@ -98,7 +226,7 @@ Ext.define('Italbox.Viewport7', {
             'background-size: contain; background-position: center;',
         },
         {
-            id: 'start-catalogos',
+            id: 'start-vidro',
             flex: 1,
             style: 'margin:20px 20px 10px 10px;border-bottom: 7px solid #05698e;border-radius:5px;'+
             'background: url(imgs/icons/vidro_menu.png) no-repeat, rgba(16, 124, 164, .8);'+
@@ -113,14 +241,14 @@ Ext.define('Italbox.Viewport7', {
             align: 'stretch'
         },
         items: [{
-            id: 'start-favoritos',
+            id: 'start-extrusao',
             flex: 1,
             style: 'margin:10px 10px 20px 20px;border-bottom: 7px solid #05698e;border-radius:5px;'+
             'background: url(imgs/icons/extrusao_menu.png) no-repeat, rgba(16, 124, 164, .8);'+
             'background-size: contain; background-position: center;',
         
         }, {
-            id: 'start-language',
+            id: 'start-tratamento',
             flex: 1,
             style: 'margin:10px 20px 20px 10px;border-bottom: 7px solid #05698e; border-radius:5px;'+
             'background: url(imgs/icons/tratamento_menu.png) no-repeat, rgba(16, 124, 164, .8);'+
@@ -147,13 +275,17 @@ Ext.define('Italbox.Viewport7', {
     listeners: [
     {
         element: 'element',
-        delegate: '#start-catalogos',
+        delegate: '#start-vidro',
         event: 'tap',
         fn: function() {
             //if (connect === 1) {
-                Ext.getCmp('menuI').hide();
-                Ext.getCmp('back').show();
-                Ext.getCmp('myList').show();
+               Ext.getCmp('menuI').hide();
+            Ext.getCmp('back').show();
+            Ext.getCmp('open-menu').show();
+            Ext.getCmp('footer').hide();
+            //Ext.getCmp('italbox').show();
+            Ext.getCmp('favorites').setActiveItem(1);
+            Ext.getCmp('favorites').show();
            /* }
             else{
                 Ext.Msg.alert('Offline', Ext.getStore('Languages').getById(idioma).get('offline_catalogs'), Ext.emptyFn);
@@ -162,7 +294,7 @@ Ext.define('Italbox.Viewport7', {
     },
     {
         element: 'element',
-        delegate: '#start-italbox',
+        delegate: '#start-caixilharia',
         event: 'tap',
         fn: function() {
             Ext.getCmp('menuI').hide();
@@ -176,13 +308,36 @@ Ext.define('Italbox.Viewport7', {
     },
      {
         element: 'element',
-        delegate: '#start-favoritos',
+        delegate: '#start-extrusao',
         event: 'tap',
         fn: function() {
           //  if (connect === 1) {
-                Ext.getCmp('menuI').hide();
-                Ext.getCmp('back').show();
-                Ext.getCmp('favorites').show();
+               Ext.getCmp('menuI').hide();
+            Ext.getCmp('back').show();
+            Ext.getCmp('open-menu').show();
+            Ext.getCmp('footer').hide();
+            //Ext.getCmp('italbox').show();
+            Ext.getCmp('favorites').setActiveItem(2);
+            Ext.getCmp('favorites').show();
+           /* }
+            else{
+                Ext.Msg.alert('Offline', Ext.getStore('Languages').getById(idioma).get('offline_favorites'), Ext.emptyFn);
+            }*/
+        }
+    },
+    {
+        element: 'element',
+        delegate: '#start-tratamento',
+        event: 'tap',
+        fn: function() {
+          //  if (connect === 1) {
+            Ext.getCmp('menuI').hide();
+            Ext.getCmp('back').show();
+            Ext.getCmp('open-menu').show();
+            Ext.getCmp('footer').hide();
+            //Ext.getCmp('italbox').show();
+            Ext.getCmp('favorites').setActiveItem(3);
+            Ext.getCmp('favorites').show();
            /* }
             else{
                 Ext.Msg.alert('Offline', Ext.getStore('Languages').getById(idioma).get('offline_favorites'), Ext.emptyFn);
@@ -758,7 +913,7 @@ Ext.define('Italbox.Viewport5', {
                             align: 'stretch'
                         },
                         items: [{
-                            id: 'start-favoritos',
+                            id: 'obras_caixilharia',
                             flex: 1,
                             style: 'margin:10px 10px 20px 20px;border-bottom: 7px solid #05698e;border-radius:5px;'+
                             'background: url(imgs/icons/obras.png) no-repeat, rgba(16, 124, 164, .8);'+
@@ -799,9 +954,30 @@ Ext.define('Italbox.Viewport5', {
                                 //if (connect === 1) {
                                     Ext.getCmp('favorites').hide();
                                     Ext.getCmp('back').show();
-                                    /*Ext.getStore('Products').load();
-                                    Ext.getCmp('search').show();*/
-                                    Ext.getCmp('teste').show();
+                                    /*Ext.getCmp('search').show();*/
+                                    Ext.getStore('Products_Caixilharia').load();
+                                    Ext.getCmp('products').setStore('Products_Caixilharia');
+                                    Ext.getCmp('products_toolbar').setHtml('<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-produtos_caixilharia" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Produtos</span>');
+                                    Ext.getCmp('products').show();
+                               /* }
+                                else{
+                                    Ext.Msg.alert('Offline', Ext.getStore('Languages').getById(idioma).get('offline_catalogs'), Ext.emptyFn);
+                                }*/
+                            }
+                        },
+                         {
+                            element: 'element',
+                            delegate: '#obras_caixilharia',
+                            event: 'tap',
+                            fn: function() {
+                                //if (connect === 1) {
+                                    Ext.getCmp('favorites').hide();
+                                    Ext.getCmp('back').show();
+                                    /*Ext.getCmp('search').show();*/
+                                    Ext.getStore('Works').load();
+                                    Ext.getCmp('works').setStore('Works');
+                                   /* Ext.getCmp('products_toolbar').setHtml('<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-produtos_caixilharia" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Produtos</span>');*/
+                                    Ext.getCmp('works').show();
                                /* }
                                 else{
                                     Ext.Msg.alert('Offline', Ext.getStore('Languages').getById(idioma).get('offline_catalogs'), Ext.emptyFn);
@@ -837,7 +1013,7 @@ Ext.define('Italbox.Viewport5', {
                             'background-size: contain; background-position: center;',
                         },
                         {
-                            id: 'start-catalogos',
+                            id: 'produtos_vidro',
                             flex: 1,
                             style: 'margin:20px 20px 10px 10px;border-bottom: 7px solid #05698e;border-radius:5px;'+
                             'background: url(imgs/icons/vidro.png) no-repeat, rgba(16, 124, 164, .8);'+
@@ -883,6 +1059,27 @@ Ext.define('Italbox.Viewport5', {
                         ],    
                     },*/
                     ],
+                     listeners: [
+                        {
+                            element: 'element',
+                            delegate: '#produtos_vidro',
+                            event: 'tap',
+                            fn: function() {
+                                //if (connect === 1) {
+                                    Ext.getCmp('favorites').hide();
+                                    Ext.getCmp('back').show();
+                                    /*Ext.getCmp('search').show();*/
+                                    Ext.getStore('Products_Vidro').load();
+                                     Ext.getCmp('products_toolbar').setHtml('<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-produtos_vidro" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Produtos</span>');
+                                    Ext.getCmp('products').setStore('Products_Vidro');
+                                    Ext.getCmp('products').show();
+                               /* }
+                                else{
+                                    Ext.Msg.alert('Offline', Ext.getStore('Languages').getById(idioma).get('offline_catalogs'), Ext.emptyFn);
+                                }*/
+                            }
+                        },
+                    ],
                 },
                 {
                     //title: 'Teste',
@@ -910,7 +1107,7 @@ Ext.define('Italbox.Viewport5', {
                             'background-size: contain; background-position: center;',
                         },
                         {
-                            id: 'start-catalogos',
+                            id: 'produtos_extrusao',
                             flex: 1,
                             style: 'margin:20px 20px 10px 10px;border-bottom: 7px solid #05698e;border-radius:5px;'+
                             'background: url(imgs/icons/extrusao.png) no-repeat, rgba(16, 124, 164, .8);'+
@@ -940,7 +1137,28 @@ Ext.define('Italbox.Viewport5', {
                         },
                         ]
                     },
-                    ],    
+                    ],
+                     listeners: [
+                        {
+                            element: 'element',
+                            delegate: '#produtos_extrusao',
+                            event: 'tap',
+                            fn: function() {
+                                //if (connect === 1) {
+                                    Ext.getCmp('favorites').hide();
+                                    Ext.getCmp('back').show();
+                                    /*Ext.getCmp('search').show();*/
+                                    Ext.getStore('Products_Extrusao').load();
+                                     Ext.getCmp('products_toolbar').setHtml('<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-produtos_extrusao" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Produtos</span>');
+                                    Ext.getCmp('products').setStore('Products_Extrusao');
+                                    Ext.getCmp('products').show();
+                               /* }
+                                else{
+                                    Ext.Msg.alert('Offline', Ext.getStore('Languages').getById(idioma).get('offline_catalogs'), Ext.emptyFn);
+                                }*/
+                            }
+                        },
+                    ],
                 },
                 {
                     //title: 'Teste',
@@ -1339,18 +1557,23 @@ Ext.define('Italbox.ViewportPanel', {
                         if(Ext.getCmp('search')._hidden === false)
                         {
                             Ext.getCmp('search').hide();
-                             Ext.getCmp('teste').hide();
+                             Ext.getCmp('products').hide();
+                              Ext.getCmp('works').hide();
                             Ext.getCmp('favorites').show();
-                        }else if (Ext.getCmp('teste')._hidden === false && Ext.getCmp('teste').getBackButton()._hidden === false){
+                        }else if (Ext.getCmp('products')._hidden === false && Ext.getCmp('products').getBackButton()._hidden === false){
                             
-                            Ext.getCmp('teste').onBackTap()
-                           
-                               console.dir(Ext.getCmp('teste').getBackButton());
+                            Ext.getCmp('products').onBackTap();
+                               //console.dir(Ext.getCmp('teste').getBackButton());
+                         }else if (Ext.getCmp('works')._hidden === false && Ext.getCmp('works').getBackButton()._hidden === false){
+                            
+                            Ext.getCmp('works').onBackTap();
+                               //console.dir(Ext.getCmp('teste').getBackButton());
                         
-                         }else if (Ext.getCmp('teste')._hidden === false && Ext.getCmp('teste').getBackButton( )._hidden === true){
+                         }else if (Ext.getCmp('products')._hidden === false && Ext.getCmp('products').getBackButton( )._hidden === true || Ext.getCmp('works')._hidden === false && Ext.getCmp('works').getBackButton( )._hidden === true){
                              Ext.getCmp('menuI').hide();
                             Ext.getCmp('footer').hide();
-                            Ext.getCmp('teste').hide();
+                            Ext.getCmp('products').hide();
+                             Ext.getCmp('works').hide();
                              Ext.getCmp('favorites').show();
                         }
                         else{
@@ -2375,7 +2598,13 @@ Ext.define('Italbox.ViewportPanel', {
         },
         {
             xtype: 'my-viewport8',
-            id: 'teste',
+            id: 'products',
+            cls: 'pesquisa',
+            hidden: true,
+        },
+        {
+            xtype: 'my-viewport9',
+            id: 'works',
             cls: 'pesquisa',
             hidden: true,
         },
@@ -2396,15 +2625,19 @@ Ext.application({
         'Setting',
         'Favorite',
         'Favorite2',
-        'Product'
+       // 'Product'
               
     ],
     stores : [
         'Settings',
         'Languages',
         'Favorites',
-        'Products',
-        'Teste'
+        //'Products',
+        'Products_Caixilharia',
+        'Products_Extrusao',
+        'Products_Vidro',
+        'Works',
+        'Works_Gallery',
     ],
     
     icon: {
@@ -2440,7 +2673,7 @@ Ext.application({
         
         //Ext.getStore('Products');
         //Ext.getStore('produtos') = Ext.getStore('Products');
-        console.dir( Ext.getStore('Teste'));
+        //console.dir( Ext.getStore('Teste'));
         Ext.Msg.setZIndex(20);
         
         try{
