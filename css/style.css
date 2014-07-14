@@ -171,6 +171,18 @@ body{
    background: #012f46;
 }
 
+.menu-sosoares{
+   /*padding-top: 60px !important;*/
+   background: #012f46;
+   z-index: 20 !important;
+}
+
+.barra-menu{
+    margin-top: 60px !important;
+    background: #012f46 !important;
+    border-bottom: 3px solid #012f46 !important;
+}
+
 .menuI{
    padding-top: 60px !important;
    padding-bottom: 60px !important;
@@ -636,8 +648,8 @@ body{
 
 .lista-pesquisa div {
 	font-size:14px;
-        text-transform:uppercase;
-        /*font-family: 'robotomedium';*/
+       /* text-transform:uppercase;
+        font-family: 'robotomedium';*/
 }
 
 .lista-pesquisa span {

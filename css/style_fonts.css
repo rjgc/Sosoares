@@ -67,7 +67,7 @@
 }
 .icon-menu:before {
 	content: "\e60c";
-	color: #00aeef !important;
+	/*color: #00aeef !important;*/
 }
 .icon-marcacao:before {
 	content: "\e60d";
@@ -84,6 +84,9 @@
 .icon-idioma:before {
 	content: "\e611";
 	font-size: 37px;
+}
+.icon-language:before {
+	content: "\e611";
 }
 .icon-extrusao:before {
 	content: "\e612";
@@ -122,4 +125,7 @@
 .icon-ajuda:before {
 	content: "\e619";
 	font-size: 37px;
+}
+.icon-help:before {
+	content: "\e619";
 }
