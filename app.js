@@ -317,7 +317,7 @@ Ext.define('Italbox.Viewport8', {
             Ext.getCmp('html_pic_produtos').setHeight(Ext.Viewport.getWindowHeight()/1.7);
          }
          else {
-            Ext.getCmp('html_pic_produtos').setHeight(Ext.Viewport.getWindowHeight()*1.2);
+            Ext.getCmp('html_pic_produtos').setHeight(Ext.Viewport.getWindowHeight()*1.4);
          }
        
     },
@@ -327,7 +327,7 @@ Ext.define('Italbox.Viewport8', {
             Ext.getCmp('html_pic_produtos').setHeight(Ext.Viewport.getWindowHeight()/1.7);
          }
          else {
-            Ext.getCmp('html_pic_produtos').setHeight(Ext.Viewport.getWindowHeight()*1.2);
+            Ext.getCmp('html_pic_produtos').setHeight(Ext.Viewport.getWindowHeight()*1.4);
          }
     }
 });
@@ -1087,7 +1087,7 @@ Ext.define('Italbox.Viewport5', {
                         },
                         items: [
                         {
-                            id: 'start-italbox',
+                            id: 'sosoares',
                             flex: 1,
                             style: 'margin:20px 10px 10px 20px;'+
                             'border-radius:5px; border-bottom: 7px solid #05698e;'+
@@ -1143,6 +1143,26 @@ Ext.define('Italbox.Viewport5', {
                     ],
                     
                      listeners: [
+                        {
+                            element: 'element',
+                            delegate: '#sosoares',
+                            event: 'tap',
+                            fn: function() {
+                                //if (connect === 1) {
+                                    Ext.getCmp('favorites').hide();
+                                    Ext.getCmp('back').show();
+                                    /*Ext.getCmp('search').show();*/
+                                   /* Ext.getStore('Services_Caixilharia').load();*/
+                                    Ext.getCmp('multi').setStore('Group');
+                                   /* Ext.getCmp('products_toolbar').setHtml('<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-produtos_caixilharia" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Produtos</span>');*/
+                                   Ext.getCmp('multi_toolbar').setHtml('<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-sosoares" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Serviços</span>');
+                                    Ext.getCmp('multi').show();
+                               /* }
+                                else{
+                                    Ext.Msg.alert('Offline', Ext.getStore('Languages').getById(idioma).get('offline_catalogs'), Ext.emptyFn);
+                                }*/
+                            }
+                        },
                         {
                             element: 'element',
                             delegate: '#produtos_caixilharia',
@@ -1221,7 +1241,7 @@ Ext.define('Italbox.Viewport5', {
                         },
                         items: [
                         {
-                            id: 'start-italbox',
+                            id: 'sosoares',
                             flex: 1,
                             style: 'margin:20px 10px 10px 20px;'+
                             'border-radius:5px; border-bottom: 7px solid #05698e;'+
@@ -1244,7 +1264,7 @@ Ext.define('Italbox.Viewport5', {
                             align: 'stretch'
                         },
                         items: [{
-                            id: 'start-favoritos',
+                            id: 'servicos_vidro',
                             flex: 1,
                             style: 'margin:10px 10px 20px 20px;border-bottom: 7px solid #05698e;border-radius:5px;'+
                             'background: url(imgs/icons/servicos_vidro.png) no-repeat, rgba(16, 124, 164, .8);'+
@@ -1278,6 +1298,26 @@ Ext.define('Italbox.Viewport5', {
                      listeners: [
                         {
                             element: 'element',
+                            delegate: '#sosoares',
+                            event: 'tap',
+                            fn: function() {
+                                //if (connect === 1) {
+                                    Ext.getCmp('favorites').hide();
+                                    Ext.getCmp('back').show();
+                                    /*Ext.getCmp('search').show();*/
+                                   /* Ext.getStore('Services_Caixilharia').load();*/
+                                    Ext.getCmp('multi_toolbar').setHtml('<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-sosoares" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Serviços</span>');
+                                    Ext.getCmp('multi').setStore('Group');
+                                   /* Ext.getCmp('products_toolbar').setHtml('<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-produtos_caixilharia" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Produtos</span>');*/
+                                    Ext.getCmp('multi').show();
+                               /* }
+                                else{
+                                    Ext.Msg.alert('Offline', Ext.getStore('Languages').getById(idioma).get('offline_catalogs'), Ext.emptyFn);
+                                }*/
+                            }
+                        },
+                        {
+                            element: 'element',
                             delegate: '#produtos_vidro',
                             event: 'tap',
                             fn: function() {
@@ -1289,6 +1329,25 @@ Ext.define('Italbox.Viewport5', {
                                      Ext.getCmp('products_toolbar').setHtml('<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-produtos_vidro" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Produtos</span>');
                                     Ext.getCmp('products').setStore('Products_Vidro');
                                     Ext.getCmp('products').show();
+                               /* }
+                                else{
+                                    Ext.Msg.alert('Offline', Ext.getStore('Languages').getById(idioma).get('offline_catalogs'), Ext.emptyFn);
+                                }*/
+                            }
+                        },
+                        {
+                            element: 'element',
+                            delegate: '#servicos_vidro',
+                            event: 'tap',
+                            fn: function() {
+                                //if (connect === 1) {
+                                    Ext.getCmp('favorites').hide();
+                                    Ext.getCmp('back').show();
+                                    /*Ext.getCmp('search').show();*/
+                                   /* Ext.getStore('Services_Caixilharia').load();*/
+                                    Ext.getCmp('multi').setStore('Services_Vidro');
+                                   /* Ext.getCmp('products_toolbar').setHtml('<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-produtos_caixilharia" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Produtos</span>');*/
+                                    Ext.getCmp('multi').show();
                                /* }
                                 else{
                                     Ext.Msg.alert('Offline', Ext.getStore('Languages').getById(idioma).get('offline_catalogs'), Ext.emptyFn);
@@ -1315,7 +1374,7 @@ Ext.define('Italbox.Viewport5', {
                         },
                         items: [
                         {
-                            id: 'start-italbox',
+                            id: 'sosoares',
                             flex: 1,
                             style: 'margin:20px 10px 10px 20px;'+
                             'border-radius:5px; border-bottom: 7px solid #05698e;'+
@@ -1338,7 +1397,7 @@ Ext.define('Italbox.Viewport5', {
                             align: 'stretch'
                         },
                         items: [{
-                            id: 'start-favoritos',
+                            id: 'servicos_extrusao',
                             flex: 1,
                             style: 'margin:10px 10px 20px 20px;border-bottom: 7px solid #05698e;border-radius:5px;'+
                             'background: url(imgs/icons/servicos_extrusao.png) no-repeat, rgba(16, 124, 164, .8);'+
@@ -1357,6 +1416,26 @@ Ext.define('Italbox.Viewport5', {
                      listeners: [
                         {
                             element: 'element',
+                            delegate: '#sosoares',
+                            event: 'tap',
+                            fn: function() {
+                                //if (connect === 1) {
+                                    Ext.getCmp('favorites').hide();
+                                    Ext.getCmp('back').show();
+                                    /*Ext.getCmp('search').show();*/
+                                   /* Ext.getStore('Services_Caixilharia').load();*/
+                                    Ext.getCmp('multi_toolbar').setHtml('<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-sosoares" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Serviços</span>');
+                                    Ext.getCmp('multi').setStore('Group');
+                                   /* Ext.getCmp('products_toolbar').setHtml('<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-produtos_caixilharia" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Produtos</span>');*/
+                                    Ext.getCmp('multi').show();
+                               /* }
+                                else{
+                                    Ext.Msg.alert('Offline', Ext.getStore('Languages').getById(idioma).get('offline_catalogs'), Ext.emptyFn);
+                                }*/
+                            }
+                        },
+                        {
+                            element: 'element',
                             delegate: '#produtos_extrusao',
                             event: 'tap',
                             fn: function() {
@@ -1368,6 +1447,25 @@ Ext.define('Italbox.Viewport5', {
                                      Ext.getCmp('products_toolbar').setHtml('<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-produtos_extrusao" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Produtos</span>');
                                     Ext.getCmp('products').setStore('Products_Extrusao');
                                     Ext.getCmp('products').show();
+                               /* }
+                                else{
+                                    Ext.Msg.alert('Offline', Ext.getStore('Languages').getById(idioma).get('offline_catalogs'), Ext.emptyFn);
+                                }*/
+                            },
+                        },
+                        {
+                            element: 'element',
+                            delegate: '#servicos_extrusao',
+                            event: 'tap',
+                            fn: function() {
+                                //if (connect === 1) {
+                                    Ext.getCmp('favorites').hide();
+                                    Ext.getCmp('back').show();
+                                    /*Ext.getCmp('search').show();*/
+                                   /* Ext.getStore('Services_Caixilharia').load();*/
+                                    Ext.getCmp('multi').setStore('Services_Extrusao');
+                                   /* Ext.getCmp('products_toolbar').setHtml('<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-produtos_caixilharia" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Produtos</span>');*/
+                                    Ext.getCmp('multi').show();
                                /* }
                                 else{
                                     Ext.Msg.alert('Offline', Ext.getStore('Languages').getById(idioma).get('offline_catalogs'), Ext.emptyFn);
@@ -1394,7 +1492,7 @@ Ext.define('Italbox.Viewport5', {
                         },
                         items: [
                         {
-                            id: 'start-italbox',
+                            id: 'sosoares',
                             flex: 1,
                             style: 'margin:20px 10px 10px 20px;'+
                             'border-radius:5px; border-bottom: 7px solid #05698e;'+
@@ -1432,6 +1530,7 @@ Ext.define('Italbox.Viewport5', {
                         },
                         ]
                     },
+                    
                    /* {
                         flex:1,
                         layout: {
@@ -1447,6 +1546,29 @@ Ext.define('Italbox.Viewport5', {
                         },
                         ],    
                     },*/
+                    ],
+                    listeners: [
+                        {
+                            element: 'element',
+                            delegate: '#sosoares',
+                            event: 'tap',
+                            fn: function() {
+                                //if (connect === 1) {
+                                    Ext.getCmp('favorites').hide();
+                                    Ext.getCmp('back').show();
+                                    /*Ext.getCmp('search').show();*/
+                                   /* Ext.getStore('Services_Caixilharia').load();*/
+                                    Ext.getCmp('multi_toolbar').setHtml('<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-sosoares" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Serviços</span>');
+                                    Ext.getCmp('multi').setStore('Group');
+                                   /* Ext.getCmp('products_toolbar').setHtml('<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-produtos_caixilharia" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Produtos</span>');*/
+                                    Ext.getCmp('multi').show();
+                               /* }
+                                else{
+                                    Ext.Msg.alert('Offline', Ext.getStore('Languages').getById(idioma).get('offline_catalogs'), Ext.emptyFn);
+                                }*/
+                            }
+                        },
+                        
                     ],
                 },
                 
@@ -2583,12 +2705,15 @@ Ext.application({
         'Languages',
         'Favorites',*/
         'Menu',
+        'Group',
         'Products_Caixilharia',
         'Products_Extrusao',
         'Products_Vidro',
         'Works',
         'Works_Gallery',
-        'Services_Caixilharia'
+        'Services_Caixilharia',
+        'Services_Vidro',
+        'Services_Extrusao'
     ],
     
     icon: {
