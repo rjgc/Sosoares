@@ -1,10 +1,11 @@
 @font-face {
 	font-family: 'sosoares';
 	src:url('font/sosoares.eot?-dkg7gs');
-	src:url('font/sosoares.eot?#iefix-dkg7gs') format('embedded-opentype'),
+	src:url('font/sosoares.svg?-dkg7gs#sosoares') format('svg'),
+	url('font/sosoares.eot?#iefix-dkg7gs') format('embedded-opentype'),
 		url('font/sosoares.woff?-dkg7gs') format('woff'),
-		url('font/sosoares.ttf?-dkg7gs') format('truetype'),
-		url('font/sosoares.svg?-dkg7gs#sosoares') format('svg');
+		url('font/sosoares.ttf?-dkg7gs') format('truetype');
+		
 	font-weight: normal;
 	font-style: normal;
 }

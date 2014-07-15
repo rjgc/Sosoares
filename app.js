@@ -60,12 +60,13 @@ Ext.define('Italbox.Viewport9', {
                         xtype: 'carousel',
                         id: 'carousel_obras',
                         /*autoSlide: true,
-                        carouselSlideDelay: 3500,
-                        /*cls: 'carousel_obras',*/
-                        /*height: 320,*/
-                        maxHeight: 768,
-                        minHeight: 320,
-                        style: 'max-width:100%; max-height:70%',
+                        carouselSlideDelay: 3500,*/
+                        //cls: 'carousel_obras',
+                       // height: 320,
+                       /* maxHeight: 768,
+                        minHeight: 320,*/
+                        /*style: 'max-width:100%; max-height:70%',*/
+                        
                     },
                     {
                      id: 'html_obras',
@@ -118,7 +119,26 @@ Ext.define('Italbox.Viewport9', {
               // me.getDetailCard().setStyle('background-color: #054667;margin: 0px !important;padding: 0px !important');
                // me.getDetailCard().setFullscreen(true);
             }
-        }
+        },
+    },
+    initialize: function() {
+        Ext.Viewport.on('orientationchange', 'handleOrientationChange', this, {buffer: 50 });
+         if (Ext.Viewport.getOrientation() === 'portrait') {
+            Ext.getCmp('carousel_obras').setHeight(Ext.Viewport.getWindowHeight()/2);
+         }
+         else {
+            Ext.getCmp('carousel_obras').setHeight(Ext.Viewport.getWindowHeight()-100);
+         }
+       
+    },
+    handleOrientationChange: function(viewport, orientation, width, height){
+         
+         if (Ext.Viewport.getOrientation() === 'portrait') {
+            Ext.getCmp('carousel_obras').setHeight(Ext.Viewport.getWindowHeight()/2);
+         }
+         else {
+            Ext.getCmp('carousel_obras').setHeight(Ext.Viewport.getWindowHeight()-50);
+         }
     }
 });
 
@@ -184,6 +204,25 @@ Ext.define('Italbox.Viewport8', {
                // me.getDetailCard().setFullscreen(true);
             }
         }
+    },
+     initialize: function() {
+        Ext.Viewport.on('orientationchange', 'handleOrientationChange', this, {buffer: 50 });
+         if (Ext.Viewport.getOrientation() === 'portrait') {
+           // Ext.getCmp('carousel_obras').setHeight(Ext.Viewport.getWindowHeight()/2);
+         }
+         else {
+            //Ext.getCmp('carousel_obras').setHeight(Ext.Viewport.getWindowHeight()-100);
+         }
+       
+    },
+    handleOrientationChange: function(viewport, orientation, width, height){
+         
+         if (Ext.Viewport.getOrientation() === 'portrait') {
+           // Ext.getCmp('carousel_obras').setHeight(Ext.Viewport.getWindowHeight()/2);
+         }
+         else {
+           // Ext.getCmp('carousel_obras').setHeight(Ext.Viewport.getWindowHeight()-50);
+         }
     }
 });
 
@@ -594,6 +633,54 @@ Ext.define('Italbox.Viewport7', {
         }
     },
     ]
+    },
+    initialize: function() {
+        Ext.Viewport.on('orientationchange', 'handleOrientationChange', this, {buffer: 50 });
+         /*if (Ext.Viewport.getOrientation() === 'portrait') {
+           if (Ext.Viewport.getWindowWidth() > 767 ) {
+                 Ext.getCmp('start-caixilharia').setMargin(Ext.Viewport.getWindowWidth()/10);
+                 Ext.getCmp('start-vidro').setMargin(Ext.Viewport.getWindowWidth()/10);
+                 Ext.getCmp('start-extrusao').setMargin(Ext.Viewport.getWindowWidth()/10);
+                 Ext.getCmp('start-tratamento').setMargin(Ext.Viewport.getWindowWidth()/10);
+           }else{
+                Ext.getCmp('start-caixilharia').setMargin(20);
+                 Ext.getCmp('start-vidro').setMargin(20);
+                 Ext.getCmp('start-extrusao').setMargin(20);
+                 Ext.getCmp('start-tratamento').setMargin(20);
+           }
+          
+         }
+         else {
+            Ext.getCmp('start-caixilharia').setMargin(Ext.Viewport.getWindowHeight()/10);
+            Ext.getCmp('start-vidro').setMargin(Ext.Viewport.getWindowHeight()/10);
+            Ext.getCmp('start-extrusao').setMargin(Ext.Viewport.getWindowHeight()/10);
+            Ext.getCmp('start-tratamento').setMargin(Ext.Viewport.getWindowHeight()/10);
+            
+         }*/
+       
+    },
+    handleOrientationChange: function(viewport, orientation, width, height){
+         
+        /* if (Ext.Viewport.getOrientation() === 'portrait') {
+           if (Ext.Viewport.getWindowWidth() > 767 ) {
+                 Ext.getCmp('start-caixilharia').setMargin(Ext.Viewport.getWindowWidth()/10);
+                 Ext.getCmp('start-vidro').setMargin(Ext.Viewport.getWindowWidth()/10);
+                 Ext.getCmp('start-extrusao').setMargin(Ext.Viewport.getWindowWidth()/10);
+                 Ext.getCmp('start-tratamento').setMargin(Ext.Viewport.getWindowWidth()/10);
+           }else{
+                Ext.getCmp('start-caixilharia').setMargin(20);
+                 Ext.getCmp('start-vidro').setMargin(20);
+                 Ext.getCmp('start-extrusao').setMargin(20);
+                 Ext.getCmp('start-tratamento').setMargin(20);
+           }
+         }
+         else {
+              Ext.getCmp('start-caixilharia').setMargin(Ext.Viewport.getWindowHeight()/10);
+            Ext.getCmp('start-vidro').setMargin(Ext.Viewport.getWindowHeight()/10);
+            Ext.getCmp('start-extrusao').setMargin(Ext.Viewport.getWindowHeight()/10);
+            Ext.getCmp('start-tratamento').setMargin(Ext.Viewport.getWindowHeight()/10);
+           // Ext.getCmp('carousel_obras').setHeight(Ext.Viewport.getWindowHeight()-50);
+         }*/
     }
 });
 
@@ -1661,6 +1748,20 @@ Ext.define('Italbox.ViewportPanel', {
                         displayField: 'text',
                         store: 'Menu',
                         useToolbar: false,
+                       /*   showAnimation:  
+            {
+                type: 'slideIn',
+                //duration: 1000,
+                direction: 'left',
+                //easing: 'easeIn'
+            },  
+            /*hideAnimation: 
+            {
+                type: 'slideOut',
+                duration: 1000,
+                direction: 'up',
+                easing: 'easeOut'
+            }, */
                         listConfig:{
                         cls: 'menu-sosoares',
                         itemTpl:  '<div class="lista-pesquisa">'+

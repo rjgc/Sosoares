@@ -488,6 +488,11 @@ body{
         margin-right:30px;
         height:450px;
 }
+
+.carousel_obras{
+   height: 320px !important;
+}
+
 }
 
 @media (min-height: 700px){
@@ -907,7 +912,7 @@ body{
 }
 
 .carousel_obras{
-   height: 70% !important;
+   height: 320px !important;
 }
 
 @media  
