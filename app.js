@@ -2,13 +2,158 @@ var thumb_products = 'http://www.critecns.com/sosoares/assets/uploads/produtos/t
 var products = 'http://www.critecns.com/sosoares/assets/uploads/produtos/';
 var thumb_works = 'http://www.critecns.com/sosoares/assets/uploads/obras/thumb/';
 var works = 'http://www.critecns.com/sosoares/assets/uploads/obras/';
+var position = new google.maps.LatLng(39.749566,-8.807602);  //Sencha HQ
+var position2 = new google.maps.LatLng(41.749566,-8.807602);  //Sencha HQ
+/*infowindow = new google.maps.InfoWindow({
+                content: 'Mediaweb'
+}),*/
+
+//Tracking Marker Image
+/*image = new google.maps.MarkerImage(
+    'imgs/point.png',
+    new google.maps.Size(32, 31),
+    new google.maps.Point(0, 0),
+    new google.maps.Point(16, 31)
+),
+
+shadow = new google.maps.MarkerImage(
+    'imgs/shadow.png',
+    new google.maps.Size(64, 52),
+    new google.maps.Point(0, 0),
+    new google.maps.Point(-5, 42)
+),
+
+trackingButton = Ext.create('Ext.Button', {
+    iconCls: 'locate'
+}),
+
+trafficButton = Ext.create('Ext.Button', {
+    pressed: true,
+    iconCls: 'maps'
+}),*/
 
 Ext.Loader.setConfig({
     enabled: true,
     paths: {
-        'Ext.ux': 'sencha-touch-2.0.1.1/ux'
+        'Ext.ux': 'sencha-touch-2.0.1.1/ux',
+        'Ext.plugin': 'sencha-touch-2.0.1.1/plugin'
     }
 });
+
+
+Ext.define('Italbox.Viewport11', {
+    extend: 'Ext.Panel',
+    xtype : 'my-viewport11',
+    cls: 'pesquisa',
+    //id:'myList',
+   config: {
+        layout: {
+            type: 'fit'
+        },
+        items: [
+            {
+                xtype: 'map',
+                    mapOptions : {
+                    center : new google.maps.LatLng(39.402244,-8.22876),  //Portugal
+                    zoom : 7,
+                    mapTypeId : google.maps.MapTypeId.ROADMAP,
+                    navigationControl: true,
+                    navigationControlOptions: {
+                        style: google.maps.NavigationControlStyle.DEFAULT
+                    }
+                },
+
+                /*plugins : [
+                    new Ext.plugin.google.Tracker({
+                        trackSuspended: true,   //suspend tracking initially
+                        allowHighAccuracy: false,
+                        marker: new google.maps.Marker({
+                            position: position,
+                            title: 'My Current Location',
+                            shadow: shadow,
+                            icon: image
+                        })
+                    }),
+                    new Ext.plugin.google.Traffic()
+                ],*/
+                mapListeners: {
+                    dragstart: function() {
+                        var segmented = Ext.getCmp('segmented'),
+                            pressedButtons = segmented.getPressedButtons().slice(),
+                            trackingIndex = pressedButtons.indexOf(trackingButton);
+                        if (trackingIndex != -1) {
+                            pressedButtons.splice(trackingIndex, 1);
+                            segmented.setPressedButtons(pressedButtons);
+                        }
+                    }
+                },
+    
+                listeners: {
+                    maprender: function(comp, map) {
+                        var marker2 = new google.maps.Marker({
+                            position: position2,
+                            title : 'Mediaweb',
+                            map: map
+                        });
+                        
+                        var infoWindow2 = new google.maps.InfoWindow({
+                            content: 'Mediaweb'
+                        });
+	
+	                google.maps.event.addListener(marker2,'click', function(){
+                            infoWindow2.open(map,marker2);
+		        });
+                        
+                         var marker = new google.maps.Marker({
+                            position: position,
+                            title : 'Teste',
+                            map: map
+                        });
+                         
+                         var infoWindow = new google.maps.InfoWindow({
+                            content: 'Teste'
+                        });
+	
+	                google.maps.event.addListener(marker,'click', function(){
+                            infoWindow.open(map,marker);
+		        });
+    
+                        setTimeout(function() {
+                            map.panTo(position);
+                        }, 1000);
+                    }
+    
+                }
+               
+            }
+        ]
+    },
+ 
+    initialize: function(){
+        var me = this;
+        me.callParent(arguments);
+        this.initMap();
+    },
+ 
+    initMap: function(){
+ 
+       /* var mapPanel = this.down('map');
+        var gMap = mapPanel.getMap();
+ 
+        var panoramioLayer = new google.maps.panoramio.PanoramioLayer();
+        panoramioLayer.setMap(gMap);
+       
+ 
+        var marker = new google.maps.Marker({
+            map: gMap,
+            animation: google.maps.Animation.DROP,
+            position: new google.maps.LatLng(39.402244,-8.22876)
+        });*/
+ 
+    }
+});
+
+
 
 Ext.define('Italbox.Viewport10', {
     extend: 'Ext.NestedList',
@@ -1155,7 +1300,7 @@ Ext.define('Italbox.Viewport5', {
                                    /* Ext.getStore('Services_Caixilharia').load();*/
                                     Ext.getCmp('multi').setStore('Group');
                                    /* Ext.getCmp('products_toolbar').setHtml('<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-produtos_caixilharia" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Produtos</span>');*/
-                                   Ext.getCmp('multi_toolbar').setHtml('<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-sosoares" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Serviços</span>');
+                                   Ext.getCmp('multi_toolbar').setHtml('<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-sosoares" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Grupo Sosoares</span>');
                                     Ext.getCmp('multi').show();
                                /* }
                                 else{
@@ -1212,7 +1357,7 @@ Ext.define('Italbox.Viewport5', {
                                     /*Ext.getCmp('search').show();*/
                                    /* Ext.getStore('Services_Caixilharia').load();*/
                                     Ext.getCmp('multi').setStore('Services_Caixilharia');
-                                   /* Ext.getCmp('products_toolbar').setHtml('<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-produtos_caixilharia" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Produtos</span>');*/
+                                    Ext.getCmp('multi_toolbar').setHtml('<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-servicos_vidro" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Serviços</span>');
                                     Ext.getCmp('multi').show();
                                /* }
                                 else{
@@ -1306,7 +1451,7 @@ Ext.define('Italbox.Viewport5', {
                                     Ext.getCmp('back').show();
                                     /*Ext.getCmp('search').show();*/
                                    /* Ext.getStore('Services_Caixilharia').load();*/
-                                    Ext.getCmp('multi_toolbar').setHtml('<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-sosoares" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Serviços</span>');
+                                    Ext.getCmp('multi_toolbar').setHtml('<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-sosoares" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Grupo Sosoares</span>');
                                     Ext.getCmp('multi').setStore('Group');
                                    /* Ext.getCmp('products_toolbar').setHtml('<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-produtos_caixilharia" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Produtos</span>');*/
                                     Ext.getCmp('multi').show();
@@ -1346,7 +1491,7 @@ Ext.define('Italbox.Viewport5', {
                                     /*Ext.getCmp('search').show();*/
                                    /* Ext.getStore('Services_Caixilharia').load();*/
                                     Ext.getCmp('multi').setStore('Services_Vidro');
-                                   /* Ext.getCmp('products_toolbar').setHtml('<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-produtos_caixilharia" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Produtos</span>');*/
+                                    Ext.getCmp('multi_toolbar').setHtml('<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-servicos_vidro" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Serviços</span>');
                                     Ext.getCmp('multi').show();
                                /* }
                                 else{
@@ -1424,7 +1569,7 @@ Ext.define('Italbox.Viewport5', {
                                     Ext.getCmp('back').show();
                                     /*Ext.getCmp('search').show();*/
                                    /* Ext.getStore('Services_Caixilharia').load();*/
-                                    Ext.getCmp('multi_toolbar').setHtml('<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-sosoares" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Serviços</span>');
+                                    Ext.getCmp('multi_toolbar').setHtml('<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-sosoares" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Grupo Sosoares</span>');
                                     Ext.getCmp('multi').setStore('Group');
                                    /* Ext.getCmp('products_toolbar').setHtml('<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-produtos_caixilharia" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Produtos</span>');*/
                                     Ext.getCmp('multi').show();
@@ -1464,7 +1609,7 @@ Ext.define('Italbox.Viewport5', {
                                     /*Ext.getCmp('search').show();*/
                                    /* Ext.getStore('Services_Caixilharia').load();*/
                                     Ext.getCmp('multi').setStore('Services_Extrusao');
-                                   /* Ext.getCmp('products_toolbar').setHtml('<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-produtos_caixilharia" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Produtos</span>');*/
+                                    Ext.getCmp('multi_toolbar').setHtml('<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-servicos_extrusao" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Serviços</span>');
                                     Ext.getCmp('multi').show();
                                /* }
                                 else{
@@ -1558,7 +1703,7 @@ Ext.define('Italbox.Viewport5', {
                                     Ext.getCmp('back').show();
                                     /*Ext.getCmp('search').show();*/
                                    /* Ext.getStore('Services_Caixilharia').load();*/
-                                    Ext.getCmp('multi_toolbar').setHtml('<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-sosoares" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Serviços</span>');
+                                    Ext.getCmp('multi_toolbar').setHtml('<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-sosoares" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Grupo Sosoares</span>');
                                     Ext.getCmp('multi').setStore('Group');
                                    /* Ext.getCmp('products_toolbar').setHtml('<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-produtos_caixilharia" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Produtos</span>');*/
                                     Ext.getCmp('multi').show();
@@ -2163,7 +2308,10 @@ Ext.define('Italbox.ViewportPanel', {
                     id: 'open-menu4',
                     //hidden: true,
                     handler: function () {
-                       if (contador > 0) { 
+                        Ext.getCmp('menuI').hide();
+                          Ext.getCmp('footer').hide();
+                        Ext.getCmp('map').show();
+                      /* if (contador > 0) { 
                         Ext.getCmp('footer').hide();
                         Ext.getCmp('barra5').hide();
                          if( typeof panel1 !== 'undefined' ) {
@@ -2278,7 +2426,7 @@ Ext.define('Italbox.ViewportPanel', {
                                        /////////////////////////////////////////////////////////////////////////////////////////  
                                       }
                                   },*/
-                                  {
+                                /*  {
                                       ui:    'plain',
                                       xtype: 'button',
                                       cls: 'open-menu10 icon-partilha-white',
@@ -2466,7 +2614,8 @@ Ext.define('Italbox.ViewportPanel', {
                     } 
                     else{
                          Ext.Msg.alert('', Ext.getStore('Languages').getById(idioma).get('no_products'), Ext.emptyFn);
-                    }
+                    }*/
+                    
                     }
             },
             {
@@ -2680,6 +2829,13 @@ Ext.define('Italbox.ViewportPanel', {
             cls: 'pesquisa',
             hidden: true,
         },
+          {
+            xtype: 'my-viewport11',
+            id: 'map',
+            cls: 'pesquisa',
+            hidden: true,
+        },
+
         ]
     }
 });
@@ -3328,6 +3484,7 @@ Ext.application({
         });
     }
     onLoad();
+    
     }
 });
 //});
