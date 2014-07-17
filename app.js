@@ -3177,11 +3177,31 @@ Ext.application({
         //console.dir( Ext.getStore('Teste'));
         Ext.Msg.setZIndex(20);
         
-        try{
+        Ext.MessageBox.override({
+                    confirm: function(title, message, fn, scope) {
+                    return this.show({
+                        title       : title || null,
+                        message     : message || null,
+                        buttons     : [
+                        {text: "Não",  itemId: 'no'},
+                        {text: "Sim", itemId: 'yes', ui: 'action'}
+                    ],
+                        promptConfig: false,
+                        scope       : scope,
+                        fn: function() {
+                            if (fn) {
+                                fn.apply(scope, arguments);
+                            }
+                        }
+                    });
+                }
+            });
+        
+        /*itry{
             var existe = Ext.getStore('Settings').getAt(0).get('lang');
         }
         catch(e){}
-        /*if (existe === undefined) {
+        f (existe === undefined) {
               var valor = { id_setting: '1', lang: '1'};
               Ext.getStore('Settings').add(valor);
               Ext.getStore('Settings').sync();
@@ -3362,13 +3382,22 @@ Ext.application({
                              Ext.getCmp('multi').hide();
                              Ext.getCmp('favorites').show();
                         }
-                        else {
+                        else if(Ext.getCmp('favorites')._hidden === false) {
                             Ext.getCmp('favorites').hide();
                             Ext.getCmp('menuI').show();
                             Ext.getCmp('footer').show();
                             // Ext.getCmp('teste').goToNode( Ext.getCmp('teste').getStore().getRoot() );
                                Ext.getCmp('open-menu').hide();
                               Ext.getCmp('back').hide();
+                        }else
+                        {
+                        Ext.Msg.confirm("Sair", "Deseja sair da aplicação?",  function ( answer ) { 
+                                if ( answer == 'yes') { 
+                                    navigator.app.exitApp();
+                                } else { 
+                               
+                                } 
+                            });
                         }
             
             
