@@ -2,6 +2,7 @@ var thumb_products = 'http://www.critecns.com/sosoares/assets/uploads/produtos/t
 var products = 'http://www.critecns.com/sosoares/assets/uploads/produtos/';
 var thumb_works = 'http://www.critecns.com/sosoares/assets/uploads/obras/thumb/';
 var works = 'http://www.critecns.com/sosoares/assets/uploads/obras/';
+try{
 var position3 = new google.maps.LatLng(41.202625,-8.471071);  //Valongo
 var position2 = new google.maps.LatLng(41.152985,-8.634299);  //Serviços Tecnicos
 var position13  = new google.maps.LatLng(41.785537,-8.861844);  //Viana do Castelo
@@ -16,35 +17,8 @@ var position11 = new google.maps.LatLng(38.773087,-9.364134); //Perfisoeiras
 var position12 = new google.maps.LatLng(32.668981,-16.855974); //ALULIDER
 var position = new google.maps.LatLng(39.64357,-8.37321); //INTERALUMÍNIOS
 var position14 = new google.maps.LatLng(40.642065,-7.909108); //PEOVIS
-
-
-/*infowindow = new google.maps.InfoWindow({
-                content: 'Mediaweb'
-}),*/
-
-//Tracking Marker Image
-/*image = new google.maps.MarkerImage(
-    'imgs/point.png',
-    new google.maps.Size(32, 31),
-    new google.maps.Point(0, 0),
-    new google.maps.Point(16, 31)
-),
-
-shadow = new google.maps.MarkerImage(
-    'imgs/shadow.png',
-    new google.maps.Size(64, 52),
-    new google.maps.Point(0, 0),
-    new google.maps.Point(-5, 42)
-),
-
-trackingButton = Ext.create('Ext.Button', {
-    iconCls: 'locate'
-}),
-
-trafficButton = Ext.create('Ext.Button', {
-    pressed: true,
-    iconCls: 'maps'
-}),*/
+}
+catch(e){}
 
 Ext.Loader.setConfig({
     enabled: true,
@@ -2496,7 +2470,7 @@ Ext.define('Italbox.ViewportPanel', {
                            Ext.getCmp('open-menu').setStyle('color:#00aeef');
                         });     
                        }else{
-                             panel_list_menu.show();
+                             //panel_list_menu.show();
                              //console.dir(panel_list_menu);
                             //alert('TESTE!!');
                            // panel_menu.hide();
@@ -2602,6 +2576,7 @@ Ext.define('Italbox.ViewportPanel', {
                     id: 'open-menu4',
                     //hidden: true,
                     handler: function () {
+                        
                         /*Ext.getCmp('menuI').hide();
                           Ext.getCmp('footer').hide();
                         Ext.getCmp('map').show();
@@ -3279,7 +3254,7 @@ Ext.application({
                 document.addEventListener("menubutton", Ext.bind(onMenuKeyDown, this), false);
          }
          if(navigator.network.connection.type == Connection.NONE) {
-		 Ext.Msg.alert('', Ext.getStore('Languages').getById(idioma).get('offline'), Ext.emptyFn);
+		 //Ext.Msg.alert('', Ext.getStore('Languages').getById(idioma).get('offline'), Ext.emptyFn);
                  connect = 0;
 	} else {
                 connect = 1;
@@ -3298,7 +3273,7 @@ Ext.application({
  
     function onOffline() {
         connect = 0;
-        try {
+        /*try {
                Ext.getCmp('menuP').hide();
                Ext.getCmp('menuL').hide();
                Ext.getCmp('listaPag').hide();
@@ -3340,12 +3315,65 @@ Ext.application({
             Ext.getCmp('menuI').show();                 
                                                 
             }});
-        } 
+        } */
     }
     
     function onBackKeyDown(eve) {
             eve.preventDefault();
-            try {
+            if(Ext.getCmp('search')._hidden === false)
+                        {
+                            Ext.getCmp('search').hide();
+                            Ext.getCmp('products').hide();
+                            Ext.getCmp('works').hide();
+                            Ext.getCmp('favorites').show();
+                        }else if (typeof panel_list_menu != 'undefined') {
+                         
+                                if (panel_list_menu.getBackButton()._hidden === false) {
+                                    panel_list_menu.onBackTap();
+                                }
+                                else{
+                                    panel_list_menu.hide();
+                                    /*try{
+                                    
+                                    panel_list_menu.destroy();
+                                    panel_list_menu = undefined;
+                                    }catch(e){}*/
+                                }
+                          
+                        }else if (Ext.getCmp('multi')._hidden === false && Ext.getCmp('multi').getBackButton()._hidden === false){
+                            
+                            Ext.getCmp('multi').onBackTap();
+                               //console.dir(Ext.getCmp('teste').getBackButton());
+                     
+                        }else if (Ext.getCmp('products')._hidden === false && Ext.getCmp('products').getBackButton()._hidden === false){
+                            
+                            Ext.getCmp('products').onBackTap();
+                               //console.dir(Ext.getCmp('teste').getBackButton());
+                         }else if (Ext.getCmp('works')._hidden === false && Ext.getCmp('works').getBackButton()._hidden === false){
+                            
+                            Ext.getCmp('works').onBackTap();
+                               //console.dir(Ext.getCmp('teste').getBackButton());
+                        
+                         }else if (Ext.getCmp('products')._hidden === false && Ext.getCmp('products').getBackButton( )._hidden === true || Ext.getCmp('works')._hidden === false && Ext.getCmp('works').getBackButton( )._hidden === true || Ext.getCmp('multi')._hidden === false && Ext.getCmp('multi').getBackButton( )._hidden === true){
+                             Ext.getCmp('menuI').hide();
+                            Ext.getCmp('footer').hide();
+                            Ext.getCmp('products').hide();
+                             Ext.getCmp('works').hide();
+                             Ext.getCmp('multi').hide();
+                             Ext.getCmp('favorites').show();
+                        }
+                        else {
+                            Ext.getCmp('favorites').hide();
+                            Ext.getCmp('menuI').show();
+                            Ext.getCmp('footer').show();
+                            // Ext.getCmp('teste').goToNode( Ext.getCmp('teste').getStore().getRoot() );
+                               Ext.getCmp('open-menu').hide();
+                              Ext.getCmp('back').hide();
+                        }
+            
+            
+            
+           /* try {
                 Ext.getCmp('menuP').hide();
                 Ext.getCmp('menuL').hide();
                 Ext.getCmp('listaPag').hide();
@@ -3411,12 +3439,416 @@ Ext.application({
                     } 
                 });
 	    }
-            
+            */
     }
     
     function onMenuKeyDown(eve) {
             eve.preventDefault();
-            var panel_menu = Ext.Viewport.add({ 
+             if (typeof panel_list_menu === 'undefined' && Ext.getCmp('menuI')._hidden === true)  {
+                        Ext.getCmp('open-menu').setStyle('color:#FFF');
+                        panel_list_menu = Ext.Viewport.add({
+                        xtype : 'nestedlist',
+                        id:'list-menu',
+                        //cls: 'lista-extras',
+                        float: true,
+                        title: 'Menu',
+                        displayField: 'text',
+                        store: 'Menu',
+                        useToolbar: false,
+                       /*   showAnimation:  
+                        {
+                            type: 'slideIn',
+                            //duration: 1000,
+                            direction: 'left',
+                            //easing: 'easeIn'
+                        },  
+                        /*hideAnimation: 
+                        {
+                            type: 'slideOut',
+                            duration: 1000,
+                            direction: 'up',
+                            easing: 'easeOut'
+                        }, */
+                        listConfig:{
+                        cls: 'menu-sosoares',
+                        itemTpl:  '<div class="lista-pesquisa">'+
+                            '<i class="{icon}" style="font-size:27px; color:#FFF; float:left; margin-right:10px;"></i><i class="icon-front front"></i></img>' +
+                            '<div> <span>{text}</span></div>' +
+                            '</div>',
+                        emptyText: '<div class="lista-pesquisa">Sem resultados</div>',
+                        },
+                        detailCard:{
+                            xtype: 'panel',
+                             layout: 'fit',
+                            //styleHtmlContent: true,
+                            //scrollable: true,
+                            //padding: '0px !important',
+                            html: '',
+                            style: 'background-color: #054667;',
+                            zIndex: 50,
+                        },
+                        items: [
+                               {
+                               xtype: 'toolbar',
+                               docked: 'top',
+                               cls: 'barra-menu',
+                               zIndex: 50,
+                               id: 'menu_toolbar',
+                               html: '<span style="background: #012f46; color:#FFF; float:left; font-size: 21px;margin-top: 7px; "><i class="" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Menu</span>',
+                               }],
+                        listeners: {
+                            leafitemtap: function(me, list, index, target, record) {
+                                if (record.get('id') == 3) {
+                                    //alert('teste');
+                                    try{
+                                    Ext.getCmp('mapa').show();
+                                    }catch(e){}
+                                     me.getDetailCard().setHtml('');
+                                      //me.getDetailCard().setLayout();
+                                    me.getDetailCard().setScrollable(false);
+                                
+                                    if (typeof Ext.getCmp('mapa') === 'undefined') {
+                                    me.getDetailCard().add(
+                                        {
+                                        id: 'mapa',
+                                        xtype: 'map',
+                                            mapOptions : {
+                                            center : new google.maps.LatLng(39.402244,-8.22876),  //Portugal
+                                            zoom : 5,
+                                            mapTypeId : google.maps.MapTypeId.ROADMAP,
+                                            navigationControl: true,
+                                            navigationControlOptions: {
+                                                style: google.maps.NavigationControlStyle.DEFAULT
+                                            }
+                                        },
+                        
+                                        /*plugins : [
+                                            new Ext.plugin.google.Tracker({
+                                                trackSuspended: true,   //suspend tracking initially
+                                                allowHighAccuracy: false,
+                                                marker: new google.maps.Marker({
+                                                    position: position,
+                                                    title: 'My Current Location',
+                                                    shadow: shadow,
+                                                    icon: image
+                                                })
+                                            }),
+                                            new Ext.plugin.google.Traffic()
+                                        ],*/
+                                        mapListeners: {
+                                            dragstart: function() {
+                                                var segmented = Ext.getCmp('segmented'),
+                                                    pressedButtons = segmented.getPressedButtons().slice(),
+                                                    trackingIndex = pressedButtons.indexOf(trackingButton);
+                                                if (trackingIndex != -1) {
+                                                    pressedButtons.splice(trackingIndex, 1);
+                                                    segmented.setPressedButtons(pressedButtons);
+                                                }
+                                            }
+                                        },
+                            
+                                        listeners: {
+                                            maprender: function(comp, map) {
+                                                 var marker = new google.maps.Marker({
+                                                    position: position13,
+                                                    title : 'SOSOARES - VIANA DO CASTELO',
+                                                    icon: 'imgs/marker.png',
+                                                    map: map
+                                                });
+                                                 
+                                                 var infoWindow = new google.maps.InfoWindow({
+                                                    content: 'SOSOARES - VIANA DO CASTELO<br>'+
+                                                    'Lugar da Bandeira - Afife 4900-012 Viana do Castelo<br>'+
+                                                    'Telf.: 258 981 299  |   Fax: 258 981 274<br>'+
+                                                    'Email: sosoares.viana@sosoares.pt',
+                                                });
+                                
+                                                google.maps.event.addListener(marker,'click', function(){
+                                                    infoWindow.open(map,marker);
+                                                });
+                                                
+                                                 var marker2 = new google.maps.Marker({
+                                                    position: position2,
+                                                    title : 'SOSOARES - SERVIÇOS TÉCNICOS E COMERCIAIS',
+                                                    icon: 'imgs/marker.png',
+                                                    map: map
+                                                });
+                                                
+                                                var infoWindow2 = new google.maps.InfoWindow({
+                                                    content: 'SOSOARES - SERVIÇOS TÉCNICOS E COMERCIAIS<br>'+
+                                                    'Rua do Campo Alegre, 474 4150-170 Porto<br>'+
+                                                    'Telf.: 226 096 709  |   Fax: 226 005 642<br>'+
+                                                    'Email: comercial@sosoares.pt |   gabinete.tecnico@sosoares.pt'
+                                                });
+                                
+                                                google.maps.event.addListener(marker2,'click', function(){
+                                                    infoWindow2.open(map,marker2);
+                                                });
+                                                
+                                                 var marker3 = new google.maps.Marker({
+                                                    position: position3,
+                                                    title : 'SOSOARES - VALONGO',
+                                                    icon: 'imgs/marker.png',
+                                                    map: map
+                                                });
+                                                
+                                                var infoWindow3 = new google.maps.InfoWindow({
+                                                    content: 'SOSOARES - VALONGO<br>'+
+                                                    'Rua do Baldeirão, s/n 4440 - 346 Sobrado - Valongo<br>'+
+                                                    'Telf.: 224 119 230  |   Fax: 224 119 231<br>'+
+                                                    'Email: geral@sosoares.pt'
+                                                });
+                                
+                                                google.maps.event.addListener(marker3,'click', function(){
+                                                    infoWindow3.open(map,marker3);
+                                                });
+                                                
+                                                 var marker4 = new google.maps.Marker({
+                                                    position: position4,
+                                                    title : 'SOSOARES - LEIRIA',
+                                                    icon: 'imgs/marker.png',
+                                                    map: map
+                                                });
+                                                
+                                                var infoWindow4 = new google.maps.InfoWindow({
+                                                    content: 'SOSOARES - LEIRIA<br>'+
+                                                    'Armazém nº1 E.N.8 - Chão da Feira, 9 2480-060 Calvaria de Cima<br>'+
+                                                    'Telf.: 244 481 136  |   Fax: 244 482 186 <br>'+
+                                                    'Email: sosoares.leiria@sosoares.pt<br>'
+                                                });
+                                
+                                                google.maps.event.addListener(marker4,'click', function(){
+                                                    infoWindow4.open(map,marker4);
+                                                });
+                                                
+                                                var marker5 = new google.maps.Marker({
+                                                    position: position5,
+                                                    title : 'SOSOARES - VISEU',
+                                                    icon: 'imgs/marker.png',
+                                                    map: map
+                                                });
+                                                
+                                                var infoWindow5 = new google.maps.InfoWindow({
+                                                    content: 'SOSOARES - VISEU<br>'+
+                                                    'Zona Industrial de Abraveses 3515-157 Viseu<br>'+
+                                                    'Telf.: 232 459 731  |   Fax: 232 450 623<br>'+
+                                                    'Email: sosoares.viseu@sosoares.pt'
+                                                });
+                                
+                                                google.maps.event.addListener(marker5,'click', function(){
+                                                    infoWindow5.open(map,marker5);
+                                                });
+                                                
+                                                var marker6 = new google.maps.Marker({
+                                                    position: position6,
+                                                    title : 'SOSOARES - FÁBR. TRANSF. VIDRO',
+                                                    icon: 'imgs/marker.png',
+                                                    map: map
+                                                });
+                                                
+                                                var infoWindow6 = new google.maps.InfoWindow({
+                                                    content: 'SOSOARES - FÁBR. TRANSF. VIDRO<br>'+
+                                                    'Zona Ind. Coimbrões, Lt. 101/102 S. João de Lourosa - 3500-618  VISEU<br>'+
+                                                    'Telf.: 232 458 567  |   Fax: 232 458 566<br>'+
+                                                    'Email: geral.vidro@sosoares.pt'
+                                                });
+                                
+                                                google.maps.event.addListener(marker6,'click', function(){
+                                                    infoWindow6.open(map,marker6);
+                                                });
+                                                
+                                                 var marker7 = new google.maps.Marker({
+                                                    position: position7,
+                                                    title : 'SOSOARES - LACAGEM',
+                                                    icon: 'imgs/marker.png',
+                                                    map: map
+                                                });
+                                                
+                                                var infoWindow7 = new google.maps.InfoWindow({
+                                                    content: 'SOSOARES - LACAGEM<br>'+
+                                                    'Zona Ind. Coimbrões, Lt.41 3500-886 S.João Lourosa - Viseu<br>'+
+                                                    'Telf.: 232 479 448  |   Fax: 232 478 643<br>'+
+                                                    'Email: sosoares.viseu@sosoares.pt'
+                                                });
+                                
+                                                google.maps.event.addListener(marker7,'click', function(){
+                                                    infoWindow7.open(map,marker7);
+                                                });
+                                                
+                                                var marker8 = new google.maps.Marker({
+                                                    position: position8,
+                                                    title : 'SOSOARES - ALMANCIL - FARO',
+                                                    icon: 'imgs/marker.png',
+                                                    map: map
+                                                });
+                                                
+                                                var infoWindow8 = new google.maps.InfoWindow({
+                                                    content: 'SOSOARES - ALMANCIL - FARO<br>'+
+                                                    'Sítio do Vale da Venda EN 125, Km 98.8 8135-037 Almancil<br>'+
+                                                    'Telf.: (indisponível)<br>'+
+                                                    'Email: sosoares.faro@sosoares.pt'
+                                                });
+                                
+                                                google.maps.event.addListener(marker8,'click', function(){
+                                                    infoWindow8.open(map,marker8);
+                                                });
+                                                
+                                                var marker9 = new google.maps.Marker({
+                                                    position: position9,
+                                                    title : 'METALFER - METALÚRGICA DE FERMENTELOS, S.A.',
+                                                    icon: 'imgs/marker.png',
+                                                    map: map
+                                                });
+                                                
+                                                var infoWindow9 = new google.maps.InfoWindow({
+                                                    content: 'METALFER - METALÚRGICA DE FERMENTELOS, S.A.<br>'+
+                                                    'Travessa do Bolegão, 146 Apartado1 3754-904 Fermentelos<br>'+
+                                                    'Telf.: 234 729 740  |   Fax: 234 729 741<br>'+
+                                                    'Email: metalfer@sosoares.pt'
+                                                });
+                                
+                                                google.maps.event.addListener(marker9,'click', function(){
+                                                    infoWindow9.open(map,marker9);
+                                                });
+                                                
+                                                var marker10 = new google.maps.Marker({
+                                                    position: position10,
+                                                    title : 'ALFA SUL - ALUMÍNIOS DO SUL, LDA',
+                                                    icon: 'imgs/marker.png',
+                                                    map: map
+                                                });
+                                                
+                                                var infoWindow10 = new google.maps.InfoWindow({
+                                                    content: 'ALFA SUL - ALUMÍNIOS DO SUL, LDA<br>'+
+                                                    'E.N. Lisboa - Sintra Km 14 Apartado 156 2726-936 Mem Martins<br>'+
+                                                    'Telf.: 219 265 090  |   Fax: 219 256 098<br>'+
+                                                    'Email: alfa.sul@sosoares.pt'
+                                                });
+                                
+                                                google.maps.event.addListener(marker10,'click', function(){
+                                                    infoWindow10.open(map,marker10);
+                                                });
+                                                
+                                                var marker11 = new google.maps.Marker({
+                                                    position: position11,
+                                                    title : 'PERFISOEIRAS - SOC. EXTRUSÃO ALUMÍNIO E COBRE, SA.',
+                                                    icon: 'imgs/marker.png',
+                                                    map: map
+                                                });
+                                                
+                                                var infoWindow11 = new google.maps.InfoWindow({
+                                                    content: 'PERFISOEIRAS - SOC. EXTRUSÃO ALUMÍNIO E COBRE, SA.<br>'+
+                                                    'Rua da Colónia - Quinta da Cardosa Apartado 214 - Abrunheira 2711-952 Sintra<br>'+
+                                                    'Telf.: 219 156 660  |   Fax: 219 156 661<br>'+
+                                                    'Email: perfis.oeiras@sosoares.pt'
+                                                });
+                                
+                                                google.maps.event.addListener(marker11,'click', function(){
+                                                    infoWindow11.open(map,marker11);
+                                                });
+                                                
+                                                var marker12 = new google.maps.Marker({
+                                                    position: position12,
+                                                    title : 'ALULIDER - INDÚSTRIA E COMÉRCIO DE ALUMÍNIO, LDA',
+                                                    icon: 'imgs/marker.png',
+                                                    map: map
+                                                });
+                                                
+                                                var infoWindow12 = new google.maps.InfoWindow({
+                                                    content: 'ALULIDER - INDÚSTRIA E COMÉRCIO DE ALUMÍNIO, LDA'+
+                                            'Pav. Industrial H - Plataforma 13D Zona Franca Industrial 9200-047 Caniçal - Madeira'+
+                                            'Telf.: 291 960 488 / 291 960 494  |   Fax: 291 960 497'+
+                                            'Email: Alulider@sosoares.pt'
+                                                });
+                                
+                                                google.maps.event.addListener(marker12,'click', function(){
+                                                    infoWindow12.open(map,marker12);
+                                                });
+                                                
+                                                var marker13 = new google.maps.Marker({
+                                                    position: position,
+                                                    title : 'INTERALUMÍNIOS - SOC. COMERCIALIZAÇÃO ALUMÍNIOS, LDA.',
+                                                    icon: 'imgs/marker.png',
+                                                    map: map
+                                                });
+                                                
+                                                var infoWindow13 = new google.maps.InfoWindow({
+                                                    content: 'INTERALUMÍNIOS - SOC. COMERCIALIZAÇÃO ALUMÍNIOS, LDA.<br>'+
+                                                    'Alto da Venda Nova, 68 B - Apartado 251 2304-909 Tomar<br>'+
+                                                    'Telf.: 249 301 493  |   Fax: 249 301 628<br>'+
+                                                    'Email: interaluminios@sosoares.pt'
+                                                });
+                                
+                                                google.maps.event.addListener(marker13,'click', function(){
+                                                    infoWindow13.open(map,marker13);
+                                                });
+                                                
+                                                var marker14 = new google.maps.Marker({
+                                                    position: position14,
+                                                    title : 'PEOVIS - COMÉRCIO DE ALUMÍNIOS, LDA.',
+                                                    icon: 'imgs/marker.png',
+                                                    map: map
+                                                });
+                                                
+                                                var infoWindow14 = new google.maps.InfoWindow({
+                                                    content: 'PEOVIS - COMÉRCIO DE ALUMÍNIOS, LDA.<br>'+
+                                                    'Manhosa - Ranhados 3500-631 Viseu<br>'+
+                                                    'Telf.: 232 461 005  |   Fax: 232 469 346<br>'+
+                                                    'Email: peovis@sosoares.pt'
+                                                });
+                                
+                                                google.maps.event.addListener(marker14,'click', function(){
+                                                    infoWindow14.open(map,marker14);
+                                                });
+                            
+                                                setTimeout(function() {
+                                                    map.panTo(position);
+                                                }, 1000);
+                                            }
+                            
+                                        }
+                                       
+                                    }                        
+                                    );
+                                    }
+                                }else{
+                                try{
+                                    Ext.getCmp('mapa').hide();
+                                    }catch(e){}
+                                   // me.getDetailCard().setHtml('');
+                                  //  Ext.getCmp('teste99').setLayout('');
+                                    me.getDetailCard().setScrollable(true);
+                                    me.getDetailCard().setHtml('<div style="max-width:100%" class="leaf_panel">'+
+                                    '<br/><div style="margin:10px"><h3 style="font-size: 24px; color:#00aeef !important">'+
+                                    record.get('text')+'</h3><br><p style="color:#FFF !important;">'+
+                                    record.get('html')+'</p></div></div>');
+                                    
+                                }
+                              /*me.getDetailCard().setHtml('<div style="max-width:100%" class="leaf_panel">'+
+                                                        '<img style="max-width:100%; max-height:70%" src="'+products+record.get('foto')+'">'+
+                                                        '<br/><div style="margin:10px"><h3 style="font-size: 24px; color:#00aeef !important">'+record.get('text')+'</h3><br><p style="color:#FFF !important;">'+record.get('descricao')+'</p></div></div>');*/
+                              // me.getDetailCard().setStyle('background-color: #054667;margin: 0px !important;padding: 0px !important');
+                               // me.getDetailCard().setFullscreen(true);
+                            }
+                            
+                        }
+                        });
+                        panel_list_menu.show();
+                        panel_list_menu.on('hide', function() {
+                           panel_list_menu.setDetailCard('')
+                           panel_list_menu.destroy();
+                           panel_list_menu = undefined;
+                           Ext.getCmp('open-menu').setStyle('color:#00aeef');
+                        });     
+                       }else{
+                             //panel_list_menu.show();
+                             //console.dir(panel_list_menu);
+                            //alert('TESTE!!');
+                           // panel_menu.hide();
+                       }
+            
+            
+           /* var panel_menu = Ext.Viewport.add({ 
             xtype: 'container',
             id: 'menuP',
             modal: true,
@@ -3775,7 +4207,7 @@ Ext.application({
         panel_menu.on('hide', function() {
             panel_menu.destroy();
 
-        });
+        });*/
     }
     onLoad();
     
