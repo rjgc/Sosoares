@@ -3,6 +3,7 @@ var products = 'http://www.critecns.com/sosoares/assets/uploads/produtos/';
 var thumb_works = 'http://www.critecns.com/sosoares/assets/uploads/obras/thumb/';
 var works = 'http://www.critecns.com/sosoares/assets/uploads/obras/';
 try{
+//Onde Estamos
 var position3 = new google.maps.LatLng(41.202625,-8.471071);  //Valongo
 var position2 = new google.maps.LatLng(41.152985,-8.634299);  //Serviços Tecnicos
 var position13  = new google.maps.LatLng(41.785537,-8.861844);  //Viana do Castelo
@@ -17,6 +18,20 @@ var position11 = new google.maps.LatLng(38.773087,-9.364134); //Perfisoeiras
 var position12 = new google.maps.LatLng(32.668981,-16.855974); //ALULIDER
 var position = new google.maps.LatLng(39.64357,-8.37321); //INTERALUMÍNIOS
 var position14 = new google.maps.LatLng(40.642065,-7.909108); //PEOVIS
+//Areas Comerciais
+var position_1 = new google.maps.LatLng(40.558133,-8.542492);  //Aveiro
+var position_2 = new google.maps.LatLng(39.618106,-8.860048);  //Leiria
+var position_3  = new google.maps.LatLng(41.785537,-8.479128);  //Viana do Castelo
+var position_4 = new google.maps.LatLng(37.063602,-7.973403); //Algarve
+var position_5 = new google.maps.LatLng(40.680569,-7.92256); //Viseu
+var position_6 = new google.maps.LatLng(41.202625,-8.471071); //Porto
+var position_7 = new google.maps.LatLng(41.202625,-8.471071); //Valongo
+var position_8 = new google.maps.LatLng(40.557855,-8.542814); //Coimbra
+var position_9 = new google.maps.LatLng(32.668981,-16.855974); //Madeira
+var position_10 = new google.maps.LatLng(38.782509,-9.34036); //Lisboa Sul
+var position_11 = new google.maps.LatLng(38.782509,-9.34036); //Lisboa Norte
+var position_12 = new google.maps.LatLng(41.202625,-8.471071); //Vila Real
+var position_13 = new google.maps.LatLng(37.765287,-25.67389); //Açores
 }
 catch(e){}
 
@@ -25,6 +40,72 @@ Ext.Loader.setConfig({
     paths: {
         'Ext.ux': 'sencha-touch-2.0.1.1/ux',
         'Ext.plugin': 'sencha-touch-2.0.1.1/plugin'
+    }
+});
+
+Ext.define('Italbox.Viewport11', {
+    extend: 'Ext.Panel',
+    xtype : 'my-viewport11',
+    id: 'treatment',
+    cls: 'tratamento',
+    config: {
+        showAnimation: 
+        {
+            type: 'slideIn',
+            duration: 1000,
+            delay: 700,
+            direction: 'up',
+            easing: 'easeOut'
+        },  
+        hideAnimation: 
+        {
+            type: 'slideOut',
+            duration: 700,
+            direction: 'down',
+            easing: 'easeIn'
+        }, 
+        layout: {
+            type: 'vbox',
+        },
+        scrollable: {
+            direction: 'vertical'
+        },
+        items : [
+            {
+                id: 'html_pic_treatment',
+                html  : '',
+            },
+            {
+                id: 'html_treatment',
+                html  : '',
+            },
+            {
+               xtype: 'toolbar',
+               docked: 'top',
+               cls: 'barraPesquisa',
+               id: 'treatment_toolbar',
+               html: '<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-apoio" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Tratamento</span>',
+            }
+        ],
+    },
+    initialize: function() {
+        Ext.Viewport.on('orientationchange', 'handleOrientationChange', this, {buffer: 50 });
+         if (Ext.Viewport.getOrientation() === 'portrait') {
+            Ext.getCmp('html_pic_treatment').setHeight(Ext.Viewport.getWindowHeight()/2);
+         }
+         else {
+            Ext.getCmp('html_pic_treatment').setHeight(Ext.Viewport.getWindowHeight());
+         }
+       
+    },
+    handleOrientationChange: function(viewport, orientation, width, height){
+         
+         if (Ext.Viewport.getOrientation() === 'portrait') {
+            Ext.getCmp('html_pic_treatment').setHeight(Ext.Viewport.getWindowHeight()/2);
+         }
+         else {
+            Ext.getCmp('html_pic_treatment').setHeight(Ext.Viewport.getWindowHeight());
+         }
     }
 });
 
@@ -67,12 +148,18 @@ Ext.define('Italbox.Viewport10', {
         },
         detailCard:{
             xtype:'panel',
+           // id: 'detail_multi',
             //styleHtmlContent: true,
-            scrollable: true,
+            layout: 'fit',
+           // scrollable: true,
             //padding: '0px !important',
             html: '',
-            style: 'background-color: #054667;',
+            style: 'background-color: #04334b;',
              items: [{
+                      xtype:'panel',
+                      scrollable: true,
+                      items: [
+                     {
                      id: 'html_pic_multi',
                     html  : '',
                     },
@@ -80,7 +167,8 @@ Ext.define('Italbox.Viewport10', {
                      id: 'html_multi',
                     html  : '',
                     },
-            ]
+                     ]
+             }]
         },
         items: [
                {
@@ -92,11 +180,325 @@ Ext.define('Italbox.Viewport10', {
         }],
         listeners: {
             leafitemtap: function(me, list, index, target, record) {
+                if (record.get('id') == 5) {
+                    Ext.getCmp('html_pic_multi').hide();
+                    Ext.getCmp('html_multi').hide();
+                    try{
+                        Ext.getCmp('mapa2').show();
+                    }catch(e){}
+                
+                        if (typeof Ext.getCmp('mapa2') === 'undefined') {
+                        me.getDetailCard().add(
+                            {
+                            id: 'mapa2',
+                            xtype: 'map',
+                                mapOptions : {
+                                center : new google.maps.LatLng(39.402244,-8.22876),  //Portugal
+                                zoom : 5,
+                                mapTypeId : google.maps.MapTypeId.ROADMAP,
+                                navigationControl: true,
+                                navigationControlOptions: {
+                                    style: google.maps.NavigationControlStyle.DEFAULT
+                                }
+                            },
+            
+                            /*plugins : [
+                                new Ext.plugin.google.Tracker({
+                                    trackSuspended: true,   //suspend tracking initially
+                                    allowHighAccuracy: false,
+                                    marker: new google.maps.Marker({
+                                        position: position,
+                                        title: 'My Current Location',
+                                        shadow: shadow,
+                                        icon: image
+                                    })
+                                }),
+                                new Ext.plugin.google.Traffic()
+                            ],*/
+                            mapListeners: {
+                                dragstart: function() {
+                                    var segmented = Ext.getCmp('segmented'),
+                                        pressedButtons = segmented.getPressedButtons().slice(),
+                                        trackingIndex = pressedButtons.indexOf(trackingButton);
+                                    if (trackingIndex != -1) {
+                                        pressedButtons.splice(trackingIndex, 1);
+                                        segmented.setPressedButtons(pressedButtons);
+                                    }
+                                }
+                            },
+                
+                            listeners: {
+                                maprender: function(comp, map) {
+                                     var marker_1 = new google.maps.Marker({
+                                        position: position_1,
+                                        title : 'SOSOARES - VIANA DO CASTELO',
+                                        icon: 'imgs/marker.png',
+                                        map: map
+                                    });
+                                     
+                                     var infoWindow_1 = new google.maps.InfoWindow({
+                                        content: 'SOSOARES - AVEIRO<br>'+
+                                        'Trav. Do Bolegão, 146 - Apartado 1 3754-904 Fermentelos<br>'+
+                                        'Luis Ferreira<br>'+
+                                        'Telf.: +351 936 457 232<br>'+
+                                        'Email: luis.ferreira@sosoares.pt<br>',
+                                         });
+                    
+                                    google.maps.event.addListener(marker_1,'click', function(){
+                                        infoWindow_1.open(map,marker_1);
+                                    });
+                                    
+                                    var marker_2 = new google.maps.Marker({
+                                        position: position_2,
+                                        title : 'SOSOARES - LEIRIA',
+                                        icon: 'imgs/marker.png',
+                                        map: map
+                                    });
+                                     
+                                     var infoWindow_2 = new google.maps.InfoWindow({
+                                        content: 'SOSOARES - LEIRIA<br>'+
+                                        'E.N.8 - Chão da Feira, 9 2480-060 Calvaria de Cima<br>'+
+                                        'Luis Santos<br>'+
+                                        'Telf.: +351 936 454 294<br>'+
+                                        'Email: luis.santos@sosoares.pt',
+                                         });
+                    
+                                    google.maps.event.addListener(marker_2,'click', function(){
+                                        infoWindow_2.open(map,marker_2);
+                                    });
+                                   
+                                    var marker_3 = new google.maps.Marker({
+                                        position: position_3,
+                                        title : 'SOSOARES - VIANA DO CASTELO',
+                                        icon: 'imgs/marker.png',
+                                        map: map
+                                    });
+                                     
+                                     var infoWindow_3 = new google.maps.InfoWindow({
+                                        content: 'SOSOARES - VIANA DO CASTELO<br>'+
+                                        'Lugar da Bandeira - Afife 4900-012 Viana do Castelo<br>'+
+                                        'Vitor Gonçalves<br>'+
+                                        'Telf.: +351 937 752 656<br>'+
+                                        'Email: vitor.goncalves@sosoares.pt',
+                                         });
+                    
+                                    google.maps.event.addListener(marker_3,'click', function(){
+                                        infoWindow_3.open(map,marker_3);
+                                    });
+                                    
+                                    var marker_4 = new google.maps.Marker({
+                                        position: position_4,
+                                        title : 'SOSOARES - ALGARVE',
+                                        icon: 'imgs/marker.png',
+                                        map: map
+                                    });
+                                     
+                                     var infoWindow_4 = new google.maps.InfoWindow({
+                                        content: 'SOSOARES - ALGARVE<br>'+
+                                        'Sítio do Vale da Venda EN 125, Km 98.8 8135-037 Almancil<br>'+
+                                        'Henrique Cintra<br>'+
+                                        'Telf.: +351 917 982 470<br>'+
+                                        'Email: henrique.cintra@sosoares.pt',
+                                        });
+                    
+                                    google.maps.event.addListener(marker_4,'click', function(){
+                                        infoWindow_4.open(map,marker_4);
+                                    });
+                                    
+                                    var marker_5 = new google.maps.Marker({
+                                        position: position_5,
+                                        title : 'SOSOARES - VISEU',
+                                        icon: 'imgs/marker.png',
+                                        map: map
+                                    });
+                                     
+                                     var infoWindow_5 = new google.maps.InfoWindow({
+                                        content: 'SOSOARES - VISEU<br>'+
+                                            'Zona Industrial de Abraveses 3515-157 Viseu<br>'+
+                                            'Ricardo Rodrigues<br>'+
+                                            'Telf.: +351 936 454 289<br>'+
+                                            'Email: ricardo.rodrigues@sosoares.pt',
+                                         });
+                    
+                                    google.maps.event.addListener(marker_5,'click', function(){
+                                        infoWindow_5.open(map,marker_5);
+                                    });
+                                    
+                                    var marker_6 = new google.maps.Marker({
+                                        position: position_6,
+                                        title : 'SOSOARES - PORTO',
+                                        icon: 'imgs/marker.png',
+                                        map: map
+                                    });
+                                     
+                                     var infoWindow_6 = new google.maps.InfoWindow({
+                                        content: 'SOSOARES - PORTO<br>'+
+                                        'Rua do Baldeirão, s/n 4440 - 346 Sobrado - Valongo<br>'+
+                                        'João Pinto<br>'+
+                                        'Telf.: +351 917 543 353<br>'+
+                                        'Email: joao.pinto@sosoares.pt',
+                                         });
+                    
+                                    google.maps.event.addListener(marker_6,'click', function(){
+                                        infoWindow_6.open(map,marker_6);
+                                    });
+                                    
+                                    var marker_7 = new google.maps.Marker({
+                                        position: position_7,
+                                        title : 'SOSOARES - VALONGO',
+                                        icon: 'imgs/marker.png',
+                                        map: map
+                                    });
+                                     
+                                     var infoWindow_7 = new google.maps.InfoWindow({
+                                        content: 'SOSOARES - VALONGO<br>'+
+                                                'Rua do Baldeirão, s/n 4440 - 346 Sobrado - Valongo<br>'+
+                                                'João Pedro<br>'+
+                                                'Telf.: +351 912 567 970<br>'+
+                                                'Email: joao.pedro@sosoares.pt',
+                                         });
+                    
+                                    google.maps.event.addListener(marker_7,'click', function(){
+                                        infoWindow_7.open(map,marker_7);
+                                    });
+                                    
+                                    var marker_8 = new google.maps.Marker({
+                                        position: position_8,
+                                        title : 'SOSOARES - COIMBRA',
+                                        icon: 'imgs/marker.png',
+                                        map: map
+                                    });
+                                     
+                                     var infoWindow_8 = new google.maps.InfoWindow({
+                                        content: 'SOSOARES - COIMBRA<br>'+
+                                        'Travessa do Bolegão, 146 Apartado 1 3754-904 Fermentelos'+
+                                        'Paulo Arede<br>'+
+                                        'Telf.: +351 913 549 929<br>'+
+                                        'Email: paulo.arede@sosoares.pt',
+                                         });
+                    
+                                    google.maps.event.addListener(marker_8,'click', function(){
+                                        infoWindow_8.open(map,marker_8);
+                                    });
+                                    
+                                    var marker_9 = new google.maps.Marker({
+                                        position: position_9,
+                                        title : 'SOSOARES - MADEIRA',
+                                        icon: 'imgs/marker.png',
+                                        map: map
+                                    });
+                                     
+                                     var infoWindow_9 = new google.maps.InfoWindow({
+                                        content: 'SOSOARES - MADEIRA<br>'+
+                                        'Pav. Industrial H - Plataforma 13D Zona Franca Industrial 9200-047 Caniçal - Madeira<br>'+
+                                        'Marco Ornelas<br>'+
+                                        'Telf.: +351 969 032 025<br>'+
+                                        'Email: marco.ornelas@sosoares.pt',
+                                         });
+                    
+                                    google.maps.event.addListener(marker_9,'click', function(){
+                                        infoWindow_9.open(map,marker_9);
+                                    });
+                                    
+                                    var marker_10 = new google.maps.Marker({
+                                        position: position_10,
+                                        title : 'SOSOARES - LISBOA SUL',
+                                        icon: 'imgs/marker.png',
+                                        map: map
+                                    });
+                                     
+                                     var infoWindow_10 = new google.maps.InfoWindow({
+                                        content: 'SOSOARES - LISBOA SUL<br>'+
+                                        'E.N. Lisboa - Sintra Km 14  Apartado 156<br>'+
+                                        'Pedro Guise<br>'+
+                                        'Telf.: +351 936 314 418<br>'+
+                                        'Email: pedro.guise@sosoares.pt',
+                                         });
+                    
+                                    google.maps.event.addListener(marker_10,'click', function(){
+                                        infoWindow_10.open(map,marker_10);
+                                    });
+                                    
+                                    var marker_11 = new google.maps.Marker({
+                                        position: position_11,
+                                        title : 'SOSOARES - LISBOA NORTE',
+                                        icon: 'imgs/marker.png',
+                                        map: map
+                                    });
+                                     
+                                     var infoWindow_11 = new google.maps.InfoWindow({
+                                        content: 'SOSOARES - LISBOA NORTE<br>'+
+                                        'E.N. Lisboa - Sintra Km 14  Apartado 156<br>'+
+                                        'João Costa<br>'+
+                                        'Telf.: +351 967 575 728<br>'+
+                                        'Email: joao.costa@sosoares.pt',
+                                         });
+                    
+                                    google.maps.event.addListener(marker_11,'click', function(){
+                                        infoWindow_11.open(map,marker_11);
+                                    });
+                                    
+                                    var marker_12 = new google.maps.Marker({
+                                        position: position_12,
+                                        title : 'SOSOARES - VILA REAL',
+                                        icon: 'imgs/marker.png',
+                                        map: map
+                                    });
+                                     
+                                     var infoWindow_12 = new google.maps.InfoWindow({
+                                        content: 'SOSOARES - VILA REAL<br>'+
+                                        'Rua do Baldeirão, s/n 4440 - 346 Sobrado - Valongo<br>'+
+                                        'Duarte Teixeira<br>'+
+                                        'Telf.: +351 936 459 326<br>'+
+                                        'Email: duarte.teixeira@sosoares.pt',
+                                         });
+                    
+                                    google.maps.event.addListener(marker_12,'click', function(){
+                                        infoWindow_12.open(map,marker_12);
+                                    });
+                                    
+                                    var marker_13 = new google.maps.Marker({
+                                        position: position_13,
+                                        title : 'SOSOARES - LEIRIA',
+                                        icon: 'imgs/marker.png',
+                                        map: map
+                                    });
+                                     
+                                     var infoWindow_13 = new google.maps.InfoWindow({
+                                        content: 'SOSOARES - MADEIRA<br>'+
+                                        'Pav. Industrial H - Plataforma 13D Zona Franca Industrial 9200-047 Caniçal - Madeira<br>'+
+                                        'Marco Ornelas<br>'+
+                                        'Telf.: +351 969 032 025<br>'+
+                                        'Email: marco.ornelas@sosoares.pt',
+                                         });
+                    
+                                    google.maps.event.addListener(marker_13,'click', function(){
+                                        infoWindow_13.open(map,marker_13);
+                                    });
+                
+                                    setTimeout(function() {
+                                        map.panTo(position);
+                                    }, 1000);
+                                }
+                
+                            }
+                           
+                        }                        
+                        );
+                        }
+                }else{
+                    try{
+                        Ext.getCmp('mapa2').destroy();
+                    }catch(e){}
+           
+               Ext.getCmp('html_pic_multi').show();
+               Ext.getCmp('html_multi').show();
                Ext.getCmp('html_pic_multi').setHtml('<img style="width:100%; height:100%; position:absolute" src="'+record.get('foto')+'">');
          
              
                Ext.getCmp('html_multi').setHtml('<div style="max-width:100%" class="leaf_panel">'+
                                         '<br/><div style="margin:10px"><h3 style="font-size: 24px; color:#00aeef !important">'+record.get('text')+'</h3><br><p style="color:#FFF !important;">'+record.get('html')+'</p></div></div>');
+               }
               // me.getDetailCard().setStyle('background-color: #054667;margin: 0px !important;padding: 0px !important');
                // me.getDetailCard().setFullscreen(true);
             }
@@ -166,7 +568,7 @@ Ext.define('Italbox.Viewport9', {
             scrollable: true,
             //padding: '0px !important',
             //html: '',
-            style: 'background-color: #054667;',
+            style: 'background-color: #04334b;',
            // fullscreen: true,
             //height: '50%',
             items: [{
@@ -298,7 +700,7 @@ Ext.define('Italbox.Viewport8', {
             scrollable: true,
             //padding: '0px !important',
             html: '',
-            style: 'background-color: #054667;',
+            style: 'background-color: #04334b;',
              items: [{
                         xtype: 'carousel',
                         id: 'carousel_produtos',
@@ -1575,7 +1977,7 @@ Ext.define('Italbox.Viewport5', {
                             'background-size: contain; background-position: center;',
                         },
                         {
-                            id: 'start-catalogos',
+                            id: 'tratamento-lacagem',
                             flex: 1,
                             style: 'margin:20px 20px 10px 10px;border-bottom: 7px solid #05698e;border-radius:5px;'+
                             'background: url(imgs/icons/lacagem.png) no-repeat, rgba(16, 124, 164, .8);'+
@@ -1590,14 +1992,14 @@ Ext.define('Italbox.Viewport5', {
                             align: 'stretch'
                         },
                         items: [{
-                            id: 'start-favoritos',
+                            id: 'tratamento-anodizacao',
                             flex: 1,
                             style: 'margin:10px 10px 20px 20px;border-bottom: 7px solid #05698e;border-radius:5px;'+
                             'background: url(imgs/icons/anodizacao.png) no-repeat, rgba(16, 124, 164, .8);'+
                             'background-size: contain; background-position: center;',
                         
                         }, {
-                            id: 'start-language',
+                            id: 'tratamento-imitacao',
                             flex: 1,
                             style: 'margin:10px 20px 20px 10px;border-bottom: 7px solid #05698e; border-radius:5px;'+
                             'background: url(imgs/icons/imitacao.png) no-repeat, rgba(16, 124, 164, .8);'+
@@ -1637,6 +2039,86 @@ Ext.define('Italbox.Viewport5', {
                                     Ext.getCmp('multi').setStore('Group');
                                    /* Ext.getCmp('products_toolbar').setHtml('<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-produtos_caixilharia" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Produtos</span>');*/
                                     Ext.getCmp('multi').show();
+                               /* }
+                                else{
+                                    Ext.Msg.alert('Offline', Ext.getStore('Languages').getById(idioma).get('offline_catalogs'), Ext.emptyFn);
+                                }*/
+                            }
+                        },
+                         {
+                            element: 'element',
+                            delegate: '#tratamento-lacagem',
+                            event: 'tap',
+                            fn: function() {
+                                //if (connect === 1) {
+                                     Ext.getCmp('favorites').hide();
+                                    /*Ext.getCmp('back').show();
+                                    /*Ext.getCmp('search').show();*/
+                                   /* Ext.getStore('Services_Caixilharia').load();*/
+                                   Ext.getCmp('treatment_toolbar').setHtml('<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-lacagem" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Lacagem</span>');
+                                    Ext.getCmp('html_pic_treatment').setHtml('<img style="width:100%; height:100%; position:absolute" src="imgs/sosoares.jpg">');
+                                   /* Ext.getCmp('multi').setStore('Group');*/
+                                    Ext.getCmp('html_treatment').setHtml('<div style="margin:10px"><br><h3 style="font-size: 24px; color:#00aeef !important">Lacagem</h3><br>'+
+                                        '<p>A lacagem é um processo de pintura com base em'+ 'poliéster, termoendurecível. Compõe-se de um ciclo de pré-tratamento, por imersão, cujas principias finalidades são preparar os'+'perfis para a pintura, protegê-los da corrosão e maximizar a adesão da tinta.</p>'+
+'<p>O Pré-tratamento assenta nas seguintes operações:</p>'+
+'<ul class="lista">'+
+'<li>Banho de desengorduramento</li>'+
+'<li>Lavagem corrente</li>'+
+'<li>Decapagem</li>'+
+'<li>Lavagem corrente</li>'+
+'<li>Passivação</li>'+
+'<li>Lavagem com água</li>'+
+'<li>Lavagem com água desmineralizada</li>'+
+'<li>Estufa de secagem</li>'+
+'</ul>'+
+'<p>Posteriormente, os perfis de alumínio darão entrada nas unidades de pintura onde as partículas de pó, carregadas de'+ 'electricidade estática, se depositam uniformemente nas superfícies dos perfis. Depois de transportados para o forno de'+ 'polimerização, a temperatura fará com que se crie uma camada homogénea, de lacagem, nos perfis.</p>'+
+'<p>Controlo de Produto Acabado:</p>'+
+'<p>Todo o processo decorre em condições de controlo, de acordo com a norma de qualidade QUALICOAT.</p>'+
+'<p>Assim, são controlados os banhos de pré-tratamento, a temperatura de polimerização, verificadas as espessuras da camada de'+'lacagem e a aderência da mesma, bem como a verificação da cor por comparação e brilho (Normas NP EN ISO).</p>'+
+'<p>Um laboratório de apoio com equipamento apropriado garante a realização de ensaios químicos e físicos.</p>'+
+'<p>Sosoares lacagem, constitui a unidade de lacagem do Grupo Sosoares e é detentora do certificado europeu de qualidade'+
+'QUALICOAT.</p></div></div>');
+                                    Ext.getCmp('treatment').show();
+                               /* }
+                                else{
+                                    Ext.Msg.alert('Offline', Ext.getStore('Languages').getById(idioma).get('offline_catalogs'), Ext.emptyFn);
+                                }*/
+                            }
+                        },
+                        {
+                            element: 'element',
+                            delegate: '#tratamento-anodizacao',
+                            event: 'tap',
+                            fn: function() {
+                                //if (connect === 1) {
+                                     Ext.getCmp('favorites').hide();
+                                    /*Ext.getCmp('back').show();
+                                    /*Ext.getCmp('search').show();*/
+                                   /* Ext.getStore('Services_Caixilharia').load();*/
+                                     Ext.getCmp('treatment_toolbar').setHtml('<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-anodizacao" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Anodização</span>');
+                                   /* Ext.getCmp('multi').setStore('Group');*/
+                                   /* Ext.getCmp('products_toolbar').setHtml('<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-produtos_caixilharia" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Produtos</span>');*/
+                                    Ext.getCmp('treatment').show();
+                               /* }
+                                else{
+                                    Ext.Msg.alert('Offline', Ext.getStore('Languages').getById(idioma).get('offline_catalogs'), Ext.emptyFn);
+                                }*/
+                            }
+                        },
+                        {
+                            element: 'element',
+                            delegate: '#tratamento-imitacao',
+                            event: 'tap',
+                            fn: function() {
+                                //if (connect === 1) {
+                                    Ext.getCmp('favorites').hide();
+                                    /*Ext.getCmp('back').show();
+                                    /*Ext.getCmp('search').show();*/
+                                   /* Ext.getStore('Services_Caixilharia').load();*/
+                                 Ext.getCmp('treatment_toolbar').setHtml('<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-imitacao" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Imitação Madeira</span>');
+                                   /* Ext.getCmp('multi').setStore('Group');*/
+                                    Ext.getCmp('products_toolbar').setHtml('<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-produtos_caixilharia" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Produtos</span>');
+                                    Ext.getCmp('treatment').show();
                                /* }
                                 else{
                                     Ext.Msg.alert('Offline', Ext.getStore('Languages').getById(idioma).get('offline_catalogs'), Ext.emptyFn);
@@ -2001,13 +2483,17 @@ Ext.define('Italbox.ViewportPanel', {
                             Ext.getCmp('works').onBackTap();
                                //console.dir(Ext.getCmp('teste').getBackButton());
                         
-                         }else if (Ext.getCmp('products')._hidden === false && Ext.getCmp('products').getBackButton( )._hidden === true || Ext.getCmp('works')._hidden === false && Ext.getCmp('works').getBackButton( )._hidden === true || Ext.getCmp('multi')._hidden === false && Ext.getCmp('multi').getBackButton( )._hidden === true){
-                             Ext.getCmp('menuI').hide();
+                         }else if (Ext.getCmp('products')._hidden === false && Ext.getCmp('products').getBackButton( )._hidden === true || Ext.getCmp('works')._hidden === false && Ext.getCmp('works').getBackButton( )._hidden === true || Ext.getCmp('multi')._hidden === false && Ext.getCmp('multi').getBackButton( )._hidden === true ||  Ext.getCmp('treatment')._hidden === false){
+                            Ext.getCmp('treatment').hide();
+                            Ext.getCmp('menuI').hide();
                             Ext.getCmp('footer').hide();
                             Ext.getCmp('products').hide();
                              Ext.getCmp('works').hide();
                              Ext.getCmp('multi').hide();
                              Ext.getCmp('favorites').show();
+                             try{
+                                Ext.getCmp('mapa2').destroy();
+                            }catch(e){}
                         }
                         else {
                             Ext.getCmp('favorites').hide();
@@ -2113,7 +2599,7 @@ Ext.define('Italbox.ViewportPanel', {
                             //scrollable: true,
                             //padding: '0px !important',
                             html: '',
-                            style: 'background-color: #054667;',
+                            style: 'background-color: #04334b;',
                             zIndex: 50,
                         },
                         items: [
@@ -3098,12 +3584,12 @@ Ext.define('Italbox.ViewportPanel', {
             cls: 'pesquisa',
             hidden: true,
         },
-         /* {
+        {
             xtype: 'my-viewport11',
-            id: 'map',
-            cls: 'pesquisa',
+            id: 'treatment',
+            cls: 'tratamento',
             hidden: true,
-        },*/
+        },
 
         ]
     }
@@ -3381,6 +3867,9 @@ Ext.application({
                              Ext.getCmp('works').hide();
                              Ext.getCmp('multi').hide();
                              Ext.getCmp('favorites').show();
+                             try{
+                                Ext.getCmp('mapa2').destroy();
+                            }catch(e){}
                         }
                         else if(Ext.getCmp('favorites')._hidden === false) {
                             Ext.getCmp('favorites').hide();

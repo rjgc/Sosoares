@@ -171,6 +171,11 @@ body{
    background: #012f46;
 }
 
+.tratamento{
+   padding-top: 60px !important;
+   background: #04334b;
+}
+
 .menu-sosoares{
    /*padding-top: 60px !important;*/
    background: #012f46;
@@ -409,9 +414,9 @@ body{
 
 
 .lista{
-        margin-top: 45px;
-        text-align: center;
-        height: 400px;
+        /* margin-top: 10px;
+       text-align: center;
+        height: 400px;*/
 }
 
 /*@media (min-height: 1px) and (max-height: 320px){ 
@@ -1154,14 +1159,26 @@ background-color: rgba(255, 255, 255, 0.5) !important;
 
 .leaf_panel p{
    color: #FFF !important;
-   text-align: justify !important;
+   text-align: left !important;
 }
 
 .leaf_panel ul{
    color: #FFF !important;
-   text-align: justify !important;
+   text-align: left !important;
 }
 
 .leaf_panel h4{
    color: #107ca4 !important
+}
+
+.leaf_panel h3{
+   color: #107ca4 !important
+}
+
+.leaf_panel span{
+   color: #FFF !important
+}
+
+.leaf_panel a{
+   color: #FFF !important
 }
