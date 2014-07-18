@@ -2058,26 +2058,7 @@ Ext.define('Italbox.Viewport5', {
                                    Ext.getCmp('treatment_toolbar').setHtml('<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-lacagem" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Lacagem</span>');
                                     Ext.getCmp('html_pic_treatment').setHtml('<img style="width:100%; height:100%; position:absolute" src="imgs/sosoares.jpg">');
                                    /* Ext.getCmp('multi').setStore('Group');*/
-                                    Ext.getCmp('html_treatment').setHtml('<div style="margin:10px"><br><h3 style="font-size: 24px; color:#00aeef !important">Lacagem</h3><br>'+
-                                        '<p>A lacagem é um processo de pintura com base em'+ 'poliéster, termoendurecível. Compõe-se de um ciclo de pré-tratamento, por imersão, cujas principias finalidades são preparar os'+'perfis para a pintura, protegê-los da corrosão e maximizar a adesão da tinta.</p>'+
-'<p>O Pré-tratamento assenta nas seguintes operações:</p>'+
-'<ul class="lista">'+
-'<li>Banho de desengorduramento</li>'+
-'<li>Lavagem corrente</li>'+
-'<li>Decapagem</li>'+
-'<li>Lavagem corrente</li>'+
-'<li>Passivação</li>'+
-'<li>Lavagem com água</li>'+
-'<li>Lavagem com água desmineralizada</li>'+
-'<li>Estufa de secagem</li>'+
-'</ul>'+
-'<p>Posteriormente, os perfis de alumínio darão entrada nas unidades de pintura onde as partículas de pó, carregadas de'+ 'electricidade estática, se depositam uniformemente nas superfícies dos perfis. Depois de transportados para o forno de'+ 'polimerização, a temperatura fará com que se crie uma camada homogénea, de lacagem, nos perfis.</p>'+
-'<p>Controlo de Produto Acabado:</p>'+
-'<p>Todo o processo decorre em condições de controlo, de acordo com a norma de qualidade QUALICOAT.</p>'+
-'<p>Assim, são controlados os banhos de pré-tratamento, a temperatura de polimerização, verificadas as espessuras da camada de'+'lacagem e a aderência da mesma, bem como a verificação da cor por comparação e brilho (Normas NP EN ISO).</p>'+
-'<p>Um laboratório de apoio com equipamento apropriado garante a realização de ensaios químicos e físicos.</p>'+
-'<p>Sosoares lacagem, constitui a unidade de lacagem do Grupo Sosoares e é detentora do certificado europeu de qualidade'+
-'QUALICOAT.</p></div></div>');
+                                    Ext.getCmp('html_treatment').setHtml(Ext.getStore('Treatment').getById(1).get('html'));
                                     Ext.getCmp('treatment').show();
                                /* }
                                 else{
@@ -2098,6 +2079,11 @@ Ext.define('Italbox.Viewport5', {
                                      Ext.getCmp('treatment_toolbar').setHtml('<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-anodizacao" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Anodização</span>');
                                    /* Ext.getCmp('multi').setStore('Group');*/
                                    /* Ext.getCmp('products_toolbar').setHtml('<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-produtos_caixilharia" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Produtos</span>');*/
+                                    Ext.getCmp('html_pic_treatment').setHtml('<img style="width:100%; height:100%; position:absolute" src="imgs/sosoares.jpg">');
+                                   /* Ext.getCmp('multi').setStore('Group');*/
+                                     Ext.getCmp('html_pic_treatment').setHtml('<img style="width:100%; height:100%; position:absolute" src="imgs/sosoares.jpg">');
+                                   /* Ext.getCmp('multi').setStore('Group');*/
+                                    Ext.getCmp('html_treatment').setHtml(Ext.getStore('Treatment').getById(2).get('html'));
                                     Ext.getCmp('treatment').show();
                                /* }
                                 else{
@@ -2118,6 +2104,9 @@ Ext.define('Italbox.Viewport5', {
                                  Ext.getCmp('treatment_toolbar').setHtml('<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-imitacao" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Imitação Madeira</span>');
                                    /* Ext.getCmp('multi').setStore('Group');*/
                                     Ext.getCmp('products_toolbar').setHtml('<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-produtos_caixilharia" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Produtos</span>');
+                                     Ext.getCmp('html_pic_treatment').setHtml('<img style="width:100%; height:100%; position:absolute" src="imgs/sosoares.jpg">');
+                                   /* Ext.getCmp('multi').setStore('Group');*/
+                                    Ext.getCmp('html_treatment').setHtml(Ext.getStore('Treatment').getById(3).get('html'));
                                     Ext.getCmp('treatment').show();
                                /* }
                                 else{
@@ -3624,7 +3613,8 @@ Ext.application({
         'Works_Gallery',
         'Services_Caixilharia',
         'Services_Vidro',
-        'Services_Extrusao'
+        'Services_Extrusao',
+        'Treatment'
     ],
     
     icon: {
