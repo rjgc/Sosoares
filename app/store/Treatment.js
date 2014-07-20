@@ -8,7 +8,7 @@ Ext.define('ItalboxCatalog.store.Treatment', {
         ],
         data : [{
                 id : 1,
-                html:   '<div style="margin:10px"><br><h3 style="font-size: 24px; color:#00aeef !important">Lacagem</h3><br>'+
+                html:   '<div style="margin:10px" class="leaf_panel"><br><h3 style="font-size: 24px; color:#00aeef !important">Lacagem</h3><br>'+
                         '<p>A lacagem é um processo de pintura com base em'+ 'poliéster, termoendurecível. Compõe-se de um ciclo de pré-tratamento, por imersão, cujas principias finalidades são preparar os'+'perfis para a pintura, protegê-los da corrosão e maximizar a adesão da tinta.</p>'+
                         '<p>O Pré-tratamento assenta nas seguintes operações:</p>'+
                         '<ul class="lista">'+
@@ -31,11 +31,14 @@ Ext.define('ItalboxCatalog.store.Treatment', {
                 },
                 {
                 id : 2,
-                html: ''
+                html:   '<div style="margin:10px" class="leaf_panel"><br><h3 style="font-size: 24px; color:#00aeef !important">Anodização</h3><br><p>A anodização consiste num processo electrolítico que promove a formação de uma “película” decorativa, protectora e uniforme. Essa “película” ou camada de óxido é classificada e designada por um número correspondente à espessura em microns (µ). A escolha dessa espessura é definida em função da agressividade do meio ambiente e normalizada pela norma <strong>NP1476</strong>.</p>'+
+                        '<p>Sendo a espessura normal de 15µ pode-se optar por 20µ para zonas marítimas ou até 25µ em condições muito especiais (proximidade de fábricas que produzam agentes químicos, etc.). No estado anódico normal, o alumínio fica com uma aspecto “mate” leitoso, podendo receber tratamentos mecânicos: Polido (aspecto brilhante) ou Escovado.</p>'+
+                        '<p>O Grupo Sosoares dispõe de duas unidades industriais detentoras do certificado de qualidade Europeu EURAS (<strong>QUALANOD</strong>)- Alfa Sul em Mem Martins e Metalfer S.A. em Fermentelos – que asseguram as necessidades do grupo neste tipo de tratamentos, prestando igualmente serviços a terceiros.</p></div>'
+                       
                 },
                 {
                 id : 3,
-                html: ''
+                html: '<div style="margin:10px" class="leaf_panel"><br><h3 style="font-size: 24px; color:#00aeef !important">Imitação Madeira</h3><br><p>Para responder à crescente procura de materiais em lacado imitação madeira, a Sosoares SA decidiu em meados de 2004 instalar uma nova unidade para oferecer aos seus clientes, produtos com este novo tratamento com os mesmos padrões de qualidade aplicados.</p></div>'
                 },
         ]
     }
