@@ -510,7 +510,7 @@ Ext.define('Italbox.Viewport10', {
             Ext.getCmp('html_pic_multi').setHeight(Ext.Viewport.getWindowHeight()/2);
          }
          else {
-            Ext.getCmp('html_multi').setHeight(Ext.Viewport.getWindowHeight());
+            Ext.getCmp('html_pic_multi').setHeight(Ext.Viewport.getWindowHeight());
          }
        
     },
@@ -520,7 +520,7 @@ Ext.define('Italbox.Viewport10', {
             Ext.getCmp('html_pic_multi').setHeight(Ext.Viewport.getWindowHeight()/2);
          }
          else {
-            Ext.getCmp('html_multi').setHeight(Ext.Viewport.getWindowHeight());
+            Ext.getCmp('html_pic_multi').setHeight(Ext.Viewport.getWindowHeight());
          }
     }
 });
@@ -739,27 +739,27 @@ Ext.define('Italbox.Viewport8', {
                       items.push({
                         xtype: 'image',
                         src: products+record.get('foto'),
-                        style: 'background-size: 100% 100%;'
+                        style: 'background-size: 100% 93%;'
                       });
                       if (record.get('foto2') != '') {
                          items.push({
                          xtype: 'image',
                          src: products+record.get('foto2'),
-                         style: 'background-size: 100% 100%;'
+                         style: 'background-size: 100% 93%;'
                       });
                       }
                        if (record.get('foto3') != '') {
                          items.push({
                          xtype: 'image',
                          src: products+record.get('foto3'),
-                         style: 'background-size: 100% 100%;'
+                         style: 'background-size: 100% 93%;'
                       });
                       }
                          if (record.get('foto4') != '') {
                          items.push({
                          xtype: 'image',
                          src: products+record.get('foto4'),
-                         style: 'background-size: 100% 100%;'
+                         style: 'background-size: 100% 93%;'
                       });
                       }
                        /*items.push({
@@ -773,7 +773,7 @@ Ext.define('Italbox.Viewport8', {
                     Ext.getCmp('carousel_produtos').setItems(items);
                     Ext.getCmp('carousel_produtos').setActiveItem(0);
                     
-                    Ext.getCmp('html_produtos').setHtml('<div style="max-width:100%" class="leaf_panel"><br/><div style="margin:10px"><h3 style="font-size: 24px; color:#00aeef !important">'+record.get('text')+'</h3><br><p style="color:#FFF !important;">'+record.get('descricao')+'</p></div></div>');
+                    Ext.getCmp('html_produtos').setHtml('<div style="max-width:100%" class="leaf_panel"><div style="margin:10px"><h3 style="font-size: 24px; color:#00aeef !important">'+record.get('text')+'</h3><br><p style="color:#FFF !important;">'+record.get('descricao')+'</p></div></div>');
                     
                   //  })
                 
@@ -2559,7 +2559,7 @@ Ext.define('Italbox.ViewportPanel', {
                         displayField: 'text',
                         store: 'Menu',
                         useToolbar: false,
-                       /*   showAnimation:  
+                        /*  showAnimation:  
                         {
                             type: 'slideIn',
                             //duration: 1000,
@@ -2935,11 +2935,23 @@ Ext.define('Italbox.ViewportPanel', {
                                // me.getDetailCard().setFullscreen(true);
                             }
                             
+                        },
+                        initialize: function() {
+                            this.callParent(arguments);
+                            this.getHideAnimation().on({
+                                animationend: this.destroy,
+                                scope: this
+                            });
                         }
+                   
                         });
                         panel_list_menu.show();
                         panel_list_menu.on('hide', function() {
-                           panel_list_menu.setDetailCard('')
+                           panel_list_menu.setDetailCard('');
+                           Ext.getCmp('menu_toolbar').destroy();
+                           try{
+                           Ext.getCmp('mapa').destroy();
+                           }catch(e){}
                            panel_list_menu.destroy();
                            panel_list_menu = undefined;
                            Ext.getCmp('open-menu').setStyle('color:#00aeef');
