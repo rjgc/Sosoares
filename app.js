@@ -1526,6 +1526,7 @@ Ext.define('Italbox.Viewport7', {
 Ext.define('Italbox.Viewport5', {
     extend: 'Ext.tab.Panel',
     xtype : 'my-viewport5',
+     plugins: 'swipetabs',
     id:'favorites',
     cls: 'favorites',
     config: {
@@ -3792,7 +3793,8 @@ Ext.define('Italbox.ViewportPanel', {
             xtype: 'my-viewport5',
             hidden: true,
             id: 'favorites',
-            cls: 'favorites'
+            cls: 'favorites',
+             plugins: 'swipetabs',
         },
        /* {
             xtype: 'my-viewport6',
@@ -3840,7 +3842,8 @@ Ext.application({
     appFolder: 'app',
     
     views : [
-        'Ext.ux.ImageViewer'
+        'Ext.ux.ImageViewer',
+        'Ext.ux.touch.SwipeTabs'
     ],
   
     models : [
