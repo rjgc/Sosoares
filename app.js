@@ -697,7 +697,9 @@ Ext.define('Italbox.Viewport8', {
         detailCard:{
             xtype:'panel',
             //styleHtmlContent: true,
-            scrollable: true,
+            scrollable: {
+                direction: 'vertical'
+            },
             //padding: '0px !important',
             html: '',
             style: 'background-color: #04334b;',
