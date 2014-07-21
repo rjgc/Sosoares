@@ -158,6 +158,7 @@ Ext.define('Italbox.Viewport10', {
              items: [{
                       xtype:'panel',
                       scrollable: true,
+                      id: 'panel_multi',
                       items: [
                      {
                      id: 'html_pic_multi',
@@ -490,7 +491,6 @@ Ext.define('Italbox.Viewport10', {
                     try{
                         Ext.getCmp('mapa2').destroy();
                     }catch(e){}
-           
                Ext.getCmp('html_pic_multi').show();
                Ext.getCmp('html_multi').show();
                Ext.getCmp('html_pic_multi').setHtml('<img style="width:100%; height:100%; position:absolute" src="'+record.get('foto')+'">');
@@ -498,9 +498,11 @@ Ext.define('Italbox.Viewport10', {
              
                Ext.getCmp('html_multi').setHtml('<div style="max-width:100%" class="leaf_panel">'+
                                         '<br/><div style="margin:10px"><h3 style="font-size: 24px; color:#00aeef !important">'+record.get('text')+'</h3><br><p style="color:#FFF !important;">'+record.get('html')+'</p></div></div>');
+                
                }
               // me.getDetailCard().setStyle('background-color: #054667;margin: 0px !important;padding: 0px !important');
                // me.getDetailCard().setFullscreen(true);
+               Ext.getCmp('panel_multi').getScrollable().getScroller().scrollTo(0,0.1, false);
             }
         }
     },
@@ -621,10 +623,9 @@ Ext.define('Italbox.Viewport9', {
                     }})
                      Ext.getCmp('carousel_obras').setItems(items);
                     Ext.getCmp('carousel_obras').setActiveItem(0);
-                    
-                    Ext.getCmp('html_obras').setHtml('<div style="max-width:100%" class="leaf_panel"><br/><div style="margin:10px"><h3 style="font-size: 24px; color:#00aeef !important">'+record.get('text')+'</h3><br><p style="color:#FFF !important;">'+record.get('descricao')+'</p></div></div>');
-                    
                     })
+                    Ext.getCmp('html_obras').setHtml('<div style="max-width:100%" class="leaf_panel"><br/><div style="margin:10px"><h3 style="font-size: 24px; color:#00aeef !important">'+record.get('text')+'</h3><br><p style="color:#FFF !important;">'+record.get('descricao')+'</p></div></div>');
+                    me.getDetailCard().getScrollable().getScroller().scrollTo(0,0.1, false);
                     // fill items into carousel
                    
                // });
@@ -787,6 +788,7 @@ Ext.define('Italbox.Viewport8', {
                                         '<br/><div style="margin:10px"><h3 style="font-size: 24px; color:#00aeef !important">'+record.get('text')+'</h3><br><p style="color:#FFF !important;">'+record.get('descricao')+'</p></div></div>');*/
               // me.getDetailCard().setStyle('background-color: #054667;margin: 0px !important;padding: 0px !important');
                // me.getDetailCard().setFullscreen(true);
+               me.getDetailCard().getScrollable().getScroller().scrollTo(0,0.1, false);
             }
         }
     },
@@ -2061,6 +2063,7 @@ Ext.define('Italbox.Viewport5', {
                                     Ext.getCmp('html_pic_treatment').setHtml('<img style="width:100%; height:100%; position:absolute" src="imgs/sosoares.jpg">');
                                    /* Ext.getCmp('multi').setStore('Group');*/
                                     Ext.getCmp('html_treatment').setHtml(Ext.getStore('Treatment').getById(1).get('html'));
+                                    Ext.getCmp('treatment').getScrollable().getScroller().scrollTo(0,0.1, false);
                                     Ext.getCmp('treatment').show();
                                /* }
                                 else{
@@ -2081,11 +2084,10 @@ Ext.define('Italbox.Viewport5', {
                                      Ext.getCmp('treatment_toolbar').setHtml('<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-anodizacao" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Anodização</span>');
                                    /* Ext.getCmp('multi').setStore('Group');*/
                                    /* Ext.getCmp('products_toolbar').setHtml('<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-produtos_caixilharia" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Produtos</span>');*/
-                                    Ext.getCmp('html_pic_treatment').setHtml('<img style="width:100%; height:100%; position:absolute" src="imgs/sosoares.jpg">');
-                                   /* Ext.getCmp('multi').setStore('Group');*/
                                      Ext.getCmp('html_pic_treatment').setHtml('<img style="width:100%; height:100%; position:absolute" src="imgs/sosoares.jpg">');
                                    /* Ext.getCmp('multi').setStore('Group');*/
                                     Ext.getCmp('html_treatment').setHtml(Ext.getStore('Treatment').getById(2).get('html'));
+                                    Ext.getCmp('treatment').getScrollable().getScroller().scrollTo(0,0.1, false);
                                     Ext.getCmp('treatment').show();
                                /* }
                                 else{
@@ -2105,10 +2107,10 @@ Ext.define('Italbox.Viewport5', {
                                    /* Ext.getStore('Services_Caixilharia').load();*/
                                  Ext.getCmp('treatment_toolbar').setHtml('<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-imitacao" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Imitação Madeira</span>');
                                    /* Ext.getCmp('multi').setStore('Group');*/
-                                    Ext.getCmp('products_toolbar').setHtml('<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-produtos_caixilharia" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Produtos</span>');
                                      Ext.getCmp('html_pic_treatment').setHtml('<img style="width:100%; height:100%; position:absolute" src="imgs/sosoares.jpg">');
                                    /* Ext.getCmp('multi').setStore('Group');*/
                                     Ext.getCmp('html_treatment').setHtml(Ext.getStore('Treatment').getById(3).get('html'));
+                                    Ext.getCmp('treatment').getScrollable().getScroller().scrollTo(0,0.1, false);
                                     Ext.getCmp('treatment').show();
                                /* }
                                 else{
@@ -2963,7 +2965,7 @@ Ext.define('Italbox.ViewportPanel', {
                                     '<br/><div style="margin:10px"><h3 style="font-size: 24px; color:#00aeef !important">'+
                                     record.get('text')+'</h3><br><p style="color:#FFF !important;">'+
                                     record.get('html')+'</p></div></div>');
-                                    
+                                    me.getDetailCard().getScrollable().getScroller().scrollTo(0,0.1, false);
                                 }
                               /*me.getDetailCard().setHtml('<div style="max-width:100%" class="leaf_panel">'+
                                                         '<img style="max-width:100%; max-height:70%" src="'+products+record.get('foto')+'">'+
@@ -4579,6 +4581,7 @@ Ext.application({
                                     '<br/><div style="margin:10px"><h3 style="font-size: 24px; color:#00aeef !important">'+
                                     record.get('text')+'</h3><br><p style="color:#FFF !important;">'+
                                     record.get('html')+'</p></div></div>');
+                                    me.getDetailCard().getScrollable().getScroller().scrollTo(0,0.1, false);
                                     
                                 }
                               /*me.getDetailCard().setHtml('<div style="max-width:100%" class="leaf_panel">'+
