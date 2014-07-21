@@ -1752,7 +1752,7 @@ Ext.define('Italbox.Viewport5', {
                             'background-size: contain; background-position: center;',
                         
                         }, {
-                            id: 'start-language',
+                            id: 'area_tecnica',
                             flex: 1,
                             style: 'margin:10px 20px 20px 10px;border-bottom: 7px solid #05698e; border-radius:5px;'+
                             'background: url(imgs/icons/tecnica.png) no-repeat, rgba(16, 124, 164, .8);'+
@@ -1835,6 +1835,23 @@ Ext.define('Italbox.Viewport5', {
                                 }*/
                             }
                         },
+                        {
+                            element: 'element',
+                            delegate: '#area_tecnica',
+                            event: 'tap',
+                            fn: function() {
+                                   Ext.getCmp('favorites').hide();
+                                    /*Ext.getCmp('back').show();
+                                    /*Ext.getCmp('search').show();*/
+                                   /* Ext.getStore('Services_Caixilharia').load();*/
+                                   Ext.getCmp('treatment_toolbar').setHtml('<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-tecnica" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Área Técnica</span>');
+                                    Ext.getCmp('html_pic_treatment').setHtml('<img style="width:100%; height:100%; position:absolute" src="imgs/sosoares.jpg">');
+                                   /* Ext.getCmp('multi').setStore('Group');*/
+                                    Ext.getCmp('html_treatment').setHtml(Ext.getStore('Treatment').getById(4).get('html'));
+                                    Ext.getCmp('treatment').getScrollable().getScroller().scrollTo(0,0.1, false);
+                                    Ext.getCmp('treatment').show();
+                            }
+                        }
                     ],
                 },
                 {
@@ -1885,7 +1902,7 @@ Ext.define('Italbox.Viewport5', {
                             'background-size: contain; background-position: center;',
                         
                         }, {
-                            id: 'start-language',
+                            id: 'apoio_cliente',
                             flex: 1,
                             style: 'margin:10px 20px 20px 10px;border-bottom: 7px solid #05698e; border-radius:5px;'+
                             'background: url(imgs/icons/apoio.png) no-repeat, rgba(16, 124, 164, .8);'+
@@ -1953,6 +1970,23 @@ Ext.define('Italbox.Viewport5', {
                                 }*/
                             }
                         },
+                        {
+                            element: 'element',
+                            delegate: '#apoio_cliente',
+                            event: 'tap',
+                            fn: function() {
+                                   Ext.getCmp('favorites').hide();
+                                    /*Ext.getCmp('back').show();
+                                    /*Ext.getCmp('search').show();*/
+                                   /* Ext.getStore('Services_Caixilharia').load();*/
+                                   Ext.getCmp('treatment_toolbar').setHtml('<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-tecnica" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Apoio Cliente</span>');
+                                    Ext.getCmp('html_pic_treatment').setHtml('<img style="width:100%; height:100%; position:absolute" src="imgs/sosoares.jpg">');
+                                   /* Ext.getCmp('multi').setStore('Group');*/
+                                    Ext.getCmp('html_treatment').setHtml(Ext.getStore('Treatment').getById(5).get('html'));
+                                    Ext.getCmp('treatment').getScrollable().getScroller().scrollTo(0,0.1, false);
+                                    Ext.getCmp('treatment').show();
+                            }
+                        }
                     ],
                 },
                 {
