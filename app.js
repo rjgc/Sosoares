@@ -1267,7 +1267,7 @@ Ext.define('Italbox.Viewport7', {
     }
 });
 
-Ext.define('Italbox.Viewport6', {
+/*Ext.define('Italbox.Viewport6', {
     extend: 'Ext.dataview.List',
     xtype : 'my-viewport6',
     cls: 'pesquisa',
@@ -1293,7 +1293,7 @@ Ext.define('Italbox.Viewport6', {
                /* fields: ['id_produto', 'nome', 'descricao_1','descricao_2','descricao_3','descricao_4', 'foto', 'ref', 'estado', 'lastModified'],
                 data:tprodutos*/
         /*},*/
-        itemTpl:  '<div class="lista-pesquisa">'+
+     /*   itemTpl:  '<div class="lista-pesquisa">'+
             '<img src="'+thumb_products+'{foto_1}" style="float:left; height:30px; margin-right:10px;"><i class="icon-front front"></i></img>' +
             '<div> <span>{nome_pt}</span></div>' +
             '</div>',
@@ -1335,7 +1335,7 @@ Ext.define('Italbox.Viewport6', {
                     }*/
               /* },*/
               //  ],
-            }
+        /*    }
         ],
         listeners: {
             itemtap: function(list, index, target, record) {
@@ -1517,7 +1517,7 @@ Ext.define('Italbox.Viewport6', {
             }
         }
     }
-});
+});*/
 
 Ext.define('Italbox.Viewport5', {
     extend: 'Ext.tab.Panel',
@@ -2439,13 +2439,13 @@ Ext.define('Italbox.ViewportPanel', {
                     cls: 'back icon-back',
                     hidden: true,
                     handler: function () {
-                        if(Ext.getCmp('search')._hidden === false)
+                        /*if(Ext.getCmp('search')._hidden === false)
                         {
                             Ext.getCmp('search').hide();
                             Ext.getCmp('products').hide();
                             Ext.getCmp('works').hide();
                             Ext.getCmp('favorites').show();
-                        }else if (typeof Ext.getCmp('list-menu-language') != 'undefined') {
+                        }else */if (typeof Ext.getCmp('list-menu-language') != 'undefined') {
                         
                                if (Ext.getCmp('list-menu-language').getBackButton()._hidden === false) {
                                    Ext.getCmp('list-menu-language').onBackTap();
@@ -2460,7 +2460,22 @@ Ext.define('Italbox.ViewportPanel', {
                                    panel_list_menu = undefined;
                                    }catch(e){}*/
                                }
-                          
+                         }else if (typeof Ext.getCmp('list-help') != 'undefined') {
+                         
+                              /*  if (Ext.getCmp('list-help').getBackButton()._hidden === false) {
+                                    Ext.getCmp('list-help').onBackTap();
+                                }
+                                else{*/
+                                    Ext.getCmp('list-help').destroy();
+                                    Ext.getCmp('back').hide();
+                                    panel_help = undefined;
+                                    /*try{
+                                    
+                                    panel_list_menu.destroy();
+                                    panel_list_menu = undefined;
+                                    }catch(e){}*/
+                              /*  }*/
+                                
                         }else if (typeof Ext.getCmp('list-menu') != 'undefined') {
                          
                                 if (Ext.getCmp('list-menu').getBackButton()._hidden === false) {
@@ -2574,6 +2589,7 @@ Ext.define('Italbox.ViewportPanel', {
                         id:'list-menu',
                         //cls: 'lista-extras',
                         float: true,
+                        zIndex: 45,
                         title: 'Menu',
                         displayField: 'text',
                         store: 'Menu',
@@ -3134,7 +3150,7 @@ Ext.define('Italbox.ViewportPanel', {
                                cls: 'barra-menu',
                                zIndex: 50,
                                id: 'language_toolbar',
-                               html: '<span style="background: #012f46; color:#FFF; float:left; font-size: 21px;margin-top: 7px; "><i class="icon-idiomas" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Idiomas</span>',
+                               html: '<span style="background: #012f46; color:#FFF; float:left; font-size: 21px;margin-top: 7px; "><i class="icon-idioma" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Idiomas</span>',
                                }],
                         listeners: {
                             leafitemtap: function(me, list, index, target, record) {
@@ -3171,9 +3187,6 @@ Ext.define('Italbox.ViewportPanel', {
                             Ext.getCmp('back').hide();
                            panel_language.setDetailCard('');
                            Ext.getCmp('language_toolbar').destroy();
-                           try{
-                           Ext.getCmp('mapa').destroy();
-                           }catch(e){}
                            panel_language.destroy();
                            panel_language = undefined;
                            //Ext.getCmp('open-menu').setStyle('color:#00aeef');
@@ -3506,11 +3519,73 @@ Ext.define('Italbox.ViewportPanel', {
                     text: '<i class="icon-ajuda"></i><br><font style="font-size:15px">Ajuda</font>',
                     cls: 'open-menu4_2',
                     id: 'open-menu5',
+                    handler: function () {
+                        if (typeof panel_help === 'undefined')  {
+                           Ext.getCmp('back').show();
+                           panel_help = Ext.Viewport.add({
+                           xtype: 'container',
+                           id: 'list-help',
+                           //cls: 'pesquisa2',
+                           style: 'background: rgb(4, 51, 75);',
+                           scrollable: {
+                              direction: 'vertical',
+                           },
+                           float: true,
+                           zIndex: 45,
+                           showAnimation:  
+                           {
+                               type: 'slideIn',
+                               //duration: 1000,
+                               direction: 'left',
+                               //easing: 'easeIn'
+                           },  
+                           items: [
+                               {
+                               xtype: 'toolbar',
+                               docked: 'top',
+                               cls: 'barra-menu',
+                               zIndex: 50,
+                               id: 'help_toolbar',
+                               html: '<span style="background: #012f46; color:#FFF; float:left; font-size: 21px;margin-top: 7px; "><i class="icon-ajuda" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Ajuda</span>',
+                               },
+                               {
+                                   html  : '<div style="max-width:100%" class="leaf_panel">'+
+                                    '<br/><div style="margin:10px"><h3 style="font-size: 24px; color:#00aeef !important">'+
+                                    'Ajuda</h3><br><p style="color:#FFF !important;"><p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>'+
+                                     '</p></div></div>'
+                               },
+                           ],   
+                            initialize: function() {
+                                this.callParent(arguments);
+                                this.getHideAnimation().on({
+                                    animationend: this.destroy,
+                                    scope: this
+                                });
+                            }
+                       
+                            });
+                            panel_help.show();
+                            panel_help.on('hide', function() {
+                                Ext.getCmp('back').hide();
+                               panel_help.setDetailCard('');
+                               Ext.getCmp('language_toolbar').destroy();
+                              
+                               panel_help.destroy();
+                               panel_help = undefined;
+                               //Ext.getCmp('open-menu').setStyle('color:#00aeef');
+                            });     
+                       }else{
+                             //panel_list_menu.show();
+                             //console.dir(panel_list_menu);
+                            //alert('TESTE!!');
+                           // panel_menu.hide();
+                       }
+                    }
                     //hidden: true,
             }
             ]    
         },
-        {
+      /*  {
             xtype: 'toolbar',
             id: 'barra5',
             cls: 'right_bar',
@@ -3652,7 +3727,7 @@ Ext.define('Italbox.ViewportPanel', {
                 }
             },
         ]
-        },
+        },*/
         /*{
             xtype: 'my-viewport',
             hidden: true,
@@ -3681,12 +3756,12 @@ Ext.define('Italbox.ViewportPanel', {
             id: 'favorites',
             cls: 'favorites'
         },
-        {
+       /* {
             xtype: 'my-viewport6',
             hidden: true,
             id: 'search',
             cls: 'pesquisa',
-        },
+        },*/
         {
             xtype: 'my-viewport7',
             id: 'menuI',
@@ -3789,7 +3864,7 @@ Ext.application({
         //Ext.getStore('Products');
         //Ext.getStore('produtos') = Ext.getStore('Products');
         //console.dir( Ext.getStore('Teste'));
-        Ext.Msg.setZIndex(20);
+        Ext.Msg.setZIndex(100);
         
         Ext.MessageBox.override({
                     confirm: function(title, message, fn, scope) {
@@ -3954,13 +4029,13 @@ Ext.application({
     
     function onBackKeyDown(eve) {
             eve.preventDefault();
-            if(Ext.getCmp('search')._hidden === false)
+            /*if(Ext.getCmp('search')._hidden === false)
                         {
                             Ext.getCmp('search').hide();
                             Ext.getCmp('products').hide();
                             Ext.getCmp('works').hide();
                             Ext.getCmp('favorites').show();
-                        }else if (typeof Ext.getCmp('list-menu-language') != 'undefined') {
+                        }else*/ if (typeof Ext.getCmp('list-menu-language') != 'undefined') {
                          
                                 if (Ext.getCmp('list-menu-language').getBackButton()._hidden === false) {
                                     Ext.getCmp('list-menu-language').onBackTap();
@@ -3975,6 +4050,21 @@ Ext.application({
                                     panel_list_menu = undefined;
                                     }catch(e){}*/
                                 }
+                         }else if (typeof Ext.getCmp('list-help') != 'undefined') {
+                         
+                                /*if (Ext.getCmp('list-help').getBackButton()._hidden === false) {
+                                    Ext.getCmp('list-help').onBackTap();
+                                }
+                                else{*/
+                                    Ext.getCmp('list-help').destroy();
+                                    Ext.getCmp('back').hide();
+                                    panel_help = undefined;
+                                    /*try{
+                                    
+                                    panel_list_menu.destroy();
+                                    panel_list_menu = undefined;
+                                    }catch(e){}*/
+                               /* }*/
                            
                         }else if (typeof Ext.getCmp('list-menu') != 'undefined') {
                          
@@ -4115,6 +4205,7 @@ Ext.application({
                         id:'list-menu',
                         //cls: 'lista-extras',
                         float: true,
+                        zIndex: 45,
                         title: 'Menu',
                         displayField: 'text',
                         store: 'Menu',
