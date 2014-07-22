@@ -230,6 +230,7 @@ Ext.define('Italbox.Viewport10', {
                 
                             listeners: {
                                 maprender: function(comp, map) {
+                                    
                                      var marker_1 = new google.maps.Marker({
                                         position: position_1,
                                         title : 'SOSOARES - VIANA DO CASTELO',
