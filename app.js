@@ -3036,6 +3036,10 @@ Ext.define('Italbox.ViewportPanel', {
                              //console.dir(panel_list_menu);
                             //alert('TESTE!!');
                            // panel_menu.hide();
+                            Ext.getCmp('list-menu').destroy();
+                            Ext.getCmp('open-menu').setStyle('color:#00aeef');
+                            panel_list_menu = undefined;
+                           
                        }
                      }, 
                 },
@@ -4643,6 +4647,9 @@ Ext.application({
                              //console.dir(panel_list_menu);
                             //alert('TESTE!!');
                            // panel_menu.hide();
+                           Ext.getCmp('list-menu').destroy();
+                           Ext.getCmp('open-menu').setStyle('color:#00aeef');
+                           panel_list_menu = undefined;
                        }
             
             
