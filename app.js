@@ -4256,7 +4256,7 @@ Ext.application({
                         displayField: 'text',
                         store: 'Menu',
                         useToolbar: false,
-                       /*   showAnimation:  
+                        showAnimation:  
                         {
                             type: 'slideIn',
                             //duration: 1000,
