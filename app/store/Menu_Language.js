@@ -21,25 +21,25 @@ Ext.define('ItalboxCatalog.store.Menu_Language', {
                         id: 10,
                         text: 'Português',
                         icon: '',
-                        leaf: false,
+                        leaf: true,
                     },
                     {
                         id: 11,
                         text: 'English',
                         icon: '',
-                        leaf: false,
+                        leaf: true,
                     },
                     {
                         id: 12,
                         text: 'Français',
                         icon: '',
-                        leaf: false,
+                        leaf: true,
                     },
                     {
                         id: 13,
                         text: 'Espanhol',
                         icon: '',
-                        leaf: false,
+                        leaf: true,
                     }
                     ]
                 },

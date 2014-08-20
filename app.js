@@ -35,6 +35,8 @@ var position_13 = new google.maps.LatLng(37.765287,-25.67389); //Açores
 }
 catch(e){}
 
+var idioma;
+
 Ext.Loader.setConfig({
     enabled: true,
     paths: {
@@ -3177,7 +3179,7 @@ Ext.define('Italbox.ViewportPanel', {
                             '</div>',
                         emptyText: '<div class="lista-pesquisa">Sem resultados</div>',
                         },
-                        detailCard:{
+                        /*detailCard:{
                             xtype: 'panel',
                              layout: 'fit',
                             //styleHtmlContent: true,
@@ -3186,7 +3188,7 @@ Ext.define('Italbox.ViewportPanel', {
                             html: '',
                             style: 'background-color: #04334b;',
                             zIndex: 50,
-                        },
+                        },*/
                         items: [
                                {
                                xtype: 'toolbar',
@@ -3198,17 +3200,74 @@ Ext.define('Italbox.ViewportPanel', {
                                }],
                         listeners: {
                             leafitemtap: function(me, list, index, target, record) {
-                    
-                                
+                                    if (record.get('id') == 10) {
+                                        
+                                        var valor = { id_setting: '1', lang: '1'};
+                                        Ext.getStore('Settings').getAt(0).set(valor);
+                                        Ext.getStore('Settings').sync();
+                                        idioma = Ext.getStore('Settings').getAt(0).get('lang');
+                                        
+                                    }
+                                    else if (record.get('id') == 11) {
+                                        
+                                        var valor = { id_setting: '1', lang: '2'};
+                                        Ext.getStore('Settings').getAt(0).set(valor);
+                                        Ext.getStore('Settings').sync();
+                                        idioma = Ext.getStore('Settings').getAt(0).get('lang');
+                                    }
+                                    else if (record.get('id') == 12) {
+                                        
+                                        var valor = { id_setting: '1', lang: '3'};
+                                        Ext.getStore('Settings').getAt(0).set(valor);
+                                        Ext.getStore('Settings').sync();
+                                        idioma = Ext.getStore('Settings').getAt(0).get('lang');
+                                    }
+                                    else if (record.get('id') == 13) {
+                                        
+                                        var valor = { id_setting: '1', lang: '4'};
+                                        Ext.getStore('Settings').getAt(0).set(valor);
+                                        Ext.getStore('Settings').sync();
+                                        idioma = Ext.getStore('Settings').getAt(0).get('lang');
+                                    }
+                                    
+                                     Ext.getCmp('start-caixilharia').setStyle(Ext.getStore('Languages').getById(idioma).get('start_caixilharia'));
+                                        Ext.getCmp('start-vidro').setStyle(Ext.getStore('Languages').getById(idioma).get('start_vidro'));
+                                        Ext.getCmp('start-extrusao').setStyle(Ext.getStore('Languages').getById(idioma).get('start_extrusao'));
+                                        Ext.getCmp('start-tratamento').setStyle(Ext.getStore('Languages').getById(idioma).get('start_tratamento'));
+                                        
+                                        Ext.MessageBox.override({
+                                                confirm: function(title, message, fn, scope) {
+                                                return this.show({
+                                                    title       : title || null,
+                                                    message     : message || null,
+                                                    buttons     : [
+                                                    {text: Ext.getStore('Languages').getById(idioma).get('no'),  itemId: 'no'},
+                                                    {text: Ext.getStore('Languages').getById(idioma).get('yes'), itemId: 'yes', ui: 'action'}
+                                                ],
+                                                    promptConfig: false,
+                                                    scope       : scope,
+                                                    fn: function() {
+                                                        if (fn) {
+                                                            fn.apply(scope, arguments);
+                                                        }
+                                                    }
+                                                });
+                                            }
+                                        });
+                                        
+                                        
+                                        Ext.getCmp('back').hide();
+                                        Ext.getCmp('list-menu-language').destroy();
+                                        panel_language = undefined;
                                    // me.getDetailCard().setHtml('');
                                   //  Ext.getCmp('teste99').setLayout('');
-                                    me.getDetailCard().setScrollable(true);
+                                   /* me.getDetailCard().setScrollable(true);
                                     me.getDetailCard().setHtml('<div style="max-width:100%" class="leaf_panel">'+
                                     '<br/><div style="margin:10px"><h3 style="font-size: 24px; color:#00aeef !important">'+
                                     record.get('text')+'</h3><br><p style="color:#FFF !important;">'+
-                                    record.get('html')+'</p></div></div>');
+                                    record.get('html')+'</p></div></div>');*/
                                     
-                                }
+                                },
                               /*me.getDetailCard().setHtml('<div style="max-width:100%" class="leaf_panel">'+
                                                         '<img style="max-width:100%; max-height:70%" src="'+products+record.get('foto')+'">'+
                                                         '<br/><div style="margin:10px"><h3 style="font-size: 24px; color:#00aeef !important">'+record.get('text')+'</h3><br><p style="color:#FFF !important;">'+record.get('descricao')+'</p></div></div>');*/
@@ -3852,16 +3911,16 @@ Ext.application({
     ],
   
     models : [
-       /* 'Setting',
-        'Favorite',
+        'Setting',
+        /*'Favorite',
         'Favorite2',*/
        // 'Product'
               
     ],
     stores : [
-       /* 'Settings',
+        'Settings',
         'Languages',
-        'Favorites',*/
+        /*'Favorites',*/
         'Menu',
         'Menu_Language',
         'Group',
@@ -3932,16 +3991,16 @@ Ext.application({
                 }
             });
         
-        /*itry{
+        try{
             var existe = Ext.getStore('Settings').getAt(0).get('lang');
         }
         catch(e){}
-        f (existe === undefined) {
+        if (existe === undefined) {
               var valor = { id_setting: '1', lang: '1'};
               Ext.getStore('Settings').add(valor);
               Ext.getStore('Settings').sync();
               idioma = Ext.getStore('Settings').getAt(0).get('lang');
-              Ext.MessageBox.override({
+             /* Ext.MessageBox.override({
                     confirm: function(title, message, fn, scope) {
                     return this.show({
                         title       : title || null,
@@ -3959,11 +4018,11 @@ Ext.application({
                         }
                     });
                 }
-            });
+            });*/
         }
         else{
             idioma = Ext.getStore('Settings').getAt(0).get('lang');
-            Ext.getCmp('start-catalogos').setStyle(Ext.getStore('Languages').getById(idioma).get('menu_catalogs'));
+            /*Ext.getCmp('start-catalogos').setStyle(Ext.getStore('Languages').getById(idioma).get('menu_catalogs'));
             Ext.getCmp('start-favoritos').setStyle(Ext.getStore('Languages').getById(idioma).get('menu_favorites'));
             Ext.getCmp('start-language').setStyle(Ext.getStore('Languages').getById(idioma).get('menu_language'));
             Ext.getCmp('start-help').setStyle(Ext.getStore('Languages').getById(idioma).get('menu_help'));
@@ -3993,8 +4052,8 @@ Ext.application({
                         }
                     });
                 }
-            });
-        }*/
+            });*/
+        }
        
      _IS_RIPPLE_EMULATOR = $('#tinyhippos-injected').length > 0;    
         
