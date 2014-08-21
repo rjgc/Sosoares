@@ -36,6 +36,8 @@ var position_13 = new google.maps.LatLng(37.765287,-25.67389); //Açores
 catch(e){}
 
 var idioma;
+/*var language = 'Idiomas';
+var help = 'Ajuda';*/
 
 Ext.Loader.setConfig({
     enabled: true,
@@ -1638,7 +1640,7 @@ Ext.define('Italbox.Viewport5', {
                                     Ext.getCmp('back').show();
                                     /*Ext.getCmp('search').show();*/
                                    /* Ext.getStore('Services_Caixilharia').load();*/
-                                    Ext.getCmp('multi').setStore('Group');
+                                    Ext.getCmp('multi').setStore('Group_'+idioma);
                                    /* Ext.getCmp('products_toolbar').setHtml('<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-produtos_caixilharia" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Produtos</span>');*/
                                    Ext.getCmp('multi_toolbar').setHtml('<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-sosoares" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Grupo Sosoares</span>');
                                     Ext.getCmp('multi').show();
@@ -1792,7 +1794,7 @@ Ext.define('Italbox.Viewport5', {
                                     /*Ext.getCmp('search').show();*/
                                    /* Ext.getStore('Services_Caixilharia').load();*/
                                     Ext.getCmp('multi_toolbar').setHtml('<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-sosoares" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Grupo Sosoares</span>');
-                                    Ext.getCmp('multi').setStore('Group');
+                                    Ext.getCmp('multi').setStore('Group_'+idioma);
                                    /* Ext.getCmp('products_toolbar').setHtml('<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-produtos_caixilharia" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Produtos</span>');*/
                                     Ext.getCmp('multi').show();
                                /* }
@@ -1927,7 +1929,7 @@ Ext.define('Italbox.Viewport5', {
                                     /*Ext.getCmp('search').show();*/
                                    /* Ext.getStore('Services_Caixilharia').load();*/
                                     Ext.getCmp('multi_toolbar').setHtml('<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-sosoares" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Grupo Sosoares</span>');
-                                    Ext.getCmp('multi').setStore('Group');
+                                    Ext.getCmp('multi').setStore('Group_'+idioma);
                                    /* Ext.getCmp('products_toolbar').setHtml('<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-produtos_caixilharia" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Produtos</span>');*/
                                     Ext.getCmp('multi').show();
                                /* }
@@ -2078,7 +2080,7 @@ Ext.define('Italbox.Viewport5', {
                                     /*Ext.getCmp('search').show();*/
                                    /* Ext.getStore('Services_Caixilharia').load();*/
                                     Ext.getCmp('multi_toolbar').setHtml('<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-sosoares" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Grupo Sosoares</span>');
-                                    Ext.getCmp('multi').setStore('Group');
+                                    Ext.getCmp('multi').setStore('Group_'+idioma);
                                    /* Ext.getCmp('products_toolbar').setHtml('<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-produtos_caixilharia" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Produtos</span>');*/
                                     Ext.getCmp('multi').show();
                                /* }
@@ -2634,7 +2636,7 @@ Ext.define('Italbox.ViewportPanel', {
                         zIndex: 45,
                         title: 'Menu',
                         displayField: 'text',
-                        store: 'Menu',
+                        store: 'Menu_'+idioma,
                         useToolbar: false,
                         showAnimation:  
                         {
@@ -2992,12 +2994,70 @@ Ext.define('Italbox.ViewportPanel', {
                                     }                        
                                     );
                                     }
+                                }else if(record.get('id') == 10 || record.get('id') == 11 || record.get('id') == 12 || record.get('id') == 13  ){
+                                    if (record.get('id') == 10) {
+                                        var valor = { id_setting: '1', lang: '1'};
+                                    }
+                                    else if (record.get('id') == 11) {
+                                        var valor = { id_setting: '1', lang: '2'};
+                                    }
+                                    else if (record.get('id') == 12) {
+                                        var valor = { id_setting: '1', lang: '3'};
+                                    }
+                                    else if (record.get('id') == 13) {
+                                        var valor = { id_setting: '1', lang: '4'};
+                                    }
+                                    Ext.getStore('Settings').getAt(0).set(valor);
+                                    Ext.getStore('Settings').sync();
+                                    idioma = Ext.getStore('Settings').getAt(0).get('lang');
+                                    Ext.getCmp('start-caixilharia').setStyle(Ext.getStore('Languages').getById(idioma).get('start_caixilharia'));
+                                    Ext.getCmp('start-vidro').setStyle(Ext.getStore('Languages').getById(idioma).get('start_vidro'));
+                                    Ext.getCmp('start-extrusao').setStyle(Ext.getStore('Languages').getById(idioma).get('start_extrusao'));
+                                    Ext.getCmp('start-tratamento').setStyle(Ext.getStore('Languages').getById(idioma).get('start_tratamento'));           
+                                    Ext.getCmp('produtos_caixilharia').setStyle(Ext.getStore('Languages').getById(idioma).get('produtos_caixilharia'));
+                                    Ext.getCmp('obras_caixilharia').setStyle(Ext.getStore('Languages').getById(idioma).get('obras_caixilharia'));
+                                    Ext.getCmp('servicos_caixilharia').setStyle(Ext.getStore('Languages').getById(idioma).get('servicos_caixilharia'));
+                                    Ext.getCmp('produtos_vidro').setStyle(Ext.getStore('Languages').getById(idioma).get('produtos_vidro'));
+                                    Ext.getCmp('servicos_vidro').setStyle(Ext.getStore('Languages').getById(idioma).get('servicos_vidro'));
+                                    Ext.getCmp('area_tecnica').setStyle(Ext.getStore('Languages').getById(idioma).get('area_tecnica'));
+                                    Ext.getCmp('produtos_extrusao').setStyle(Ext.getStore('Languages').getById(idioma).get('produtos_extrusao'));
+                                    Ext.getCmp('servicos_extrusao').setStyle(Ext.getStore('Languages').getById(idioma).get('servicos_extrusao'));
+                                    Ext.getCmp('apoio_cliente').setStyle(Ext.getStore('Languages').getById(idioma).get('apoio_cliente'));
+                                    Ext.getCmp('tratamento-lacagem').setStyle(Ext.getStore('Languages').getById(idioma).get('tratamento_lacagem'));
+                                    Ext.getCmp('tratamento-anodizacao').setStyle(Ext.getStore('Languages').getById(idioma).get('tratamento_anodizacao'));
+                                    Ext.getCmp('tratamento-imitacao').setStyle(Ext.getStore('Languages').getById(idioma).get('tratamento_imitacao'));
+                                    Ext.getCmp('open-menu4').setText(Ext.getStore('Languages').getById(idioma).get('idiomas'));
+                                    Ext.getCmp('open-menu5').setText(Ext.getStore('Languages').getById(idioma).get('ajuda'));  
+                                    
+                                    Ext.MessageBox.override({
+                                              confirm: function(title, message, fn, scope) {
+                                              return this.show({
+                                                  title       : title || null,
+                                                  message     : message || null,
+                                                  buttons     : [
+                                                  {text: Ext.getStore('Languages').getById(idioma).get('no'),  itemId: 'no'},
+                                                  {text: Ext.getStore('Languages').getById(idioma).get('yes'), itemId: 'yes', ui: 'action'}
+                                              ],
+                                                  promptConfig: false,
+                                                  scope       : scope,
+                                                  fn: function() {
+                                                      if (fn) {
+                                                          fn.apply(scope, arguments);
+                                                      }
+                                                  }
+                                              });
+                                          }
+                                      });
+                                      Ext.getCmp('open-menu').setStyle('color:#00aeef');
+                                      Ext.getCmp('list-menu').destroy();
+                                      panel_list_menu = undefined;
+                                    
                                 }else{
                                 try{
                                     Ext.getCmp('mapa').hide();
                                     }catch(e){}
-                                   // me.getDetailCard().setHtml('');
-                                  //  Ext.getCmp('teste99').setLayout('');
+                                    //me.getDetailCard().setHtml('');
+                                    //Ext.getCmp('teste99').setLayout('');
                                     me.getDetailCard().setScrollable(true);
                                     me.getDetailCard().setHtml('<div style="max-width:100%" class="leaf_panel">'+
                                     '<br/><div style="margin:10px"><h3 style="font-size: 24px; color:#00aeef !important">'+
@@ -3196,7 +3256,7 @@ Ext.define('Italbox.ViewportPanel', {
                                cls: 'barra-menu',
                                zIndex: 50,
                                id: 'language_toolbar',
-                               html: '<span style="background: #012f46; color:#FFF; float:left; font-size: 21px;margin-top: 7px; "><i class="icon-idioma" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Idiomas</span>',
+                               html: Ext.getStore('Languages').getById(idioma).get('language_toolbar'),
                                }],
                         listeners: {
                             leafitemtap: function(me, list, index, target, record) {
@@ -3206,6 +3266,8 @@ Ext.define('Italbox.ViewportPanel', {
                                         Ext.getStore('Settings').getAt(0).set(valor);
                                         Ext.getStore('Settings').sync();
                                         idioma = Ext.getStore('Settings').getAt(0).get('lang');
+                                        /*language = 'Idiomas';
+                                        help = 'Ajuda';*/
                                         
                                     }
                                     else if (record.get('id') == 11) {
@@ -3214,6 +3276,8 @@ Ext.define('Italbox.ViewportPanel', {
                                         Ext.getStore('Settings').getAt(0).set(valor);
                                         Ext.getStore('Settings').sync();
                                         idioma = Ext.getStore('Settings').getAt(0).get('lang');
+                                        /*language = 'Languages';
+                                        help = 'Help';*/
                                     }
                                     else if (record.get('id') == 12) {
                                         
@@ -3221,6 +3285,8 @@ Ext.define('Italbox.ViewportPanel', {
                                         Ext.getStore('Settings').getAt(0).set(valor);
                                         Ext.getStore('Settings').sync();
                                         idioma = Ext.getStore('Settings').getAt(0).get('lang');
+                                       /* language = 'Langues';
+                                        help = 'Aide';*/
                                     }
                                     else if (record.get('id') == 13) {
                                         
@@ -3228,12 +3294,28 @@ Ext.define('Italbox.ViewportPanel', {
                                         Ext.getStore('Settings').getAt(0).set(valor);
                                         Ext.getStore('Settings').sync();
                                         idioma = Ext.getStore('Settings').getAt(0).get('lang');
+                                       /* language = 'Idiomas';
+                                        help = 'Ayuda';*/
                                     }
                                     
-                                     Ext.getCmp('start-caixilharia').setStyle(Ext.getStore('Languages').getById(idioma).get('start_caixilharia'));
-                                        Ext.getCmp('start-vidro').setStyle(Ext.getStore('Languages').getById(idioma).get('start_vidro'));
-                                        Ext.getCmp('start-extrusao').setStyle(Ext.getStore('Languages').getById(idioma).get('start_extrusao'));
-                                        Ext.getCmp('start-tratamento').setStyle(Ext.getStore('Languages').getById(idioma).get('start_tratamento'));
+                                    Ext.getCmp('start-caixilharia').setStyle(Ext.getStore('Languages').getById(idioma).get('start_caixilharia'));
+                                    Ext.getCmp('start-vidro').setStyle(Ext.getStore('Languages').getById(idioma).get('start_vidro'));
+                                    Ext.getCmp('start-extrusao').setStyle(Ext.getStore('Languages').getById(idioma).get('start_extrusao'));
+                                    Ext.getCmp('start-tratamento').setStyle(Ext.getStore('Languages').getById(idioma).get('start_tratamento'));           
+                                    Ext.getCmp('produtos_caixilharia').setStyle(Ext.getStore('Languages').getById(idioma).get('produtos_caixilharia'));
+                                    Ext.getCmp('obras_caixilharia').setStyle(Ext.getStore('Languages').getById(idioma).get('obras_caixilharia'));
+                                    Ext.getCmp('servicos_caixilharia').setStyle(Ext.getStore('Languages').getById(idioma).get('servicos_caixilharia'));
+                                    Ext.getCmp('produtos_vidro').setStyle(Ext.getStore('Languages').getById(idioma).get('produtos_vidro'));
+                                    Ext.getCmp('servicos_vidro').setStyle(Ext.getStore('Languages').getById(idioma).get('servicos_vidro'));
+                                    Ext.getCmp('area_tecnica').setStyle(Ext.getStore('Languages').getById(idioma).get('area_tecnica'));
+                                    Ext.getCmp('produtos_extrusao').setStyle(Ext.getStore('Languages').getById(idioma).get('produtos_extrusao'));
+                                    Ext.getCmp('servicos_extrusao').setStyle(Ext.getStore('Languages').getById(idioma).get('servicos_extrusao'));
+                                    Ext.getCmp('apoio_cliente').setStyle(Ext.getStore('Languages').getById(idioma).get('apoio_cliente'));
+                                    Ext.getCmp('tratamento-lacagem').setStyle(Ext.getStore('Languages').getById(idioma).get('tratamento_lacagem'));
+                                    Ext.getCmp('tratamento-anodizacao').setStyle(Ext.getStore('Languages').getById(idioma).get('tratamento_anodizacao'));
+                                    Ext.getCmp('tratamento-imitacao').setStyle(Ext.getStore('Languages').getById(idioma).get('tratamento_imitacao'));
+                                    Ext.getCmp('open-menu4').setText(Ext.getStore('Languages').getById(idioma).get('idiomas'));
+                                    Ext.getCmp('open-menu5').setText(Ext.getStore('Languages').getById(idioma).get('ajuda'));
                                         
                                         Ext.MessageBox.override({
                                                 confirm: function(title, message, fn, scope) {
@@ -3649,13 +3731,10 @@ Ext.define('Italbox.ViewportPanel', {
                                cls: 'barra-menu',
                                zIndex: 50,
                                id: 'help_toolbar',
-                               html: '<span style="background: #012f46; color:#FFF; float:left; font-size: 21px;margin-top: 7px; "><i class="icon-ajuda" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Ajuda</span>',
+                               html: Ext.getStore('Languages').getById(idioma).get('help_toolbar'),
                                },
                                {
-                                   html  : '<div style="max-width:100%" class="leaf_panel">'+
-                                    '<br/><div style="margin:10px"><h3 style="font-size: 24px; color:#00aeef !important">'+
-                                    'Ajuda</h3><br><p style="color:#FFF !important;"><p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>'+
-                                     '</p></div></div>'
+                                   html  : Ext.getStore('Languages').getById(idioma).get('help_text')
                                },
                            ],   
                             initialize: function() {
@@ -3921,9 +4000,15 @@ Ext.application({
         'Settings',
         'Languages',
         /*'Favorites',*/
-        'Menu',
+        'Menu_1',
+        'Menu_2',
+        'Menu_3',
+        'Menu_4',
         'Menu_Language',
-        'Group',
+        'Group_1',
+        'Group_2',
+        'Group_3',
+        'Group_4',
         'Products_Caixilharia',
         'Products_Extrusao',
         'Products_Vidro',
@@ -4022,6 +4107,25 @@ Ext.application({
         }
         else{
             idioma = Ext.getStore('Settings').getAt(0).get('lang');
+            Ext.getCmp('start-caixilharia').setStyle(Ext.getStore('Languages').getById(idioma).get('start_caixilharia'));
+            Ext.getCmp('start-vidro').setStyle(Ext.getStore('Languages').getById(idioma).get('start_vidro'));
+            Ext.getCmp('start-extrusao').setStyle(Ext.getStore('Languages').getById(idioma).get('start_extrusao'));
+            Ext.getCmp('start-tratamento').setStyle(Ext.getStore('Languages').getById(idioma).get('start_tratamento'));          
+            Ext.getCmp('produtos_caixilharia').setStyle(Ext.getStore('Languages').getById(idioma).get('produtos_caixilharia'));
+            Ext.getCmp('obras_caixilharia').setStyle(Ext.getStore('Languages').getById(idioma).get('obras_caixilharia'));
+            Ext.getCmp('servicos_caixilharia').setStyle(Ext.getStore('Languages').getById(idioma).get('servicos_caixilharia'));
+            Ext.getCmp('produtos_vidro').setStyle(Ext.getStore('Languages').getById(idioma).get('produtos_vidro'));
+            Ext.getCmp('servicos_vidro').setStyle(Ext.getStore('Languages').getById(idioma).get('servicos_vidro'));
+            Ext.getCmp('area_tecnica').setStyle(Ext.getStore('Languages').getById(idioma).get('area_tecnica'));
+            Ext.getCmp('produtos_extrusao').setStyle(Ext.getStore('Languages').getById(idioma).get('produtos_extrusao'));
+            Ext.getCmp('servicos_extrusao').setStyle(Ext.getStore('Languages').getById(idioma).get('servicos_extrusao'));
+            Ext.getCmp('apoio_cliente').setStyle(Ext.getStore('Languages').getById(idioma).get('apoio_cliente'));
+            Ext.getCmp('tratamento-lacagem').setStyle(Ext.getStore('Languages').getById(idioma).get('tratamento_lacagem'));
+            Ext.getCmp('tratamento-anodizacao').setStyle(Ext.getStore('Languages').getById(idioma).get('tratamento_anodizacao'));
+            Ext.getCmp('tratamento-imitacao').setStyle(Ext.getStore('Languages').getById(idioma).get('tratamento_imitacao'));
+            Ext.getCmp('open-menu4').setText(Ext.getStore('Languages').getById(idioma).get('idiomas'));
+            Ext.getCmp('open-menu5').setText(Ext.getStore('Languages').getById(idioma).get('ajuda'));
+            
             /*Ext.getCmp('start-catalogos').setStyle(Ext.getStore('Languages').getById(idioma).get('menu_catalogs'));
             Ext.getCmp('start-favoritos').setStyle(Ext.getStore('Languages').getById(idioma).get('menu_favorites'));
             Ext.getCmp('start-language').setStyle(Ext.getStore('Languages').getById(idioma).get('menu_language'));
@@ -4313,7 +4417,7 @@ Ext.application({
                         zIndex: 45,
                         title: 'Menu',
                         displayField: 'text',
-                        store: 'Menu',
+                        store: 'Menu_'+idioma,
                         useToolbar: false,
                         showAnimation:  
                         {

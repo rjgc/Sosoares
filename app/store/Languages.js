@@ -9,7 +9,24 @@ Ext.define('ItalboxCatalog.store.Languages', {
             { name: 'start_vidro', type: 'string' },
             { name: 'start_extrusao', type: 'string' },
             { name: 'start_tratamento', type: 'string' },
-          /*{ name: 'company_html', type: 'string' },
+            { name: 'produtos_caixilharia', type: 'string' },
+            { name: 'obras_caixilharia', type: 'string' },
+            { name: 'servicos_caixilharia', type: 'string' },
+            { name: 'produtos_vidro', type: 'string' },
+            { name: 'servicos_vidro', type: 'string' },
+            { name: 'area_tecnica', type: 'string' },
+            { name: 'produtos_extrusao', type: 'string' },
+            { name: 'servicos_extrusao', type: 'string' },
+            { name: 'apoio_cliente', type: 'string' },
+            { name: 'tratamento_lacagem', type: 'string' },
+            { name: 'tratamento_anodizacao', type: 'string' },
+            { name: 'tratamento_imitacao', type: 'string' },
+            { name: 'idiomas', type: 'string' },
+            { name: 'ajuda', type: 'string' },
+            { name: 'language_toolbar', type: 'string' },
+            { name: 'help_toolbar', type: 'string' },
+            { name: 'help_text', type: 'string' },
+            /*
             { name: 'help_html', type: 'string' },
             { name: 'italbox', type: 'string' },
             { name: 'catalogs', type: 'string' },
@@ -64,8 +81,51 @@ Ext.define('ItalboxCatalog.store.Languages', {
         start_tratamento:  'margin:10px 20px 20px 10px;border-bottom: 7px solid #05698e; border-radius:5px;'+
             'background: url(imgs/icons/tratamento_menu.png) no-repeat, rgba(16, 124, 164, .8);'+
             'background-size: contain; background-position: center;',
-       /* company_html: '<div class="italbox"><img src="imgs/company.jpg"></img><br/><font color="#b69757">EMPRESA</font><br/><br/><p>A ITALBOX, LDA, empresa portuguesa fundada em 1999, é uma empresa especializada no fabrico de cabines de banho com design próprio e exclusivo, e uma excelente dicotomia qualidade/preço. Com uma equipa de 62 colaboradores, a Italbox é líder no mercado Português e tem apresentado taxas de crescimento no volume de negócios de 20% por ano, nos últimos 5 anos.<br/><br/>Em 2011 lançou o novo catalogo com uma nova linha de produtos que completa, no nosso entender, soluções que não estavam contempladas no nosso anterior catálogo.<br/>Lançamos também um catálogo de móveis de casa de banho, de fabrico próprio, no sentido de complementar a oferta.<br/><br/>Para que possam verificar os modelos que produzimos, queiram consultar o nosso Web site: <font color="#b69757">www.italbox.pt</font>.<br/>Informamos que estamos ao vosso dispor para qualquer informação e esclarecimento adicional através do e-mail: <font color="#b69757">comercial@italbox.pt</font>.</p></div>',
-        help_html: '<div style="margin:20px; margin-top:0px !important;">'+
+        produtos_caixilharia: 'margin:20px 20px 10px 10px;border-bottom: 7px solid #05698e;border-radius:5px;'+
+            'background: url(imgs/icons/caixilharia.png) no-repeat, rgba(16, 124, 164, .8);'+
+            'background-size: contain; background-position: center;',
+        obras_caixilharia: 'margin:10px 10px 20px 20px;border-bottom: 7px solid #05698e;border-radius:5px;'+
+            'background: url(imgs/icons/obras.png) no-repeat, rgba(16, 124, 164, .8);'+
+            'background-size: contain; background-position: center;',
+        servicos_caixilharia: 'margin:10px 20px 20px 10px;border-bottom: 7px solid #05698e; border-radius:5px;'+
+            'background: url(imgs/icons/servicos_vidro.png) no-repeat, rgba(16, 124, 164, .8);'+
+            'background-size: contain; background-position: center;',
+        produtos_vidro: 'margin:20px 20px 10px 10px;border-bottom: 7px solid #05698e;border-radius:5px;'+
+            'background: url(imgs/icons/vidro.png) no-repeat, rgba(16, 124, 164, .8);'+
+            'background-size: contain; background-position: center;',
+        servicos_vidro: 'margin:10px 10px 20px 20px;border-bottom: 7px solid #05698e;border-radius:5px;'+
+            'background: url(imgs/icons/servicos_vidro.png) no-repeat, rgba(16, 124, 164, .8);'+
+            'background-size: contain; background-position: center;',
+        area_tecnica: 'margin:10px 20px 20px 10px;border-bottom: 7px solid #05698e; border-radius:5px;'+
+            'background: url(imgs/icons/tecnica.png) no-repeat, rgba(16, 124, 164, .8);'+
+            'background-size: contain; background-position: center;',
+        produtos_extrusao: 'margin:20px 20px 10px 10px;border-bottom: 7px solid #05698e;border-radius:5px;'+
+            'background: url(imgs/icons/extrusao.png) no-repeat, rgba(16, 124, 164, .8);'+
+            'background-size: contain; background-position: center;',
+        servicos_extrusao: 'margin:10px 10px 20px 20px;border-bottom: 7px solid #05698e;border-radius:5px;'+
+            'background: url(imgs/icons/servicos_extrusao.png) no-repeat, rgba(16, 124, 164, .8);'+
+            'background-size: contain; background-position: center;',
+        apoio_cliente: 'margin:10px 20px 20px 10px;border-bottom: 7px solid #05698e; border-radius:5px;'+
+            'background: url(imgs/icons/apoio.png) no-repeat, rgba(16, 124, 164, .8);'+
+            'background-size: contain; background-position: center;',
+        tratamento_lacagem: 'margin:20px 20px 10px 10px;border-bottom: 7px solid #05698e;border-radius:5px;'+
+            'background: url(imgs/icons/lacagem.png) no-repeat, rgba(16, 124, 164, .8);'+
+            'background-size: contain; background-position: center;',
+        tratamento_anodizacao: 'margin:10px 10px 20px 20px;border-bottom: 7px solid #05698e;border-radius:5px;'+
+            'background: url(imgs/icons/anodizacao.png) no-repeat, rgba(16, 124, 164, .8);'+
+            'background-size: contain; background-position: center;',
+        tratamento_imitacao: 'margin:10px 20px 20px 10px;border-bottom: 7px solid #05698e; border-radius:5px;'+
+            'background: url(imgs/icons/imitacao.png) no-repeat, rgba(16, 124, 164, .8);'+
+            'background-size: contain; background-position: center;',
+        idiomas: '<i class="icon-idioma"></i><br><font style="font-size:15px">Idiomas</font>',
+        ajuda: '<i class="icon-ajuda"></i><br><font style="font-size:15px">Ajuda</font>',
+        language_toolbar: '<span style="background: #012f46; color:#FFF; float:left; font-size: 21px;margin-top: 7px; "><i class="icon-idioma" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Idiomas</span>',
+        help_toolbar: '<span style="background: #012f46; color:#FFF; float:left; font-size: 21px;margin-top: 7px; "><i class="icon-ajuda" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Ajuda</span>',
+        help_text: '<div style="max-width:100%" class="leaf_panel">'+
+            '<br/><div style="margin:10px"><h3 style="font-size: 24px; color:#00aeef !important">'+
+            'Ajuda</h3><br><p style="color:#FFF !important;"><p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>'+
+            '</p></div></div>',
+        /*help_html: '<div style="margin:20px; margin-top:0px !important;">'+
         '<font color="#b69757">AJUDA</font><br/><br/><p><i>Aceda  em qualquer lugar aos nossos catálogos de forma rápida e intuitiva. </i><br />'+
         '<i>Com a  APP ITALBOX consulte todos os nossos produtos e seus detalhes. </i><br />'+
         '<i>Escolha  e partilhe os seus favoritos.</i></p><br/><p>Precisa  de ajuda? Siga as nossas dicas aqui.</p>'+
@@ -151,6 +211,50 @@ Ext.define('ItalboxCatalog.store.Languages', {
         start_tratamento:  'margin:10px 20px 20px 10px;border-bottom: 7px solid #05698e; border-radius:5px;'+
             'background: url(imgs/icons/tratamento_menu_en.png) no-repeat, rgba(16, 124, 164, .8);'+
             'background-size: contain; background-position: center;',
+        produtos_caixilharia: 'margin:20px 20px 10px 10px;border-bottom: 7px solid #05698e;border-radius:5px;'+
+            'background: url(imgs/icons/caixilharia_en.png) no-repeat, rgba(16, 124, 164, .8);'+
+            'background-size: contain; background-position: center;',
+        obras_caixilharia: 'margin:10px 10px 20px 20px;border-bottom: 7px solid #05698e;border-radius:5px;'+
+            'background: url(imgs/icons/obras_en.png) no-repeat, rgba(16, 124, 164, .8);'+
+            'background-size: contain; background-position: center;',
+        servicos_caixilharia: 'margin:10px 20px 20px 10px;border-bottom: 7px solid #05698e; border-radius:5px;'+
+            'background: url(imgs/icons/servicos_vidro_en.png) no-repeat, rgba(16, 124, 164, .8);'+
+            'background-size: contain; background-position: center;',
+        produtos_vidro: 'margin:20px 20px 10px 10px;border-bottom: 7px solid #05698e;border-radius:5px;'+
+            'background: url(imgs/icons/vidro_en.png) no-repeat, rgba(16, 124, 164, .8);'+
+            'background-size: contain; background-position: center;',
+        servicos_vidro: 'margin:10px 10px 20px 20px;border-bottom: 7px solid #05698e;border-radius:5px;'+
+            'background: url(imgs/icons/servicos_vidro_en.png) no-repeat, rgba(16, 124, 164, .8);'+
+            'background-size: contain; background-position: center;',
+        area_tecnica: 'margin:10px 20px 20px 10px;border-bottom: 7px solid #05698e; border-radius:5px;'+
+            'background: url(imgs/icons/tecnica_en.png) no-repeat, rgba(16, 124, 164, .8);'+
+            'background-size: contain; background-position: center;',
+        produtos_extrusao: 'margin:20px 20px 10px 10px;border-bottom: 7px solid #05698e;border-radius:5px;'+
+            'background: url(imgs/icons/extrusao_en.png) no-repeat, rgba(16, 124, 164, .8);'+
+            'background-size: contain; background-position: center;',
+        servicos_extrusao: 'margin:10px 10px 20px 20px;border-bottom: 7px solid #05698e;border-radius:5px;'+
+            'background: url(imgs/icons/servicos_extrusao_en.png) no-repeat, rgba(16, 124, 164, .8);'+
+            'background-size: contain; background-position: center;',
+        apoio_cliente: 'margin:10px 20px 20px 10px;border-bottom: 7px solid #05698e; border-radius:5px;'+
+            'background: url(imgs/icons/apoio_en.png) no-repeat, rgba(16, 124, 164, .8);'+
+            'background-size: contain; background-position: center;',
+        tratamento_lacagem: 'margin:20px 20px 10px 10px;border-bottom: 7px solid #05698e;border-radius:5px;'+
+            'background: url(imgs/icons/lacagem_en.png) no-repeat, rgba(16, 124, 164, .8);'+
+            'background-size: contain; background-position: center;',
+        tratamento_anodizacao: 'margin:10px 10px 20px 20px;border-bottom: 7px solid #05698e;border-radius:5px;'+
+            'background: url(imgs/icons/anodizacao_en.png) no-repeat, rgba(16, 124, 164, .8);'+
+            'background-size: contain; background-position: center;',
+        tratamento_imitacao: 'margin:10px 20px 20px 10px;border-bottom: 7px solid #05698e; border-radius:5px;'+
+            'background: url(imgs/icons/imitacao_en.png) no-repeat, rgba(16, 124, 164, .8);'+
+            'background-size: contain; background-position: center;',
+        idiomas: '<i class="icon-idioma"></i><br><font style="font-size:15px">Languages</font>',
+        ajuda: '<i class="icon-ajuda"></i><br><font style="font-size:15px">Help</font>',
+        language_toolbar: '<span style="background: #012f46; color:#FFF; float:left; font-size: 21px;margin-top: 7px; "><i class="icon-idioma" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Languages</span>',
+        help_toolbar: '<span style="background: #012f46; color:#FFF; float:left; font-size: 21px;margin-top: 7px; "><i class="icon-ajuda" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Help</span>',
+        help_text: '<div style="max-width:100%" class="leaf_panel">'+
+            '<br/><div style="margin:10px"><h3 style="font-size: 24px; color:#00aeef !important">'+
+            'Help</h3><br><p style="color:#FFF !important;"><p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>'+
+            '</p></div></div>',
        /* help_html: '<div style="margin:20px; margin-top:0px !important;">'+
         '<font color="#b69757">HELP</font><br/><br/><p><i>Join our catalogs anywhere and in any space, by a quick and intuitive way. </i><br />'+
         '<i>Consult all our products and all the details with the APP ITALBOX. </i><br />'+
@@ -237,6 +341,50 @@ Ext.define('ItalboxCatalog.store.Languages', {
         start_tratamento:  'margin:10px 20px 20px 10px;border-bottom: 7px solid #05698e; border-radius:5px;'+
             'background: url(imgs/icons/tratamento_menu_fr.png) no-repeat, rgba(16, 124, 164, .8);'+
             'background-size: contain; background-position: center;',
+        produtos_caixilharia: 'margin:20px 20px 10px 10px;border-bottom: 7px solid #05698e;border-radius:5px;'+
+            'background: url(imgs/icons/caixilharia_fr.png) no-repeat, rgba(16, 124, 164, .8);'+
+            'background-size: contain; background-position: center;',
+        obras_caixilharia: 'margin:10px 10px 20px 20px;border-bottom: 7px solid #05698e;border-radius:5px;'+
+            'background: url(imgs/icons/obras_fr.png) no-repeat, rgba(16, 124, 164, .8);'+
+            'background-size: contain; background-position: center;',
+        servicos_caixilharia: 'margin:10px 20px 20px 10px;border-bottom: 7px solid #05698e; border-radius:5px;'+
+            'background: url(imgs/icons/servicos_vidro_en.png) no-repeat, rgba(16, 124, 164, .8);'+
+            'background-size: contain; background-position: center;',
+        produtos_vidro: 'margin:20px 20px 10px 10px;border-bottom: 7px solid #05698e;border-radius:5px;'+
+            'background: url(imgs/icons/vidro_fr.png) no-repeat, rgba(16, 124, 164, .8);'+
+            'background-size: contain; background-position: center;',
+        servicos_vidro: 'margin:10px 10px 20px 20px;border-bottom: 7px solid #05698e;border-radius:5px;'+
+            'background: url(imgs/icons/servicos_vidro_en.png) no-repeat, rgba(16, 124, 164, .8);'+
+            'background-size: contain; background-position: center;',
+        area_tecnica: 'margin:10px 20px 20px 10px;border-bottom: 7px solid #05698e; border-radius:5px;'+
+            'background: url(imgs/icons/tecnica_fr.png) no-repeat, rgba(16, 124, 164, .8);'+
+            'background-size: contain; background-position: center;',
+        produtos_extrusao: 'margin:20px 20px 10px 10px;border-bottom: 7px solid #05698e;border-radius:5px;'+
+            'background: url(imgs/icons/extrusao_fr.png) no-repeat, rgba(16, 124, 164, .8);'+
+            'background-size: contain; background-position: center;',
+        servicos_extrusao: 'margin:10px 10px 20px 20px;border-bottom: 7px solid #05698e;border-radius:5px;'+
+            'background: url(imgs/icons/servicos_extrusao_en.png) no-repeat, rgba(16, 124, 164, .8);'+
+            'background-size: contain; background-position: center;',
+        apoio_cliente: 'margin:10px 20px 20px 10px;border-bottom: 7px solid #05698e; border-radius:5px;'+
+            'background: url(imgs/icons/apoio_fr.png) no-repeat, rgba(16, 124, 164, .8);'+
+            'background-size: contain; background-position: center;',
+        tratamento_lacagem: 'margin:20px 20px 10px 10px;border-bottom: 7px solid #05698e;border-radius:5px;'+
+            'background: url(imgs/icons/lacagem_fr.png) no-repeat, rgba(16, 124, 164, .8);'+
+            'background-size: contain; background-position: center;',
+        tratamento_anodizacao: 'margin:10px 10px 20px 20px;border-bottom: 7px solid #05698e;border-radius:5px;'+
+            'background: url(imgs/icons/anodizacao_fr.png) no-repeat, rgba(16, 124, 164, .8);'+
+            'background-size: contain; background-position: center;',
+        tratamento_imitacao: 'margin:10px 20px 20px 10px;border-bottom: 7px solid #05698e; border-radius:5px;'+
+            'background: url(imgs/icons/imitacao_fr.png) no-repeat, rgba(16, 124, 164, .8);'+
+            'background-size: contain; background-position: center;',
+        idiomas: '<i class="icon-idioma"></i><br><font style="font-size:15px">Langues</font>',
+        ajuda: '<i class="icon-ajuda"></i><br><font style="font-size:15px">Aide</font>',
+        language_toolbar: '<span style="background: #012f46; color:#FFF; float:left; font-size: 21px;margin-top: 7px; "><i class="icon-idioma" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Langues</span>',
+        help_toolbar: '<span style="background: #012f46; color:#FFF; float:left; font-size: 21px;margin-top: 7px; "><i class="icon-ajuda" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Aide</span>',
+        help_text: '<div style="max-width:100%" class="leaf_panel">'+
+            '<br/><div style="margin:10px"><h3 style="font-size: 24px; color:#00aeef !important">'+
+            'Aide</h3><br><p style="color:#FFF !important;"><p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>'+
+            '</p></div></div>',
        /* company_html : '<div class="italbox"><img src="imgs/company.jpg"></img><br/><font color="#b69757">ENTREPRISE</font><br/><br/><p>ITALBOX, LDA, entreprise fondée en 1999, fabrique des panneaux et des cabines en étant une réference au Portugal.</br><br/>Le design distinctif et exclusif, l\'excellente dichotomie qualité/prix et l\'importance que nous donnons à la satisfaction du client sont nos caractéristiques d\'identication. Notre expérience et savoir-foire nos permet de rencontrer les solutions prétendu par les clients.</br>Pour que vous puissiez nous connaitre et véri er les modèles que nous produisons, voulez-vous consulter notre web-site: <font color="#b69757">www.italbox.pt</font>.<br/><br/>Par delà des divers gammes de produits du catalogue, nous produisons aussi sur mesures. Les différents hôtels où nous avons appliqué nos produits et solutions sont la reconnaissance de notre professionalisme.<br/><br/>Nous vous informons que nous sommes à votre service pour toutes renseignement supplémentaires à travers de notre e-mail: <font color="#b69757">export.italbox@italbox.pt</font>.</p></div>',
         help_html: '<div style="margin:20px; margin-top:0px !important;">'+
         '<font color="#b69757">AIDE</font><br/><br/><p><i>Accéder rapidement et intuitivement n’importe où à nos catalogues. </i><br />'+
@@ -324,6 +472,50 @@ Ext.define('ItalboxCatalog.store.Languages', {
         start_tratamento:  'margin:10px 20px 20px 10px;border-bottom: 7px solid #05698e; border-radius:5px;'+
             'background: url(imgs/icons/tratamento_menu_es.png) no-repeat, rgba(16, 124, 164, .8);'+
             'background-size: contain; background-position: center;',
+        produtos_caixilharia: 'margin:20px 20px 10px 10px;border-bottom: 7px solid #05698e;border-radius:5px;'+
+            'background: url(imgs/icons/caixilharia_es.png) no-repeat, rgba(16, 124, 164, .8);'+
+            'background-size: contain; background-position: center;',
+        obras_caixilharia: 'margin:10px 10px 20px 20px;border-bottom: 7px solid #05698e;border-radius:5px;'+
+            'background: url(imgs/icons/obras.png) no-repeat, rgba(16, 124, 164, .8);'+
+            'background-size: contain; background-position: center;',
+        servicos_caixilharia: 'margin:10px 20px 20px 10px;border-bottom: 7px solid #05698e; border-radius:5px;'+
+            'background: url(imgs/icons/servicos_vidro_es.png) no-repeat, rgba(16, 124, 164, .8);'+
+            'background-size: contain; background-position: center;',
+        produtos_vidro: 'margin:20px 20px 10px 10px;border-bottom: 7px solid #05698e;border-radius:5px;'+
+            'background: url(imgs/icons/vidro_es.png) no-repeat, rgba(16, 124, 164, .8);'+
+            'background-size: contain; background-position: center;',
+        servicos_vidro: 'margin:10px 10px 20px 20px;border-bottom: 7px solid #05698e;border-radius:5px;'+
+            'background: url(imgs/icons/servicos_vidro_es.png) no-repeat, rgba(16, 124, 164, .8);'+
+            'background-size: contain; background-position: center;',
+        area_tecnica: 'margin:10px 20px 20px 10px;border-bottom: 7px solid #05698e; border-radius:5px;'+
+            'background: url(imgs/icons/tecnica.png) no-repeat, rgba(16, 124, 164, .8);'+
+            'background-size: contain; background-position: center;',
+        produtos_extrusao: 'margin:20px 20px 10px 10px;border-bottom: 7px solid #05698e;border-radius:5px;'+
+            'background: url(imgs/icons/extrusao_es.png) no-repeat, rgba(16, 124, 164, .8);'+
+            'background-size: contain; background-position: center;',
+        servicos_extrusao: 'margin:10px 10px 20px 20px;border-bottom: 7px solid #05698e;border-radius:5px;'+
+            'background: url(imgs/icons/servicos_extrusao_es.png) no-repeat, rgba(16, 124, 164, .8);'+
+            'background-size: contain; background-position: center;',
+        apoio_cliente: 'margin:10px 20px 20px 10px;border-bottom: 7px solid #05698e; border-radius:5px;'+
+            'background: url(imgs/icons/apoio_es.png) no-repeat, rgba(16, 124, 164, .8);'+
+            'background-size: contain; background-position: center;',
+        tratamento_lacagem: 'margin:20px 20px 10px 10px;border-bottom: 7px solid #05698e;border-radius:5px;'+
+            'background: url(imgs/icons/lacagem_es.png) no-repeat, rgba(16, 124, 164, .8);'+
+            'background-size: contain; background-position: center;',
+        tratamento_anodizacao: 'margin:10px 10px 20px 20px;border-bottom: 7px solid #05698e;border-radius:5px;'+
+            'background: url(imgs/icons/anodizacao_es.png) no-repeat, rgba(16, 124, 164, .8);'+
+            'background-size: contain; background-position: center;',
+        tratamento_imitacao: 'margin:10px 20px 20px 10px;border-bottom: 7px solid #05698e; border-radius:5px;'+
+            'background: url(imgs/icons/imitacao_es.png) no-repeat, rgba(16, 124, 164, .8);'+
+            'background-size: contain; background-position: center;',
+        idiomas: '<i class="icon-idioma"></i><br><font style="font-size:15px">Idiomas</font>',
+        ajuda: '<i class="icon-ajuda"></i><br><font style="font-size:15px">Ayuda</font>',
+        language_toolbar: '<span style="background: #012f46; color:#FFF; float:left; font-size: 21px;margin-top: 7px; "><i class="icon-idioma" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Idiomas</span>',
+        help_toolbar: '<span style="background: #012f46; color:#FFF; float:left; font-size: 21px;margin-top: 7px; "><i class="icon-ajuda" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Ayuda</span>',
+        help_text: '<div style="max-width:100%" class="leaf_panel">'+
+            '<br/><div style="margin:10px"><h3 style="font-size: 24px; color:#00aeef !important">'+
+            'Ayuda</h3><br><p style="color:#FFF !important;"><p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>'+
+            '</p></div></div>',
        /* company_html: '<div class="italbox"><img src="imgs/company.jpg"></img><br/><font color="#b69757">EMPRESA</font><br/><br/><p>Italbox, LDA, es una empresa fundada en 1999 especializada en la fabricación de cabinas de ducha y es una referencia en Portugal.<br/><br/>El diseño propio y único, la dicotomía excelente relación calidad/precio y el centrarse en las satisfacciones del cliente son nuestras señas de identidad. Nuestra experiencia y conocimiento nos permiten encontrar soluciones deseadas por los clientes.<br/><br/>Para conocernos a nosotros y los modelos que producimos, por favor consulte nuestro web-site:  <font color="#b69757">www.italbox.pt</font>.<br/><br/>Al lado de las diferentes gamas de los productos del catálogo, también adaptamos. Los diversos hoteles en cuál nuestros productos y soluciones son aplicados son el reconocimiento de nuestro profissionalismo.<br/>Informamos que estamos a su disposición para cualquier información adicional através del correo electrónico: <font color="#b69757">export.italbox@italbox.pt</font>.</p></div>',
         help_html: '<div style="margin:20px; margin-top:0px !important;">'+
         '<font color="#b69757">AYUDA</font><br/><br/><p><i>Ve a donde quieras nuestros catálogos de manera rápida e intuitiva. </i><br />'+

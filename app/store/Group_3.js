@@ -1,4 +1,4 @@
-Ext.define('ItalboxCatalog.store.Group', {
+Ext.define('ItalboxCatalog.store.Group_3', {
         extend: 'Ext.data.TreeStore',
         //defaultRootProperty: 'items',
         config: {
