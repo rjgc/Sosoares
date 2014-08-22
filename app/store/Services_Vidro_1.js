@@ -1,4 +1,4 @@
-Ext.define('ItalboxCatalog.store.Services_Vidro', {
+Ext.define('ItalboxCatalog.store.Services_Vidro_1', {
         extend: 'Ext.data.TreeStore',
         //defaultRootProperty: 'items',
         config: {

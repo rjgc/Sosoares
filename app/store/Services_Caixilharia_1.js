@@ -1,4 +1,4 @@
-Ext.define('ItalboxCatalog.store.Services_Caixilharia', {
+Ext.define('ItalboxCatalog.store.Services_Caixilharia_1', {
         extend: 'Ext.data.TreeStore',
         //defaultRootProperty: 'items',
         config: {

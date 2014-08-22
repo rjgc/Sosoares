@@ -26,6 +26,13 @@ Ext.define('ItalboxCatalog.store.Languages', {
             { name: 'language_toolbar', type: 'string' },
             { name: 'help_toolbar', type: 'string' },
             { name: 'help_text', type: 'string' },
+            { name: 'services', type: 'string' },
+            { name: 'area', type: 'string' },
+            { name: 'apoio', type: 'string' },
+            { name: 'lacagem', type: 'string' },
+            { name: 'anodizacao', type: 'string' },
+            { name: 'madeira', type: 'string' },
+            
             /*
             { name: 'help_html', type: 'string' },
             { name: 'italbox', type: 'string' },
@@ -125,6 +132,12 @@ Ext.define('ItalboxCatalog.store.Languages', {
             '<br/><div style="margin:10px"><h3 style="font-size: 24px; color:#00aeef !important">'+
             'Ajuda</h3><br><p style="color:#FFF !important;"><p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>'+
             '</p></div></div>',
+        services : 'Serviços',
+        area: 'Área Técnica',
+        apoio: 'Apoio Cliente',
+        lacagem: 'Lacagem',
+        anodizacao: 'Anodização',
+        madeira: 'Imitação Madeira',
         /*help_html: '<div style="margin:20px; margin-top:0px !important;">'+
         '<font color="#b69757">AJUDA</font><br/><br/><p><i>Aceda  em qualquer lugar aos nossos catálogos de forma rápida e intuitiva. </i><br />'+
         '<i>Com a  APP ITALBOX consulte todos os nossos produtos e seus detalhes. </i><br />'+
@@ -255,6 +268,12 @@ Ext.define('ItalboxCatalog.store.Languages', {
             '<br/><div style="margin:10px"><h3 style="font-size: 24px; color:#00aeef !important">'+
             'Help</h3><br><p style="color:#FFF !important;"><p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>'+
             '</p></div></div>',
+        services : 'Services',
+        area: 'Technical Area',
+        apoio: 'Customer Service',
+        lacagem: 'Lacquering',
+        anodizacao: 'Anodizing',
+        madeira: 'Wood Imitation',
        /* help_html: '<div style="margin:20px; margin-top:0px !important;">'+
         '<font color="#b69757">HELP</font><br/><br/><p><i>Join our catalogs anywhere and in any space, by a quick and intuitive way. </i><br />'+
         '<i>Consult all our products and all the details with the APP ITALBOX. </i><br />'+
@@ -385,6 +404,12 @@ Ext.define('ItalboxCatalog.store.Languages', {
             '<br/><div style="margin:10px"><h3 style="font-size: 24px; color:#00aeef !important">'+
             'Aide</h3><br><p style="color:#FFF !important;"><p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>'+
             '</p></div></div>',
+        services : 'Services',
+        area: 'Secteur Technique',
+        apoio: 'Service Client',
+        lacagem: 'Laquage',
+        anodizacao: 'Anodisation',
+        madeira: 'Imitation Bois',
        /* company_html : '<div class="italbox"><img src="imgs/company.jpg"></img><br/><font color="#b69757">ENTREPRISE</font><br/><br/><p>ITALBOX, LDA, entreprise fondée en 1999, fabrique des panneaux et des cabines en étant une réference au Portugal.</br><br/>Le design distinctif et exclusif, l\'excellente dichotomie qualité/prix et l\'importance que nous donnons à la satisfaction du client sont nos caractéristiques d\'identication. Notre expérience et savoir-foire nos permet de rencontrer les solutions prétendu par les clients.</br>Pour que vous puissiez nous connaitre et véri er les modèles que nous produisons, voulez-vous consulter notre web-site: <font color="#b69757">www.italbox.pt</font>.<br/><br/>Par delà des divers gammes de produits du catalogue, nous produisons aussi sur mesures. Les différents hôtels où nous avons appliqué nos produits et solutions sont la reconnaissance de notre professionalisme.<br/><br/>Nous vous informons que nous sommes à votre service pour toutes renseignement supplémentaires à travers de notre e-mail: <font color="#b69757">export.italbox@italbox.pt</font>.</p></div>',
         help_html: '<div style="margin:20px; margin-top:0px !important;">'+
         '<font color="#b69757">AIDE</font><br/><br/><p><i>Accéder rapidement et intuitivement n’importe où à nos catalogues. </i><br />'+
@@ -516,6 +541,12 @@ Ext.define('ItalboxCatalog.store.Languages', {
             '<br/><div style="margin:10px"><h3 style="font-size: 24px; color:#00aeef !important">'+
             'Ayuda</h3><br><p style="color:#FFF !important;"><p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>'+
             '</p></div></div>',
+        services : 'Servicios',
+        area: 'Área Técnica',
+        apoio: 'Asistencia Cliente',
+        lacagem: 'Lacado',
+        anodizacao: 'Anodizacin',
+        madeira: 'Imitación Madera',
        /* company_html: '<div class="italbox"><img src="imgs/company.jpg"></img><br/><font color="#b69757">EMPRESA</font><br/><br/><p>Italbox, LDA, es una empresa fundada en 1999 especializada en la fabricación de cabinas de ducha y es una referencia en Portugal.<br/><br/>El diseño propio y único, la dicotomía excelente relación calidad/precio y el centrarse en las satisfacciones del cliente son nuestras señas de identidad. Nuestra experiencia y conocimiento nos permiten encontrar soluciones deseadas por los clientes.<br/><br/>Para conocernos a nosotros y los modelos que producimos, por favor consulte nuestro web-site:  <font color="#b69757">www.italbox.pt</font>.<br/><br/>Al lado de las diferentes gamas de los productos del catálogo, también adaptamos. Los diversos hoteles en cuál nuestros productos y soluciones son aplicados son el reconocimiento de nuestro profissionalismo.<br/>Informamos que estamos a su disposición para cualquier información adicional através del correo electrónico: <font color="#b69757">export.italbox@italbox.pt</font>.</p></div>',
         help_html: '<div style="margin:20px; margin-top:0px !important;">'+
         '<font color="#b69757">AYUDA</font><br/><br/><p><i>Ve a donde quieras nuestros catálogos de manera rápida e intuitiva. </i><br />'+

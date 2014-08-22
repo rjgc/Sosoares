@@ -1,4 +1,4 @@
-Ext.define('ItalboxCatalog.store.Services_Extrusao', {
+Ext.define('ItalboxCatalog.store.Services_Extrusao_4', {
         extend: 'Ext.data.TreeStore',
         //defaultRootProperty: 'items',
         config: {
@@ -24,7 +24,7 @@ Ext.define('ItalboxCatalog.store.Services_Extrusao', {
             root: {
                 text:'Serviços',
                items: [{
-                    text: 'Extrusão de Produtos de Alumínio',
+                    text: 'La extrusión de perfiles de aluminio',
                     html: '<p style="">Depois do desenvolvimento da solução com perfil de alumínio extrudido e da execução da ferramenta que lhe dará origem, vemos proceder à extrusão desse perfil.</p>'+
                         '<br><p style="">O processo de extrusão inicia-se com o pré-aquecimento (cerca de 450ºC) dos biletes de alumínio que são posteriormente inseridos dentro da prensa de extrusão.</p>'+
                         '<p style="">Com a ajuda de um pistão, o bilete é pressionado contra um orifício que representa a secção pretendida. Este orifício é executado numa fieira fabricada em aço especial de grande resistência. O conjunto denomina-se matriz e é composto por uma placa e contraplaca.</p>'+
@@ -37,7 +37,7 @@ Ext.define('ItalboxCatalog.store.Services_Extrusao', {
                     leaf: true
                 },
                 {
-                    text: 'Desenvolvimento e Produção de Matrizes',
+                    text: 'Desarrollo y Producción de Dies',
                     html: '<p>Um dos fatores chave para a extrusão de perfis de alumínio de excelente qualidade é o desenho e forma de produção das ferramentas, matrizes, que lhes dão origem.</p>'+
                           '<p>Para proporcionar aos seus clientes perfis de alumínio de qualidade extrema, e uma rápida capacidade de resposta no desenvolvimento de novos projetos a Perfis Oeiras incorpora uma unidade própria para produção das suas matrizes.</p>',
                     foto: 'imgs/sosoares.jpg',
