@@ -37,8 +37,8 @@ Ext.define('ItalboxCatalog.store.Services_Vidro_1', {
                     text: 'Pintura Digital Vitrificada',
                      html: 'A possibilidade de criar uma fachada em vidro e personalizá-la com uma imagem, uma fotografia ou um desenho, é agora possível, por intermédio de um processo de pintura digital.<br> O processo consiste na deposição da tinta de base cerâmica no vidro, através de uma plotter. '+
                            'Após impressão, o vidro passa pela estufa de secagem e seguidamente pelo forno de têmpera a 750° para a tinta vitrificar. Uma vez fundida no vidro, a tinta mantém-se inalterável à radiação solar e resistente à abrasão, permitindo deste modo a exposição das superfícies pintadas a fatores agressivos sem serem afetadas.'+
-                           '<br>Embora possa ser aplicado em interiores a sua utilização está mais direcionada para o exterior pois permite, juntamente com o vidro apropriado, um melhor controlo solar bem como de graduação da transmissão luminosa sem alteração das cores impressas.'+
-                           '<br>Esta nova tecnologia permite aos projectistas combinar e graduar a intensidade luminosa e o controlo solar em vidros termicamente eficientes num amplo leque de soluções decorativas onde o limite é o imaginário.',
+                           '<br><br>Embora possa ser aplicado em interiores a sua utilização está mais direcionada para o exterior pois permite, juntamente com o vidro apropriado, um melhor controlo solar bem como de graduação da transmissão luminosa sem alteração das cores impressas.'+
+                           '<br><br>Esta nova tecnologia permite aos projectistas combinar e graduar a intensidade luminosa e o controlo solar em vidros termicamente eficientes num amplo leque de soluções decorativas onde o limite é o imaginário.',
                     foto: 'imgs/imagem3.jpg',
                     icon: 'icon-apoio',
                     leaf: true

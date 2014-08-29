@@ -25,39 +25,38 @@ Ext.define('ItalboxCatalog.store.Services_Vidro_4', {
                 text:'Serviços',
                 items: [{
                     text: 'Servicios de Vidrio',
-                    html: '<ul class="lista"><li>-Mecanização</li><li>-Furação</li><li>-Corte</li><li>-Arestas</li>'+
-                           '<li>-Bisel</li><li>-Rincon</li><li>-Têmpera</li><ul class="lista"><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dimensões mínimas: 80 mm x 275mm</li>'+
-                           '<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dimensões máximas: 2600 mm x 4500mm</li><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Espessuras de 3mm a 19mm</li></ul><li>-HST</li><li>-Laminação</li>'+
-                           '<li>-Foscagem</li><li>-Pintura digital no P.V.B.</li></ul>',
+                    html: '<ul class="lista"><li>-Mecanizacion</li><li>-Furacion</li><li>-Corte</li><li>-Arestas</li>'+
+                           '<li>-Bisel</li><li>-Rincon</li><li>-Tempra</li><ul class="lista"><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dimensiones mínimas: 80 mm x 275mm</li>'+
+                           '<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dimensiones máximas: 2600 mm x 4500mm</li><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Espesor de 3mm a 19mm</li></ul><li>-HST</li><li>-Laminacion</li>'+
+                           '<li>-Foscaje</li><li>-Pintura dijital no P.V.B.</li></ul>',
                     foto: 'imgs/servico_vidro3.jpg',
                     icon: 'icon-apoio',
                     leaf: true
                 },
                {
-                    text: 'Pintura Digital Vitrificada',
-                     html: 'A possibilidade de criar uma fachada em vidro e personalizá-la com uma imagem, uma fotografia ou um desenho, é agora possível, por intermédio de um processo de pintura digital.<br> O processo consiste na deposição da tinta de base cerâmica no vidro, através de uma plotter. '+
-                           'Após impressão, o vidro passa pela estufa de secagem e seguidamente pelo forno de têmpera a 750° para a tinta vitrificar. Uma vez fundida no vidro, a tinta mantém-se inalterável à radiação solar e resistente à abrasão, permitindo deste modo a exposição das superfícies pintadas a fatores agressivos sem serem afetadas.'+
-                           '<br>Embora possa ser aplicado em interiores a sua utilização está mais direcionada para o exterior pois permite, juntamente com o vidro apropriado, um melhor controlo solar bem como de graduação da transmissão luminosa sem alteração das cores impressas.'+
-                           '<br>Esta nova tecnologia permite aos projectistas combinar e graduar a intensidade luminosa e o controlo solar em vidros termicamente eficientes num amplo leque de soluções decorativas onde o limite é o imaginário.',
+                    text: 'Pintura Digital Ventanal',
+                    html: 'La posibilidad de crear una fachada de cristal y personalizarlo con un cuadro, una fotografía o un dibujo, ahora es posible, a través de un proceso de pintura digital. El proceso consiste en depositar la tinta sobre la base de cerámica de vidrio, por un trazador. Después de la impresión, el vidrio pasa a través de un horno de secado y luego revenido a 750 ° horno para pintura esmaltada. Una vez que el vidrio fundido, la tinta se mantiene sin cambios a la radiación solar y resistente a la abrasión, permitiendo de este modo la exposición de los factores agresivos, superficies pintadas no afectados.'+
+                    '<br><br<Aunque se puede utilizar en interiores su uso se dirige más hacia el exterior, ya que permite, junto con el vidrio apropiado, un mejor control solar y de transmisión de luz de la graduación sin alteración de los colores impresos.'+
+                    '<br><br>Esta nueva tecnología permite a los diseñadores para combinar y ampliar la intensidad de la luz y el control solar, acristalamiento térmico eficiente en una amplia gama de soluciones decorativas donde el límite es la imaginación.',
                     foto: 'imgs/imagem3.jpg',
                     icon: 'icon-apoio',
                     leaf: true
                 },
                 {
                     text: 'Serigrafia',
-                    html: '<p>Quando o objectivo passa por uma repetição de uma imagem ou desenho, o método a utilizar será a serigrafia.<br>Este processo de gravação consiste numa tela micro perfurada onde é reproduzida a imagem pretendida, a qual é sobreposta no vidro. Ao aplicar a tinta de base cerâmica por cima da tela, ela irá passar apenas nos espaços com orifícios ficando retida nas restantes áreas. Depois de receber a tinta, o vidro é levado ao forno de têmpera para que a tinta vitrifique nele.</p>'+
-                          '<br><p>Os vidros serigrafados têm variadíssimas aplicações: em fachadas, permite para além da parte estética, funcionar como forma de controlo solar, assegurando uma boa visibilidade do interior para o exterior; no interior, desde portas, divisórias, cabines de duche ou até mobiliário, desde que aplicada com o vidro adequado.</p>'+
-                          '<br><p>Qualquer que seja o motivo pretendido, standard ou personalizado, realizado com uma ou mais cores, aplicado no interior ou no exterior, a inalterabilidade das cores é garantida.</p>',
+                    html: 'Cuando el objetivo es por una repetición de una imagen o dibujo, el método es la impresión de pantalla. Este proceso de grabación es una pantalla micro perforada donde se reproduce la imagen deseada, que se superpone sobre el cristal. Al aplicar la pintura de cerámica encima de la pantalla básica, pasará sólo en espacios con agujeros que se conservan en las áreas restantes. Después de recibir la tinta, el vidrio es llevado a horno de revenido para glasear de la tinta en su interior.'+
+                    '<br><br>Los vidrios serigrafiados tienen una gama de aplicaciones: para las paredes, permite, además de la estética, la función como una forma de control solar, lo que garantiza una buena visibilidad desde el interior hacia el exterior; el interior de las puertas, mamparas, cabinas de ducha o incluso muebles ya se aplica con la copa adecuada.'+
+                    '<br><br>Cualquiera que sea el tema, o una norma, realizada con uno o varios colores, aplicados en el interior o al aire libre, se garantiza la inviolabilidad de los colores.',
                     foto: 'imgs/imagem2.jpg',
                     icon: 'icon-apoio',
                     leaf: true
                 },
                 {
                     text: 'Opacificación',
-                    html: '<p style="text-align: justify;">A opacificação é o método mais rápido e simples quando se pretende pintar um vidro com uma única cor.</p>'+
-                        '<br><p style="text-align: justify;">Consiste no revestimento total e uniforme de uma das faces do vidro com a tinta.</p>'+
-                        '<br><p style="text-align: justify;">A fusão da tinta no vidro garante a inalterabilidade das cores pelo que também se recomenda a sua aplicação no exterior.</p>'+
-                        '<br><p style="text-align: justify;">Os efeitos estéticos conseguidos pela reflexão da luz, realçam a beleza da fachada</p>',
+                    html: 'Opacidad es el método más rápido y sencillo cuando se quiere pintar un vidrio con un solo color.'+
+                    '<br><br>Consiste en el recubrimiento total y uniforme de un lado del vidrio con pintura.'+
+                    '<br><br>La fusión de la tinta sobre las garantías de vidrio inviolabilidad de los colores así que también se recomienda para aplicaciones en exteriores.'+
+                    '<br><br>Los efectos estéticos alcanzados por la reflexión de la luz, realzan la belleza de la fachada',
                     foto: 'imgs/imagem4.jpg',
                     icon: 'icon-apoio',
                     leaf: true

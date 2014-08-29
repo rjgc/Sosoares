@@ -25,20 +25,20 @@ Ext.define('ItalboxCatalog.store.Services_Vidro_3', {
                 text:'Serviços',
                 items: [{
                     text: 'Services de Verre',
-                    html: '<ul class="lista"><li>-Mecanização</li><li>-Furação</li><li>-Corte</li><li>-Arestas</li>'+
-                           '<li>-Bisel</li><li>-Rincon</li><li>-Têmpera</li><ul class="lista"><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dimensões mínimas: 80 mm x 275mm</li>'+
-                           '<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dimensões máximas: 2600 mm x 4500mm</li><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Espessuras de 3mm a 19mm</li></ul><li>-HST</li><li>-Laminação</li>'+
-                           '<li>-Foscagem</li><li>-Pintura digital no P.V.B.</li></ul>',
+                    html: '<ul class="lista"><li>-Mécanisation</li><li>-Perçage</li><li>-Coupe</li><li>-Bords</li>'+
+                           '<li>-Chanfrein</li><li>-Angle</li><li>-Trempé</li><ul class="lista"><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dimensions minimales : 80 mm x 275mm</li>'+
+                           '<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dimensions maximales: 2600 mm x 4500mm</li><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Epaisseurs de 3mm à 19mm</li></ul><li>-HST</li><li>-Stratification avec pellicules spéciales</li>'+
+                           '<li>-Décors par dépolissage</li><li>-Stratifié contrôle acoustique</li></ul>',
                     foto: 'imgs/servico_vidro3.jpg',
                     icon: 'icon-apoio',
                     leaf: true
                 },
                {
-                    text: 'Pintura Digital Vitrificada',
+                    text: 'Peinture Numérique Glacé',
                      html: 'A possibilidade de criar uma fachada em vidro e personalizá-la com uma imagem, uma fotografia ou um desenho, é agora possível, por intermédio de um processo de pintura digital.<br> O processo consiste na deposição da tinta de base cerâmica no vidro, através de uma plotter. '+
                            'Após impressão, o vidro passa pela estufa de secagem e seguidamente pelo forno de têmpera a 750° para a tinta vitrificar. Uma vez fundida no vidro, a tinta mantém-se inalterável à radiação solar e resistente à abrasão, permitindo deste modo a exposição das superfícies pintadas a fatores agressivos sem serem afetadas.'+
-                           '<br>Embora possa ser aplicado em interiores a sua utilização está mais direcionada para o exterior pois permite, juntamente com o vidro apropriado, um melhor controlo solar bem como de graduação da transmissão luminosa sem alteração das cores impressas.'+
-                           '<br>Esta nova tecnologia permite aos projectistas combinar e graduar a intensidade luminosa e o controlo solar em vidros termicamente eficientes num amplo leque de soluções decorativas onde o limite é o imaginário.',
+                           '<br><br>Embora possa ser aplicado em interiores a sua utilização está mais direcionada para o exterior pois permite, juntamente com o vidro apropriado, um melhor controlo solar bem como de graduação da transmissão luminosa sem alteração das cores impressas.'+
+                           '<br><br>Esta nova tecnologia permite aos projectistas combinar e graduar a intensidade luminosa e o controlo solar em vidros termicamente eficientes num amplo leque de soluções decorativas onde o limite é o imaginário.',
                     foto: 'imgs/imagem3.jpg',
                     icon: 'icon-apoio',
                     leaf: true

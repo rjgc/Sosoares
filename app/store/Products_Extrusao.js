@@ -14,7 +14,10 @@ Ext.define('ItalboxCatalog.store.Products_Extrusao', {
         defaultRootProperty: 'items',
         proxy: {
             type: 'ajax',
-            url: 'http://critecns.com/sosoares_app/connect2.php?table=produtos_extrusao'
+            url: 'http://critecns.com/sosoares_app/connect2.php?table=produtos_extrusao',
+            extraParams:{
+                format:'json'
+            },
         },
         /*autoLoad: true,*/
         root: {

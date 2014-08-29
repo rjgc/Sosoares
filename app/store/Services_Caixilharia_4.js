@@ -26,7 +26,7 @@ Ext.define('ItalboxCatalog.store.Services_Caixilharia_4', {
                 items: [{
                     text: 'Anodizado',
                     html: '<p>La anodización es un proceso electrolítico que promueve la formación de una decoración de "película", de protección y uniforme. Esta "película" o la capa de óxido se clasifican y denominan mediante un número que se corresponde con el espesor en micras (µ). La elección de este espesor se define en términos de la agresividad del medio ambiente y normalizado por el <strong>NP1476</strong>.</p><br>'+
-'<p>Siendo el espesor normal de 15µ puede elegir a 20µ a 25µ cerca del mar o incluso en condiciones muy especiales (proximidad de fábricas que producen productos químicos, etc). Áreas. En el ánodo estado normal, el aluminio se vuelve un aspecto lechoso "mate" podrá recibir tratamientos mecánicos: pulido (aspecto brillante) o cepillado.</p><br>'+
+'<p>Siendo el espesor normal de 15µ puede elegir a 20µ a 25µ cerca del mar o incluso en condiciones muy especiales (proximidad de fábricas que producen productos químicos, etc). Áreas. En el ánodo estado normal, el aluminio se vuelve un aspecto lechoso "mate" podrá recibir tratamientos mecánicos: pulido (aspecto brillante) o cepillado.</p><br>',
                     foto: 'imgs/sosoares.jpg',
                     icon: 'icon-apoio',
                     leaf: true

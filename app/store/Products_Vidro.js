@@ -14,7 +14,10 @@ Ext.define('ItalboxCatalog.store.Products_Vidro', {
         defaultRootProperty: 'items',
         proxy: {
             type: 'ajax',
-            url: 'http://critecns.com/sosoares_app/connect2.php?table=produtos_vidro'
+            url: 'http://critecns.com/sosoares_app/connect2.php?table=produtos_vidro',
+            extraParams:{
+                format:'json'
+            },
         },
         /*autoLoad: true,*/
         root: {

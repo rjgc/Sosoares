@@ -35,29 +35,28 @@ Ext.define('ItalboxCatalog.store.Services_Vidro_2', {
                 },
                {
                     text: 'Glazed Digital Painting',
-                     html: 'A possibilidade de criar uma fachada em vidro e personalizá-la com uma imagem, uma fotografia ou um desenho, é agora possível, por intermédio de um processo de pintura digital.<br> O processo consiste na deposição da tinta de base cerâmica no vidro, através de uma plotter. '+
-                           'Após impressão, o vidro passa pela estufa de secagem e seguidamente pelo forno de têmpera a 750° para a tinta vitrificar. Uma vez fundida no vidro, a tinta mantém-se inalterável à radiação solar e resistente à abrasão, permitindo deste modo a exposição das superfícies pintadas a fatores agressivos sem serem afetadas.'+
-                           '<br>Embora possa ser aplicado em interiores a sua utilização está mais direcionada para o exterior pois permite, juntamente com o vidro apropriado, um melhor controlo solar bem como de graduação da transmissão luminosa sem alteração das cores impressas.'+
-                           '<br>Esta nova tecnologia permite aos projectistas combinar e graduar a intensidade luminosa e o controlo solar em vidros termicamente eficientes num amplo leque de soluções decorativas onde o limite é o imaginário.',
+                    html: '<p style="text-align: justify;">The possibility of create a glass façade and customize it with an image, a picture or a draw, is now possible by a process of digital painting. The process consists in the deposition of ink on the glass ceramic base, through a plotter. After printing, the glass passes through the kiln and then through the oven with the temperature of 750 for paint glaze. Once the molten glass, the ink stays unalterable to the solar radiation and resists abrasion, allowing the exposure of the painted surfaces to aggressive factors unaffected.</p>'+
+                    '<br><p style="text-align: justify;">Although it can be applied in the interiors, their use is more directed to the outside because it allows, together with the appropriate glass, better solar control as well as the graduation of the light transmission without changing of printed colors.'+
+                    '<br><br>This new technology allows the designers to combine the light intensity and solar control glass thermally efficient in a wide range of decorative solutions where the limit is the imagination.</p>',
                     foto: 'imgs/imagem3.jpg',
                     icon: 'icon-apoio',
                     leaf: true
                 },
                 {
                     text: 'Serigraphy',
-                    html: '<p>Quando o objectivo passa por uma repetição de uma imagem ou desenho, o método a utilizar será a serigrafia.<br>Este processo de gravação consiste numa tela micro perfurada onde é reproduzida a imagem pretendida, a qual é sobreposta no vidro. Ao aplicar a tinta de base cerâmica por cima da tela, ela irá passar apenas nos espaços com orifícios ficando retida nas restantes áreas. Depois de receber a tinta, o vidro é levado ao forno de têmpera para que a tinta vitrifique nele.</p>'+
-                          '<br><p>Os vidros serigrafados têm variadíssimas aplicações: em fachadas, permite para além da parte estética, funcionar como forma de controlo solar, assegurando uma boa visibilidade do interior para o exterior; no interior, desde portas, divisórias, cabines de duche ou até mobiliário, desde que aplicada com o vidro adequado.</p>'+
-                          '<br><p>Qualquer que seja o motivo pretendido, standard ou personalizado, realizado com uma ou mais cores, aplicado no interior ou no exterior, a inalterabilidade das cores é garantida.</p>',
+                    html: '<p>When the objective passes through the repetition of an image or a draw, the method that is used will be the silkscreen. This process consists in a micro perforated screen where the desired image is reproduced, which is superimposed on the glass. When applying the paint ceramic base above the screen, it will pass only in the spaces with holes and will be retained in the remaining areas. After receiving the ink, the glass is taken to the oven for the ink to glaze it.</p>'+
+                    '<br><p>The screen printed glass has varied applications: in façades, besides the aesthetics, it functions as a form of solar control, ensuring a good visibility from the inside to the outside; from doors, partitions shower cubicles and also furniture, if applied with the proper glass.</p>'+
+                    '<br><p>Whatever the reason for the intended subject, standard or custom, accomplished with one or more colors, applied in the inside or in the outside, the inalterability of the colors is guaranteed.</p>',
                     foto: 'imgs/imagem2.jpg',
                     icon: 'icon-apoio',
                     leaf: true
                 },
                 {
                     text: 'Opacification',
-                    html: '<p style="text-align: justify;">A opacificação é o método mais rápido e simples quando se pretende pintar um vidro com uma única cor.</p>'+
-                        '<br><p style="text-align: justify;">Consiste no revestimento total e uniforme de uma das faces do vidro com a tinta.</p>'+
-                        '<br><p style="text-align: justify;">A fusão da tinta no vidro garante a inalterabilidade das cores pelo que também se recomenda a sua aplicação no exterior.</p>'+
-                        '<br><p style="text-align: justify;">Os efeitos estéticos conseguidos pela reflexão da luz, realçam a beleza da fachada</p>',
+                    html: '<p style="text-align: justify;">The opacification is the faster and simplest method when we want to paint a glass with a single color.</p>'+
+                    '<br><p style="text-align: justify;">It consists in the total and equal coating of one side of the glass with ink.</p>'+
+                    '<br><p style="text-align: justify;">The fusion of the ink in the glass guarantee the inalterability of the colors being the application also recommended for the outside.</p>'+
+                    '<br><p style="text-align: justify;">The aesthetic effects accomplished by the light reflection highlight the beauty of the façade.</p>',
                     foto: 'imgs/imagem4.jpg',
                     icon: 'icon-apoio',
                     leaf: true

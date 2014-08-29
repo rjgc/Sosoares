@@ -34,7 +34,7 @@ Ext.define('ItalboxCatalog.store.Group_1', {
                 {
                     id: 2,
                     text: 'Quem Somos',
-                    html: '<h4><strong>Um parceiro continuo… </strong></h4><br><p>O Grupo Sosoares está empenhado e valoriza a parceria com os seus clientes e transformadores, no desenvolvimento do produto, na sua transformação e na assistência pós venda, com o objetivo final de garantir um cliente, satisfeito. Com este objetivo o grupo dispõe de:</p><br><ul class="lista"><li><strong>Gabinete de desenvolvimento</strong> e análise com profissionais qualificados em engenharia e arquitetura para a criação de novos sistemas e complemento dos existentes.</li><li><strong>Serralheiro</strong> para formação em oficina e montagem em obra.</li><li><strong>Departamento de orçamentação</strong> com 4 orçamentistas para apoio à elaboração de orçamentos aos clientes.</li><li><strong>Helpdesk</strong> para apoio na instalação de software de orçamentação, criação e atualização de base de dados assim como formação dos utilizadores.</li><br><li>Uma equipa comercial ao dispor, para divulgação dos sistemas de alumínio e vidro para arquitetura, num total de 17 delegados técnicos comerciais, cuja função é dar apoio aos seus clientes. Assim podem ser minimizados tempos na procura de informação bem como na obtenção das melhores soluções técnicas.</li></ul>',
+                    html: '<h4><strong>Um parceiro continuo… </strong></h4><br><p>O Grupo Sosoares está empenhado e valoriza a parceria com os seus clientes e transformadores, no desenvolvimento do produto, na sua transformação e na assistência pós venda, com o objetivo final de garantir um cliente, satisfeito. Com este objetivo o grupo dispõe de:</p><br><ul class="lista"><li><strong>Gabinete de desenvolvimento</strong> e análise com profissionais qualificados em engenharia e arquitetura para a criação de novos sistemas e complemento dos existentes.</li><br><li><strong>Serralheiro</strong> para formação em oficina e montagem em obra.</li><br><li><strong>Departamento de orçamentação</strong> com 4 orçamentistas para apoio à elaboração de orçamentos aos clientes.</li><br><li><strong>Helpdesk</strong> para apoio na instalação de software de orçamentação, criação e atualização de base de dados assim como formação dos utilizadores.</li><br><li>Uma equipa comercial ao dispor, para divulgação dos sistemas de alumínio e vidro para arquitetura, num total de 17 delegados técnicos comerciais, cuja função é dar apoio aos seus clientes. Assim podem ser minimizados tempos na procura de informação bem como na obtenção das melhores soluções técnicas.</li></ul>',
                     foto: 'imgs/sosoares.jpg',
                     icon: 'icon-apoio',
                     leaf: true
@@ -42,7 +42,7 @@ Ext.define('ItalboxCatalog.store.Group_1', {
                 {
                     id: 3,
                     text: 'Missão e Valores',
-                    html: 'Desenvolver, produzir e comercializar sistemas de alumínio e vidros para arquitectura que constituam soluções de caixilharia diferenciadas positivamente em funcionalidade, conforto, estética e eficiência energética de forma a assegurar total satisfação dos utilizadores e contribuir para a preservação do planeta.<br> Exportar, substituir importações, criar emprego, produzir riqueza, elevar o nível de vida dos colaboradores e potenciar a competitividade dos seus clientes, é a missão do Grupo.',
+                    html: 'Desenvolver, produzir e comercializar sistemas de alumínio e vidros para arquitectura que constituam soluções de caixilharia diferenciadas positivamente em funcionalidade, conforto, estética e eficiência energética de forma a assegurar total satisfação dos utilizadores e contribuir para a preservação do planeta.<br><br> Exportar, substituir importações, criar emprego, produzir riqueza, elevar o nível de vida dos colaboradores e potenciar a competitividade dos seus clientes, é a missão do Grupo.',
                     foto: 'imgs/sosoares.jpg',
                     icon: 'icon-apoio',
                     leaf: true
@@ -50,7 +50,7 @@ Ext.define('ItalboxCatalog.store.Group_1', {
                 {
                     id: 4,
                     text: 'Mercados Alvo',
-                    html: 'O desenvolvimento de sistemas integrados de caixilharia de alumínio e vidro tem sido uma das prioridades do Grupo Sosoares. Estes sistemas integrados permitem solucionar todas as imposições técnicas e estéticas exigidas pelos empreendimentos arquitectónicos modernos.<br> O acompanhamento do projecto desde a fase da arquitectura até à execução da obra, permite a correcta implementação da solução desejada e a constante inovação dos produtos.',
+                    html: 'O desenvolvimento de sistemas integrados de caixilharia de alumínio e vidro tem sido uma das prioridades do Grupo Sosoares. Estes sistemas integrados permitem solucionar todas as imposições técnicas e estéticas exigidas pelos empreendimentos arquitectónicos modernos.<br><br> O acompanhamento do projecto desde a fase da arquitectura até à execução da obra, permite a correcta implementação da solução desejada e a constante inovação dos produtos.',
                     foto: 'imgs/sosoares.jpg',
                     icon: 'icon-apoio',
                     leaf: true

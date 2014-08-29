@@ -34,7 +34,7 @@ Ext.define('ItalboxCatalog.store.Group_2', {
                 {
                     id: 2,
                     text: 'Who We Are',
-                    html: '<h4><strong>A continuous partner...</strong></h4><p>Group Sosoares is committed and values &#8203;&#8203;the partnership with its customers and manufactures in the product development, in its manufacturing and after-sales service with the ultimate goal of ensuring customer satisfaction. With this objective the group has:</p><ul class="lista"><li><strong>Development Office</strong> and analysis with qualified professionals in engineering and architecture for the creation of new systems and complement of the existing ones.</li><li><strong>Locksmith</strong> for training workshop and assembly in work.</li><li><strong>Budgeting Department</strong> with a team of estimators to support budgeting to customers.</li><li><strong>Helpdesk</strong> support for the installation of budgeting software, creating and updating the database as well as user training.</li><li><strong>A commercial team</strong> to promote aluminum and glass systems for architecture with a commercial delegates, whose function is to support its customers. So time can be minimized in seeking information and obtaining the best technical solutions.</li></ul>',
+                    html: '<h4><strong>A continuous partner...</strong></h4><br><p>Group Sosoares is committed and values &#8203;&#8203;the partnership with its customers and manufactures in the product development, in its manufacturing and after-sales service with the ultimate goal of ensuring customer satisfaction. With this objective the group has:</p><br><ul class="lista"><li><strong>Development Office</strong> and analysis with qualified professionals in engineering and architecture for the creation of new systems and complement of the existing ones.</li><br><li><strong>Locksmith</strong> for training workshop and assembly in work.</li><br><li><strong>Budgeting Department</strong> with a team of estimators to support budgeting to customers.</li><br><li><strong>Helpdesk</strong> support for the installation of budgeting software, creating and updating the database as well as user training.</li><br><li><strong>A commercial team</strong> to promote aluminum and glass systems for architecture with a commercial delegates, whose function is to support its customers. So time can be minimized in seeking information and obtaining the best technical solutions.</li></ul>',
                     foto: 'imgs/sosoares.jpg',
                     icon: 'icon-apoio',
                     leaf: true
@@ -42,7 +42,7 @@ Ext.define('ItalboxCatalog.store.Group_2', {
                 {
                     id: 3,
                     text: 'Mission and Values',
-                    html: '<p>To develop, to produce and to commercialize aluminium and glass systems for architecture which consist of functionally positive differentiated frame solutions, comfort, aesthetic and energetic efficiency so as to assure the full satisfaction of the users and contribute to the preservation of the planet.</p><p>To export, to replace imports, to create job opportunities, to produce wealth, to elevate its workers’ level of life and to potentiate its clients’ competitiveness, is the mission of the Group.</p>',
+                    html: '<p>To develop, to produce and to commercialize aluminium and glass systems for architecture which consist of functionally positive differentiated frame solutions, comfort, aesthetic and energetic efficiency so as to assure the full satisfaction of the users and contribute to the preservation of the planet.</p><br><p>To export, to replace imports, to create job opportunities, to produce wealth, to elevate its workers’ level of life and to potentiate its clients’ competitiveness, is the mission of the Group.</p>',
                     foto: 'imgs/sosoares.jpg',
                     icon: 'icon-apoio',
                     leaf: true
@@ -50,7 +50,7 @@ Ext.define('ItalboxCatalog.store.Group_2', {
                 {
                     id: 4,
                     text: 'Target markets',
-                    html: '<p style="">The development of integrated aluminium and glass frame systems has been one of the priorities of Grupo Sosoares.</p><p style="">These integrated systems support the answer to all technical and aesthetic demands posed by modern architectural projects.</p><p style="">The development of the project from the architectural drawing stage to the actual construction sustains the correct implementation of the intended answer and constant product innovation.</p> ',
+                    html: '<p style="">The development of integrated aluminium and glass frame systems has been one of the priorities of Grupo Sosoares.</p><p style="">These integrated systems support the answer to all technical and aesthetic demands posed by modern architectural projects.</p><br><p style="">The development of the project from the architectural drawing stage to the actual construction sustains the correct implementation of the intended answer and constant product innovation.</p> ',
                     foto: 'imgs/sosoares.jpg',
                     icon: 'icon-apoio',
                     leaf: true

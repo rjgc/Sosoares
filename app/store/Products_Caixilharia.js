@@ -14,7 +14,10 @@ Ext.define('ItalboxCatalog.store.Products_Caixilharia', {
         defaultRootProperty: 'items',
         proxy: {
             type: 'ajax',
-            url: 'http://critecns.com/sosoares_app/connect2.php?table=produtos_aluminio'
+            url: 'http://critecns.com/sosoares_app/connect2.php?table=produtos_aluminio',
+            extraParams:{
+                format:'json'
+            },
         },
         /*autoLoad: true,*/
         root: {

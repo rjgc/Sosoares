@@ -32,6 +32,8 @@ Ext.define('ItalboxCatalog.store.Languages', {
             { name: 'lacagem', type: 'string' },
             { name: 'anodizacao', type: 'string' },
             { name: 'madeira', type: 'string' },
+            { name: 'produtos', type: 'string' },
+            { name: 'obras', type: 'string' },
             
             /*
             { name: 'help_html', type: 'string' },
@@ -61,8 +63,8 @@ Ext.define('ItalboxCatalog.store.Languages', {
             { name: 'add_product', type: 'string' },
             { name: 'add_page', type: 'string' },
             { name: 'offline', type: 'string' },
-            { name: 'offline_error', type: 'string' },
-            { name: 'exit', type: 'string' },*/
+            { name: 'offline_error', type: 'string' },*/
+            { name: 'exit', type: 'string' },
             { name: 'yes', type: 'string' },
             { name: 'no', type: 'string' },
             { name: 'cancel', type: 'string' },/*
@@ -138,6 +140,8 @@ Ext.define('ItalboxCatalog.store.Languages', {
         lacagem: 'Lacagem',
         anodizacao: 'Anodização',
         madeira: 'Imitação Madeira',
+        produtos: 'Produtos',
+        obras: 'Obras',
         /*help_html: '<div style="margin:20px; margin-top:0px !important;">'+
         '<font color="#b69757">AJUDA</font><br/><br/><p><i>Aceda  em qualquer lugar aos nossos catálogos de forma rápida e intuitiva. </i><br />'+
         '<i>Com a  APP ITALBOX consulte todos os nossos produtos e seus detalhes. </i><br />'+
@@ -198,12 +202,12 @@ Ext.define('ItalboxCatalog.store.Languages', {
         no_products: 'Não existem produtos nesta pagina',
         add_page: 'Pagina adicionada aos favoritos',
         offline: 'A trabalhar em modo offline',
-        offline_error: 'Offline, necessita de estar online para aceder a este conteúdo',
+        offline_error: 'Offline, necessita de estar online para aceder a este conteúdo',*/
         exit: 'Sair da Aplicação?',
         yes: 'Sim',
         no: 'Não',
         cancel: 'Cancelar',
-        share_page_text: 'Imagem do Catalogo ',
+       /*share_page_text: 'Imagem do Catalogo ',
         share_page_text2: ' partilhada através da aplicação Italbox',
         share_product_text: 'Imagem do Produto do Catalogo ',
         share_product_text2: ' partilhada através da aplicação Italbox',*/
@@ -274,6 +278,8 @@ Ext.define('ItalboxCatalog.store.Languages', {
         lacagem: 'Lacquering',
         anodizacao: 'Anodizing',
         madeira: 'Wood Imitation',
+        produtos: 'Products',
+        obras: 'Works',
        /* help_html: '<div style="margin:20px; margin-top:0px !important;">'+
         '<font color="#b69757">HELP</font><br/><br/><p><i>Join our catalogs anywhere and in any space, by a quick and intuitive way. </i><br />'+
         '<i>Consult all our products and all the details with the APP ITALBOX. </i><br />'+
@@ -334,12 +340,12 @@ Ext.define('ItalboxCatalog.store.Languages', {
         no_products: 'This page doesn\'t have any Products',
         add_page: 'Page added to Favorites',
         offline: 'Working in Offline Mode',
-        offline_error: 'Offline, you need to be Online to view this content',
+        offline_error: 'Offline, you need to be Online to view this content',*/
         exit: 'Exit Application?',
         yes: 'Yes',
         no: 'No',
         cancel: 'Cancel',
-        share_page_text: 'Image from the Catalog ',
+       /* share_page_text: 'Image from the Catalog ',
         share_page_text2: ' shared through the Italbox App',
         share_product_text: 'Image of a Product from the Catalog ',
         share_product_text2: ' shared through the Italbox App',*/
@@ -410,6 +416,8 @@ Ext.define('ItalboxCatalog.store.Languages', {
         lacagem: 'Laquage',
         anodizacao: 'Anodisation',
         madeira: 'Imitation Bois',
+        produtos: 'Produits',
+        obras: 'Oeuvres',
        /* company_html : '<div class="italbox"><img src="imgs/company.jpg"></img><br/><font color="#b69757">ENTREPRISE</font><br/><br/><p>ITALBOX, LDA, entreprise fondée en 1999, fabrique des panneaux et des cabines en étant une réference au Portugal.</br><br/>Le design distinctif et exclusif, l\'excellente dichotomie qualité/prix et l\'importance que nous donnons à la satisfaction du client sont nos caractéristiques d\'identication. Notre expérience et savoir-foire nos permet de rencontrer les solutions prétendu par les clients.</br>Pour que vous puissiez nous connaitre et véri er les modèles que nous produisons, voulez-vous consulter notre web-site: <font color="#b69757">www.italbox.pt</font>.<br/><br/>Par delà des divers gammes de produits du catalogue, nous produisons aussi sur mesures. Les différents hôtels où nous avons appliqué nos produits et solutions sont la reconnaissance de notre professionalisme.<br/><br/>Nous vous informons que nous sommes à votre service pour toutes renseignement supplémentaires à travers de notre e-mail: <font color="#b69757">export.italbox@italbox.pt</font>.</p></div>',
         help_html: '<div style="margin:20px; margin-top:0px !important;">'+
         '<font color="#b69757">AIDE</font><br/><br/><p><i>Accéder rapidement et intuitivement n’importe où à nos catalogues. </i><br />'+
@@ -471,12 +479,12 @@ Ext.define('ItalboxCatalog.store.Languages', {
         no_products: 'Cette page n\'est pas encore produits',
         add_page: 'Ajouté au Favoris',
         offline: 'En mode Offline',
-        offline_error: 'Offline, vous devez être en Online pour voir ce Contenu',
+        offline_error: 'Offline, vous devez être en Online pour voir ce Contenu',*/
         exit: 'Quitter l\'application?',
         yes: 'Oui',
         no: 'Non',
         cancel: 'Annuler',
-        share_page_text: 'Image du catalogue ',
+        /*share_page_text: 'Image du catalogue ',
         share_page_text2: ' partagée sur l\'App Italbox',
         share_product_text: 'Image d\'un produit du catalogue ',
         share_product_text2: ' partagée sur l\'App Italbox',*/
@@ -547,6 +555,8 @@ Ext.define('ItalboxCatalog.store.Languages', {
         lacagem: 'Lacado',
         anodizacao: 'Anodizacin',
         madeira: 'Imitación Madera',
+        produtos: 'Productos',
+        obras: 'Obras',
        /* company_html: '<div class="italbox"><img src="imgs/company.jpg"></img><br/><font color="#b69757">EMPRESA</font><br/><br/><p>Italbox, LDA, es una empresa fundada en 1999 especializada en la fabricación de cabinas de ducha y es una referencia en Portugal.<br/><br/>El diseño propio y único, la dicotomía excelente relación calidad/precio y el centrarse en las satisfacciones del cliente son nuestras señas de identidad. Nuestra experiencia y conocimiento nos permiten encontrar soluciones deseadas por los clientes.<br/><br/>Para conocernos a nosotros y los modelos que producimos, por favor consulte nuestro web-site:  <font color="#b69757">www.italbox.pt</font>.<br/><br/>Al lado de las diferentes gamas de los productos del catálogo, también adaptamos. Los diversos hoteles en cuál nuestros productos y soluciones son aplicados son el reconocimiento de nuestro profissionalismo.<br/>Informamos que estamos a su disposición para cualquier información adicional através del correo electrónico: <font color="#b69757">export.italbox@italbox.pt</font>.</p></div>',
         help_html: '<div style="margin:20px; margin-top:0px !important;">'+
         '<font color="#b69757">AYUDA</font><br/><br/><p><i>Ve a donde quieras nuestros catálogos de manera rápida e intuitiva. </i><br />'+
@@ -608,12 +618,12 @@ Ext.define('ItalboxCatalog.store.Languages', {
         no_products: 'No hay Productos en esta Página',
         add_page: 'Página añadida a Favoritos',
         offline: 'Trabajar en el modo Offline',
-        offline_error: 'Offline, usted necesita estar Online para acceder a este contenido',
+        offline_error: 'Offline, usted necesita estar Online para acceder a este contenido',*/
         exit: 'Salir de la Aplicación?',
         yes: 'Sí',
         no: 'No',
         cancel: 'Cancelar',
-        share_page_text: 'Imagen del Catalogo ',
+       /* share_page_text: 'Imagen del Catalogo ',
         share_page_text2: ' compartida a través de la aplicación Italbox',
         share_product_text: 'Imagen de Produto del Catalogo ',
         share_product_text2: ' compartida a través de la aplicación Italbox',*/

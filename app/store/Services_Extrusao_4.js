@@ -24,22 +24,22 @@ Ext.define('ItalboxCatalog.store.Services_Extrusao_4', {
             root: {
                 text:'Serviços',
                items: [{
-                    text: 'La extrusión de perfiles de aluminio',
-                    html: '<p style="">Depois do desenvolvimento da solução com perfil de alumínio extrudido e da execução da ferramenta que lhe dará origem, vemos proceder à extrusão desse perfil.</p>'+
-                        '<br><p style="">O processo de extrusão inicia-se com o pré-aquecimento (cerca de 450ºC) dos biletes de alumínio que são posteriormente inseridos dentro da prensa de extrusão.</p>'+
-                        '<p style="">Com a ajuda de um pistão, o bilete é pressionado contra um orifício que representa a secção pretendida. Este orifício é executado numa fieira fabricada em aço especial de grande resistência. O conjunto denomina-se matriz e é composto por uma placa e contraplaca.</p>'+
-                        '<p style="">O perfil, já com a sua forma definitiva, sai pela parte frontal da prensa, sendo conduzido por um equipamento de arrasto. O processo de arrefecimento do perfil, é acelerado através da convexão forçada de ar, obtendo a sua planimetria final com o auxílio de um processo de estiramento.</p>'+
-                        '<p style="">Seguidamente vem a operação de corte das barras de perfil nas medidas solicitadas pelo cliente, geralmente 6.00m, 6.30m e 6.50m de comprimento.</p>'+
-                        '<p style="">A têmpera, ou o processo de endurecimento dos perfis, é a operação seguinte e consiste na sua introdução numa estufa por um período de cerca de 7 horas, a 200ºC. Finalmente, a embalagem e a expedição ao cliente, fecham o processo.</p>'+
-                        '<p style="">A qualidade do produto final é garantida pelo controlo específico aplicado às diversas fases do processo produtivo.</p>',
+                    text: 'Extrusión de Perfiles de Aluminio',
+                    html: 'Después de desarrollar la solución con aluminio extruido y una herramienta de implementación que dará origen al perfil, se procede a la extrusión de dicho perfil.'+
+                    '<br><br>El proceso de extrusión se inicia con precalentamiento (alrededor de 450 ° C) para palanquillas de aluminio que a continuación se insertan en la prensa de extrusión.'+
+                    '<br><br>Con la ayuda de un pistón, se pulsa el tocho contra un orificio que es la sección deseada. Este agujero se ejecuta un troquel de acero especial de alta resistencia. El conjunto se llama la matriz y se compone de una placa y placa posterior.'+
+                    '<br><br>La ficha está en su forma final, a través de la parte frontal de la prensa y es impulsado por un arrastre de engranajes. El perfil del proceso de refrigeración se acelera por convección forzada de aire, la obtención de una planimetría final con la ayuda de un proceso de estirado.'+
+                    '<br><br>Luego viene el proceso de corte de las barras perfiladas en las medidas solicitadas por el cliente, por lo general 6.00m, 6.50m, 6.30m de largo'+
+                    '<br><br>En seguida el proceso de endurecimiento de los perfiles es la siguiente operación y constituye su introducción en un horno durante un período de aproximadamente 7 horas a 200 ° C. Por último, el embalaje y el envío al cliente, el proceso de cierre.'+
+                    '<br><br>La calidad del producto final está garantizada por el control específico aplicado a las diversas etapas del proceso de producción.',
                     foto: 'imgs/sosoares.jpg',
                     icon: 'icon-apoio',
                     leaf: true
                 },
                 {
                     text: 'Desarrollo y Producción de Dies',
-                    html: '<p>Um dos fatores chave para a extrusão de perfis de alumínio de excelente qualidade é o desenho e forma de produção das ferramentas, matrizes, que lhes dão origem.</p>'+
-                          '<p>Para proporcionar aos seus clientes perfis de alumínio de qualidade extrema, e uma rápida capacidade de resposta no desenvolvimento de novos projetos a Perfis Oeiras incorpora uma unidade própria para produção das suas matrizes.</p>',
+                    html: 'Uno de los factores clave en la extrusión de perfiles de aluminio es de excelente calidad y diseño de producción de herramientas, moldes, que dan lugar a los mismos.'+
+                    '<br><br>Para ofrecer a sus clientes los perfiles de aluminio de altísima calidad, y una capacidad de respuesta rápida en el desarrollo de nuevos diseños de perfiles Oeiras incorpora una unidad para la producción de sus madres.',
                     foto: 'imgs/sosoares.jpg',
                     icon: 'icon-apoio',
                     leaf: true
