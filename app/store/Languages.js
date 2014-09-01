@@ -34,7 +34,6 @@ Ext.define('ItalboxCatalog.store.Languages', {
             { name: 'madeira', type: 'string' },
             { name: 'produtos', type: 'string' },
             { name: 'obras', type: 'string' },
-            
             /*
             { name: 'help_html', type: 'string' },
             { name: 'italbox', type: 'string' },
@@ -64,6 +63,7 @@ Ext.define('ItalboxCatalog.store.Languages', {
             { name: 'add_page', type: 'string' },
             { name: 'offline', type: 'string' },
             { name: 'offline_error', type: 'string' },*/
+            { name: 'sair', type: 'string' },
             { name: 'exit', type: 'string' },
             { name: 'yes', type: 'string' },
             { name: 'no', type: 'string' },
@@ -203,6 +203,7 @@ Ext.define('ItalboxCatalog.store.Languages', {
         add_page: 'Pagina adicionada aos favoritos',
         offline: 'A trabalhar em modo offline',
         offline_error: 'Offline, necessita de estar online para aceder a este conteúdo',*/
+        sair: 'Sair',
         exit: 'Sair da Aplicação?',
         yes: 'Sim',
         no: 'Não',
@@ -341,6 +342,7 @@ Ext.define('ItalboxCatalog.store.Languages', {
         add_page: 'Page added to Favorites',
         offline: 'Working in Offline Mode',
         offline_error: 'Offline, you need to be Online to view this content',*/
+        sair: 'Exit',
         exit: 'Exit Application?',
         yes: 'Yes',
         no: 'No',
@@ -480,6 +482,7 @@ Ext.define('ItalboxCatalog.store.Languages', {
         add_page: 'Ajouté au Favoris',
         offline: 'En mode Offline',
         offline_error: 'Offline, vous devez être en Online pour voir ce Contenu',*/
+        sair: 'Quitter',
         exit: 'Quitter l\'application?',
         yes: 'Oui',
         no: 'Non',
@@ -619,6 +622,7 @@ Ext.define('ItalboxCatalog.store.Languages', {
         add_page: 'Página añadida a Favoritos',
         offline: 'Trabajar en el modo Offline',
         offline_error: 'Offline, usted necesita estar Online para acceder a este contenido',*/
+        sair: 'Salir',
         exit: 'Salir de la Aplicación?',
         yes: 'Sí',
         no: 'No',

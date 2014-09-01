@@ -1667,6 +1667,7 @@ Ext.define('Italbox.Viewport5', {
                                     Ext.getCmp('products').setStore('Products_Caixilharia');
                                     Ext.getCmp('products_toolbar').setHtml('<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-produtos_caixilharia" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>'+Ext.getStore('Languages').getById(idioma).get('produtos')+'</span>');
                                     Ext.getCmp('products').show();
+                                   // console.dir(Ext.getCmp('products').getStore().getId());
                                /* }
                                 else{
                                     Ext.Msg.alert('Offline', Ext.getStore('Languages').getById(idioma).get('offline_catalogs'), Ext.emptyFn);
@@ -3101,13 +3102,70 @@ Ext.define('Italbox.ViewportPanel', {
                                         Ext.getCmp('treatment_toolbar').setHtml('<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-apoio" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>'+Ext.getStore('Languages').getById(idioma).get('apoio')+'</span>');
                                         Ext.getCmp('treatment').getScrollable().getScroller().scrollTo(0,0.1, false);
                                    }
+                                   try{
+                                   if (Ext.getCmp('works').getStore().getId() == 'italboxcatalog-store-works-1'){
+                                       Ext.getCmp('works').goToNode( Ext.getCmp('works').getStore().getRoot() );
+                                        Ext.getStore('Works').getProxy().setExtraParams({
+                                            lang: idioma
+                                        });
+                                        /*Ext.getCmp('search').show();*/
+                                        
+                                         Ext.Function.defer(function(){
+                                             Ext.getCmp('works').setStore('Works');
+                                        }, 100);
+                                         Ext.getStore('Works').load();
+                                        Ext.getCmp('works_toolbar').setHtml('<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-obras" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>'+Ext.getStore('Languages').getById(idioma).get('obras')+'</span>');
+                                   }
+                                   }catch(e){}
+                                   
+                                   try{
+                                   if (Ext.getCmp('products').getStore().getId() == 'italboxcatalog-store-products_caixilharia-1'){
+                                        Ext.getCmp('products').goToNode( Ext.getCmp('products').getStore().getRoot() );
+                                        Ext.getStore('Products_Caixilharia').getProxy().setExtraParams({
+                                            lang: idioma
+                                        });
+                                        /*Ext.getCmp('search').show();*/
+                                        
+                                         Ext.Function.defer(function(){
+                                             Ext.getCmp('products').setStore('Products_Caixilharia');
+                                        }, 100);
+                                        Ext.getStore('Products_Caixilharia').load();
+                                        Ext.getCmp('products_toolbar').setHtml('<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-produtos_caixilharia" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>'+Ext.getStore('Languages').getById(idioma).get('produtos')+'</span>');
+                                    }else if(Ext.getCmp('products').getStore().getId() == 'italboxcatalog-store-products_vidro-1'){
+                                         Ext.getCmp('products').goToNode( Ext.getCmp('products').getStore().getRoot() );
+                                         Ext.getStore('Products_Vidro').getProxy().setExtraParams({
+                                            lang: idioma
+                                        });
+                                        /*Ext.getCmp('search').show();*/
+                                       
+                                         Ext.Function.defer(function(){
+                                             Ext.getCmp('products').setStore('Products_Vidro');
+                                        }, 100);
+                                        Ext.getStore('Products_Vidro').load();
+                                        Ext.getCmp('products_toolbar').setHtml('<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-produtos_vidro" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>'+Ext.getStore('Languages').getById(idioma).get('produtos')+'</span>');
+                                    
+                                   
+                                   }else if(Ext.getCmp('products').getStore().getId() == 'italboxcatalog-store-products_extrusao-1'){
+                                         Ext.getStore('Products_Extrusao').getProxy().setExtraParams({
+                                            lang: idioma
+                                        });
+                                        /*Ext.getCmp('search').show();*/
+                                         Ext.Function.defer(function(){
+                                             Ext.getCmp('products').setStore('Products_Extrusao');
+                                        }, 100);
+                                         Ext.getStore('Products_Extrusao').load();
+                                        Ext.getCmp('products_toolbar').setHtml('<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-produtos_extrusao" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>'+Ext.getStore('Languages').getById(idioma).get('produtos')+'</span>');
+                                    
+                                   }
+                                   }catch(e){}
+                                   
                                    //console.dir(Ext.getCmp('html_treatment').getCls()[0]);
                                    
                                     Ext.MessageBox.override({
                                               confirm: function(title, message, fn, scope) {
                                               return this.show({
-                                                  title       : title || null,
-                                                  message     : message || null,
+                                                  title       : Ext.getStore('Languages').getById(idioma).get('sair') || null,
+                                                  message     : Ext.getStore('Languages').getById(idioma).get('exit') || null,
                                                   buttons     : [
                                                   {text: Ext.getStore('Languages').getById(idioma).get('no'),  itemId: 'no'},
                                                   {text: Ext.getStore('Languages').getById(idioma).get('yes'), itemId: 'yes', ui: 'action'}
@@ -3392,24 +3450,24 @@ Ext.define('Italbox.ViewportPanel', {
                                     Ext.getCmp('open-menu5').setText(Ext.getStore('Languages').getById(idioma).get('ajuda'));
                                         
                                         Ext.MessageBox.override({
-                                                confirm: function(title, message, fn, scope) {
-                                                return this.show({
-                                                    title       : title || null,
-                                                    message     : message || null,
-                                                    buttons     : [
-                                                    {text: Ext.getStore('Languages').getById(idioma).get('no'),  itemId: 'no'},
-                                                    {text: Ext.getStore('Languages').getById(idioma).get('yes'), itemId: 'yes', ui: 'action'}
-                                                ],
-                                                    promptConfig: false,
-                                                    scope       : scope,
-                                                    fn: function() {
-                                                        if (fn) {
-                                                            fn.apply(scope, arguments);
-                                                        }
-                                                    }
-                                                });
-                                            }
-                                        });
+                                              confirm: function(title, message, fn, scope) {
+                                              return this.show({
+                                                  title       : Ext.getStore('Languages').getById(idioma).get('sair') || null,
+                                                  message     : Ext.getStore('Languages').getById(idioma).get('exit') || null,
+                                                  buttons     : [
+                                                  {text: Ext.getStore('Languages').getById(idioma).get('no'),  itemId: 'no'},
+                                                  {text: Ext.getStore('Languages').getById(idioma).get('yes'), itemId: 'yes', ui: 'action'}
+                                              ],
+                                                  promptConfig: false,
+                                                  scope       : scope,
+                                                  fn: function() {
+                                                      if (fn) {
+                                                          fn.apply(scope, arguments);
+                                                      }
+                                                  }
+                                              });
+                                          }
+                                      });
                                         
                                         
                                         Ext.getCmp('back').hide();
@@ -4168,11 +4226,11 @@ Ext.application({
               Ext.getStore('Settings').add(valor);
               Ext.getStore('Settings').sync();
               idioma = Ext.getStore('Settings').getAt(0).get('lang');
-             /* Ext.MessageBox.override({
+              Ext.MessageBox.override({
                     confirm: function(title, message, fn, scope) {
                     return this.show({
-                        title       : title || null,
-                        message     : message || null,
+                        title       : Ext.getStore('Languages').getById(idioma).get('sair') || null,
+                        message     : Ext.getStore('Languages').getById(idioma).get('exit') || null,
                         buttons     : [
                         {text: Ext.getStore('Languages').getById(idioma).get('no'),  itemId: 'no'},
                         {text: Ext.getStore('Languages').getById(idioma).get('yes'), itemId: 'yes', ui: 'action'}
@@ -4186,7 +4244,7 @@ Ext.application({
                         }
                     });
                 }
-            });*/
+            });
         }
         else{
             idioma = Ext.getStore('Settings').getAt(0).get('lang');
@@ -4224,8 +4282,8 @@ Ext.application({
             Ext.MessageBox.override({
                     confirm: function(title, message, fn, scope) {
                     return this.show({
-                        title       : title || null,
-                        message     : message || null,
+                        title       : Ext.getStore('Languages').getById(idioma).get('sair') || null,
+                        message     : Ext.getStore('Languages').getById(idioma).get('exit') || null,
                         buttons     : [
                         {text: Ext.getStore('Languages').getById(idioma).get('no'),  itemId: 'no'},
                         {text: Ext.getStore('Languages').getById(idioma).get('yes'), itemId: 'yes', ui: 'action'}
@@ -4268,7 +4326,7 @@ Ext.application({
         console.log("onDeviceReady");
     }
 
-    function onOnline() {
+   function onOnline() {
         connect = 1;
     }
  
@@ -4390,8 +4448,8 @@ Ext.application({
                         
                          }else if (Ext.getCmp('products')._hidden === false && Ext.getCmp('products').getBackButton( )._hidden === true || Ext.getCmp('works')._hidden === false && Ext.getCmp('works').getBackButton( )._hidden === true || Ext.getCmp('multi')._hidden === false && Ext.getCmp('multi').getBackButton( )._hidden === true){
                              Ext.getCmp('menuI').hide();
-                            Ext.getCmp('footer').hide();
-                            Ext.getCmp('products').hide();
+                             Ext.getCmp('footer').hide();
+                             Ext.getCmp('products').hide();
                              Ext.getCmp('works').hide();
                              Ext.getCmp('multi').hide();
                              Ext.getCmp('favorites').show();
@@ -4858,7 +4916,7 @@ Ext.application({
                                     }                        
                                     );
                                     }
-                                 }else if(record.get('id') == 10 || record.get('id') == 11 || record.get('id') == 12 || record.get('id') == 13  ){
+                                  }else if(record.get('id') == 10 || record.get('id') == 11 || record.get('id') == 12 || record.get('id') == 13  ){
                                     if (record.get('id') == 10) {
                                         var valor = { id_setting: '1', lang: '1'};
                                     }
@@ -4947,13 +5005,64 @@ Ext.application({
                                         Ext.getCmp('treatment_toolbar').setHtml('<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-apoio" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>'+Ext.getStore('Languages').getById(idioma).get('apoio')+'</span>');
                                         Ext.getCmp('treatment').getScrollable().getScroller().scrollTo(0,0.1, false);
                                    }
+                                   try{
+                                   if (Ext.getCmp('works').getStore().getId() == 'italboxcatalog-store-works-1'){
+                                        Ext.getStore('Works').getProxy().setExtraParams({
+                                            lang: idioma
+                                        });
+                                        /*Ext.getCmp('search').show();*/
+                                        Ext.getStore('Works').load();
+                                         Ext.Function.defer(function(){
+                                             Ext.getCmp('works').setStore('Works');
+                                        }, 100);
+                                        Ext.getCmp('works_toolbar').setHtml('<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-obras" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>'+Ext.getStore('Languages').getById(idioma).get('obras')+'</span>');
+                                   }
+                                   }catch(e){}
+                                   
+                                   try{
+                                   if (Ext.getCmp('products').getStore().getId() == 'italboxcatalog-store-products_caixilharia-1'){
+                                        Ext.getStore('Products_Caixilharia').getProxy().setExtraParams({
+                                            lang: idioma
+                                        });
+                                        /*Ext.getCmp('search').show();*/
+                                         Ext.getStore('Products_Caixilharia').load();
+                                         Ext.Function.defer(function(){
+                                             Ext.getCmp('products').setStore('Products_Caixilharia');
+                                        }, 100);
+                                        Ext.getCmp('products_toolbar').setHtml('<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-produtos_caixilharia" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>'+Ext.getStore('Languages').getById(idioma).get('produtos')+'</span>');
+                                    }else if(Ext.getCmp('products').getStore().getId() == 'italboxcatalog-store-products_vidro-1'){
+                                         Ext.getStore('Products_Vidro').getProxy().setExtraParams({
+                                            lang: idioma
+                                        });
+                                        /*Ext.getCmp('search').show();*/
+                                         Ext.getStore('Products_Vidro').load();
+                                         Ext.Function.defer(function(){
+                                             Ext.getCmp('products').setStore('Products_Vidro');
+                                        }, 100);
+                                        Ext.getCmp('products_toolbar').setHtml('<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-produtos_vidro" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>'+Ext.getStore('Languages').getById(idioma).get('produtos')+'</span>');
+                                    
+                                   
+                                   }else if(Ext.getCmp('products').getStore().getId() == 'italboxcatalog-store-products_extrusao-1'){
+                                         Ext.getStore('Products_Extrusao').getProxy().setExtraParams({
+                                            lang: idioma
+                                        });
+                                        /*Ext.getCmp('search').show();*/
+                                         Ext.getStore('Products_Extrusao').load();
+                                         Ext.Function.defer(function(){
+                                             Ext.getCmp('products').setStore('Products_Extrusao');
+                                        }, 100);
+                                        Ext.getCmp('products_toolbar').setHtml('<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-produtos_extrusao" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>'+Ext.getStore('Languages').getById(idioma).get('produtos')+'</span>');
+                                    
+                                   }
+                                   }catch(e){}
+                                   
                                    //console.dir(Ext.getCmp('html_treatment').getCls()[0]);
                                    
                                     Ext.MessageBox.override({
                                               confirm: function(title, message, fn, scope) {
                                               return this.show({
-                                                  title       : title || null,
-                                                  message     : message || null,
+                                                  title       : Ext.getStore('Languages').getById(idioma).get('sair') || null,
+                                                  message     : Ext.getStore('Languages').getById(idioma).get('exit') || null,
                                                   buttons     : [
                                                   {text: Ext.getStore('Languages').getById(idioma).get('no'),  itemId: 'no'},
                                                   {text: Ext.getStore('Languages').getById(idioma).get('yes'), itemId: 'yes', ui: 'action'}
