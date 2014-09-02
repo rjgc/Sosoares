@@ -724,6 +724,7 @@ Ext.define('Italbox.Viewport8', {
                     },
                     {
                      id: 'html_produtos',
+                     cls: 'html_produtos',
                     html  : '',
                     },
             ]

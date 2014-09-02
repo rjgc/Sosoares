@@ -1168,17 +1168,34 @@ background-color: rgba(255, 255, 255, 0.5) !important;
 }
 
 .leaf_panel h4{
-   color: #107ca4 !important
+   color: #107ca4 !important;
 }
 
 .leaf_panel h3{
-   color: #107ca4 !important
+   color: #107ca4 !important;
 }
 
 .leaf_panel span{
-   color: #FFF !important
+   color: #FFF !important;
 }
 
 .leaf_panel a{
-   color: #FFF !important
+   color: #FFF !important;
+}
+
+.html_produtos img{
+   max-width: 100% !important;
+}
+
+.html_produtos h4{
+   margin-top: 15px;
+   margin-bottom: 10px;
+}
+
+table{
+   margin-top: 15px;
+}
+
+table strong{
+   
 }
