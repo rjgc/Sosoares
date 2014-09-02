@@ -3103,8 +3103,8 @@ Ext.define('Italbox.ViewportPanel', {
                                         Ext.getCmp('treatment_toolbar').setHtml('<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-apoio" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>'+Ext.getStore('Languages').getById(idioma).get('apoio')+'</span>');
                                         Ext.getCmp('treatment').getScrollable().getScroller().scrollTo(0,0.1, false);
                                    }
-                                   try{
-                                   if (Ext.getCmp('works').getStore().getId() == 'italboxcatalog-store-works-1'){
+                                   
+                                   if (Ext.getCmp('works')._hidden == false) {
                                        Ext.getCmp('works').goToNode( Ext.getCmp('works').getStore().getRoot() );
                                         Ext.getStore('Works').getProxy().setExtraParams({
                                             lang: idioma
@@ -3116,14 +3116,16 @@ Ext.define('Italbox.ViewportPanel', {
                                         }, 100);
                                          Ext.getStore('Works').load();
                                         Ext.getCmp('works_toolbar').setHtml('<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-obras" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>'+Ext.getStore('Languages').getById(idioma).get('obras')+'</span>');
-                                   }
-                                   }catch(e){}
                                    
-                                   try{
-                                   if (Ext.getCmp('products').getStore().getId() == 'italboxcatalog-store-products_caixilharia-1'){
+                                   }
+                                   
+                                if (Ext.getCmp('products')._hidden == false) {
+                                    
+                                   if (Ext.getCmp('products').getStore()._storeId == 'Products_Caixilharia'){
+                                        console.dir(Ext.getCmp('products').getStore().getRoot());
                                         //console.dir(Ext.getStore('Products_Caixilharia'));
-                                        //Ext.getCmp('products').goToNode( Ext.getCmp('products').getStore().getRoot() );
-                                        Ext.getCmp('products').setActiveItem(0,{type:'slide',reverse:false});
+                                        Ext.getCmp('products').goToNode( Ext.getCmp('products').getStore().getRoot() );
+                                        //Ext.getCmp('products').setActiveItem(1,{type:'slide',reverse:false});
                                         Ext.getStore('Products_Caixilharia').getProxy().setExtraParams({
                                             lang: idioma
                                         });
@@ -3135,9 +3137,12 @@ Ext.define('Italbox.ViewportPanel', {
                                         Ext.getStore('Products_Caixilharia').load();
                                         Ext.getCmp('products_toolbar').setHtml('<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-produtos_caixilharia" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>'+Ext.getStore('Languages').getById(idioma).get('produtos')+'</span>');
                                         //console.dir(Ext.getStore('Products_Caixilharia'));
-                                    }else if(Ext.getCmp('products').getStore().getId() == 'italboxcatalog-store-products_vidro-1'){
-                                         //Ext.getCmp('products').goToNode( Ext.getCmp('products').getStore().getRoot() );
-                                         Ext.getCmp('products').setActiveItem(0,{type:'slide',reverse:false});
+                                    }
+                                    
+                                    if(Ext.getCmp('products').getStore()._storeId == 'Products_Vidro'){
+                                        console.dir(Ext.getCmp('products').getStore().getRoot());
+                                         Ext.getCmp('products').goToNode( Ext.getCmp('products').getStore().getRoot());
+                                         //Ext.getCmp('products').setActiveItem(1,{type:'slide',reverse:false});
                                          Ext.getStore('Products_Vidro').getProxy().setExtraParams({
                                             lang: idioma
                                         });
@@ -3148,10 +3153,12 @@ Ext.define('Italbox.ViewportPanel', {
                                         }, 100);
                                         Ext.getStore('Products_Vidro').load();
                                         Ext.getCmp('products_toolbar').setHtml('<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-produtos_vidro" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>'+Ext.getStore('Languages').getById(idioma).get('produtos')+'</span>');
-                                    
+                                    }
                                    
-                                   }else if(Ext.getCmp('products').getStore().getId() == 'italboxcatalog-store-products_extrusao-1'){
-                                        Ext.getCmp('products').setActiveItem(0,{type:'slide',reverse:false});
+                                   if(Ext.getCmp('products').getStore()._storeId == 'Products_Extrusao'){
+                                        console.dir(Ext.getCmp('products').getStore().getRoot());
+                                        Ext.getCmp('products').goToNode( Ext.getCmp('products').getStore().getRoot() );
+                                        //Ext.getCmp('products').setActiveItem(1,{type:'slide',reverse:false});
                                         Ext.getStore('Products_Extrusao').getProxy().setExtraParams({
                                             lang: idioma
                                         });
@@ -3163,7 +3170,8 @@ Ext.define('Italbox.ViewportPanel', {
                                         Ext.getCmp('products_toolbar').setHtml('<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-produtos_extrusao" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>'+Ext.getStore('Languages').getById(idioma).get('produtos')+'</span>');
                                     
                                    }
-                                   }catch(e){}
+                                   
+                                   }
                                    
                                    //console.dir(Ext.getCmp('html_treatment').getCls()[0]);
                                    
