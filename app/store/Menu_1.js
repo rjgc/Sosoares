@@ -1,58 +1,19 @@
 Ext.define('ItalboxCatalog.store.Menu_1', {
         extend: 'Ext.data.TreeStore',
-        //defaultRootProperty: 'items',
         config: {
              fields: [
                 {name: 'id',type: 'int'},
                 {name: 'text',type: 'string'},
-               /* {name: 'descricao',type: 'string'},*/
                 {name: 'foto', type: 'string' },
                 {name: 'html', type: 'string' },
                 {name: 'icon', type: 'string' },
              ],
-      /*  defaultRootProperty: 'items',
-        proxy: {
-            type: 'ajax',
-            url: 'http://critecns.com/sosoares_app/connect2.php?table=produtos_aluminio'
-        },*/
+      
         autoLoad: true,
-        /*root: {
-            text:'Menu'
-        },*/
-        //model: 'App.model.Grocery',
             defaultRootProperty: 'items',
             root: {
                 text:'Menu',
-                items: [/*{
-                    id: 'grupo',
-                    text: 'Grupo Sosoares',
-                    icon: 'icon-sosoares',
-                    items: [{
-                        text: 'Sobre Nós',
-                        icon: 'icon-sosoares',
-                        leaf: true
-                    },
-                    {
-                        text: 'Quem Somos',
-                        icon: 'icon-obras',
-                        leaf: true
-                    },
-                    {
-                        text: 'Missões e Valores',
-                        icon: 'icon-obras',
-                        leaf: true
-                    },
-                    {
-                        text: 'Mercados Alvo',
-                        icon: 'icon-obras',
-                        leaf: true
-                    },
-                    {
-                        text: 'Áreas Comerciais',
-                        icon: 'icon-obras',
-                        leaf: true
-                    }]
-                },*/
+                items: [
                 {
                     id: 1,
                     text: 'Apoio a Clientes',
@@ -147,9 +108,5 @@ Ext.define('ItalboxCatalog.store.Menu_1', {
                 }
                 ]
             }
-        
     }
-
-
-
 });

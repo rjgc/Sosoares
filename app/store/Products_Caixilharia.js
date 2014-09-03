@@ -1,6 +1,5 @@
 Ext.define('ItalboxCatalog.store.Products_Caixilharia', {
         extend: 'Ext.data.TreeStore',
-        //defaultRootProperty: 'items',
         config: {
              fields: [
                 {name: 'id_caixilharia',type: 'int'},
@@ -19,54 +18,8 @@ Ext.define('ItalboxCatalog.store.Products_Caixilharia', {
                 format:'json'
             },
         },
-        /*autoLoad: true,*/
         root: {
             text:'Produtos'
         }
-        //model: 'App.model.Grocery',
-          /*    defaultRootProperty: 'items',
-            root: {
-                items: [{
-                    text: 'Drinks',
-                    icon: 'icon-sosoares',
-                    items: [{
-                        text: 'Water',
-                        icon: '',
-                        items: [{
-                            text: 'Still',
-                            icon: '',
-                            leaf: true
-                        }, {
-                            text: 'Sparkling',
-                            icon: '',
-                            leaf: true
-                        }]
-                    }, {
-                        text: 'Soda',
-                        icon: '',
-                        leaf: true
-                    }]
-                }, {
-                    text: 'Snacks',
-                    icon: '',
-                    items: [{
-                        text: 'Nuts',
-                        icon: '',
-                        leaf: true
-                    }, {
-                        text: 'Pretzels',
-                        icon: '',
-                        leaf: true
-                    }, {
-                        text: 'Wasabi Peas',
-                        icon: '',
-                        leaf: true
-                    }]
-                }]
-            }*/
-        
     }
-
-
-
 });

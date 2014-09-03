@@ -1,17 +1,11 @@
 Ext.define('ItalboxCatalog.store.Menu_Language', {
         extend: 'Ext.data.TreeStore',
-        //defaultRootProperty: 'items',
         config: {
              fields: [
                 {name: 'id',type: 'int'},
                 {name: 'text',type: 'string'},
                 {name: 'icon', type: 'string' },
              ],
-      /*  defaultRootProperty: 'items',
-        proxy: {
-            type: 'ajax',
-            url: 'http://critecns.com/sosoares_app/connect2.php?table=produtos_aluminio'
-        },*/
         autoLoad: true,
             defaultRootProperty: 'items',
             root: {
@@ -42,12 +36,6 @@ Ext.define('ItalboxCatalog.store.Menu_Language', {
                         leaf: true,
                     }
                     ]
-                },
-                
-            
-        
+                }, 
     }
-
-
-
 });

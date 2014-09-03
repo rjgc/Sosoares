@@ -1,6 +1,5 @@
 Ext.define('ItalboxCatalog.store.Group_3', {
         extend: 'Ext.data.TreeStore',
-        //defaultRootProperty: 'items',
         config: {
              fields: [
                 {name: 'id',type: 'int'},
@@ -10,16 +9,7 @@ Ext.define('ItalboxCatalog.store.Group_3', {
                /* {name: 'descricao',type: 'string'},*/
                 {name: 'icon', type: 'string' },
              ],
-      /*  defaultRootProperty: 'items',
-        proxy: {
-            type: 'ajax',
-            url: 'http://critecns.com/sosoares_app/connect2.php?table=produtos_aluminio'
-        },*/
         autoLoad: true,
-        /*root: {
-            text:'Menu'
-        },*/
-        //model: 'App.model.Grocery',
             defaultRootProperty: 'items',
             root: {
                 text:'Grupo Sosoares',
@@ -65,9 +55,5 @@ Ext.define('ItalboxCatalog.store.Group_3', {
                 }
                 ]
             }
-        
     }
-
-
-
 });
