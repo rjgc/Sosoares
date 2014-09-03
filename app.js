@@ -1952,7 +1952,7 @@ Ext.define('Italbox.ViewportPanel', {
                                 if (Ext.getCmp('products')._hidden == false) {
                                     
                                    if (Ext.getCmp('products').getStore()._storeId == 'Products_Caixilharia'){
-                                        console.dir(Ext.getCmp('products').getStore().getRoot());
+                                        //console.dir(Ext.getCmp('products').getStore().getRoot());
                                          Ext.getCmp('products').onBackTap();
                                          Ext.getCmp('products').onBackTap();
                                         Ext.getStore('Products_Caixilharia').getProxy().setExtraParams({
