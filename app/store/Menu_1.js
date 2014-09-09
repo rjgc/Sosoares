@@ -35,6 +35,17 @@ Ext.define('ItalboxCatalog.store.Menu_1', {
                     '<p><img class="imagem" style="float: left; margin: 10px; max-width: 200px;" src="imgs/estudo.png" alt=""></p>'+
                     '<p>Com a crescente preocupação nos estudos energéticos, uma boa solução de caixilharia é cada vez mais influente em todo o desempenho térmico e acústico de uma habitação. A nova legislação sobre classificação energética deixa de ser aconselhada e passa a ser obrigatória, fazendo com que cada vez mais os sistemas de caixilharia tenham de ser estudados conforme o tipo de habitação, localização, orientação, etc.</p><br>'+
                     '<p>O Grupo Sosoares acompanha os seus clientes / parceiros em todas as fases, desde a promoção e apoio, ao aconselhamento e orçamentação, para que nada falhe naquilo que possa ter influência ao nível do conforto final da habitação. Para tal, dispõe de prescritores para apoiar os técnicos projectistas durante o estudo e pormenorização de qualquer obra. Com este serviço tentamos fazer com que as soluções sejam o mais adequadas possível às obras que as vão receber.</p><br>'+
+                    '<table style="width: 100%;">'+
+                    '<tbody>'+
+                    '<tr>'+
+                    '<td><strong>ZONA NORTE</strong><br><br><span>Nuno Oliveira</span><br><br><span>+351 936 456 144</span><br><br><span>nuno.oliveira@sosoares.pt</span>&nbsp;</td></tr>'+
+                        '<tr><td><strong>ZONA CENTRO</strong><br><br><span>Nuno Fernandes</span><br><br><span>+351 936 454 274</span><br><br><span>nuno.fernandes@sosoares.pt</span>&nbsp;</td></tr>'+
+                        '<tr><td><strong>ZONA SUL</strong><br><br><span>Nélson Morganho</span><br><br><span>+351 918 193 949</span><br><br><span>nelson.morganho@sosoares.pt</span>&nbsp;</td>'+
+                        '</tr>'+
+                        
+                        '</tbody>'+
+                    '</table>'+
+                    
                     '<h3 class="title3">Software Gestão Serralharia</h3><br>'+
                     '<p><img class="imagem" style="float: left; margin: 10px; max-width: 200px;" src="imgs/prefsuite.jpg" alt=""></p>'+
                     '<p>O investimento feito neste programa e no desenvolvimento da base de dados, foi para garantir que o projecto fosse uma mais valia para os nossos clientes.</p><br>'+

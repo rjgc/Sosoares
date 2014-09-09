@@ -1136,7 +1136,7 @@ Ext.define('Italbox.Viewport5', {
                                    Ext.getCmp('favorites').hide();
                                    Ext.getCmp('treatment_toolbar').setHtml('<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-tecnica" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>'+Ext.getStore('Languages').getById(idioma).get('area')+'</span>');
                                     Ext.getCmp('html_pic_treatment').setHtml('<img style="width:100%; height:100%; position:absolute" src="imgs/sosoares.jpg">');
-                                
+                                    Ext.getCmp('html_pic_treatment').hide();
                                     Ext.getCmp('html_treatment').setHtml(Ext.getStore('Treatment').getById(idioma+'_4').get('html'));
                                     Ext.getCmp('html_treatment').setCls('4');
                                     Ext.getCmp('treatment').getScrollable().getScroller().scrollTo(0,0.1, false);
@@ -1258,6 +1258,7 @@ Ext.define('Italbox.Viewport5', {
                                    Ext.getCmp('favorites').hide();
                                    Ext.getCmp('treatment_toolbar').setHtml('<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-apoio" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>'+Ext.getStore('Languages').getById(idioma).get('apoio')+'</span>');
                                     Ext.getCmp('html_pic_treatment').setHtml('<img style="width:100%; height:100%; position:absolute" src="imgs/sosoares.jpg">');
+                                    Ext.getCmp('html_pic_treatment').hide();
                                     Ext.getCmp('html_treatment').setHtml(Ext.getStore('Treatment').getById(idioma+'_5').get('html'));
                                     Ext.getCmp('html_treatment').setCls('5');
                                     Ext.getCmp('treatment').getScrollable().getScroller().scrollTo(0,0.1, false);
@@ -1332,7 +1333,9 @@ Ext.define('Italbox.Viewport5', {
                                     Ext.getCmp('favorites').hide();
                                     Ext.getCmp('back').show();
                                     Ext.getCmp('multi_toolbar').setHtml('<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-sosoares" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Grupo Sosoares</span>');
+                                    Ext.getCmp('html_pic_treatment').show();
                                     Ext.getCmp('multi').setStore('Group_'+idioma);
+                                    Ext.getCmp('treatment').getScrollable().getScroller().scrollTo(0,0.1, false);
                                     Ext.getCmp('multi').show();
                             }
                         },
@@ -1348,6 +1351,7 @@ Ext.define('Italbox.Viewport5', {
                                  
                                     Ext.getCmp('html_treatment').setHtml(Ext.getStore('Treatment').getById(idioma+'_1').get('html'));
                                     Ext.getCmp('html_treatment').setCls('1');
+                                    Ext.getCmp('html_pic_treatment').show();
                                     Ext.getCmp('treatment').getScrollable().getScroller().scrollTo(0,0.1, false);
                                     Ext.getCmp('treatment').show();
                                

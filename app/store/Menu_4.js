@@ -87,6 +87,7 @@ Ext.define('ItalboxCatalog.store.Menu_4', {
                     '<h3 class="title3">Client Assistance Extrusion</h3><br>'+
                     '<p>La Perfis Oeiras ofrece a sus clientes una oficina de apoyo y desarrollo dirigidos al conocimiento en el desarrollo de soluciones en perfiles de aluminio extruido para diferentes mercados, a partir de energías renovables, a través de la construcción para la industria del automóvil. </p><br>'+
                     '<p>Así los clientes pueden confiar a Perfis Oeiras todo su apoyo en el desarrollo de soluciones en perfiles extruidos de aluminio que satisfagan sus necesidades.</p><br>',
+                    
                     foto: 'imgs/sosoares.jpg',
                     leaf: true
                 },

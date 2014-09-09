@@ -18,20 +18,20 @@ Ext.define('ItalboxCatalog.store.Menu_2', {
                     id: 1,
                     text: 'Customer Service',
                     icon: 'icon-apoio',
-                    html: '<h3 class="title3">Client Assistance Aluminum</h3><br>'+
+                    html: '<h3 class="title3">Aluminum Client Assistance </h3><br>'+
                     '<p><img class="imagem" style="float: left; margin: 10px; max-width: 200px;" src="imgs/comercial.png" alt=""></p>'+
                     '<p>As the need for technical assistance and advice grew, the evolution of a traditional salesperson to someone whose technical knowledge goes beyond after-sales service, taking part in the development of our frame systems became imperative.</p><br>'+
                     '<p>In order for such to happen, Grupo Sosoares performed the change from salesperson to technical sales delegate. More than a simple change in category, it has been a growing and supported knowledge enhancement so that we can continuously and efficiently offer a present and personalized assistance.</p><br>'+
-                    '<h3 class="title3">Budget Department Aluminum</h3><br>'+
+                    '<h3 class="title3">Aluminum Budget Department </h3><br>'+
                     '<p><img class="imagem" style="float: left; margin: 10px; max-width: 200px;" src="imgs/orcamentacao.jpg" alt=""></p>'+
                     '<p>Grupo Sosoares assures all necessary technical clarification regarding the systems and their correct setting. Project budgeting is a reliable and precious service for our clients.</p>'+
                     '<p>For this we count on three technical departments around the country composed of people who are able to clear all doubts our clients may have, as well as provide advice on the most adequate systems to the most diverse situations. Budgeting the most diverse projects gifts our clients with a wider range of answers for the final client. The reliability and accuracy in our proposals avoid unexpected surprises when it comes to project awarding.</p><br>'+
-                    '<h3 class="title3">Technical Support Aluminum</h3><br>'+
+                    '<h3 class="title3">Aluminum Technical Support </h3><br>'+
                     '<p><img class="imagem" style="float: left; margin: 10px; max-width: 200px;" src="imgs/technical-support.jpg" alt=""></p>'+
                     '<p>Grupo Sosoares relies on technical support regarding blacksmith and construction works. This service aims at supplying our clients with information on our systems. A system will only reach its full purpose if transformed in the correct manner.</p><br>'+
                     '<p>Clients who intend to perform a work with a new metalwork system may require technical training from Grupo Sosoares. Once approved, a date for the technician’s visit is set.</p><br>'+
                     '<p>Once at the blacksmith’s, the technician from Grupo Sosoares develops a practical training session on the system, so that during performance the potential of the frame is applied to the fullest.</p><br>'+ 
-                    '<h3 class="title3">Study of Works / Detailing Aluminum</h3><br>'+
+                    '<h3 class="title3">Aluminum Study of Works / Detailing </h3><br>'+
                     '<p><img class="imagem" style="float: left; margin: 10px; max-width: 200px;" src="imgs/estudo.png" alt=""></p>'+
                     '<p>Regarding the increasing concern about energy studies, a good frame solution is ever more influent in all thermal and acoustic performance in a house.</p><br>'+
                     '<p>The new legislation on energetic classification changes from advisable to mandatory, meaning that frame systems have to be studied according to the type of housing, location, orientation, etc.</p><br>'+
@@ -43,7 +43,7 @@ Ext.define('ItalboxCatalog.store.Menu_2', {
                     /*'<h3 class="title3">Budget / Technical Support Glass</h3><br>'+
                     '<p>A Sosoares Vidro conta com uma equipa de orçamentação pronta a ajudar em qualquer situação.</p><br>'+
                     '<p>Assim, com a constante actualização quer dos valores quer dos novos sistemas, fazemos com que os nossos clientes tenham mais uma ferramenta para os ajudar na gestão da serralharia.</p><br>'+*/
-                    '<h3 class="title3">Client Assistance Extrusion</h3><br>'+
+                    '<h3 class="title3">Extrusion Client Assistance </h3><br>'+
                     '<p>Perfis Oeiras offers its customers a support office and development led to knowledge in developing solutions in extruded aluminum profiles for different markets, from renewable energies, through construction to the automotive industry.</p><br>'+
                     '<p>So customers can rely on Perfis Oeiras all their support in developing solutions in extruded aluminum profiles that meet your needs.</p><br>',
                     foto: 'imgs/sosoares.jpg',
