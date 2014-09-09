@@ -127,6 +127,10 @@
 	content: "\e619";
 	font-size: 37px;
 }
+.icon-call2:before {
+	content: "\e614";
+	font-size: 37px;
+}
 .icon-help:before {
 	content: "\e619";
 }

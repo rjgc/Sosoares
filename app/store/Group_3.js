@@ -25,7 +25,7 @@ Ext.define('ItalboxCatalog.store.Group_3', {
                     id: 2,
                     text: 'Qui Sommes-Nous',
                     html: '<p><h4><strong>Un partenaire continue ...</strong></h4></p><br><p>Groupe Sosoares est engagé et valorise le partenariat avec ses clients et les transformateurs et dans le développement de produit, dans sa fabrication et le service après-vente dans le but ultime d\'assurer la satisfaction du client. Avec cet objectif, le groupe a:</p><br><p>• <strong>Bureau de Développent</strong> et analyse avec des professionnels qualifiés dans l\'ingénierie et de l\'architecture pour la création de nouveaux systèmes et complément de celles déjà existantes.</p><br><p>• <strong>Menuiserie pour l\'atelier</strong> de formation et d’installation dans le chantier.</p><br><p>• <strong>Département du budget</strong> avec un equipe de estimateurs pour soutenir la budgétisation pour les clients.</p><br><p>• <strong>Appui Helpdesk</strong> pour l\'installation de logiciels de budgétisation, la création et la mise à jour de la base de données ainsi que la formation des utilisateurs.</p><br><p>• Une<strong> équipe commerciale</strong> pour promouvoir l\'aluminium et des systèmes de verre pour l\'architecture avec délégués commerciaux, dont la fonction est d\'accompagner ses clients. Donc, le temps peut être réduit dans la recherche d\'informations et obtenir les meilleures solutions techniques.</p>',
-                    foto: 'imgs/sosoares.jpg',
+                    foto: 'imgs/grupo.jpg',
                     icon: 'icon-apoio',
                     leaf: true
                 },
@@ -41,7 +41,7 @@ Ext.define('ItalboxCatalog.store.Group_3', {
                     id: 4,
                     text: 'Marché Cible',
                     html: '<p style="">Le développement des systèmes de châssis aluminium avec vitre intégrée a été une des priorités du Grupo Sosoares.</p><p style="text-align: justify;">Ces systèmes intégrés permettent de répondre à toutes les exigences techniques et esthétiques exigées par toutes les entreprises de construction modernes.</p><br><p style="text-align: justify;">L’accompagnement du projet depuis la phase architecturale jusqu’à l’exécution des travaux, permet l’application correcte de la solution désirée et la constante innovation des produits.</p>',
-                    foto: 'imgs/sosoares.jpg',
+                    foto: 'imgs/target_market.jpg',
                     icon: 'icon-apoio',
                     leaf: true
                 },

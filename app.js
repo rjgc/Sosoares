@@ -1344,7 +1344,7 @@ Ext.define('Italbox.Viewport5', {
                                
                                      Ext.getCmp('favorites').hide();
                                    Ext.getCmp('treatment_toolbar').setHtml('<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-lacagem" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>'+Ext.getStore('Languages').getById(idioma).get('lacagem')+'</span>');
-                                    Ext.getCmp('html_pic_treatment').setHtml('<img style="width:100%; height:100%; position:absolute" src="imgs/sosoares.jpg">');
+                                    Ext.getCmp('html_pic_treatment').setHtml('<img style="width:100%; height:100%; position:absolute" src="imgs/lacagem.jpg">');
                                  
                                     Ext.getCmp('html_treatment').setHtml(Ext.getStore('Treatment').getById(idioma+'_1').get('html'));
                                     Ext.getCmp('html_treatment').setCls('1');
@@ -1363,7 +1363,7 @@ Ext.define('Italbox.Viewport5', {
                                    
                                      Ext.getCmp('treatment_toolbar').setHtml('<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-anodizacao" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>'+Ext.getStore('Languages').getById(idioma).get('anodizacao')+'</span>');
                                    
-                                     Ext.getCmp('html_pic_treatment').setHtml('<img style="width:100%; height:100%; position:absolute" src="imgs/sosoares.jpg">');
+                                     Ext.getCmp('html_pic_treatment').setHtml('<img style="width:100%; height:100%; position:absolute" src="imgs/anodizacao.jpg">');
                                    
                                     Ext.getCmp('html_treatment').setHtml(Ext.getStore('Treatment').getById(idioma+'_2').get('html'));
                                     Ext.getCmp('html_treatment').setCls('2');
@@ -1380,9 +1380,9 @@ Ext.define('Italbox.Viewport5', {
                                 
                                     Ext.getCmp('favorites').hide();
                                   
-                                 Ext.getCmp('treatment_toolbar').setHtml('<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-imitacao" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>'+Ext.getStore('Languages').getById(idioma).get('madeira')+'</span>');
+                                    Ext.getCmp('treatment_toolbar').setHtml('<span style="background: transparent; color:#FFF; float:left; font-size: 21px;margin-top: 10px; "><i class="icon-imitacao" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>'+Ext.getStore('Languages').getById(idioma).get('madeira')+'</span>');
                                   
-                                     Ext.getCmp('html_pic_treatment').setHtml('<img style="width:100%; height:100%; position:absolute" src="imgs/sosoares.jpg">');
+                                    Ext.getCmp('html_pic_treatment').setHtml('<img style="width:100%; height:100%; position:absolute" src="imgs/imitacao_madeira.jpg">');
                                    
                                     Ext.getCmp('html_treatment').setHtml(Ext.getStore('Treatment').getById(idioma+'_3').get('html'));
                                     Ext.getCmp('html_treatment').setCls('3');

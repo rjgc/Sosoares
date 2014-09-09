@@ -94,13 +94,41 @@ Ext.define('ItalboxCatalog.store.Languages', {
             'background: url(imgs/icons/imitacao.png) no-repeat, rgba(16, 124, 164, .8);'+
             'background-size: contain; background-position: center;',
         idiomas: '<i class="icon-idioma"></i><br><font style="font-size:15px">Idiomas</font>',
-        ajuda: '<i class="icon-ajuda"></i><br><font style="font-size:15px">Ajuda</font>',
+        ajuda: '<i class="icon-call2"></i><br><font style="font-size:15px">Contactos</font>',
         language_toolbar: '<span style="background: #012f46; color:#FFF; float:left; font-size: 21px;margin-top: 7px; "><i class="icon-idioma" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Idiomas</span>',
-        help_toolbar: '<span style="background: #012f46; color:#FFF; float:left; font-size: 21px;margin-top: 7px; "><i class="icon-ajuda" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Ajuda</span>',
+        help_toolbar: '<span style="background: #012f46; color:#FFF; float:left; font-size: 21px;margin-top: 7px; "><i class="icon-call2" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Contactos</span>',
         help_text: '<div style="max-width:100%" class="leaf_panel">'+
-            '<br/><div style="margin:10px"><h3 style="font-size: 24px; color:#00aeef !important">'+
-            'Ajuda</h3><br><p style="color:#FFF !important;"><p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>'+
-            '</p></div></div>',
+            '<div style="margin:10px"><br><h3>Departamento Administrativo</h3>'+
+                        '<span id="mails"><a href="mailto:geral@sosoares.pt">geral@sosoares.pt</a></span>'+
+                        '<p>Rua do Baldeirão, 4440-346</p>'+
+                        '<p>Sobrado, Valongo - Portugal</p>'+
+                        '<p>T +351 224 119 230</p>'+
+                        '<p>F +351 224 119 231</p><br>'+
+                        '<h3>Departamento Comercial</h3>'+
+                        '<span id="mails"><a href="mailto:comercial@sosoares.pt">comercial@sosoares.pt</a></span>'+
+                        '<p>Rua do Campo Alegre, 474</p>'+
+                        '<p>4150-170 Porto - Portugal</p>'+
+                        '<p>T +351 226 096 709</p>'+
+                        '<p>F +351 226 005 642</p><br>'+
+                        '<h3>Departamento Técnico</h3>'+
+                        '<span id="mails"><a href="mailto:gabinete.tecnico@sosoares.pt">gabinete.tecnico@sosoares.pt</a></span>'+
+                        '<p>Rua do Campo Alegre, 474</p>'+
+                        '<p>4150-170 Porto</p>'+
+                        '<p>T +351 226 096 709</p>'+
+                        '<p>F +351 226 005 642</p><br>'+
+                         '<h3>Departamento Desenvolvimento </h3>'+
+                        '<span id="mails"><a href="mailto:desenvolvimento@sosoares.pt">desenvolvimento@sosoares.pt</a></span>'+
+                        '<p>Travessa do Bolegão, 146 Apartado1</p>'+
+                        '<p>3754-904 Fermentelos</p>'+
+                        '<p>T +351 234 729 740</p>'+
+                        '<p>F +351 234 729 741</p><br>'+
+                         '<h3>Departamento de Exportação</h3>'+
+                        '<span id="mails"><a href="mailto:export@sosoares.pt">export@sosoares.pt</a></span>'+
+                        '<p>Travessa do Bolegão, 146 Apartado1</p>'+
+                        '<p>3754-904 Fermentelos</p>'+
+                        '<p>T +351 234 729 743</p>'+
+                        '<p>F +351 234 729 741</p>'+
+                        '</div></div>',
         services : 'Serviços',
         area: 'Área Técnica',
         apoio: 'Apoio Cliente',
@@ -168,13 +196,41 @@ Ext.define('ItalboxCatalog.store.Languages', {
             'background: url(imgs/icons/imitacao_en.png) no-repeat, rgba(16, 124, 164, .8);'+
             'background-size: contain; background-position: center;',
         idiomas: '<i class="icon-idioma"></i><br><font style="font-size:15px">Languages</font>',
-        ajuda: '<i class="icon-ajuda"></i><br><font style="font-size:15px">Help</font>',
+        ajuda: '<i class="icon-call2"></i><br><font style="font-size:15px">Contacts</font>',
         language_toolbar: '<span style="background: #012f46; color:#FFF; float:left; font-size: 21px;margin-top: 7px; "><i class="icon-idioma" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Languages</span>',
-        help_toolbar: '<span style="background: #012f46; color:#FFF; float:left; font-size: 21px;margin-top: 7px; "><i class="icon-ajuda" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Help</span>',
+        help_toolbar: '<span style="background: #012f46; color:#FFF; float:left; font-size: 21px;margin-top: 7px; "><i class="icon-call2" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Contacts</span>',
         help_text: '<div style="max-width:100%" class="leaf_panel">'+
-            '<br/><div style="margin:10px"><h3 style="font-size: 24px; color:#00aeef !important">'+
-            'Help</h3><br><p style="color:#FFF !important;"><p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>'+
-            '</p></div></div>',
+            '<div style="margin:10px"><br><h3>Administrative Department</h3>'+
+                        '<span id="mails"><a href="mailto:geral@sosoares.pt">geral@sosoares.pt</a></span>'+
+                        '<p>Rua do Baldeirão, 4440-346</p>'+
+                        '<p>Sobrado, Valongo - Portugal</p>'+
+                        '<p>T +351 224 119 230</p>'+
+                        '<p>F +351 224 119 231</p><br>'+
+                        '<h3>Comercial Department</h3>'+
+                        '<span id="mails"><a href="mailto:comercial@sosoares.pt">comercial@sosoares.pt</a></span>'+
+                        '<p>Rua do Campo Alegre, 474</p>'+
+                        '<p>4150-170 Porto - Portugal</p>'+
+                        '<p>T +351 226 096 709</p>'+
+                        '<p>F +351 226 005 642</p><br>'+
+                        '<h3>Technical Department</h3>'+
+                        '<span id="mails"><a href="mailto:gabinete.tecnico@sosoares.pt">gabinete.tecnico@sosoares.pt</a></span>'+
+                        '<p>Rua do Campo Alegre, 474</p>'+
+                        '<p>4150-170 Porto</p>'+
+                        '<p>T +351 226 096 709</p>'+
+                        '<p>F +351 226 005 642</p><br>'+
+                         '<h3>Development Department </h3>'+
+                        '<span id="mails"><a href="mailto:desenvolvimento@sosoares.pt">desenvolvimento@sosoares.pt</a></span>'+
+                        '<p>Travessa do Bolegão, 146 Apartado1</p>'+
+                        '<p>3754-904 Fermentelos</p>'+
+                        '<p>T +351 234 729 740</p>'+
+                        '<p>F +351 234 729 741</p><br>'+
+                        '<h3>Department of Export</h3>'+
+                        '<span id="mails"><a href="mailto:export@sosoares.pt">export@sosoares.pt</a></span>'+
+                        '<p>Travessa do Bolegão, 146 Apartado1</p>'+
+                        '<p>3754-904 Fermentelos</p>'+
+                        '<p>T +351 234 729 743</p>'+
+                        '<p>F +351 234 729 741</p>'+
+                        '</div></div>',
         services : 'Services',
         area: 'Technical Area',
         apoio: 'Customer Service',
@@ -242,13 +298,42 @@ Ext.define('ItalboxCatalog.store.Languages', {
             'background: url(imgs/icons/imitacao_fr.png) no-repeat, rgba(16, 124, 164, .8);'+
             'background-size: contain; background-position: center;',
         idiomas: '<i class="icon-idioma"></i><br><font style="font-size:15px">Langues</font>',
-        ajuda: '<i class="icon-ajuda"></i><br><font style="font-size:15px">Aide</font>',
+        ajuda: '<i class="icon-call2"></i><br><font style="font-size:15px">Contacts</font>',
         language_toolbar: '<span style="background: #012f46; color:#FFF; float:left; font-size: 21px;margin-top: 7px; "><i class="icon-idioma" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Langues</span>',
-        help_toolbar: '<span style="background: #012f46; color:#FFF; float:left; font-size: 21px;margin-top: 7px; "><i class="icon-ajuda" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Aide</span>',
+        help_toolbar: '<span style="background: #012f46; color:#FFF; float:left; font-size: 21px;margin-top: 7px; "><i class="icon-call2" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Contacts</span>',
         help_text: '<div style="max-width:100%" class="leaf_panel">'+
-            '<br/><div style="margin:10px"><h3 style="font-size: 24px; color:#00aeef !important">'+
-            'Aide</h3><br><p style="color:#FFF !important;"><p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>'+
-            '</p></div></div>',
+                        '<div style="margin:10px">'+
+                        '<h3>Département Administratif</h3>'+
+                        '<span id="mails"><a href="mailto:geral@sosoares.pt">geral@sosoares.pt</a></span>'+
+                        '<p>Rua do Baldeirão, 4440-346</p>'+
+                        '<p>Sobrado, Valongo - Portugal</p>'+
+                        '<p>T +351 224 119 230</p>'+
+                        '<p>F +351 224 119 231</p><br>'+
+                        '<h3>Département Commercial</h3>'+
+                        '<span id="mails"><a href="mailto:comercial@sosoares.pt">comercial@sosoares.pt</a></span>'+
+                        '<p>Rua do Campo Alegre, 474</p>'+
+                        '<p>4150-170 Porto - Portugal</p>'+
+                        '<p>T +351 226 096 709</p>'+
+                        '<p>F +351 226 005 642</p><br>'+
+                        '<h3>Département Technique</h3>'+
+                        '<span id="mails"><a href="mailto:gabinete.tecnico@sosoares.pt">gabinete.tecnico@sosoares.pt</a></span>'+
+                        '<p>Rua do Campo Alegre, 474</p>'+
+                        '<p>4150-170 Porto</p>'+
+                        '<p>T +351 226 096 709</p>'+
+                        '<p>F +351 226 005 642</p><br>'+
+                        '<h3>Département du développement </h3>'+
+                        '<span id="mails"><a href="mailto:desenvolvimento@sosoares.pt">desenvolvimento@sosoares.pt</a></span>'+
+                        '<p>Travessa do Bolegão, 146 Apartado1</p>'+
+                        '<p>3754-904 Fermentelos</p>'+
+                        '<p>T +351 234 729 740</p>'+
+                        '<p>F +351 234 729 741</p><br>'+
+                        '<h3>Département de l\'exportation</h3>'+
+                        '<span id="mails"><a href="mailto:export@sosoares.pt">export@sosoares.pt</a></span>'+
+                        '<p>Travessa do Bolegão, 146 Apartado1</p>'+
+                        '<p>3754-904 Fermentelos</p>'+
+                        '<p>T +351 234 729 743</p>'+
+                        '<p>F +351 234 729 741</p>'+
+                        '</div></div>',
         services : 'Services',
         area: 'Secteur Technique',
         apoio: 'Service Client',
@@ -316,13 +401,42 @@ Ext.define('ItalboxCatalog.store.Languages', {
             'background: url(imgs/icons/imitacao_es.png) no-repeat, rgba(16, 124, 164, .8);'+
             'background-size: contain; background-position: center;',
         idiomas: '<i class="icon-idioma"></i><br><font style="font-size:15px">Idiomas</font>',
-        ajuda: '<i class="icon-ajuda"></i><br><font style="font-size:15px">Ayuda</font>',
+        ajuda: '<i class="icon-call2"></i><br><font style="font-size:15px">Contactos</font>',
         language_toolbar: '<span style="background: #012f46; color:#FFF; float:left; font-size: 21px;margin-top: 7px; "><i class="icon-idioma" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Idiomas</span>',
-        help_toolbar: '<span style="background: #012f46; color:#FFF; float:left; font-size: 21px;margin-top: 7px; "><i class="icon-ajuda" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Ayuda</span>',
+        help_toolbar: '<span style="background: #012f46; color:#FFF; float:left; font-size: 21px;margin-top: 7px; "><i class="icon-call2" style="font-size: 30px !important; margin: 12px; vertical-align: middle ;"></i>Contactos</span>',
         help_text: '<div style="max-width:100%" class="leaf_panel">'+
-            '<br/><div style="margin:10px"><h3 style="font-size: 24px; color:#00aeef !important">'+
-            'Ayuda</h3><br><p style="color:#FFF !important;"><p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>'+
-            '</p></div></div>',
+            '<div style="margin:10px">'+
+            '<h3>Departamento Administrativo</h3>'+
+                        '<span id="mails"><a href="mailto:geral@sosoares.pt">geral@sosoares.pt</a></span>'+
+                        '<p>Rua do Baldeirão, 4440-346</p>'+
+                        '<p>Sobrado, Valongo - Portugal</p>'+
+                        '<p>T +351 224 119 230</p>'+
+                        '<p>F +351 224 119 231</p><br>'+
+                        '<h3>Departamento Comercial</h3>'+
+                        '<span id="mails"><a href="mailto:comercial@sosoares.pt">comercial@sosoares.pt</a></span>'+
+                        '<p>Rua do Campo Alegre, 474</p>'+
+                        '<p>4150-170 Porto - Portugal</p>'+
+                        '<p>T +351 226 096 709</p>'+
+                        '<p>F +351 226 005 642</p><br>'+
+                        '<h3>Departamento Técnico</h3>'+
+                        '<span id="mails"><a href="mailto:gabinete.tecnico@sosoares.pt">gabinete.tecnico@sosoares.pt</a></span>'+
+                        '<p>Rua do Campo Alegre, 474</p>'+
+                        '<p>4150-170 Porto</p>'+
+                        '<p>T +351 226 096 709</p>'+
+                        '<p>F +351 226 005 642</p><br>'+
+                         '<h3>Departamento de Desarrollo </h3>'+
+                        '<span id="mails"><a href="mailto:desenvolvimento@sosoares.pt">desenvolvimento@sosoares.pt</a></span>'+
+                        '<p>Travessa do Bolegão, 146 Apartado1</p>'+
+                        '<p>3754-904 Fermentelos</p>'+
+                        '<p>T +351 234 729 740</p>'+
+                        '<p>F +351 234 729 741</p><br>'+
+                         '<h3>Departamento de Exportación</h3>'+
+                        '<span id="mails"><a href="mailto:export@sosoares.pt">export@sosoares.pt</a></span>'+
+                        '<p>Travessa do Bolegão, 146 Apartado1</p>'+
+                        '<p>3754-904 Fermentelos</p>'+
+                        '<p>T +351 234 729 743</p>'+
+                        '<p>F +351 234 729 741</p>'+
+                        '</div></div>',
         services : 'Servicios',
         area: 'Área Técnica',
         apoio: 'Asistencia Cliente',
