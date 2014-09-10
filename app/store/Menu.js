@@ -1,45 +1,63 @@
-Ext.define('ItalboxCatalog.store.Menu_1', {
+Ext.define('ItalboxCatalog.store.Menu', {
         extend: 'Ext.data.TreeStore',
+        //defaultRootProperty: 'items',
         config: {
              fields: [
                 {name: 'id',type: 'int'},
                 {name: 'text',type: 'string'},
+               /* {name: 'descricao',type: 'string'},*/
                 {name: 'foto', type: 'string' },
                 {name: 'html', type: 'string' },
                 {name: 'icon', type: 'string' },
              ],
-      
+      /*  defaultRootProperty: 'items',
+        proxy: {
+            type: 'ajax',
+            url: 'http://critecns.com/sosoares_app/connect2.php?table=produtos_aluminio'
+        },*/
         autoLoad: true,
+        /*root: {
+            text:'Menu'
+        },*/
+        //model: 'App.model.Grocery',
             defaultRootProperty: 'items',
             root: {
                 text:'Menu',
-                items: [
+                items: [/*{
+                    id: 'grupo',
+                    text: 'Grupo Sosoares',
+                    icon: 'icon-sosoares',
+                    items: [{
+                        text: 'Sobre Nós',
+                        icon: 'icon-sosoares',
+                        leaf: true
+                    },
+                    {
+                        text: 'Quem Somos',
+                        icon: 'icon-obras',
+                        leaf: true
+                    },
+                    {
+                        text: 'Missões e Valores',
+                        icon: 'icon-obras',
+                        leaf: true
+                    },
+                    {
+                        text: 'Mercados Alvo',
+                        icon: 'icon-obras',
+                        leaf: true
+                    },
+                    {
+                        text: 'Áreas Comerciais',
+                        icon: 'icon-obras',
+                        leaf: true
+                    }]
+                },*/
                 {
                     id: 1,
                     text: 'Apoio a Clientes',
                     icon: 'icon-apoio',
-                    html: '<h3 class="title3">Comercial Caixilharia</h3><br>'+
-                    '<p><img class="imagem" style="float: left; margin: 10px; max-width: 200px;" src="imgs/comercial.png" alt=""></p>'+
-                    '<p>O Grupo Sosoares tem ao dispôr, para divulgação dos sistemas de alumínio para arquitectura, um total de 10 delegados técnicos e comerciais, cuja função é dar apoio aos nossos clientes. Assim podem ser minimizados tempos na procura de informação bem como na obtenção de apoio.</p><br>'+
-                    '<p>Com a crescente da necessidade no acompanhamento e aconcelhamento técnico, foi imperativo a evolução do tradicional vendedor para alguém que cujos conhecimentos técnicos permita algo mais para além do apoio comercial, intervindo e formando na elaboração dos nossos sistemas de caixilharia.</p><br>'+
-                    '<p>Para isto, o Grupo Sosoares fez a passagem da categoria de vendedor para delegado técnico comercial. Sendo mais que uma simples mudança de nome, foi uma crescente e sustentada passagem de conhecimentos para que cada vez mais possamos ser efectivamente um apoio presente e personalizado.</p><br>'+
-                    '<h3 class="title3">Orçamentação Caixilharia</h3><br>'+
-                    '<p><img class="imagem" style="float: left; margin: 10px; max-width: 200px;" src="imgs/orcamentacao.jpg" alt=""></p>'+
-                    '<p>O Grupo Sosoares garante todos os esclarecimento técnicos necessários sobre os sistemas para a sua correcta implementação. A orçamentação dos projectos é um serviço fiável e precioso para os nossos clientes.</p>'+
-                    '<p>Para isso contamos com três gabinetes técnicos espalhados pelo país com funcionários capazes não só de esclarecer todas as dúvidas que possam surgir nos nossos clientes, como também de aconselhar os melhores sistemas adequados às mais diversas situações. A orçamentação dos mais diversos projectos, faz com que os nossos clientes possam ter uma elevada capacidade de resposta perante o cliente final. A fiabilidade e o rigor impostos nas nossas propostas evitam surpresas aquando da adjudicação dos projectos.</p><br>'+
-                    '<h3 class="title3">Estudo Obra / Pormenorização Caixilharia</h3><br>'+
-                    '<p><img class="imagem" style="float: left; margin: 10px; max-width: 200px;" src="imgs/estudo.png" alt=""></p>'+
-                    '<p>Com a crescente preocupação nos estudos energéticos, uma boa solução de caixilharia é cada vez mais influente em todo o desempenho térmico e acústico de uma habitação. A nova legislação sobre classificação energética deixa de ser aconselhada e passa a ser obrigatória, fazendo com que cada vez mais os sistemas de caixilharia tenham de ser estudados conforme o tipo de habitação, localização, orientação, etc.</p><br>'+
-                    '<p>O Grupo Sosoares acompanha os seus clientes / parceiros em todas as fases, desde a promoção e apoio, ao aconselhamento e orçamentação, para que nada falhe naquilo que possa ter influência ao nível do conforto final da habitação. Para tal, dispõe de prescritores para apoiar os técnicos projectistas durante o estudo e pormenorização de qualquer obra. Com este serviço tentamos fazer com que as soluções sejam o mais adequadas possível às obras que as vão receber.</p><br>'+
-                    '<table style="">'+
-                    '<tbody>'+
-                    '<tr>'+
-                    '<td><strong>ZONA NORTE</strong><br><span>Nuno Oliveira</span><br><span>+351 936 456 144</span><br><span><a href="mailto:nuno.oliveira@sosoares.pt">nuno.oliveira@sosoares.pt</a></span>&nbsp;</td></tr>'+
-                    '<tr><td><strong>ZONA CENTRO</strong><br><span>Nuno Fernandes</span><br><span>+351 936 454 274</span><br><span><a href="mailto:nuno.fernandes@sosoares.pt">nuno.fernandes@sosoares.pt</a></span>&nbsp;</td></tr>'+
-                    '<tr><td><strong>ZONA SUL</strong><br><span>Nélson Morganho</span><br><span>+351 918 193 949</span><br><span><a href="mailto:nelson.morganho@sosoares.pt">nelson.morganho@sosoares.pt</a></span>&nbsp;</td>'+
-                    '</tr>'+
-                    '</tbody>'+
-                    '</table><br><br>'+
+                    html: '<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>',
                     foto: 'imgs/sosoares.jpg',
                     leaf: true
                 },
@@ -97,37 +115,41 @@ Ext.define('ItalboxCatalog.store.Menu_1', {
                         id: 10,
                         text: 'Português',
                         icon: '',
-                        leaf: true,
+                        leaf: false,
                     },
                     {
                         id: 11,
                         text: 'English',
                         icon: '',
-                        leaf: true,
+                        leaf: false,
                     },
                     {
                         id: 12,
                         text: 'Français',
                         icon: '',
-                        leaf: true,
+                        leaf: false,
                     },
                     {
                         id: 13,
                         text: 'Espanhol',
                         icon: '',
-                        leaf: true,
+                        leaf: false,
                     }
                     ]
                 },
-                /*{
+                {
                     id: 5,
                     text: 'Ajuda',
                     icon: 'icon-help',
                     html: 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus',
                     foto: 'imgs/sosoares.jpg',
                     leaf: true
-                }*/
+                }
                 ]
             }
+        
     }
+
+
+
 });
