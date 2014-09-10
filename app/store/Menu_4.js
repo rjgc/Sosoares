@@ -65,29 +65,22 @@ Ext.define('ItalboxCatalog.store.Menu_4', {
                     '<h3 class="title3">Departamento de Presupuesto Aluminio</h3><br>'+
                     '<p><img class="imagem" style="float: left; margin: 10px; max-width: 200px;" src="imgs/orcamentacao.jpg" alt=""></p>'+
                     '<p>El Grupo Sosoares asegura que todos los sistemas de clarificación técnicas necesarias para su correcta aplicación. El presupuesto de los proyectos es un servicio confiable y valioso para nuestros clientes.</p>'+
-                    '<p>Contamos con tres oficinas técnicas en todo el país con empleados capaces, no sólo para aclarar las dudas que puedan surgir con nuestros clientes, sino también de asesorar a la que mejor se adapte a los más diversos sistemas de situaciones. El presupuesto de los diferentes proyectos, hace que nuestros clientes pueden tener una alta capacidad de respuesta al cliente final. La fiabilidad y la precisión en nuestras propuestas fiscales evitar sorpresas en la adjudicación de los proyectos.</p><br>'+     
-                    '<h3 class="title3">Soporte Técnico Aluminio</h3><br>'+
-                    '<p><img class="imagem" style="float: left; margin: 10px; max-width: 200px;" src="imgs/technical-support.jpg" alt=""></p>'+
-                    '<p>O Grupo Sosoares ofrece asistencia técnica en los talleres/obras. Este servicio tiene como objetivo capacitar a los clientes en la transformación de nuestros sistemas. Un sistema sólo alcanza sus verdaderas capacidades cuando se procesa de la manera correcta.</p><br>'+
-                    '<p>Los clientes que ejecutan un proyecto con un nuevo sistema para el cerrajero pueden requerir capacitación técnica al Grupo Sosoares comercial. Una vez aprobado, la fecha y tiene previsto visitar el tecnico.</p><br>'+
-                    '<p>Ya en la carpintería, el técnico-Sosoares realiza una sesión de formación práctica en el sistema, por lo que la ejecución de las posibilidades de trabajo de los marcos están plenamente bien hechos.</p><br>'+          
+                    '<p>Contamos con tres oficinas técnicas en todo el país con empleados capaces, no sólo para aclarar las dudas que puedan surgir con nuestros clientes, sino también de asesorar a la que mejor se adapte a los más diversos sistemas de situaciones. El presupuesto de los diferentes proyectos, hace que nuestros clientes pueden tener una alta capacidad de respuesta al cliente final. La fiabilidad y la precisión en nuestras propuestas fiscales evitar sorpresas en la adjudicación de los proyectos.</p><br>'+               
                     '<h3 class="title3">Estudio de Obras / Detalle Aluminio</h3><br>'+
                     '<p><img class="imagem" style="float: left; margin: 10px; max-width: 200px;" src="imgs/estudo.png" alt=""></p>'+
                     '<p>Con la creciente preocupación en estudios de energía, unos buenos marcos de solución es cada vez más influyente en todo el rendimiento acústico y térmico de una vivienda.</p><br>'+
                     '<p>La nueva legislación en materia de calificación de la energía deja de ser asesorado y será obligatorio, de manera que las tramas cada vez más los sistemas tienen que ser estudiadas según el tipo de vivienda, ubicación, orientación, etc.</p><br>'+
                     '<p>El Grupo Sosoares ayuda a sus clientes en todas las fases, desde la promoción y el apoyo, el asesoramiento y la elaboración de presupuestos, para que nada falle en lo que puede tener influencia en el último nivel de confort de la vivienda. </p><br>'+
                     '<p>Para ello, ofrece los prescriptores para apoyar diseñadores durante el estudio técnico y los detalles de cualquier trabajo. Con este servicio, tratamos de hacer que las soluciones son tan apropiados como sea posible a las obras que se van a recibir.</p><br>'+
-                    '<h3 class="title3">Programa de Gestión de Metalistería</h3><br>'+
-                    '<p><img class="imagem" style="float: left; margin: 10px; max-width: 200px;" src="imgs/prefsuite.jpg" alt=""></p>'+
-                    '<p>La inversión realizada en este programa y el desarrollo de la base de datos era asegurarse de que el proyecto era de gran valor para nuestros clientes. </p><br>'+
-                    '<p>Por lo tanto, la actualización constante, ya sea los valores o los nuevos sistemas, nos aseguramos de que nuestros clientes tengan una herramienta más para ayudar en la gestión de las ventanas.</p><br>'+   
-                   /* '<h3 class="title3">Budget / Technical Support Glass</h3><br>'+
-                    '<p>A Sosoares Vidro conta com uma equipa de orçamentação pronta a ajudar em qualquer situação.</p><br>'+
-                    '<p>Assim, com a constante actualização quer dos valores quer dos novos sistemas, fazemos com que os nossos clientes tenham mais uma ferramenta para os ajudar na gestão da serralharia.</p><br>'+*/
-                    '<h3 class="title3">Client Assistance Extrusion</h3><br>'+
-                    '<p>La Perfis Oeiras ofrece a sus clientes una oficina de apoyo y desarrollo dirigidos al conocimiento en el desarrollo de soluciones en perfiles de aluminio extruido para diferentes mercados, a partir de energías renovables, a través de la construcción para la industria del automóvil. </p><br>'+
-                    '<p>Así los clientes pueden confiar a Perfis Oeiras todo su apoyo en el desarrollo de soluciones en perfiles extruidos de aluminio que satisfagan sus necesidades.</p><br>',
-                    
+                    '<table style="">'+
+                    '<tbody>'+
+                    '<tr>'+
+                    '<td><p style="color: #107ca4 !important;"><strong>ZONA NORTE</strong></p><br><span>Nuno Oliveira</span><br><span>+351 936 456 144</span><br><span><a href="mailto:nuno.oliveira@sosoares.pt">nuno.oliveira@sosoares.pt</a></span>&nbsp;<br><br></td></tr>'+
+                    '<tr><td><p style="color: #107ca4 !important;"><strong>ZONA CENTRO</strong></p><br><span>Nuno Fernandes</span><br><span>+351 936 454 274</span><br><span><a href="mailto:nuno.fernandes@sosoares.pt">nuno.fernandes@sosoares.pt</a></span>&nbsp;<br><br></td></tr>'+
+                    '<tr><td><p style="color: #107ca4 !important;"><strong>ZONA SUR</strong></p><br><span>Nélson Morganho</span><br><span>+351 918 193 949</span><br><span><a href="mailto:nelson.morganho@sosoares.pt">nelson.morganho@sosoares.pt</a></span>&nbsp;</td>'+
+                    '</tr>'+
+                    '</tbody>'+
+                    '</table><br><br>',
                     foto: 'imgs/sosoares.jpg',
                     leaf: true
                 },

@@ -36,26 +36,22 @@ Ext.define('ItalboxCatalog.store.Menu_3', {
                     '<p><img class="imagem" style="float: left; margin: 10px; max-width: 200px;" src="imgs/orcamentacao.jpg" alt=""></p>'+
                     '<p>Le Grupo Sosoares s’engage à donner toutes les explications techniques nécessaires de nos systèmes afin de garantir leur mise en œuvre. Le bureau d’étude des projets élaborant les devis est fiable et précieux pour nos clients.</p>'+
                     '<p>Pour cela, nous comptons trois bureaux techniques dispersés dans le pays avec des employés capables de lever tous les doutes pouvant surgir chez nos clients, mais également de les conseiller sur le système le plus adapté face aux situations les plus diverses.</p><br>'+
-                    '<h3 class="title3">Assistance Technique Aluminium</h3><br>'+
-                    '<p><img class="imagem" style="float: left; margin: 10px; max-width: 200px;" src="imgs/technical-support.jpg" alt=""></p>'+
-                    '<p>Le Grupo Sosoares dispose d’une assistance technique en menuiserie/mise en ouvre.</p><br>'+
-                    '<p>Ce service a pour objectif de former nos clients sur la modification de nos systèmes. Un système atteint ses réelles capacités quand il est installé de manière correcte.</p><br>'+
-                    '<p>Les clients amenés à mettre en œuvre un nouveau système de menuiseries et de châssis, peuvent demander une formation technique par le biais de l’interlocuteur commercial du Grupo Sosoares. Après acceptation, une date est fixée pour la visite du technicien. Actuellement, le technicien du Grupo Sosoares présente une session de formation pratique sur le système afin que lors de l’exécution des travaux, tout le potentiel en matière de menuiseries et châssis soit au maximum mis en ouvre.</p><br>'+
                     '<h3 class="title3">Etudes de Travaux / Description Détaillée Aluminium</h3><br>'+
                     '<p><img class="imagem" style="float: left; margin: 10px; max-width: 200px;" src="imgs/estudo.png" alt=""></p>'+
                     '<p>Avec la préoccupation croissante dans nos études de consommation d’énergie, une bonne solution de menuiserie est très attractive grâce aux performances thermiques et acoustiques dans une construction.</p><br>'+
                     '<p>La nouvelle législation sur la classification énergétique ne représente plus seulement un conseil, elle devient obligatoire. Ce qui fait que chaque fois les systèmes de châssis doivent être étudiés et conformes au type de construction, localisation, orientation, etc.</p><br>'+
                     '<p>Le Grupo Sosoares accompagne ses clients/partenaires dans toutes les phases, depuis la promotion et l’assistance, le conseil et l’étude des devis, afin que rien n’échoue dans tout ce qui pourrait avoir un impact au niveau du confort final de la construction. C’est pourquoi, les techniciens projeteurs disposent de prescripteurs durant l’étude des détails de chaque chantier.</p><br>'+
                     '<p>Avec ce service, nous tentons de donner à chaque chantier les solutions les plus adaptées.</p><br>'+
-                    '<h3 class="title3">Programme de Gestion en Serrurerie</h3><br>'+
-                    '<p><img class="imagem" style="float: left; margin: 10px; max-width: 200px;" src="imgs/prefsuite.jpg" alt=""></p>'+
-                    '<p>L’investissement réalisé sur ce programme et dans le développement de la base de données, avait pour but de garantir que le projet soit une plus value pour nos clients.<br>Ainsi, avec la constante actualisation soit des valeurs soit des nouveaux systèmes, nous permettons à nos clients d’avoir un outil de plus pour les aider dans la gestion de la serrurerie.</p><br>'+
-                    /*'<h3 class="title3">Budget / Technical Support Glass</h3><br>'+
-                    '<p>A Sosoares Vidro conta com uma equipa de orçamentação pronta a ajudar em qualquer situação.</p><br>'+
-                    '<p>Assim, com a constante actualização quer dos valores quer dos novos sistemas, fazemos com que os nossos clientes tenham mais uma ferramenta para os ajudar na gestão da serralharia.</p><br>'+*/
-                    '<h3 class="title3">Client Assistance Extrusion</h3><br>'+
-                    '<p>Perfis Oeiras propose à ses clients un bureau et soutien au développement ont conduit à la connaissance dans le développement de solutions en aluminium extrudé pour différents marchés, à partir d\'énergies renouvelables, grâce à la construction de l\'industrie automobile.</p><br>'+
-                    '<p>Ainsi, les clients peuvent compter sur Perfis Oeiras tout leur soutien dans le développement de solutions en aluminium extrudé qui répondent à vos besoins.</p><br>',
+                    '<table style="">'+
+                    '<tbody>'+
+                    '<tr>'+
+                    '<td><p style="color: #107ca4 !important;"><strong>ZONE NORD</strong></p><br><span>Nuno Oliveira</span><br><span>+351 936 456 144</span><br><span><a href="mailto:nuno.oliveira@sosoares.pt">nuno.oliveira@sosoares.pt</a></span>&nbsp;<br><br></td></tr>'+
+                    '<tr><td><p style="color: #107ca4 !important;"><strong>ZONE CENTRALE</strong></p><br><span>Nuno Fernandes</span><br><span>+351 936 454 274</span><br><span><a href="mailto:nuno.fernandes@sosoares.pt">nuno.fernandes@sosoares.pt</a></span>&nbsp;<br><br></td></tr>'+
+                    '<tr><td><p style="color: #107ca4 !important;"><strong>ZONE SUD</strong></p><br><span>Nélson Morganho</span><br><span>+351 918 193 949</span><br><span><a href="mailto:nelson.morganho@sosoares.pt">nelson.morganho@sosoares.pt</a></span>&nbsp;</td>'+
+                    '</tr>'+
+                    '</tbody>'+
+                    '</table><br><br>',
+                    
                     foto: 'imgs/sosoares.jpg',
                     leaf: true
                 },

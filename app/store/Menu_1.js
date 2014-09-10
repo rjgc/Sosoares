@@ -34,12 +34,12 @@ Ext.define('ItalboxCatalog.store.Menu_1', {
                     '<table style="">'+
                     '<tbody>'+
                     '<tr>'+
-                    '<td><strong>ZONA NORTE</strong><br><span>Nuno Oliveira</span><br><span>+351 936 456 144</span><br><span><a href="mailto:nuno.oliveira@sosoares.pt">nuno.oliveira@sosoares.pt</a></span>&nbsp;</td></tr>'+
-                    '<tr><td><strong>ZONA CENTRO</strong><br><span>Nuno Fernandes</span><br><span>+351 936 454 274</span><br><span><a href="mailto:nuno.fernandes@sosoares.pt">nuno.fernandes@sosoares.pt</a></span>&nbsp;</td></tr>'+
-                    '<tr><td><strong>ZONA SUL</strong><br><span>Nélson Morganho</span><br><span>+351 918 193 949</span><br><span><a href="mailto:nelson.morganho@sosoares.pt">nelson.morganho@sosoares.pt</a></span>&nbsp;</td>'+
+                    '<td><p style="color: #107ca4 !important;"><strong>ZONA NORTE</strong></p><br><span>Nuno Oliveira</span><br><span>+351 936 456 144</span><br><span><a href="mailto:nuno.oliveira@sosoares.pt">nuno.oliveira@sosoares.pt</a></span>&nbsp;<br><br></td></tr>'+
+                    '<tr><td><p style="color: #107ca4 !important;"><strong>ZONA CENTRO</strong></p><br><span>Nuno Fernandes</span><br><span>+351 936 454 274</span><br><span><a href="mailto:nuno.fernandes@sosoares.pt">nuno.fernandes@sosoares.pt</a></span>&nbsp;<br><br></td></tr>'+
+                    '<tr><td><p style="color: #107ca4 !important;"><strong>ZONA SUL</strong></p><br><span>Nélson Morganho</span><br><span>+351 918 193 949</span><br><span><a href="mailto:nelson.morganho@sosoares.pt">nelson.morganho@sosoares.pt</a></span>&nbsp;</td>'+
                     '</tr>'+
                     '</tbody>'+
-                    '</table><br><br>'+
+                    '</table><br><br>',
                     foto: 'imgs/sosoares.jpg',
                     leaf: true
                 },
