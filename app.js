@@ -1,7 +1,7 @@
-var thumb_products = 'http://www.critecns.com/sosoares/assets/uploads/produtos/thumb/';
-var products = 'http://www.critecns.com/sosoares/assets/uploads/produtos/';
-var thumb_works = 'http://www.critecns.com/sosoares/assets/uploads/obras/thumb/';
-var works = 'http://www.critecns.com/sosoares/assets/uploads/obras/';
+var thumb_products = 'http://grupososoares.pt/assets/uploads/produtos/thumb/';
+var products = 'http://grupososoares.pt/assets/uploads/produtos/';
+var thumb_works = 'http://grupososoares.pt/assets/uploads/obras/thumb/';
+var works = 'http://grupososoares.pt/assets/uploads/obras/';
 try{
 //Onde Estamos
 var position3 = new google.maps.LatLng(41.202625,-8.471071);  //Valongo

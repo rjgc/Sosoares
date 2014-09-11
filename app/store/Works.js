@@ -10,7 +10,7 @@ Ext.define('ItalboxCatalog.store.Works', {
         defaultRootProperty: 'items',
         proxy: {
             type: 'ajax',
-            url: 'http://critecns.com/sosoares_app/connect2.php?table=obras',
+            url: 'http://grupososoares.pt/sosoares_app/connect.php?table=obras',
             extraParams:{
                 format:'json'
             },

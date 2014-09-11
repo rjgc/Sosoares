@@ -9,7 +9,7 @@ Ext.define('ItalboxCatalog.store.Works_Gallery', {
           
           proxy: {
             type: 'ajax',
-            url : 'http://critecns.com/sosoares_app/connect2.php?table=obras_gallery',
+            url : 'http://grupososoares.pt/sosoares_app/connect.php?table=obras_gallery',
             method : "POST",
             reader: 'json',
             //id  : 'ProductKey',
