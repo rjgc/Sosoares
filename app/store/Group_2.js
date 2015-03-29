@@ -32,7 +32,7 @@ Ext.define('ItalboxCatalog.store.Group_2', {
                     id: 3,
                     text: 'Mission and Values',
                     html: '<p>To develop, to produce and to commercialize aluminium and glass systems for architecture which consist of functionally positive differentiated frame solutions, comfort, aesthetic and energetic efficiency so as to assure the full satisfaction of the users and contribute to the preservation of the planet.</p><br><p>To export, to replace imports, to create job opportunities, to produce wealth, to elevate its workers’ level of life and to potentiate its clients’ competitiveness, is the mission of the Group.</p>',
-                    foto: 'imgs/sosoares.jpg',
+                    foto: 'imgs/missao.jpg',
                     icon: 'icon-apoio',
                     leaf: true
                 },

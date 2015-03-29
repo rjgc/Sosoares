@@ -32,7 +32,7 @@ Ext.define('ItalboxCatalog.store.Group_1', {
                     id: 3,
                     text: 'Missão e Valores',
                     html: 'Desenvolver, produzir e comercializar sistemas de alumínio e vidros para arquitectura que constituam soluções de caixilharia diferenciadas positivamente em funcionalidade, conforto, estética e eficiência energética de forma a assegurar total satisfação dos utilizadores e contribuir para a preservação do planeta.<br><br> Exportar, substituir importações, criar emprego, produzir riqueza, elevar o nível de vida dos colaboradores e potenciar a competitividade dos seus clientes, é a missão do Grupo.',
-                    foto: 'imgs/sosoares.jpg',
+                    foto: 'imgs/missao.jpg',
                     icon: 'icon-apoio',
                     leaf: true
                 },

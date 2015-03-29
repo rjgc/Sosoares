@@ -391,10 +391,10 @@ body{
 	margin: auto;
         margin-bottom: 2px;
 	padding: 13px;
-	width: 150px;
-	height: 34px;
-	background: url(../imgs/logotipo-retina.png) no-repeat center;
-        background-size: 150px 34px;
+        width: 148px;
+        height: 33px;
+        background: url(../imgs/logotipo-retina.png) no-repeat center;
+        background-size: 148px 33px;
 }
 
 .close{
@@ -413,17 +413,19 @@ body{
 	height: 60px !important;
         font-size: 30px !important;
         text-align: -webkit-center !important;
+        margin-right: 0px !important;
 
 }
 
 .open-menu2{
 	top: 0;
-	right: 40px;
+	right: 35px;
 	position: absolute;
-	width: 45px;
-	height: 45px !important;
-        font-size: 23px !important;
+	width: 55px;
+	height: 60px !important;
+        font-size: 30px !important;
         text-align: -webkit-center !important;
+       
 }
 
 .open-menu3{
@@ -479,10 +481,11 @@ body{
 	top: 0;
 	left: 0px;
 	position: absolute;
-	width: 60px;
+	width: 65px;
 	height: 60px !important;
         font-size: 32px !important;
         text-align: -webkit-center !important;
+        margin-left: 0px !important; 
 }
 
 .front{

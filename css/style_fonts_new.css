@@ -1,16 +1,16 @@
 @font-face {
 	font-family: 'sosoares';
-	src:url('font/sosoares.eot?-dkg7gs');
-	src:url('font/sosoares.svg?-dkg7gs#sosoares') format('svg'),
-	url('font/sosoares.eot?#iefix-dkg7gs') format('embedded-opentype'),
-		url('font/sosoares.woff?-dkg7gs') format('woff'),
-		url('font/sosoares.ttf?-dkg7gs') format('truetype');
+	src:url('fonts/sosoares.eot?-a0k8hr');
+	src:url('fonts/sosoares.svg?-a0k8hr#sosoares') format('svg'),
+	url('fonts/sosoares.eot?#iefix-a0k8hr') format('embedded-opentype'),
+		url('fonts/sosoares.woff?-a0k8hr') format('woff'),
+		url('fonts/sosoares.ttf?-a0k8hr') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
 
 [class^="icon-"], [class*=" icon-"] {
-	font-family: 'sosoares';
+	font-family: 'sosoares_site';
 	speak: none;
 	font-style: normal;
 	font-weight: normal;
@@ -24,16 +24,37 @@
 }
 
 .icon-vidro:before {
-	content: "\e608";
-	font-size: 29px !important;
+	content: "\e61d";
+	font-size: 31px !important;
 	background-color: #022e45 !important;
 	visibility: visible !important;
 }
 .icon-tratamento:before {
-	content: "\e61b";
+	content: "\e61e";
 	font-size: 31px !important;
 	background-color: #022e45 !important;
 	visibility: visible !important;
+}
+.icon-extrusao:before {
+	content: "\e61f";
+}
+.icon-outline_caixilharia:before {
+	content: "\e620";
+}
+.icon-tratamento_new:before {
+	content: "\e61b";
+}
+.icon-extrusao_new:before {
+	content: "\e61c";
+}
+.icon-front:before {
+	content: "\e61a";
+}
+.icon-vidro:before {
+	content: "\e600";
+}
+.icon-tratamento:before {
+	content: "\e601";
 }
 .icon-telefone:before {
 	content: "\e602";
@@ -57,7 +78,7 @@
 	content: "\e608";
 }
 .icon-produtos_extrusao:before {
-	content: "\e61c";
+	content: "\e609";
 }
 .icon-produtos_caixilharia:before {
 	content: "\e60a";
@@ -67,7 +88,6 @@
 }
 .icon-menu:before {
 	content: "\e60c";
-	/*color: #00aeef !important;*/
 }
 .icon-marcacao:before {
 	content: "\e60d";
@@ -83,16 +103,9 @@
 }
 .icon-idioma:before {
 	content: "\e611";
-	font-size: 37px;
-}
-.icon-language:before {
-	content: "\e611";
 }
 .icon-extrusao:before {
-	content: "\e61c";
-	font-size: 33px !important;
-	background-color: transparent !important;
-	visibility: visible !important;
+	content: "\e612";
 }
 .icon-call_black:before {
 	content: "\e613";
@@ -101,35 +114,17 @@
 	content: "\e614";
 }
 .icon-caixilharia:before {
-	content: "\e60a";
-	font-size: 29px !important;
-	background-color: transparent !important;
-	visibility: visible !important;
+	content: "\e615";
 }
-
 .icon-back:before {
 	content: "\e616";
-	color: #00aeef !important;
-}
-.icon-front:before {
-	content: "\e616";
-	color: #FFF !important;
 }
 .icon-apoio:before {
 	content: "\e617";
 }
 .icon-anodizacao:before {
 	content: "\e618";
-	
 }
 .icon-ajuda:before {
-	content: "\e619";
-	font-size: 37px;
-}
-.icon-call2:before {
-	content: "\e614";
-	font-size: 37px;
-}
-.icon-help:before {
 	content: "\e619";
 }

@@ -39,6 +39,9 @@ Ext.define('ItalboxCatalog.store.Languages', {
             { name: 'yes', type: 'string' },
             { name: 'no', type: 'string' },
             { name: 'cancel', type: 'string' },
+            { name: 'search', type: 'string' },
+            { name: 'offline', type: 'string' },
+            { name: 'noresults', type: 'string' },
         ],
         data : [
         {
@@ -142,6 +145,9 @@ Ext.define('ItalboxCatalog.store.Languages', {
         yes: 'Sim',
         no: 'Não',
         cancel: 'Cancelar',
+        search: 'Pesquisa...',
+        offline: 'Está em modo offline',
+        noresults: 'Sem Resultados',
         },
         {
         id : 2,
@@ -244,6 +250,9 @@ Ext.define('ItalboxCatalog.store.Languages', {
         yes: 'Yes',
         no: 'No',
         cancel: 'Cancel',
+        search: 'Search...',
+        offline: 'You are offline',
+        noresults: 'No Results',
         },
         {
         id : 3,
@@ -347,6 +356,9 @@ Ext.define('ItalboxCatalog.store.Languages', {
         yes: 'Oui',
         no: 'Non',
         cancel: 'Annuler',
+        search: 'Recherche...',
+        offline: 'Vous êtes déconnecté',
+        noresults: 'Aucun Résultat',
         },
         {
         id : 4,
@@ -450,6 +462,9 @@ Ext.define('ItalboxCatalog.store.Languages', {
         yes: 'Sí',
         no: 'No',
         cancel: 'Cancelar',
+        search: 'Búsqueda...',
+        offline: 'Usted está offline',
+        noresults: 'No hay resultados',
         },
         ]
     }

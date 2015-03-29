@@ -19,15 +19,15 @@ Ext.define('ItalboxCatalog.store.Menu_2', {
                     text: 'Customer Service',
                     icon: 'icon-apoio',
                     html: '<h3 class="title3">Aluminum Client Assistance </h3><br>'+
-                    '<p><img class="imagem" style="float: left; margin: 10px; max-width: 200px;" src="imgs/comercial.png" alt=""></p>'+
+                    '<p><img class="imagem" style="float: left;  width: 100%;padding: 10px;" src="imgs/comercial.png" alt=""></p>'+
                     '<p>As the need for technical assistance and advice grew, the evolution of a traditional salesperson to someone whose technical knowledge goes beyond after-sales service, taking part in the development of our frame systems became imperative.</p><br>'+
                     '<p>In order for such to happen, Grupo Sosoares performed the change from salesperson to technical sales delegate. More than a simple change in category, it has been a growing and supported knowledge enhancement so that we can continuously and efficiently offer a present and personalized assistance.</p><br>'+
                     '<h3 class="title3">Aluminum Budget Department </h3><br>'+
-                    '<p><img class="imagem" style="float: left; margin: 10px; max-width: 200px;" src="imgs/orcamentacao.jpg" alt=""></p>'+
+                    '<p><img class="imagem" style="float: left;  width: 100%;padding: 10px;" src="imgs/orcamentacao.jpg" alt=""></p>'+
                     '<p>Grupo Sosoares assures all necessary technical clarification regarding the systems and their correct setting. Project budgeting is a reliable and precious service for our clients.</p>'+
                     '<p>For this we count on three technical departments around the country composed of people who are able to clear all doubts our clients may have, as well as provide advice on the most adequate systems to the most diverse situations. Budgeting the most diverse projects gifts our clients with a wider range of answers for the final client. The reliability and accuracy in our proposals avoid unexpected surprises when it comes to project awarding.</p><br>'+
                     '<h3 class="title3">Aluminum Study of Works / Detailing </h3><br>'+
-                    '<p><img class="imagem" style="float: left; margin: 10px; max-width: 200px;" src="imgs/estudo.png" alt=""></p>'+
+                    '<p><img class="imagem" style="float: left;  width: 100%;padding: 10px;" src="imgs/estudo.png" alt=""></p>'+
                     '<p>Regarding the increasing concern about energy studies, a good frame solution is ever more influent in all thermal and acoustic performance in a house.</p><br>'+
                     '<p>The new legislation on energetic classification changes from advisable to mandatory, meaning that frame systems have to be studied according to the type of housing, location, orientation, etc.</p><br>'+
                     '<p>Grupo Sosoares accompanies its clients / partners through all phases, from promotion and support, to advice and budgeting, so that nothing of which influences the comfort in the finished house risks failing. For that, it relies on prescribers to aid design technicians during the study and detailing of any work.</p><br>'+

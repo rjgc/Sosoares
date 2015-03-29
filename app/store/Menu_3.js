@@ -29,15 +29,15 @@ Ext.define('ItalboxCatalog.store.Menu_3', {
                     text: 'Service Client',
                     icon: 'icon-apoio',
                     html: '<h3 class="title3">Appui Commercial Aluminium</h3><br>'+
-                    '<p><img class="imagem" style="float: left; margin: 10px; max-width: 200px;" src="imgs/comercial.png" alt=""></p>'+
+                    '<p><img class="imagem" style="float: left;  width: 100%;padding: 10px;" src="imgs/comercial.png" alt=""></p>'+
                     '<p>Le Grupo Sosoares met à votre disposition pour la diffusion de ses systèmes en aluminium pour l’architecture, un total de 10 techniciens et commerciaux dont la fonction est d’aider nos clients. Ainsi, la perte de temps dans la recherche d’informations ou l’obtention d’une assistance est minimisée.</p><br>'+
                     '<p>Avec l’augmentation des besoins dans l’accompagnement et le conseil technique, il était essentiel de faire évoluer le traditionnel vendeur vers quelqu’un, dont les connaissances techniques vont au delà de l’aspect commercial, qui est intervenu et a été formé dans l’élaboration de nos différents systèmes.</p><br>'+ 
                     '<h3 class="title3">Bureau des Devis Aluminium</h3><br>'+
-                    '<p><img class="imagem" style="float: left; margin: 10px; max-width: 200px;" src="imgs/orcamentacao.jpg" alt=""></p>'+
+                    '<p><img class="imagem" style="float: left;  width: 100%;padding: 10px;" src="imgs/orcamentacao.jpg" alt=""></p>'+
                     '<p>Le Grupo Sosoares s’engage à donner toutes les explications techniques nécessaires de nos systèmes afin de garantir leur mise en œuvre. Le bureau d’étude des projets élaborant les devis est fiable et précieux pour nos clients.</p>'+
                     '<p>Pour cela, nous comptons trois bureaux techniques dispersés dans le pays avec des employés capables de lever tous les doutes pouvant surgir chez nos clients, mais également de les conseiller sur le système le plus adapté face aux situations les plus diverses.</p><br>'+
                     '<h3 class="title3">Etudes de Travaux / Description Détaillée Aluminium</h3><br>'+
-                    '<p><img class="imagem" style="float: left; margin: 10px; max-width: 200px;" src="imgs/estudo.png" alt=""></p>'+
+                    '<p><img class="imagem" style="float: left;  width: 100%;padding: 10px;" src="imgs/estudo.png" alt=""></p>'+
                     '<p>Avec la préoccupation croissante dans nos études de consommation d’énergie, une bonne solution de menuiserie est très attractive grâce aux performances thermiques et acoustiques dans une construction.</p><br>'+
                     '<p>La nouvelle législation sur la classification énergétique ne représente plus seulement un conseil, elle devient obligatoire. Ce qui fait que chaque fois les systèmes de châssis doivent être étudiés et conformes au type de construction, localisation, orientation, etc.</p><br>'+
                     '<p>Le Grupo Sosoares accompagne ses clients/partenaires dans toutes les phases, depuis la promotion et l’assistance, le conseil et l’étude des devis, afin que rien n’échoue dans tout ce qui pourrait avoir un impact au niveau du confort final de la construction. C’est pourquoi, les techniciens projeteurs disposent de prescripteurs durant l’étude des détails de chaque chantier.</p><br>'+

@@ -33,7 +33,7 @@ Ext.define('ItalboxCatalog.store.Group_3', {
                     id: 3,
                     text: 'Mission et Valeurs',
                     html: '<p>Développer, produire et commercialiser des systèmes en aluminium et verre pour l’architecture qui constituent des solutions d’ensembles différents alliant fonctionnalité, confort, esthétique et efficacité énergétique de façon à assurer la totale satisfaction des utilisateurs et contribuer à la protection de la planète.</p><br><p>Exporter, se substituer aux importations, créer des emplois, produire de la richesse, élever le niveau de vie des collaborateurs et optimiser la compétitivité de vos clients, c’est la mission du Groupe.</p>',
-                    foto: 'imgs/sosoares.jpg',
+                    foto: 'imgs/missao.jpg',
                     icon: 'icon-apoio',
                     leaf: true
                 },

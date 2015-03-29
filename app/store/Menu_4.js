@@ -58,16 +58,16 @@ Ext.define('ItalboxCatalog.store.Menu_4', {
                     text: 'Asistencia al Cliente',
                     icon: 'icon-apoio',
                     html: '<h3 class="title3">Asistencia al Cliente Aluminio</h3><br>'+
-                    '<p><img class="imagem" style="float: left; margin: 10px; max-width: 200px;" src="imgs/comercial.png" alt=""></p>'+
+                    '<p><img class="imagem" style="float: left;  width: 100%;padding: 10px;" src="imgs/comercial.png" alt=""></p>'+
                     '<p>El Grupo Sosoares tiene a su dispinibilidad, para la difusión de los sistemas de aluminio para arqutectura un total de 10 técnicos y representantes de ventas, cuya función es apoyar a nuestros clientes. Así, el tiempo puede ser minimizado en la búsqueda de información y la obtención de apoyo.</p><br>'+
                     '<p>Con la creciente necesidad de controlar y Asesoría Técnica era imperativo pasar de vendedor tradicional con alguien cuya experiencia permite otra cosa que no sea el apoyo comercial, intervino en la redacción y la formación de nuestros sistemas de marco.</p><br>'+
                     '<p>Para ello, el Grupo Sosoares ha realizado el paso categoría vendedor al delegado técnico comercial. Al ser algo más que un cambio de nombre fue una creciente y sostenida paso del conocimiento para que podamos estar cada vez más en realizar un apoyo personalizado.</p><br>'+
                     '<h3 class="title3">Departamento de Presupuesto Aluminio</h3><br>'+
-                    '<p><img class="imagem" style="float: left; margin: 10px; max-width: 200px;" src="imgs/orcamentacao.jpg" alt=""></p>'+
+                    '<p><img class="imagem" style="float: left;  width: 100%;padding: 10px;" src="imgs/orcamentacao.jpg" alt=""></p>'+
                     '<p>El Grupo Sosoares asegura que todos los sistemas de clarificación técnicas necesarias para su correcta aplicación. El presupuesto de los proyectos es un servicio confiable y valioso para nuestros clientes.</p>'+
                     '<p>Contamos con tres oficinas técnicas en todo el país con empleados capaces, no sólo para aclarar las dudas que puedan surgir con nuestros clientes, sino también de asesorar a la que mejor se adapte a los más diversos sistemas de situaciones. El presupuesto de los diferentes proyectos, hace que nuestros clientes pueden tener una alta capacidad de respuesta al cliente final. La fiabilidad y la precisión en nuestras propuestas fiscales evitar sorpresas en la adjudicación de los proyectos.</p><br>'+               
                     '<h3 class="title3">Estudio de Obras / Detalle Aluminio</h3><br>'+
-                    '<p><img class="imagem" style="float: left; margin: 10px; max-width: 200px;" src="imgs/estudo.png" alt=""></p>'+
+                    '<p><img class="imagem" style="float: left;  width: 100%;padding: 10px;" src="imgs/estudo.png" alt=""></p>'+
                     '<p>Con la creciente preocupación en estudios de energía, unos buenos marcos de solución es cada vez más influyente en todo el rendimiento acústico y térmico de una vivienda.</p><br>'+
                     '<p>La nueva legislación en materia de calificación de la energía deja de ser asesorado y será obligatorio, de manera que las tramas cada vez más los sistemas tienen que ser estudiadas según el tipo de vivienda, ubicación, orientación, etc.</p><br>'+
                     '<p>El Grupo Sosoares ayuda a sus clientes en todas las fases, desde la promoción y el apoyo, el asesoramiento y la elaboración de presupuestos, para que nada falle en lo que puede tener influencia en el último nivel de confort de la vivienda. </p><br>'+
