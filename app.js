@@ -2860,8 +2860,8 @@ Ext.application({
         document.addEventListener("offline", onOffline, false);
         document.addEventListener("deviceready", onDeviceReady, false);
          if(device.platform == "Android"){
-                /*document.addEventListener("backbutton", Ext.bind(onBackKeyDown, this), false);
-                document.addEventListener("menubutton", Ext.bind(onMenuKeyDown, this), false);*/
+                document.addEventListener("backbutton", Ext.bind(onBackKeyDown, this), false);
+                document.addEventListener("menubutton", Ext.bind(onMenuKeyDown, this), false);
          }
          if(navigator.network.connection.type == Connection.NONE) {
 		 //Ext.Msg.alert('', Ext.getStore('Languages').getById(idioma).get('offline'), Ext.emptyFn);
@@ -2875,8 +2875,6 @@ Ext.application({
 
     function onDeviceReady() {
         console.log("onDeviceReady");
-        document.addEventListener("backbutton", onBackKeyDown, false);
-        document.addEventListener("menubutton", onMenuKeyDown, false);
     }
 
    function onOnline() {
@@ -2887,8 +2885,8 @@ Ext.application({
         connect = 0;
     }
     
-    function onBackKeyDown() {
-         
+    function onBackKeyDown(eve) {
+            eve.preventDefault();
                          if (typeof Ext.getCmp('list-menu-language') != 'undefined') {
                          
                                 if (Ext.getCmp('list-menu-language').getBackButton()._hidden === false) {
@@ -2964,7 +2962,8 @@ Ext.application({
                         }
     }
     
-    function onMenuKeyDown() {
+    function onMenuKeyDown(eve) {
+            eve.preventDefault();
              if (typeof panel_list_menu === 'undefined' && Ext.getCmp('menuI')._hidden === true)  {
                         Ext.getCmp('open-menu').setStyle('color:#FFF');
                         panel_list_menu = Ext.Viewport.add({
