@@ -849,6 +849,11 @@ text-shadow: rgba(0, 0, 0, 0.5) 0 -0.08em 0;
 width: 25% !important;
 }
 
+.x-tabbar-dark.x-docked-bottom .x-tab-active .x-button-icon {
+  background-image: none;
+  background-color: transparent !important;
+}
+
 #ext-tab-1{
 background: #02354f;
 color: #fff;
@@ -915,7 +920,7 @@ border-radius: 0px;
    margin: .5em;
    min-height: 0;
    border-bottom: 0;
-   background: #000000 !important;
+   background: #012f46 !important
 }
 
 .x-toolbar .x-form-field {

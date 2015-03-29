@@ -91,7 +91,7 @@
 .icon-extrusao:before {
 	content: "\e61c";
 	font-size: 33px !important;
-	background-color: transparent !important;
+	background-color: #02354f !important;
 	visibility: visible !important;
 }
 .icon-call_black:before {
@@ -103,7 +103,7 @@
 .icon-caixilharia:before {
 	content: "\e60a";
 	font-size: 29px !important;
-	background-color: transparent !important;
+	background-color: #02354f !important;
 	visibility: visible !important;
 }
 
