@@ -811,6 +811,10 @@ body{
     text-shadow: none !important;
 }
 
+.x-toolbar-dark {
+  border-color: #012f46 !important;
+}
+
 .x-toolbar-dark .x-title {
     color:#FFF !important;
     font-size: 20px !important;
