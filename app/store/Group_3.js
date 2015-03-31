@@ -25,7 +25,7 @@ Ext.define('ItalboxCatalog.store.Group_3', {
                     id: 2,
                     text: 'Qui Sommes-Nous',
                     html: '<p><h4><strong>Un partenaire continue ...</strong></h4></p><br><p>Groupe Sosoares est engagé et valorise le partenariat avec ses clients et les transformateurs et dans le développement de produit, dans sa fabrication et le service après-vente dans le but ultime d\'assurer la satisfaction du client. Avec cet objectif, le groupe a:</p><br><p>• <strong>Bureau de Développent</strong> et analyse avec des professionnels qualifiés dans l\'ingénierie et de l\'architecture pour la création de nouveaux systèmes et complément de celles déjà existantes.</p><br><p>• <strong>Menuiserie pour l\'atelier</strong> de formation et d’installation dans le chantier.</p><br><p>• <strong>Département du budget</strong> avec un equipe de estimateurs pour soutenir la budgétisation pour les clients.</p><br><p>• <strong>Appui Helpdesk</strong> pour l\'installation de logiciels de budgétisation, la création et la mise à jour de la base de données ainsi que la formation des utilisateurs.</p><br><p>• Une<strong> équipe commerciale</strong> pour promouvoir l\'aluminium et des systèmes de verre pour l\'architecture avec délégués commerciaux, dont la fonction est d\'accompagner ses clients. Donc, le temps peut être réduit dans la recherche d\'informations et obtenir les meilleures solutions techniques.</p>',
-                    foto: 'imgs/grupo.jpg',
+                    foto: 'imgs/quem-somos.jpg',
                     icon: 'icon-apoio',
                     leaf: true
                 },

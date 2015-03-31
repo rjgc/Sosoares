@@ -24,7 +24,7 @@ Ext.define('ItalboxCatalog.store.Group_1', {
                     id: 2,
                     text: 'Quem Somos',
                     html: '<h4><strong>Um parceiro continuo… </strong></h4><br><p>O Grupo Sosoares está empenhado e valoriza a parceria com os seus clientes e transformadores, no desenvolvimento do produto, na sua transformação e na assistência pós venda, com o objetivo final de garantir um cliente, satisfeito. Com este objetivo o grupo dispõe de:</p><br><ul class="lista"><li><strong>Gabinete de desenvolvimento</strong> e análise com profissionais qualificados em engenharia e arquitetura para a criação de novos sistemas e complemento dos existentes.</li><br><li><strong>Serralheiro</strong> para formação em oficina e montagem em obra.</li><br><li><strong>Departamento de orçamentação</strong> com 4 orçamentistas para apoio à elaboração de orçamentos aos clientes.</li><br><li><strong>Helpdesk</strong> para apoio na instalação de software de orçamentação, criação e atualização de base de dados assim como formação dos utilizadores.</li><br><li>Uma equipa comercial ao dispor, para divulgação dos sistemas de alumínio e vidro para arquitetura, num total de 17 delegados técnicos comerciais, cuja função é dar apoio aos seus clientes. Assim podem ser minimizados tempos na procura de informação bem como na obtenção das melhores soluções técnicas.</li></ul>',
-                    foto: 'imgs/sosoares.jpg',
+                    foto: 'imgs/quem-somos.jpg',
                     icon: 'icon-apoio',
                     leaf: true
                 },

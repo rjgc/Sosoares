@@ -24,7 +24,7 @@ Ext.define('ItalboxCatalog.store.Group_2', {
                     id: 2,
                     text: 'Who We Are',
                     html: '<h4><strong>A continuous partner...</strong></h4><br><p>Group Sosoares is committed and values &#8203;&#8203;the partnership with its customers and manufactures in the product development, in its manufacturing and after-sales service with the ultimate goal of ensuring customer satisfaction. With this objective the group has:</p><br><ul class="lista"><li><strong>Development Office</strong> and analysis with qualified professionals in engineering and architecture for the creation of new systems and complement of the existing ones.</li><br><li><strong>Locksmith</strong> for training workshop and assembly in work.</li><br><li><strong>Budgeting Department</strong> with a team of estimators to support budgeting to customers.</li><br><li><strong>Helpdesk</strong> support for the installation of budgeting software, creating and updating the database as well as user training.</li><br><li><strong>A commercial team</strong> to promote aluminum and glass systems for architecture with a commercial delegates, whose function is to support its customers. So time can be minimized in seeking information and obtaining the best technical solutions.</li></ul>',
-                    foto: 'imgs/sosoares.jpg',
+                    foto: 'imgs/quem-somos.jpg',
                     icon: 'icon-apoio',
                     leaf: true
                 },

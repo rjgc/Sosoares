@@ -146,7 +146,7 @@ Ext.define('ItalboxCatalog.store.Languages', {
         no: 'Não',
         cancel: 'Cancelar',
         search: 'Pesquisa...',
-        offline: 'Está em modo offline',
+        offline: 'Conteúdo Disponível Online',
         noresults: 'Sem Resultados',
         },
         {
@@ -251,7 +251,7 @@ Ext.define('ItalboxCatalog.store.Languages', {
         no: 'No',
         cancel: 'Cancel',
         search: 'Search...',
-        offline: 'You are offline',
+        offline: 'Content Available Online',
         noresults: 'No Results',
         },
         {
@@ -357,7 +357,7 @@ Ext.define('ItalboxCatalog.store.Languages', {
         no: 'Non',
         cancel: 'Annuler',
         search: 'Recherche...',
-        offline: 'Vous êtes déconnecté',
+        offline: 'Contenu Disponible Online',
         noresults: 'Aucun Résultat',
         },
         {
@@ -463,7 +463,7 @@ Ext.define('ItalboxCatalog.store.Languages', {
         no: 'No',
         cancel: 'Cancelar',
         search: 'Búsqueda...',
-        offline: 'Usted está offline',
+        offline: 'Contenido Disponible Online',
         noresults: 'No hay resultados',
         },
         ]
